@@ -1,0 +1,269 @@
+ FVG - Fair Value Gap | Funded.Now 
+ Skip to content 
+ Limited Lucid 40% OFF LucidDaily One Time Fee New Plan - Daily Payouts Use code LUMI . LUMI 
+ New Apex 90% OFF NO ACTIVATION FEE with code: Use code LUMI . LUMI 
+ Free Join the LumiTraders Club - Free Discord! 
+ Limited Lucid 40% OFF LucidDaily One Time Fee New Plan - Daily Payouts Use code LUMI . LUMI 
+[IMG /_next/image?url=%2Flogos%2Ffunded-now-logo-best-prop-firm-deals.png&w=3840&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ Prop Firms 
+ Compare 
+ Trading Tools 
+ Learn 
+ Giveaways 
+ LUMI 
+ Sign in Sign Up 
+[IMG /flags/3x2/US.svg]
+ LUMI 
+ ES +0.00% NQ +0.00% 
+ Loading lesson… 
+ Cookie Preferences
+ Choose Accept to allow optional cookies, or Decline to continue without them. Privacy Policy 
+ Decline Accept 
+ Lesson library / FVG - Fair Value Gap 
+ ICT Concept Beginner 
+ FVG - Fair Value Gap
+ Different types of FVG and how to trade them
+ 13 min read 
+ 9 sections 
+ Free to read 
+ By Funded.Now Editorial Team Reviewed July 26, 2026 
+ In this lesson 9 sections 
+ 01 What Are BISI and SIBI? 
+ 02 Three Types of Retest 
+ 03 Breakaway Gap 
+ 04 Measuring Gap 
+ 05 How to Determine the Terminus Using a Measuring Gap 
+ 06 Inversion FVG 
+ 07 Balanced Price Range (BPR) 
+ 08 Why the Balanced Price Range Matters 
+ 09 How I would trade a BPR 
+ In this lesson
+ 01 What Are BISI and SIBI? 
+ 02 Three Types of Retest 
+ 03 Breakaway Gap 
+ 04 Measuring Gap 
+ 05 How to Determine the Terminus Using a Measuring Gap 
+ 06 Inversion FVG 
+ 07 Balanced Price Range (BPR) 
+ 08 Why the Balanced Price Range Matters 
+ 09 How I would trade a BPR 
+ Save lesson 
+ My notes 
+ Share 
+ Before you begin
+ What you’ll learn
+ FVG 
+ Breakaway Gap 
+ Measuring Gap 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785104203611-c39e4937.png]
+ Full size 
+ A Fair Value Gap (FVG) is a three-candlestick pattern that represents an imbalance in the market caused by aggressive buying or selling.
+ In a set of three candles, if the middle candle moves far enough, the third candle's low can end up above the first candle's high. The space between those two levels — candle 1's high and candle 3's low — is price that never got traded. That untouched space is the fair value gap (FVG).
+ Bearish version is the same thing upside down: candle 3's high sits below candle 1's low, and the space between them is the gap.
+ Because markets often seek to rebalance these inefficiencies, price frequently retraces to the Fair Value Gap before continuing in its original direction.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785104738225-dbd59136.png]
+ Full size 
+ What Are BISI and SIBI?
+ BISI — Buy Side Imbalance, Sell Side Inefficiency. Forms during bullish movement. The buy side was offered, and the sell side was left inefficient. This is a bullish fair value gap: the third candle's low sits above the first candle's high, and the range between them is what got skipped.
+ SIBI — Sell Side Imbalance, Buy Side Inefficiency. Forms during bearish movement. The sell side was offered, and the buy side was left inefficient. This is a bearish fair value gap: the third candle's high sits below the first candle's low.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785105442297-401a06e2.png]
+ Full size 
+ Three Types of Retest
+ IOFED
+ Consequent Encroachment (50%)
+ FVG fill
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785105855232-7f00e949.png]
+ Full size 
+ IOFED - Institutional Order Flow Entry Drill 
+ Price enters the FVG but does not cross its 50% midpoint - remaining below the midpoint for a bearish FVG and above the midpoint for a bullish FVG.
+ Consequent Encroachment (50%) 
+ 50% retracement level of a fair value gap.
+ FVG Fill 
+ Complete fill is when price trades all the way through the gap, edge to edge. At that point the imbalance is fully rebalanced and ICT considers it spent - no longer a level worth watching. If price fills a bullish gap completely and keeps dropping, the setup has failed.
+ Breakaway Gap
+ Breakaway Gap (BG) is a gap that forms at the start of a strong expansion - at the place where we expect to see SMR - smart money reversal - price breaking out of a range or consolidation and taking off. The defining characteristic is that price does not come back to this type of FVG. It runs away and leaves the gap unfilled, sometimes for a very long time.
+ The best way to identify a Breakaway Gap (BG) is by analyzing the formation of the Fair Value Gap (FVG).
+ If the second and third candles that form the FVG are strong displacement candles, and the move originates from or taps a higher-timeframe (HTF) level , the FVG is much more likely to become a Breakaway Gap rather than a gap that gets retested quickly.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785107121409-a8cd6624.png]
+ Full size 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785107567069-ec28efb4.png]
+ Full size 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785107708296-3f93cbfa.png]
+ Full size 
+ Measuring Gap
+ A Measuring Gap (MG) is a Fair Value Gap (FVG) that typically forms near the midpoint of an implied range . Unlike other types of gaps, a Measuring Gap often remains unfilled. When price does revisit it, the retracement is usually shallow, offering an IOFED (Institutional Order Flow Entry Drill) before continuing in the original direction to complete the formation of the implied range.
+ Measuring Gap signals that the current market trend is likely to continue. 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785111219818-3912baa1.png]
+ Full size 
+ How to Determine the Terminus Using a Measuring Gap
+ The Measuring Gap (MG) typically appears as a relatively large Fair Value Gap (FVG) .
+ I generally use the projected move from the Measuring Gap as my MMXM target/terminus.
+ To reiterate, the Measuring Gap is the FVG located at the midpoint (50%) of the implied dealing range . /usually it forms during the second stage of re-accumulation or re-distribution .
+ To calculate the measuring move, I use:
+ The low/high where the SMR occurred , and
+ The top/bottom of the Measuring Gap .
+ Projecting this measurement by 100% provides my MMXM target .
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785111479928-0bbc85a5.png]
+ Full size 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785111654524-9d74f21f.png]
+ Full size 
+ Inversion FVG
+ IFVG is a FVG that fails to hold and is violated becomes an IFVG, flipping its role from support to resistance or from resistance to support. 
+ Bullish IFVG
+ A bullish FVG forms.
+ Price trades back down through the FVG.
+ Price closes below the FVG, showing the bullish FVG failed.
+ The FVG is now treated as a bearish IFVG .
+ When price returns to the IFVG, it can act as resistance .
+ Bullish FVG → violated to the downside → Bearish IFVG 
+ Bearish IFVG
+ A bearish FVG forms.
+ Price trades up through the FVG.
+ Price closes above the FVG.
+ The FVG becomes a bullish IFVG .
+ When price returns to the IFVG, it can act as support .
+ Bearish FVG → violated to the upside → Bullish IFVG 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785197122978-5bc3b69d.png]
+ Full size 
+ A+ IFVG conditions 
+ Liquidity Sweep
+ Displacement
+ Obvious Draw on Liquidity (EQH/EQL, News High/Low, etc.)
+ We want to short bearish IFVG in Premium and we want to long bullish IFVG in Discount
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785197552807-48fa1560.png]
+ Full size 
+ Balanced Price Range (BPR)
+ A BPR is created when two opposing Fair Value Gaps (FVGs) overlap or partially overlap. One FVG is typically bullish and the other bearish, creating a balanced area where price may react.
+ Simple example
+ Price moves down → creates a bearish FVG .
+ Price then reverses and moves up → creates a bullish FVG .
+ The two FVGs overlap → this overlapping area is the BPR .
+ Another words, BPR is a double FVG.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785195353270-7c01f3ba.png]
+ Full size 
+ Why the Balanced Price Range Matters
+ The Balanced Price Range (BPR) matters because it can provide a key PD Array within the context of HTF narrative .
+ BPR is formed by opposing FVGs 
+The overlap between a Bullish FVG and a Bearish FVG creates the BPR.
+ BPR can act as a reaction point 
+Price may return to the BPR to rebalance the inefficiency before continuing toward the next draw on liquidity .
+ BPR can provide an entry model 
+When the BPR aligns with an HTF PD Array , CISD , MSS , or SMT , it can provide a more precise entry.
+ BPR can confirm a shift in delivery 
+When formed around a CISD or MSS , the BPR can help identify the transition from one state of delivery to another. Basically, it confirms Smart Money Reversal.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785195741553-48add83d.png]
+ Full size 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785195779657-9dcb4ca1.png]
+ Full size 
+ BPR and displacement 
+ You generally want to see meaningful displacement involved in the creation of the opposing imbalances.
+ The idea is not simply:
+ "Two random FVGs overlap."
+ Instead, you're looking for price delivery that creates an imbalance in one direction, followed by opposing delivery that creates an imbalance back through the same area .
+ The stronger the displacement and the more meaningful the context, the more interesting the BPR becomes.
+ This is why I would always ask:
+ Why did price displace? 
+ What liquidity was taken? 
+ What PD Array was involved? 
+ Where is the BPR located relative to dealing range? 
+ What is the HTF bias? 
+ What is price likely seeking next? 
+ The BPR itself is not the entire setup .
+ It is the location .
+ How I would trade a BPR
+ If I were building an ICT BPR model, I would structure it like this:
+ Step 1 — Establish HTF bias
+ Ask:
+ What is the Draw on Liquidity? 
+ Is price seeking:
+ BSL? SSL? A specific HTF PD Array?
+ Step 2 — Establish Premium / Discount
+ Determine whether you're looking for:
+ Longs in Discount or Shorts in Premium 
+ Step 3 — Wait for liquidity
+ Look for: BSL raid, SSL raid, EQH, EQL, PDH, PDL, PWH, PWL, Session liquidity level, killzone liquidity levels, etc.
+ The liquidity event gives you the narrative .
+ Step 4 — Look for displacement
+ You want to see the market demonstrate intent .
+ Look for:
+ Displacement, CISD, and/or MSS.
+ Step 5 — Identify the BPR
+ Now look for:
+ BISI overlapping SIBI or SIBI overlapping BISI. The overlapping section is your BPR.
+ Step 6 — Wait for retracement
+ Instead of chasing the displacement, allow price to return toward the BPR.
+ Step 7 — Enter
+ Your entry can be refined around:
+ BPR, FVG, IFVG, CISD.
+ Step 9 — Target liquidity
+ Your objective should be based on the Draw on Liquidity .
+ For example:
+ SSL → Bullish BPR → BSL or BSL → Bearish BPR → SSL 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/fvg-fair-vale-gap/1785196604688-0ce207a2.png]
+ Full size 
+ Your learning progress 
+ Finished reading?
+ Finished reading? Mark this lesson complete to keep track of what you’ve covered.
+ Mark complete 
+ Know someone this could help?
+ Share the lesson with them.
+ Keep learning
+ Build on what you’ve learned
+ All lessons 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/liquidity-sweep/1790626804353-bc8f1907.png]
+ ICT Concept Liquidity Sweep Best way to trade liquidity sweep. Step-by-step guide Beginner · 20 min read 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/spx-rth-gap/1785447214862-fd03fe48.png]
+ ICT Concept SPX Regular Trading Hours (RTH) Gap How to trade the gap between yesterday's close and today's open — levels, scenarios, and entries. Advanced · 15 min read 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/10-am-open/1786045830387-cdf0e95c.png]
+ ICT Concept 10 AM OPEN The 10:00 AM Open and the 4-Hour Candle Playbook Intermediate · 20 min read 
+ Put it into practice
+ Compare prop firm rules and costs
+ Explore account structures, restrictions, and costs side by side.
+ Loading your notes…
+ These lessons explain trading concepts through educational examples. For current account terms, confirm the rules with the firm’s official documentation.
+ Explore more lessons 
+ Join Our Community
+ Live trading discussions
+ Loading community stats… 
+ Join Discord 
+ Stay Updated
+ Get the latest deals & tips
+ Subscribe 
+[IMG /_next/image?url=%2Flogos%2Ffunded-now-logo-best-prop-firm-deals.png&w=1920&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ Empowering traders with the capital they need to succeed. Find your perfect prop firm and start your funded trading journey today.
+ Platform
+ All Prop Firms 
+ Discounts & Promo Codes 
+ Compare Firms 
+ Futures Prop Firms 
+ Best Prop Firms 
+ Trading Tools 
+ Giveaways 
+ Challenges 
+ Tools
+ All Trading Tools 
+ Lot Size Calculator 
+ Consistency Calculator 
+ Return Calculator 
+ Drawdown Simulator 
+ Resources
+ Blog 
+ Economic Calendar 
+ TradingView Indicators 
+ Glossary 
+ News 
+ Newsletter 
+ Restricted Countries 
+ Firms by Country 
+ Firms by Trader Type 
+ Company
+ Review Methodology 
+ About Us 
+ Contact 
+ Privacy Policy 
+ Terms of Service 
+ FTC Disclosure: Funded.Now is an independent affiliate marketing platform. We receive commissions when you purchase through our affiliate links at no extra cost to you. This revenue helps us maintain and improve our services. All reviews and comparisons are based on our honest analysis and user feedback.
+ Risk Disclaimer: Trading involves a substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. The information provided is for educational purposes only and should not be considered investment advice. Always conduct your own due diligence before choosing a prop firm.
+ © 2026 Funded.Now. All rights reserved.
+ Privacy Terms Contact 
+ 

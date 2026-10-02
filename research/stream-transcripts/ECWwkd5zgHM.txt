@@ -1,0 +1,3601 @@
+[0:03:14] Good morning everyone guys. Happy
+[0:03:16] Tuesday.
+[0:03:18] You know, today's a Tuesday, but it's
+[0:03:20] only day when I have some free time
+[0:03:23] after stream because we're going to have
+[0:03:25] chess class until 3 p.m. today, which
+[0:03:28] means I will enjoy my life for like 1
+[0:03:31] hour, extra 1 hour.
+[0:03:35] Good morning. Good morning. Good
+[0:03:36] morning. Hi, Daniel. How are you? Hello.
+[0:03:40] Hello. Hello, guys.
+[0:03:42] Hi, Barbara. How are you guys? How's
+[0:03:45] your morning so far?
+[0:03:53] I'm doing good. Slept well, by the way.
+[0:03:58] Slept well, but didn't check my
+[0:03:59] recovery.
+[0:04:01] Oh, wow. Guys, my recovery is
+[0:04:08] 98%.
+[0:04:10] Last time I had 98%. I don't know, guys.
+[0:04:13] It was millions years ago.
+[0:04:18] Yeah, I save this a lot. Yeah,
+[0:04:21] I'm like, you know what? I'm super new
+[0:04:24] to Pine Script and Yeah, I save this a
+[0:04:29] lot.
+[0:04:32] It's like very first indicator. Yeah,
+[0:04:37] [laughter and gasps]
+[0:04:37] I know.
+[0:04:39] Can you see like 23 on your shirt, guys?
+[0:04:42] I guess it's only for me, right? Since
+[0:04:44] it's
+[0:04:45] It's mine, right? But yeah, I'm not sure
+[0:04:48] about like RTH gap. I guess it was super
+[0:04:51] easy indicator. It took me like one
+[0:04:53] attempt to do this. But yeah, I saved
+[0:04:56] this a lot.
+[0:04:59] Oh god, I forgot.
+[0:05:05] Oh man, are you kidding me?
+[0:05:08] Guys, one second. I need to remove every
+[0:05:10] single drilling I have.
+[0:05:14] Okay, let's
+[0:05:16] you know what we going to do now? We're
+[0:05:17] going to do draw levels because I forgot
+[0:05:20] it's contract change. Like I mean I knew
+[0:05:22] about this but completely forgot to draw
+[0:05:24] all levels.
+[0:05:26] Okay, let's see. I mean I'm not going to
+[0:05:29] draw like previous weekly high, previous
+[0:05:30] weekly low because my uh levels I have
+[0:05:33] indicator for these levels. Let's see.
+[0:05:36] Let's see. Let's see. Monthly chart
+[0:05:39] looks so bad.
+[0:05:43] So like super not in sync, right? I hate
+[0:05:46] contract roll over as well.
+[0:05:51] Yeah, I know. But still my uh levels a
+[0:05:53] little bit off even with B adjust on.
+[0:05:58] [sighs and gasps] Okay. What I want to
+[0:06:00] Oh, yeah. I want to see like what we
+[0:06:01] have here. We have SMT like nothing to
+[0:06:03] do on monthly chart. I guess we traded
+[0:06:05] into this for a while gap.
+[0:06:10] But I I don't like it. Like seriously
+[0:06:13] completely forgot to draw levels. You
+[0:06:15] mean untapped guys. We never traded into
+[0:06:17] this for a volume gap. It's just easier
+[0:06:19] for me to understand that this still
+[0:06:21] open for a volume gap. Morning. Morning
+[0:06:23] guys. Trying to draw levels. Sorry if
+[0:06:25] I'm going to ignore you for 5 minutes.
+[0:06:28] Huge volume imbalance here. Huge volume
+[0:06:31] imbalance here. Oh god, this market is
+[0:06:35] is so broken.
+[0:06:38] No, I guess I'm not going to draw this.
+[0:06:42] But I'm going to do this or not. [music]
+[0:06:44] No, I'm going to do this. Open. Close.
+[0:06:48] Open.
+[0:06:54] Since we got new contract, guys,
+[0:06:56] December contract. I'm just trying to
+[0:06:58] draw all levels to keep my chart clean
+[0:07:01] and don't miss anything. Uh, okay.
+[0:07:03] Labels, chart, text. Is it middle?
+[0:07:09] No, it's it's not middle. [snorts]
+[0:07:13] Yeah, it's this middle right now.
+[0:07:20] Yeah, we will see what market wants to
+[0:07:21] do. Tomorrow's the form. See,
+[0:07:28] I mean guys, we have room to go over. My
+[0:07:30] level is a little bit off simply because
+[0:07:32] I want to 7550
+[0:07:35] um
+[0:07:37] like yesterday but since contract change
+[0:07:38] price change so I guess it's going to be
+[0:07:40] like slightly higher. Maybe we'll see.
+[0:07:46] Yeah, I was looking for I'm going to
+[0:07:49] look for July.
+[0:07:52] What the heck I'm talking about? Not
+[0:07:54] July. August.
+[0:07:56] August open.
+[0:08:02] So it yesterday it was 7550 but I'm
+[0:08:04] going to shift right now to 7670 simply
+[0:08:07] because price changed. Okay
+[0:08:12] for ENQ it's going to be also a good I
+[0:08:14] mean why I'm looking for previous months
+[0:08:16] open simply because we didn't have like
+[0:08:18] nice manipulation here. See the small
+[0:08:19] week and huge body. See how we closed
+[0:08:21] this huge week here. So, which makes me
+[0:08:23] feel like we're going to get so-called
+[0:08:25] [cough and clears throat]
+[0:08:26] I call this by the way [laughter]
+[0:08:28] delayed manipulation
+[0:08:32] August open.
+[0:08:34] So, it's my like objective for the next
+[0:08:41] I would say two weeks maybe.
+[0:08:47] Okay. 50% of monthly week. You know what
+[0:08:49] guys? I like 50% of long weeks. that
+[0:08:51] treat I treat them as liquidity level.
+[0:08:55] All right, that's it. As you can see,
+[0:08:57] I'm not trying to highlight like
+[0:08:59] previous uh monthly low high. I don't
+[0:09:01] really need this
+[0:09:03] on Ninja Trader. I know like it it's
+[0:09:07] okay for me. But check the price right
+[0:09:09] now on ES. It is 76.91 on ES
+[0:09:15] monthly highs or lows are placed yet for
+[0:09:18] this.
+[0:09:21] I mean I have no idea at least.
+[0:09:23] [laughter]
+[0:09:25] Yeah. I mean for me too
+[0:09:29] it's December contract. Make sure to see
+[0:09:31] like uh 12 here. So basically it's
+[0:09:33] December. Maybe it you you see September
+[0:09:37] just like switch manually if you have
+[0:09:39] September contract still
+[0:09:44] you know guys uh for long clicks. So
+[0:09:48] everything is fractal right? Right. So
+[0:09:49] we don't really care about time frame.
+[0:09:50] When I see long week, I treat long week
+[0:09:53] as I mean ICT explained this long time
+[0:09:55] ago but we trade long weeks as liquidity
+[0:09:58] levels. So 50% of long week is basically
+[0:10:01] same sell side depends on the direction
+[0:10:03] or buy side at this po this point 50% of
+[0:10:06] monthly week is possible sell side for
+[0:10:08] us. So price may reject this. I talk
+[0:10:10] about this in my OT lesson my website
+[0:10:13] optimal trade entry lesson about 50% and
+[0:10:16] OT of u long weeks. You can read about
+[0:10:19] this
+[0:10:20] if you want to learn more about uh VIX
+[0:10:23] optimal trade entry. So everything is on
+[0:10:26] my website. I cannot create giveaway for
+[0:10:29] some reason. I will do this later guys.
+[0:10:31] [laughter] I'm going to show you lesson
+[0:10:33] once again. Funded.now/lesssons.
+[0:10:37] We go to optimal trade entry and over
+[0:10:40] here we're going to find
+[0:10:42] no no height of weeks. So I covered this
+[0:10:46] topic there. If you want to dive into
+[0:10:48] this, go guys. It's It cost you $0. It
+[0:10:52] cost you only your time. Okay, once
+[0:10:54] again, I highly recommend after reading
+[0:10:58] every single lesson, don't trust my
+[0:10:59] lessons. Go on your chart and test this.
+[0:11:02] If it's going to work for you, you can
+[0:11:04] use this. If for some reason you find
+[0:11:06] this it's not useful for you, please
+[0:11:08] don't use this. So every single lesson I
+[0:11:11] post, I highly recommend to test this
+[0:11:13] first before applying real market,
+[0:11:14] especially trying to risk your own money
+[0:11:16] on this because something that works for
+[0:11:19] me might not work for you. You need to
+[0:11:21] keep this in mind.
+[0:11:24] So you guys want um a sip of hot coffee
+[0:11:27] for now.
+[0:11:30] All right, we stuck uh we're not stuck.
+[0:11:33] We stop at weekly chart. Okay,
+[0:11:38] honestly speaking, I expect to get job
+[0:11:40] today, but maybe something will change.
+[0:11:46] Are you drinking vodka? You know, it's
+[0:11:48] not funny. By the way, I never ever ever
+[0:11:50] ever in my life tried this one. I never
+[0:11:53] ever ever in my life I tried to smoke or
+[0:11:55] something like that. Never ever.
+[0:11:58] Good morning. Hello. Hello.
+[0:12:03] We do have some SMTs at lows. The
+[0:12:05] question is if it's really important SMT
+[0:12:10] ideally yes I don't mind to see a feel
+[0:12:12] of new opening gap but my problem for
+[0:12:15] today not sure because tomorrow's FMC
+[0:12:18] the question is will they try to build
+[0:12:20] liquidity for FMC I mean I don't know
+[0:12:23] look at this daily chart on um on INQ
+[0:12:26] guys it's super super super ch like
+[0:12:30] obvious direction
+[0:12:33] but you know Guys, we talk I'm going to
+[0:12:35] talk about um since I have time today
+[0:12:38] after steam, we're going to talk about
+[0:12:39] market maker model a little bit. And I
+[0:12:41] would like to remind you something.
+[0:12:42] Let's do quick listen.
+[0:12:47] I'm going to ask questions. You're going
+[0:12:48] to answer these questions first guys.
+[0:12:50] When we have higher levels uh not not
+[0:12:54] this one, no not [clears throat] this
+[0:12:55] one. Don't listen this. When we have
+[0:12:56] height from consolidation, what we do
+[0:12:59] with this?
+[0:13:02] So for example, I'm going to draw
+[0:13:04] consolidation. It's not only on high
+[0:13:06] time frame by the way, it's on low time
+[0:13:08] frame as well.
+[0:13:13] So guys, what we usually do, I saw your
+[0:13:16] message. I will do this. I will do this.
+[0:13:18] Let me finish.
+[0:13:20] Guys, it's our height from
+[0:13:22] consolidation. I'm going to make this a
+[0:13:25] little bit darker, I guess, because hard
+[0:13:27] to see. At least for me, guys. Who knows
+[0:13:30] what you want to do with this?
+[0:13:34] Yes, we want to put quadrants, right?
+[0:13:36] Yes, exactly, guys. We want to put
+[0:13:38] quadrants. How you want to do from it's
+[0:13:40] up to you from uh up of from top of
+[0:13:43] consolidation to bottom of
+[0:13:44] consolidation. Quadrants are going to be
+[0:13:45] the same.
+[0:13:48] Guys, listen, take notes because it's
+[0:13:50] very important. And once again, you can
+[0:13:51] back test this and you will see. I'm
+[0:13:53] going to do underneath prices. I'm going
+[0:13:56] to uncheck this one. I'm going to make
+[0:13:58] this bigger so everyone can see this
+[0:14:01] guys. Everyone can see numbers. Should I
+[0:14:03] make this bigger? Smaller? Just want to
+[0:14:06] make sure everyone can see this.
+[0:14:08] Obviously zero and starts and ending
+[0:14:11] point.
+[0:14:13] I guess everyone can see this, right?
+[0:14:15] Yeah. Okay, it's great. Okay, guys. What
+[0:14:17] is our next step?
+[0:14:28] What is our next step?
+[0:14:32] [laughter] No trade. No, we can actually
+[0:14:35] trade this especially when we have this
+[0:14:37] kind of high frame consolid
+[0:14:39] consolidation. We actually can
+[0:14:41] anticipate possible move towards where.
+[0:14:45] So guys,
+[0:14:47] I'm going to repeat this again. I had
+[0:14:49] lesson about this before. But when we
+[0:14:52] have consolidation, our turning point is
+[0:14:54] 50%. Exactly. Our [music] turning point
+[0:14:57] is 50%. So let's say from um
+[0:15:03] how we want to anticipate move from
+[0:15:06] inside consolidation from upper quadrant
+[0:15:08] to lower quadrant
+[0:15:11] from upper quadrant to lower quadrant.
+[0:15:15] This is how it's going to look. I'm
+[0:15:17] going to show this uh upper and lower
+[0:15:19] quadrants for you to it's easy to see uh
+[0:15:21] to see this quadrants. Okay. So when we
+[0:15:24] trading inside consolidation medium time
+[0:15:26] frame, lower time frame, high time frame
+[0:15:28] everywhere because everything is
+[0:15:29] fractal. We moving from upper quadrant
+[0:15:31] to lower quadrant from upper quadrant of
+[0:15:34] consolidation to lower quadrant of
+[0:15:35] consolidation from lower quadrant of
+[0:15:37] consolidation to upper quadrant of
+[0:15:39] consolidation. And often what happens
+[0:15:42] inside this lower and upper quadrants? H
+[0:15:45] what we expect to get inside lower and
+[0:15:47] upper quadrants what usually happens
+[0:15:48] there guys
+[0:15:51] if you don't know like just try to guess
+[0:15:53] what we anticipate to get inside lower
+[0:15:55] and upper quadrants
+[0:15:59] yeah Daniel it can be market maker model
+[0:16:01] low with but what should happen first we
+[0:16:03] cannot just enter upper quadrant and say
+[0:16:05] okay it's going to be market maker model
+[0:16:06] there as reaction ideal scenario for us
+[0:16:10] what happens
+[0:16:13] yeah Like it's a good guys for market
+[0:16:15] maker model definitely we want to see
+[0:16:17] change in the state of delivery market
+[0:16:18] structure shift everything is nice but
+[0:16:21] first in very important guys key uh
+[0:16:23] factor for us when we want to say okay
+[0:16:26] it's going to be textbook reaction we're
+[0:16:28] sweeping liquidity inside upper quadrant
+[0:16:30] we're sweeping liquidity inside lower
+[0:16:32] quadrant this happens often I cannot say
+[0:16:35] it happens all the time because nothing
+[0:16:37] happens all the time like 100% of the
+[0:16:39] time but what happens super often we're
+[0:16:42] going to upper quadrant We sweeping
+[0:16:44] upper quadrant sell buy side we
+[0:16:47] rejecting lower we going to lower
+[0:16:49] quadrant we sweeping liquidity inside
+[0:16:51] lower quadrant once again it doesn't
+[0:16:53] need to be like like in deep lower
+[0:16:54] quadrant obviously it can be just here
+[0:16:56] but we still went there right to sweep
+[0:16:58] lower quadrant sell side that's
+[0:17:00] important to keep this in mind for us to
+[0:17:02] say okay I want to switch on lower time
+[0:17:05] frame right now and look for market make
+[0:17:07] possible smart money reversal to
+[0:17:08] anticipate market maker model we need to
+[0:17:11] get this upper or lower quadrant liquid
+[0:17:13] sweep
+[0:17:15] that's guys that's a key for us. This is
+[0:17:18] where when we can trade consolidation
+[0:17:20] that's best way to trade consolidation
+[0:17:22] with when this scenario happens when we
+[0:17:24] go to upper quadrant liquidity level
+[0:17:27] when we go to lower quadrant sweeping
+[0:17:29] liquidity level. So what usually happens
+[0:17:31] after this as Daniel said before we
+[0:17:33] anticipate to get market maker model. So
+[0:17:36] once again a reaction from higher frame
+[0:17:38] level and guys yes 5 minute can be
+[0:17:40] higher from level if you're going to use
+[0:17:42] for example 30 second chart for
+[0:17:44] executions 5 minute can be higher from
+[0:17:46] frame level but let's talk about let's
+[0:17:49] say
+[0:17:51] hourly consolidation.
+[0:17:53] Okay, we inside hourly consolidation on
+[0:17:56] hourly chart we went to upper quadrant
+[0:17:57] and we v this web by side liquidity
+[0:18:00] level guys what is our next step I'm
+[0:18:03] going to just write this on the chart
+[0:18:05] [snorts] 1 hour
+[0:18:07] consolidation what anticipate to get
+[0:18:10] next what is my oops sorry guys what
+[0:18:14] anticipate to do next my next step guys
+[0:18:16] okay we went to upper quadrant of higher
+[0:18:20] frame hourly consolidation what I'm
+[0:18:21] going to do
+[0:18:23] changing the state of delivery. But
+[0:18:24] which time frame I'm going to use?
+[0:18:29] Let's think about time frame alignment
+[0:18:30] chart. What what will happen?
+[0:18:34] 5 minute. Exactly. 5 minute guys.
+[0:18:40] I'm going to time frame
+[0:18:47] time frame alignment guys for weekly.
+[0:18:50] I'm gonna use
+[0:18:52] which time frame we use for weekly. Who
+[0:18:54] knows?
+[0:18:56] Does anyone know which we use? Which
+[0:18:58] time frame we use for weekly?
+[0:19:02] High. Okay, good job. We using for a
+[0:19:04] chart for daily
+[0:19:07] we use
+[0:19:09] for daily we use
+[0:19:12] daily chart hourly. Okay, good job. For
+[0:19:16] 4 hour chart we use
+[0:19:19] now 4 chart guys we use 15 minute.
+[0:19:23] Exactly. Good job. For hourly we use
+[0:19:29] our next we just said it's going to be
+[0:19:31] five. Right. Five minute.
+[0:19:34] Next. My favorite one
+[0:19:38] 30 minute chart is
+[0:19:43] 3 minute. Yeah.
+[0:19:46] And 15-inut chart
+[0:19:49] 1 minute I see answer. And for example
+[0:19:51] for 5 minute I don't use this personally
+[0:19:53] but I know like lots of people. Sorry
+[0:19:56] guys use this by the way 1 minute and I
+[0:19:58] would say and 2 minute you can use this.
+[0:20:01] It's up to you in case you just hate one
+[0:20:03] minute chart you can use this one 30
+[0:20:05] second.
+[0:20:07] [sighs and gasps]
+[0:20:09] Okay which means that's our time frame
+[0:20:11] alignment chart. If we have a hour early
+[0:20:14] frame consolidation once again it's
+[0:20:15] really hard to talk about PD race right
+[0:20:18] to anticipate reaction from higher level
+[0:20:20] but once again we already figure out
+[0:20:22] best scenario for us to trade height
+[0:20:24] from consolidation is move from upper
+[0:20:26] quadrant to lower quadrant from lower
+[0:20:28] quadrant to upper quadrant and we must
+[0:20:31] sweep by side there right so using time
+[0:20:33] frame alignment chart we know okay if
+[0:20:35] we're inside hourly consolidation we
+[0:20:38] swept upper quadrant buy side our task
+[0:20:41] right now to Switch on five minute chart
+[0:20:44] and look for signs of smart money
+[0:20:46] reversal. Next question guys, what is
+[0:20:48] the signs of smart money reversal?
+[0:20:52] 1 2 3 who knows
+[0:20:58] where I need to put this over here.
+[0:21:01] Who knows? Three signs.
+[0:21:07] The first one guys, what is the most
+[0:21:09] important guys? one like first one is
+[0:21:18] yeah it's gonna be sweep inside
+[0:21:19] consolidation on high time frame but I I
+[0:21:22] will call this high frame level guys
+[0:21:24] listen without higher frame levels
+[0:21:26] without higher frame structure smart
+[0:21:29] money reversal makes no sense the value
+[0:21:33] guys first rule for us is higher level
+[0:21:36] at this point inside consolidation is
+[0:21:38] going to be se of upper or lower
+[0:21:39] quadrant liquidity levels. It's very
+[0:21:42] very important. [music]
+[0:21:43] Without hydrogen level, everything makes
+[0:21:46] no sense.
+[0:21:54] Okay. Second part,
+[0:21:57] second [music] rule
+[0:21:59] is we use lower time frame.
+[0:22:03] Perfect. That's my favorite phrase. Yes.
+[0:22:05] Changing the state of delivery. Good
+[0:22:07] job. And and last one
+[0:22:15] market structure shift. Exactly.
+[0:22:18] So this where I need to put this over
+[0:22:20] here. This three signs
+[0:22:24] for us to say okay it's possible smart
+[0:22:27] money reversal. What is smart money
+[0:22:29] reversal?
+[0:22:31] Because why guys when we talk about
+[0:22:33] smart money universal our goal is to
+[0:22:35] understand what is smart money reversal.
+[0:22:37] Guys what is smart money universal
+[0:22:43] h
+[0:22:49] we need to understand basics right
+[0:22:51] before like trading.
+[0:22:54] What is smart money reversal?
+[0:23:05] I want to see like
+[0:23:09] what I want to see
+[0:23:14] track and correlation. Not really
+[0:23:16] exactly I see what I want to see. It's
+[0:23:18] transition from buy model to sell model
+[0:23:22] or it's transition from sell model to
+[0:23:25] buy model. That's what we call smart
+[0:23:27] money reversal. Transition from one
+[0:23:29] phase to another phase. Okay, make sense
+[0:23:34] guys. This part makes sense.
+[0:23:42] Yes. No.
+[0:23:44] Come on guys, we have seven more minutes
+[0:23:46] before tra uh before market open. Okay.
+[0:23:49] Okay. We figured this out. This means
+[0:23:51] our high frame level inside
+[0:23:53] consolidation going to be sweep of upper
+[0:23:55] or lower quadrant always. Okay. Our next
+[0:23:59] two steps is to go on five minute trend
+[0:24:02] since we have hourly consolidation but
+[0:24:03] you're going to use this time frame
+[0:24:05] alignment chart for different time
+[0:24:06] frames and to find lower time frame
+[0:24:08] change in the state of delivery lower
+[0:24:10] time frame market structure shift. Once
+[0:24:12] we got this structure on five minute
+[0:24:13] chart and once again over here like over
+[0:24:16] here it's going to look like that.
+[0:24:20] I'm going to make this smaller. By the
+[0:24:22] way,
+[0:24:29] let's let's change the color. Make this
+[0:24:31] smaller.
+[0:24:33] So, exact move over here on five minute
+[0:24:36] chart will look something like that.
+[0:24:38] Okay. Let's change to actually like
+[0:24:40] pink.
+[0:24:42] So in our task is to find
+[0:24:46] market structure shift change in the day
+[0:24:47] to day often is pretty much same level.
+[0:24:52] Oops. Impossible to see nearly
+[0:24:54] impossible to see.
+[0:24:57] Okay. So once he got the structure I
+[0:25:00] want to see what I want to see shorts
+[0:25:03] and as we already figured this out I
+[0:25:05] want to short from upper quadrant to
+[0:25:07] lower quadrant but our turning point
+[0:25:10] will be 50%. This means I will place my
+[0:25:12] short using five minute structure 5
+[0:25:14] minute change in the state of delivering
+[0:25:16] market structure shift but I will always
+[0:25:19] consider take some position off at 50%
+[0:25:23] of consolidation
+[0:25:25] because 50% of consolidation tells me
+[0:25:28] okay are we want to like are we still do
+[0:25:30] we still want to come back to upper
+[0:25:32] quadrant to retest some something there
+[0:25:34] or we are ready to go to lower quadrant
+[0:25:36] if I see strong displacement below 50% I
+[0:25:39] anticipate to get continuation lower
+[0:25:41] towards the lower quadrant. So that's
+[0:25:43] why sometimes I just sweep in this 50%
+[0:25:46] energy tracing back up to upper
+[0:25:47] quadrant. This happens often as well. So
+[0:25:50] I want to place this short using 5m
+[0:25:52] minute change in the state of delivery.
+[0:25:54] But I will always always always consider
+[0:25:56] partial at 50%. If I see like it still
+[0:25:59] wants to go lower, no reaction from 50%.
+[0:26:03] I'm going to keep this trade without tra
+[0:26:05] stop loss I guess and I will hold all
+[0:26:07] the way down to lower quadrant near a
+[0:26:10] liquidity level inside lower quadrant.
+[0:26:12] So your trade when you're trying to
+[0:26:14] trade consolidation will look like that
+[0:26:16] where you always want to take uh partial
+[0:26:19] at 50% off uh at 50% of consolidation.
+[0:26:23] Cannot talk a lot today guys make sense
+[0:26:26] how you want to trade consolidation.
+[0:26:28] Once again not always it's going to be
+[0:26:30] such like perfect scenario but when you
+[0:26:32] see like all stars align
+[0:26:35] this how we're going to trade it.
+[0:26:46] Okay. Okay. So, what's wrong with you
+[0:26:49] today
+[0:27:03] [laughter]
+[0:27:05] and cancel over here? Okay, we have four
+[0:27:09] more minutes, guys. So, we are ready to
+[0:27:10] trade, right?
+[0:27:16] Okay, I'm going to take screenshot. I
+[0:27:17] will post in Discord.
+[0:27:21] It's not really like strategy, but this
+[0:27:23] how you want to approach this. Once
+[0:27:24] again, don't take my words. Go on your
+[0:27:26] chart. T this test this test this. I
+[0:27:30] took screenshot. I will post in Discord.
+[0:27:31] Okay.
+[0:27:35] Deleting for now.
+[0:27:42] Okay, let's keep dropping levels because
+[0:27:44] once again, we don't really have I'm
+[0:27:46] going to post in Discord right now. So,
+[0:27:47] if you want to print this,
+[0:27:52] post it.
+[0:28:01] Hard to see when you really guys don't
+[0:28:03] have any drawings.
+[0:28:05] So what happened yesterday? We hit 75%
+[0:28:08] of a new week opening gap which was
+[0:28:09] cool. We do have SN at loss now.
+[0:28:16] Wow.
+[0:28:22] Not super confident I guess with my bias
+[0:28:24] today but I will look for move towards
+[0:28:26] this level.
+[0:28:30] If I will be in longs, I will uh I will
+[0:28:33] uh aim for 7707. [music] Why I will aim
+[0:28:36] for this level guys?
+[0:28:42] If I will find long setup, why I want to
+[0:28:44] aim for 7707
+[0:28:50] level? No. Mm- not liquidity. Think
+[0:28:54] about it. Yes, possible change in the
+[0:28:56] state of delivery. Exactly. It's going
+[0:28:58] to be possible.
+[0:29:01] for our change in the state of delivery.
+[0:29:03] Why I want to treat this as a possible
+[0:29:06] change in the state of delivery? Because
+[0:29:07] we got SMT and SV. So if market wants to
+[0:29:10] offer possible possible smart money
+[0:29:14] reversal, we need to get change in the
+[0:29:16] state of delivery, right?
+[0:29:20] Yeah, it's going to be same level in
+[0:29:22] over here.
+[0:29:24] 29,577
+[0:29:26] possible.
+[0:29:32] Can you hear my husband?
+[0:29:39] Okay guys, interesting question
+[0:29:42] that would make the swing low protected.
+[0:29:44] Yes, but best way to talk about
+[0:29:47] protected high and low is when we have
+[0:29:49] breakoff structure. Not only changing
+[0:29:51] the state of the break of structure. So
+[0:29:53] basically once you breaking above this
+[0:29:54] swing high and closing on for chart
+[0:29:57] above this level we get some break of
+[0:29:58] structure and uh it's going to be
+[0:30:01] protected low seems. What are you
+[0:30:03] talking about? Did I miss something?
+[0:30:07] Whatever.
+[0:30:11] Yeah, it's my husband.
+[0:30:14] Everyone can hear you.
+[0:30:24] Yeah, he found best time to do this.
+[0:30:48] He said he almost done. [cough]
+[0:30:51] Okay guys, market is open. Yes, let's
+[0:30:53] focus right now on trading.
+[0:31:02] Wow, so many emails. Oh, I need to
+[0:31:04] create Wait. One second.
+[0:31:21] Okay, market is open trying to stay
+[0:31:23] above New York open on both yes and Q.
+[0:31:26] Let's see what will happen next.
+[0:31:30] Seven points gap. That's bad.
+[0:31:44] creating giveway for you guys. One
+[0:31:47] second.
+[0:32:01] I had problems this morning. Took a gear
+[0:32:02] away. Yeah, I did this. Okay, it works
+[0:32:05] now. At least something
+[0:32:16] Yeah guys, I did the giveway traify for
+[0:32:18] today. Oh wow, such a big drop.
+[0:32:24] I believe SPX wants to smash his
+[0:32:26] liquidity levels from yesterday.
+[0:32:27] Remember we talked about this yesterday.
+[0:32:30] I believe he wants to go there first.
+[0:32:41] Yes, I believe so.
+[0:32:51] I don't need this one. I need this one.
+[0:32:55] So nothing significant happened yet
+[0:33:00] but we got huge displace in below New
+[0:33:01] York with night open
+[0:33:04] because for new contract I believe for
+[0:33:06] RTY as well.
+[0:33:13] Hey guys hello hello guys if you just
+[0:33:14] joined hello we had small lesson if you
+[0:33:16] want to watch about from consolidation
+[0:33:19] you can watch in replay after stream.
+[0:33:29] But for now guys, for now, let's focus
+[0:33:33] on trading.
+[0:33:36] I don't use opening gap a lot.
+[0:33:42] I believe SPX really wants to hit dumb
+[0:33:45] dash. What's wrong with you?
+[0:33:48] Hit still side that it left yesterday.
+[0:33:51] We have lots of equal lows lower because
+[0:33:54] if so it's it can be nice action from
+[0:33:56] there.
+[0:34:00] Nothing is going on so far. Let's check
+[0:34:01] gold real quick.
+[0:34:04] On gold is it still same contract? I
+[0:34:08] believe so.
+[0:34:11] On gold I want to see 4276. We talked
+[0:34:14] about this uh last week. So it's going
+[0:34:16] to be possible monthly immediate
+[0:34:17] rebalance. talking about immediate
+[0:34:19] rebalance. I will talk about this either
+[0:34:21] today after Steam or tomorrow morning.
+[0:34:25] Yeah, it might be Chappie. Oh, hello
+[0:34:27] Amelia. I didn't see you yesterday.
+[0:34:28] Hello. Hello.
+[0:34:39] Still uh still kind of hard to engage in
+[0:34:41] short for me personally engage in
+[0:34:42] shorts, but I don't mind this lower.
+[0:34:44] Just going to a little bit chill.
+[0:34:53] Morning. Morning guys. Good morning
+[0:34:54] guys. How are you? No trades yet. I mean
+[0:34:57] like nothing yet for us.
+[0:35:00] I'm trading my funded. Ah different
+[0:35:04] question. I trade my funded with
+[0:35:05] evaluations when I need to pass
+[0:35:07] evaluations. Yes. Uh okay. I have like
+[0:35:10] two different types of evaluations. When
+[0:35:12] I need to pass evaluations, you always
+[0:35:14] know about this. I never hide this. And
+[0:35:16] I trade this with my funded with same
+[0:35:18] contract size and same risk. But
+[0:35:20] sometimes I buy evaluations already
+[0:35:22] funded with certain prop firms. Let's
+[0:35:24] say it's lucid. But for example, their
+[0:35:27] price action like when you're like uh
+[0:35:29] you know what I don't I don't want to
+[0:35:31] trade them today. I don't want to risk
+[0:35:33] my funded accounts trading this crap and
+[0:35:36] I buy evaluations like when I see money
+[0:35:38] set up but conditions conditions for
+[0:35:41] trade like overall super like super bad
+[0:35:44] like low probability conditions I trade
+[0:35:46] my valuations and risk that invaluations
+[0:35:49] is slightly bigger usually but once
+[0:35:52] again I always talk about this like when
+[0:35:53] I want to trade the valuations only when
+[0:35:56] I trying to pass a V but I trade them
+[0:35:58] with my funded and so on. So I I have
+[0:36:02] two different type types of I trade
+[0:36:08] but sometimes like once again I simply I
+[0:36:10] know why my brain cannot trade paper
+[0:36:12] money when it's really low probability
+[0:36:14] conditions. I I still feel like I would
+[0:36:16] try to spend money on evaluations at
+[0:36:19] least I spent my money on this
+[0:36:21] evaluations and I feel a responsibility
+[0:36:24] for these accounts.
+[0:36:26] How long?
+[0:36:27] You know, I would say
+[0:36:31] depends on account size. For 150k, it
+[0:36:33] took me like six weeks to pass accounts.
+[0:36:39] For 50k for Apex, I pass this quickly
+[0:36:42] like two weeks.
+[0:36:45] I don't I don't pass them for one day.
+[0:36:48] Sometimes it's like really like small
+[0:36:50] slow market. So, sometimes it takes
+[0:36:52] longer. But for 150k accounts, it was
+[0:36:55] six or seven weeks to pass. I take this
+[0:36:58] slow. I just trying to show like
+[0:37:00] realistic trading. You don't need to
+[0:37:01] full port to pass. I mean, you actually
+[0:37:04] can, but it's wasting of your money.
+[0:37:08] No, no, no, no. Listen, for Tradeify and
+[0:37:11] Lucid, it's one time evaluation fee. You
+[0:37:14] can take your time. So, you're not going
+[0:37:15] to get like uh a renew for next month.
+[0:37:18] No, no. You're not going to be charged
+[0:37:20] for second months for with Tradeify and
+[0:37:22] Lucid for example. With take profit
+[0:37:24] trader, yes, you're going to be charged
+[0:37:25] for second months and for epics as well
+[0:37:27] for legacy accounts.
+[0:37:30] But for Trade and Lucid, no. Basically,
+[0:37:32] you pay just once and that's it. Take
+[0:37:34] your [music] time. That's the beauty of
+[0:37:36] one time evaluation fee.
+[0:37:46] You're not limited this time and you're
+[0:37:48] not going to have activation here.
+[0:37:53] Yeah. It used to be like that.
+[0:37:54] Everything changed like last year I
+[0:37:56] would say or like year and a half. Yeah.
+[0:38:00] Yeah. It's good. It's good because it's
+[0:38:02] really hard to like pay monthly fee all
+[0:38:04] the time. Especially when you have lots
+[0:38:07] of perms. It just I know like it's
+[0:38:08] wasting of money. That's why people full
+[0:38:11] ported like accounts before simply
+[0:38:13] because they didn't want to pay like for
+[0:38:14] second month
+[0:38:17] also like it used to be like activation
+[0:38:18] for uh activation here for every single
+[0:38:20] prop right now it's not like that
+[0:38:22] anymore
+[0:38:24] which is good
+[0:38:30] it's not good you know depends uh
+[0:38:33] depends if you just like started trading
+[0:38:35] I truly believe like evaluation is good
+[0:38:37] for you to practice it basically
+[0:38:39] prepares you to funded account and how
+[0:38:41] you're going to treat your funded
+[0:38:42] account in the future. If you're already
+[0:38:44] like raw, if I can say so, and you're
+[0:38:46] like good uh in your funded account, you
+[0:38:48] like taking payouts all the time, maybe
+[0:38:51] you're right, you can like increase your
+[0:38:53] contract size and increase your risk
+[0:38:54] when you passing your evaluation. But in
+[0:38:56] for me personally, my understanding
+[0:38:58] evaluation is basically preparation for
+[0:39:00] funded account.
+[0:39:03] Why so many people after passing
+[0:39:05] evaluations blow accounts? Because of
+[0:39:07] course, it's easy to full board. It's
+[0:39:09] easy for me to full port as well. I did
+[0:39:10] this before many many times to pass for
+[0:39:12] one day. But can you keep your funed
+[0:39:14] account after this without like proper
+[0:39:17] preparation? Probably no. That's why 99%
+[0:39:20] of people blowing accounts funded
+[0:39:21] accounts after passing.
+[0:39:25] [gasps and sighs]
+[0:39:26] That's true.
+[0:39:30] still below New York midnight open and Q
+[0:39:32] looks slightly more bullish in my
+[0:39:34] opinion comparing to ES
+[0:39:41] you know what
+[0:39:44] uh rules not like it's they're not going
+[0:39:46] to change like for every single prop
+[0:39:48] firm but once again before buy you buy
+[0:39:50] an evaluation
+[0:39:52] like everything clearly stated on
+[0:39:54] website proper website what you're going
+[0:39:56] to have on funding what you're going to
+[0:39:57] have on evaluation I know why people
+[0:39:59] skip this important part.
+[0:40:04] Yes, exactly. I I'm like I'm a guest of
+[0:40:07] full porting.
+[0:40:09] Yes, exactly. And you know what is good
+[0:40:12] for this at this point? Consistency is
+[0:40:14] good. So basically, you need to be
+[0:40:16] consistent with your profit. It's not
+[0:40:17] like you one day you made like $10,000,
+[0:40:19] another day you made like 100 bucks. So
+[0:40:22] consistency rule at this point is good,
+[0:40:24] but at the same time sometimes it's not
+[0:40:26] good. But yeah,
+[0:40:29] if you like full port a lot, probably I
+[0:40:31] would try to um buy account where I'm
+[0:40:34] going to have consistency on funded to
+[0:40:36] protect my account
+[0:40:40] from from my full boards and
+[0:40:45] yeah, [snorts] but end goal like u to
+[0:40:47] trade life account, right?
+[0:40:50] So yes, still below New York midnight
+[0:40:52] open and Q just broke above this level.
+[0:40:54] Yes, still be bullish in my opinion.
+[0:40:59] Yes, need to break above New York
+[0:41:01] midnight open as well somehow. I don't
+[0:41:03] like how SPX just dancing near the sell
+[0:41:06] side liquidity levels. That's super
+[0:41:07] annoying
+[0:41:17] in stocks. Yes. Uh mostly I trade
+[0:41:19] options.
+[0:41:21] Uh but yeah, I do invest in stocks. You
+[0:41:23] know what? I still truly believe in in
+[0:41:25] NEO. It's Chinese stock and I honestly
+[0:41:28] have no idea. I mean, I lost lots of
+[0:41:31] money on this NEO options, but I still
+[0:41:34] have no idea why with their technologies
+[0:41:37] they're still that low on this market.
+[0:41:51] I mean I do trade options like NEO PR
+[0:41:55] and something like this. We trade this
+[0:41:57] but
+[0:41:59] I Chinese stock
+[0:42:06] [snorts]
+[0:42:09] honestly I have no idea why like why
+[0:42:13] it's that low with their technologies
+[0:42:15] with everything like that.
+[0:42:21] Yes, my it's new contract, Alex.
+[0:42:39] I started buying new. It was 201
+[0:42:44] 18.
+[0:42:47] It was moving good.
+[0:42:51] Yeah, I lost money as well on options.
+[0:42:59] Different story
+[0:43:05] according to S. Yes, probably
+[0:43:09] structure according to a yes spel set a
+[0:43:12] minus lower. We're gonna we just hit 25
+[0:43:15] and 50% price injected. We don't have
+[0:43:17] two minute but also problem is small gap
+[0:43:21] just so put
+[0:43:35] yeah once Trump allows to um enter
+[0:43:40] Chinese uh cars to us that's it Tesla
+[0:43:43] will be destroyed every single EV car
+[0:43:45] will be destroyed and probably they
+[0:43:47] understand this but still once again
+[0:43:49] with new technologies like Tesla just
+[0:43:52] like I don't know like
+[0:43:55] I don't even want to compare them
+[0:44:00] will never I mean I know
+[0:44:02] I know
+[0:44:04] but you know what I saw on YouTube uh
+[0:44:07] one guy did test drive a Chinese car
+[0:44:09] here in the US I have no idea how it was
+[0:44:12] allowed to do this But
+[0:44:28] yeah, one guy did a test test drive for
+[0:44:30] this car.
+[0:44:40] I found the future's family. I never
+[0:44:42] traded with them,
+[0:44:44] but I heard good good reviews about them
+[0:44:46] as well.
+[0:44:49] [snorts]
+[0:44:51] I don't know, Michael. I don't know.
+[0:45:06] The thing is, was it expensive to this
+[0:45:08] car? Yes.
+[0:45:10] Who knows?
+[0:45:17] Max loss limit depends on account size.
+[0:45:18] For 150k between 400 450 bucks, it's my
+[0:45:22] maximum loss limit. This is when I lock
+[0:45:24] out my accounts. [music] For uh 50k,
+[0:45:26] it's around like 250. Can be 270. So,
+[0:45:29] it's not a big deal, but usually less
+[0:45:31] than 300 bucks.
+[0:45:34] [clears throat]
+[0:45:38] You know what I see right now? Oh yes.
+[0:45:43] If it's going to displace above New York
+[0:45:45] midnight open, I really want to see this
+[0:45:47] one. Oh, look at this pink arrow. Looks
+[0:45:51] good.
+[0:45:55] Wait, like that better. If it's going to
+[0:45:59] displace above
+[0:46:01] open New York midnight open, we have a
+[0:46:03] chance to bounce here.
+[0:46:05] Maybe it's going to be harder to engage
+[0:46:08] in this trade
+[0:46:13] probably. Yes, it will be hard to
+[0:46:14] engage.
+[0:46:17] I have no idea actually where I want to
+[0:46:19] long.
+[0:46:21] Do I want to enter long at the test of
+[0:46:23] 9mm open after breaking above this level
+[0:46:25] with stop loss over here?
+[0:46:28] 14 points. That's not That's a lot.
+[0:46:35] That's a lot.
+[0:46:38] Okay, let's see guys. ENQ looks slightly
+[0:46:40] more bullish. Let's see if yes and ENQ
+[0:46:42] can stay above the New York bit open and
+[0:46:44] open. If so, I will consider passong. I
+[0:46:46] don't know exact entry yet as well as I
+[0:46:49] don't know exact stop loss. I will
+[0:46:51] consider something like that but I'm not
+[0:46:53] sure about exact entry.
+[0:47:00] We already change country guys. Listen
+[0:47:02] careful how you want to like uh make
+[0:47:05] sure it's time to switch uh contract.
+[0:47:07] You go to barchart.com
+[0:47:10] and you usually want to compare
+[0:47:11] September and December contract or in
+[0:47:13] other words old and new contract. If
+[0:47:16] volume on new contract and open interest
+[0:47:19] on new contract is higher than on old
+[0:47:22] contract this means it's time to switch.
+[0:47:25] So right now open interest and volume on
+[0:47:27] new contract is higher which means it's
+[0:47:30] time to switch.
+[0:47:36] See me data. Yeah sure. Uh
+[0:47:39] how much is like seven bucks a month if
+[0:47:40] I'm mistaken or eight already.
+[0:47:52] No, no, no, no. Guys, listen careful.
+[0:47:55] When you're trying to look for longs,
+[0:47:58] make sure on for example, make sure ES
+[0:48:01] also shows signs of bullishness for us
+[0:48:03] to engage in longs.
+[0:48:05] Can we see like bullish right now? Yes,
+[0:48:08] we can see this. Can I say ES is bullish
+[0:48:10] right now? Absolutely not. So, our task
+[0:48:13] is to be patient and wait for market to
+[0:48:16] be in sync. Both either bullish or
+[0:48:19] bearish. Okay. In such a case, S&P short
+[0:48:23] model building but structure looks
+[0:48:24] bullish on ENQ. Yes, you want to wait
+[0:48:26] for what? You want to see either in Q
+[0:48:28] turning beish, you're waiting for 2
+[0:48:30] minute OB on SPX to engage in shorts.
+[0:48:32] That's only case when you want uh
+[0:48:34] shorties. Okay.
+[0:48:50] My English also not perfect.
+[0:48:54] That's only scenario where ES will turn
+[0:48:56] bullish. Okay, it's not bullish. Keep
+[0:48:59] this in mind. Okay.
+[0:49:10] What did what I just just did?
+[0:49:16] How I did this? How I did this?
+[0:49:20] Oh, it was different line then whatever
+[0:49:29] because for example what we see we have
+[0:49:31] two minute OB on SPX. Can I can I see in
+[0:49:34] Q still can I see in Qish right now? Not
+[0:49:38] really. For example, if INQ could break
+[0:49:40] below 9M open in New York and we could
+[0:49:43] start talking about possible short on
+[0:49:44] S&P to aim for equal here. It's not
+[0:49:48] valid yet. Market is kind of decoupled.
+[0:49:52] Our goal is to wait for market either to
+[0:49:54] be bullish. I mean ES and Q to be
+[0:49:55] bullish or bearish.
+[0:49:58] SPX and AS trying to stay beish and Q is
+[0:50:01] still bullish. So this basically stops
+[0:50:04] me from engaging in any trades. Hello.
+[0:50:07] Hello guys. Good morning. Nice to see
+[0:50:09] you here. We still chilling now. No
+[0:50:12] setups. Just trying to be patient and uh
+[0:50:14] don't force any trades [cough]
+[0:50:18] because once in Q turns be your setup is
+[0:50:20] going to be this one.
+[0:50:23] Stop loss above 50% and we're going to
+[0:50:25] aim for this level
+[0:50:30] and this one.
+[0:50:33] That's going to be trade idea which
+[0:50:35] gonna be high probability trade idea was
+[0:50:37] for this kind of chop.
+[0:50:40] But what stops us right now in Q.
+[0:50:45] [gasps]
+[0:50:47] I'm going to trade against five accounts
+[0:50:49] today only TP team. I don't like perform
+[0:50:53] but I will trade 500
+[0:50:55] just as you can see not valid. I mean
+[0:50:57] looks good definitely looks good as
+[0:50:59] textbook but in cute tells me opposite.
+[0:51:09] Chilling. Waking out.
+[0:51:24] Still nothing. Still nothing, guys.
+[0:51:28] Google translation in real time for
+[0:51:30] YouTube chat. Yes, I saw this. I
+[0:51:32] remember when I was trying to write
+[0:51:33] something in Russian, it was translated
+[0:51:35] to English immediately and I was like,
+[0:51:37] "No,
+[0:51:39] no."
+[0:51:44] So, at this point, we don't really care
+[0:51:46] about Bish OB on and Q. We do care how
+[0:51:48] we react from 9:00 p.m. open and New
+[0:51:50] York midnight open. So, let's say we got
+[0:51:52] 2 minute, but price still keep closing
+[0:51:55] above um New York midnight open. So at
+[0:51:57] this point, we're just going to wait for
+[0:51:58] the break below these two levels
+[0:52:18] for entry usually two or three minute
+[0:52:20] chart.
+[0:52:23] Short not looking good. No.
+[0:52:28] I mean, for me personally, it doesn't
+[0:52:30] look good.
+[0:52:39] Um, gold
+[0:52:42] like overall on gold I'm looking for
+[0:52:45] lower.
+[0:52:47] I'm looking for possible monthly mutual
+[0:52:49] balance at 4276.
+[0:52:51] So definitely we may bounce like next 10
+[0:52:54] uh higher 10 higher 10 more points
+[0:52:56] higher but I wouldn't long this probably
+[0:53:09] yeah I mean we can bounce to this
+[0:53:11] liquidity level here
+[0:53:14] let's see something
+[0:53:20] Yeah, very close to about 50%.
+[0:53:30] I don't know, guys.
+[0:53:33] So, technically we can do this this one,
+[0:53:35] but
+[0:53:57] >> [cough]
+[0:53:57] >> And you're still [clears throat]
+[0:53:57] bullish. You're either waiting for ES
+[0:54:00] turn bullish to keep looking for longs
+[0:54:03] or in turn bish.
+[0:54:23] and he couldn't break him and change
+[0:54:24] over and over again. Yeah, our goal is
+[0:54:26] to see how we plan with non open in New
+[0:54:28] York but not open right now
+[0:54:32] before from back in the web large
+[0:54:35] overnight range. I mean yeah not not
+[0:54:37] going to force anything but if it's
+[0:54:39] going to be textbook stuff we had not to
+[0:54:40] try. I already said I'm going to trade
+[0:54:42] five uh five funded accounts. Not going
+[0:54:44] to trade all my accounts.
+[0:54:47] So no reason for this in Q still
+[0:54:49] bullish. Yes. Needs to break above New
+[0:54:51] York open to turn bullish as well.
+[0:55:04] Nothing.
+[0:55:07] [gasps]
+[0:55:08] Your chart looks ugly. I would say it
+[0:55:10] looks ugly for all of us unfortunately.
+[0:55:21] Do you believe in equal height? Yeah,
+[0:55:23] sure.
+[0:55:28] I'm going to seem longer today. So,
+[0:55:33] because sometimes when this kind of chap
+[0:55:35] first hour after market open, we get a
+[0:55:37] nice perception after this. Let me close
+[0:55:39] the door. Kind of cold.
+[0:56:01] I opened this long time ago.
+[0:56:07] Where is disconnect?
+[0:56:10] Can I close and open this? Can I close
+[0:56:12] and open this? Okay.
+[0:56:23] No, I'm going to show you like that.
+[0:56:31] One second, guys.
+[0:57:45] My husband just playing like he wrote a
+[0:57:47] program but this program doesn't work
+[0:57:56] for some reason. He updated this
+[0:57:58] yesterday and it doesn't work right now.
+[0:58:02] Do you have problem with trade? I mean,
+[0:58:04] I connected accounts. I didn't place any
+[0:58:06] trades yet. So, I don't know.
+[0:58:18] Yeah, he found new habit to write
+[0:58:20] applications.
+[0:58:29] This something.
+[0:58:31] Yeah, I was mid because my husband was
+[0:58:33] trying to fix something.
+[0:58:37] He didn't want to be on Steam.
+[0:58:40] He's shy.
+[0:58:45] Trade syncing not working. Um guys, you
+[0:58:48] scaring me right now. Trade is down.
+[0:58:51] Should I even like need to [laughter] to
+[0:58:54] place any trades?
+[0:58:56] I use a duplicant, but you keep saying
+[0:58:58] like trade is not working. So, I'm kind
+[0:59:00] of scared because of this. What is going
+[0:59:02] on?
+[0:59:07] I mean, it's a it's not a good sign for
+[0:59:09] me. I'm going to trade 500 today, not
+[0:59:11] 3500.
+[0:59:15] My bias, you know, like it's preform
+[0:59:17] price action, so I'm not quite sure yet
+[0:59:22] about bias. So, technically, I don't
+[0:59:25] mind to see slightly lower too long.
+[0:59:30] This this setup not valid by the way
+[0:59:32] yet.
+[0:59:33] It's just possible idea once in Q turns
+[0:59:35] Bish. I will let me move this to the
+[0:59:38] right because some people watching me on
+[0:59:40] mute classic right
+[0:59:46] it's not valid
+[0:59:48] unless we get NQ break below New York
+[0:59:51] but net open and I'm open. So how I see
+[0:59:53] like overall picture in my perfect world
+[0:59:56] we're going down. So you can sell side
+[0:59:58] here over here and over here and press
+[1:00:00] reacting that's ideal scenario for me
+[1:00:06] maybe even offers V-shaped reversal also
+[1:00:08] don't mind
+[1:00:11] but so far it's super chia you know guys
+[1:00:13] classic example when we have gap on S&P
+[1:00:16] smaller than 10 points so it's like less
+[1:00:18] than 10 points so usually ES is inside
+[1:00:22] consolidation first one hour or Oh,
+[1:00:26] >> see like classic example of this. We
+[1:00:28] talked about this many many times before
+[1:00:34] what is S? You keep writing S is like
+[1:00:37] support.
+[1:00:42] I I I cannot think about any other words
+[1:00:45] with S.
+[1:00:52] I'm not going to do this anymore, Sean.
+[1:00:53] I promise I will do my best to control
+[1:00:56] myself.
+[1:00:58] [laughter]
+[1:01:10] Why I don't like this music?
+[1:01:12] You like to listen to me only? I mean, I
+[1:01:15] don't mind. [clears throat]
+[1:01:18] So technically, yes. That's why I drew
+[1:01:20] the straight idea on SPX here, right? So
+[1:01:23] technically it's valid but my biggest
+[1:01:25] problem with this trade is in Q in Q
+[1:01:28] still staying bullish. I don't want to
+[1:01:30] short mark like one market one once
+[1:01:33] another market calculated market is
+[1:01:35] bullish.
+[1:01:40] Oh yeah I just forgot to
+[1:01:44] sure I completely forgot about this. One
+[1:01:46] second.
+[1:02:10] [snorts]
+[1:02:24] >> [clears throat]
+[1:02:29] >> Okay, okay, okay guys, now this and Q
+[1:02:33] and Q trying but really I don't want to
+[1:02:35] force any shorts because of this thumb
+[1:02:37] and Q and look at in Q New York open we
+[1:02:40] keep sweeping this level cannot close
+[1:02:42] above so it's really looks like trap
+[1:02:48] okay
+[1:02:50] so this market is
+[1:02:53] just playing with you. Wait, wait,
+[1:02:55] Dasha. Don't force any traits.
+[1:02:58] Patience, space.
+[1:03:01] Sometimes you need to sit on your butt
+[1:03:03] just for hours to get 10 points. It's
+[1:03:05] normal. Like, it's okay, Dasha. Take
+[1:03:07] your time.
+[1:03:10] Take your time. Don't be in rush to take
+[1:03:13] any setups
+[1:03:15] as usual. You know what?
+[1:03:19] uh when we have a job you said as usual
+[1:03:22] we still keep like we keep getting good
+[1:03:24] trades
+[1:03:25] it's all about like patience and I guess
+[1:03:27] at this point why so many people keep
+[1:03:29] losing inside the chop because they
+[1:03:31] don't want to see like they don't want
+[1:03:32] to wait for market to like to be in sync
+[1:03:35] right now it's not in sync what we can
+[1:03:36] see on Q is bullish structure what we
+[1:03:39] can see on yes it's kind of bearish
+[1:03:41] because it's decoupled market if one
+[1:03:44] asset is bullish another one is bullish
+[1:03:46] and especially inside consolidation
+[1:03:50] It's a good sign for you to wait.
+[1:03:54] Who is she talking to? To you. Long time
+[1:03:57] no see. By the way, where were you?
+[1:04:01] Where were you before?
+[1:04:05] Let's check. Gold.
+[1:04:15] I know. I don't like gold.
+[1:04:39] Yeah, guys, it's 10:00 a.m. finally
+[1:04:41] and keep trying in really really trying
+[1:04:44] right now. First closure below this
+[1:04:46] level. So, basically validating move to
+[1:04:48] downside first which is good.
+[1:04:52] First closure guys. Wow. Finally.
+[1:04:57] Okay, I may look uh for stop on the SPX.
+[1:05:00] Then
+[1:05:03] it does not mean I need to like engage
+[1:05:04] in shorts like right away, right? Since
+[1:05:06] we're near like lows the day, but it's a
+[1:05:09] good sign for me to start looking for
+[1:05:10] possible reaction as long as we below
+[1:05:12] this two levels.
+[1:05:15] Everyone go like, uh, excuse me.
+[1:05:24] Yes, Sean. That's from our lesson.
+[1:05:26] Morning lesson. Mhm.
+[1:05:32] We went from where? Yeah. By the way,
+[1:05:34] guys, great example from morning lesson.
+[1:05:37] Here is your uh consolidation on
+[1:05:39] 15-minut chart, right? We went to lower
+[1:05:41] quadrant, swept sellside inside lower
+[1:05:43] quadrant. Price went where? To 50%
+[1:05:46] closed above this level. Let's see as
+[1:05:48] long as we above this 50% what we want
+[1:05:50] to see. We want to see move towards
+[1:05:53] where upper quadrant upper quadrant near
+[1:05:56] liquidity level near 43 48. It's like
+[1:06:00] like an example.
+[1:06:04] Daniel receive a point. Good job my my
+[1:06:08] boy.
+[1:06:20] Wow, this chop is real.
+[1:06:28] Oh, you're trying to short. Okay. Okay.
+[1:06:34] You want to see 40 points lower? Okay.
+[1:06:44] I'm not looking for 40 points lower. So,
+[1:06:47] but yeah, looks good.
+[1:06:55] Let's see. I do like K closed below this
+[1:06:57] levels, two levels on NQ.
+[1:07:01] Let's see if it's going to be minor
+[1:07:02] pullback.
+[1:07:08] My my son's name is Daniel is popular
+[1:07:11] name.
+[1:07:14] I used to think like this Nathan is not
+[1:07:17] popular any name but like I know like I
+[1:07:18] hear Nathan a lot right now
+[1:07:31] like everywhere it's common one. Yeah.
+[1:07:57] Yeah, my son. I like Daniel. It's real
+[1:07:59] nice name.
+[1:08:02] But Daniel is super common name.
+[1:08:10] Let's see if it's going to pull back to
+[1:08:12] the fair value. You go.
+[1:08:16] >> [snorts]
+[1:08:43] >> guys. I'm going to have hair appointment
+[1:08:44] on Thursday. It's going to be blown
+[1:08:46] finally.
+[1:08:50] Let's see if you're going to get pulled
+[1:08:51] back to the fair value gap.
+[1:08:55] That looks good to keep driving lower.
+[1:09:02] I like it.
+[1:09:08] Come on. Give me pull this for a while.
+[1:09:10] I get to try.
+[1:09:13] I don't mind
+[1:09:17] [gasps]
+[1:09:18] guys. Guys, I'm going to steam longer
+[1:09:20] today because I believe we're going to
+[1:09:22] get nice setup. I hope it's not going to
+[1:09:25] just drop.
+[1:09:27] I mean, I don't feel former setup was
+[1:09:29] there according to my model, but the
+[1:09:30] problem was in Q. So, I would say it's
+[1:09:33] fine.
+[1:09:37] I don't feel like I missed something.
+[1:09:42] Sometimes it's better to protect your
+[1:09:44] accounts when you see market is
+[1:09:46] decoupled. Even if your model is here.
+[1:09:50] [clears throat]
+[1:10:16] >> [sighs]
+[1:10:18] >> Okay.
+[1:10:26] Yeah. Yeah. I received this notification
+[1:10:28] in the trader this morning. I guess I
+[1:10:30] received this during PM session
+[1:10:32] yesterday.
+[1:10:39] Once again don't feel like once again
+[1:10:40] for more I do like to see setup was
+[1:10:43] playing out here but the problem was in
+[1:10:45] Q
+[1:10:48] if it if you could trade below New York
+[1:10:50] PT open once S&P forms the setup we
+[1:10:52] could be in trade a long time ago but
+[1:10:55] okay
+[1:11:00] once again don't feel bad about that
+[1:11:01] it's Okay,
+[1:11:08] yesterday two trade ideas also play out.
+[1:11:10] Yesterday was good.
+[1:11:19] I'm a bit annoyed.
+[1:11:26] You're not sure like I mean nothing to
+[1:11:28] show you. [laughter]
+[1:11:36] I didn't take the street.
+[1:11:48] Yeah, it's okay.
+[1:12:02] model play out.
+[1:12:06] You miss short because you were afraid.
+[1:12:08] Oh my man. Don't be afraid.
+[1:12:12] As long as you have good risk management
+[1:12:15] like loses should not hurt your account.
+[1:12:22] Okay.
+[1:12:28] Super annoying and kill.
+[1:12:40] I do speak Russian. Yeah, I'm not
+[1:12:43] Russian, but I do speak Russian
+[1:12:48] for this ICT model around like 60%.
+[1:12:56] Not going to give you like you know this
+[1:12:59] strategy is 99% win rate. No, not at
+[1:13:04] all. [laughter]
+[1:13:06] It's run like 60.
+[1:13:24] How am I Russian? My name is Zane.
+[1:13:28] Did you speak Russian with me? I believe
+[1:13:30] um YouTube translated.
+[1:13:34] If I saw something, it was in English.
+[1:13:48] Okay.
+[1:14:03] Speak something in Russian. You know
+[1:14:05] what is funny? on Traify TV with Amas.
+[1:14:08] We have Russian lessons, free Russian
+[1:14:11] lessons when we're trying to learn like
+[1:14:13] uh something in Russian.
+[1:14:17] I know probably you know Amas. Uh he
+[1:14:19] will go to Florida like soon. August
+[1:14:22] October. He said October. We will go to
+[1:14:24] Russian restaurant and he will try
+[1:14:26] Russian food for the first time in his
+[1:14:28] life.
+[1:14:36] >> [laughter]
+[1:14:36] [gasps]
+[1:14:38] >> That's funny, right?
+[1:14:44] Oh, he's already in Florida.
+[1:14:47] Oh, wow. Okay.
+[1:14:52] No, no, he's going to be in Florida. We
+[1:14:54] have nice Russian restaurant here in
+[1:14:56] South Florida. We have like many
+[1:14:57] different Russian restaurants here.
+[1:15:00] What is Bill?
+[1:15:03] You can ask Google.
+[1:15:07] Oh, you know what is funny guys?
+[1:15:09] Yesterday, I mean guys, I'm old enough
+[1:15:11] to have Facebook page and I was Facebook
+[1:15:14] page like I'm not part of this group,
+[1:15:17] but it was like in recommendations group
+[1:15:20] calls like Tesla owners in Florida or
+[1:15:23] something like that. And one guy said
+[1:15:26] like he wrote a post saying like I live
+[1:15:29] in Melbourne, Florida. I'm looking for
+[1:15:31] Tesla service. Uh, can you recommend
+[1:15:34] something? Like imagine guys, he went to
+[1:15:36] Facebook to ask this question instead of
+[1:15:39] go to Google map and search this.
+[1:15:46] So he went to Facebook to write like
+[1:15:48] where can I find Tesla service places in
+[1:15:51] Melbourne? And I was like so basically
+[1:15:54] you wasted five minutes of your life
+[1:15:56] instead of go to Google map and search
+[1:15:59] this one.
+[1:16:01] I have no words. I I just have no words.
+[1:16:04] I have no words how this works.
+[1:16:16] No, I just my brain refused to
+[1:16:18] understand this guys.
+[1:16:21] Like no way I'm going to go to Facebook
+[1:16:23] asking questions I can like find on
+[1:16:25] Google Map or Google.
+[1:16:28] Oh, crazy. That's crazy.
+[1:16:35] He has Tesla. So basically, it's
+[1:16:37] something new to flex Teslas in 2026.
+[1:16:40] Teslas is a like most of Teslas are
+[1:16:43] portable cars.
+[1:16:45] So it's not car that you need to flex.
+[1:16:50] I want straight SPX. It just I mean it
+[1:16:52] was brilliant setup but still has cell
+[1:16:54] side lower.
+[1:17:00] No, I mean I never like answer this kind
+[1:17:03] of questions on Facebook. I was just
+[1:17:04] scrolling and saw this post and I was
+[1:17:06] like what the heck? What is going on?
+[1:17:12] Google Google to Google something.
+[1:17:13] [laughter]
+[1:17:19] Yeah, guys, it's insane.
+[1:17:38] nice nice bread and peanut. Nice. This
+[1:17:40] one could could be nice short, but once
+[1:17:42] again, my concern was in Q. That's why I
+[1:17:44] didn't take this one. But once again, no
+[1:17:46] complaints. It's only 9 10:16.
+[1:17:50] Yeah, guys, while we're waiting for a
+[1:17:52] nice textbook set up, let's hit the like
+[1:17:54] button and let's hit
+[1:18:00] to the giveaway.
+[1:18:11] I believe you're going to get nice read.
+[1:18:14] By the way, guys, talking about Spanish,
+[1:18:16] you know what I did on my website?
+[1:18:17] Because I have lots of le lessons in uh
+[1:18:20] on my website, you know what I did? If
+[1:18:22] you speak Spanish and don't speak
+[1:18:24] English, you can right now switch to
+[1:18:27] Spanish version on this website.
+[1:18:29] Everything will be in Spanish.
+[1:18:31] Everything will be in Spanish
+[1:18:35] just in case you don't speak uh English.
+[1:18:39] So right now if you go on my website you
+[1:18:41] will be able to switch to from English
+[1:18:43] to Spanish.
+[1:18:52] Yeah, I'm working on everything else.
+[1:18:53] It's really hard to convert. But guys,
+[1:18:56] give me some time. I will translate
+[1:18:57] everything on this website to Spanish.
+[1:19:01] Like couple of weeks and it will be
+[1:19:02] translate everything to Spanish.
+[1:19:16] >> [clears throat]
+[1:19:23] >> this progress. Yeah, sure. Of course.
+[1:19:26] Nice progress. You speak Chinese. You
+[1:19:28] know what? When I was in school, I my
+[1:19:30] second language was Chinese. I used to
+[1:19:32] learn Chinese for like 12 years. when
+[1:19:36] was while [clears throat] I was in
+[1:19:37] school I didn't know English so like
+[1:19:40] completely we didn't have English in my
+[1:19:42] school a second language we had like
+[1:19:44] Russian p Russian and Chinese and you
+[1:19:48] know what it was like really guys 11
+[1:19:51] years ago and I realized like I remember
+[1:19:54] nothing
+[1:19:58] like just wasting of life what's the
+[1:20:01] point to learn Chinese if you cannot
+[1:20:02] practice this
+[1:20:05] western of life and I turned like oh one
+[1:20:09] second my husband to
+[1:20:16] and I remember when I was uh like 18 and
+[1:20:19] I moved to US like imagine like no no no
+[1:20:22] Chinese but not English when you live in
+[1:20:24] US [laughter] it's just wasting of life
+[1:20:27] can you talk Chinese I cannot because
+[1:20:30] last time I practice Chinese when I was
+[1:20:31] 17 like guys long time ago.
+[1:20:35] How can I say like practice? We had like
+[1:20:37] tests to uh after school like once you
+[1:20:41] graduated from high school you need to
+[1:20:43] pass like test math test Chinese test
+[1:20:46] Russian history
+[1:20:48] Russian
+[1:20:52] and that's it.
+[1:20:55] I don't remember what kind of test I
+[1:20:58] think so. So that's only last like like
+[1:21:00] it was last time when I was doing
+[1:21:02] Chinese but I never spoke with ch okay I
+[1:21:04] spoke with Chinese people like for some
+[1:21:06] time but I never practices if you don't
+[1:21:09] practice language like learning like
+[1:21:11] from books from movies from websites it
+[1:21:13] just makes no sense without practice you
+[1:21:16] will not learn any language it's my
+[1:21:18] opinion
+[1:21:22] I'm in states yes in US in Florida South
+[1:21:29] spammer. I cannot see this.
+[1:21:48] Okay, my friends,
+[1:21:50] let's wait for a setup. Once again, as
+[1:21:52] you can see, no for. So that's the most
+[1:21:54] important part to control yourself
+[1:21:56] right. So what was here? It was our
+[1:21:58] model. It was a plus scenario for us. If
+[1:22:01] you want to ignore in Q ignoring in Q.
+[1:22:04] Yes, it was textbook short. And I mean I
+[1:22:06] happy we saw this in real time. But what
+[1:22:08] was the problem in Q was the problem?
+[1:22:10] Exactly same situation happened
+[1:22:11] yesterday with us. So this is basically
+[1:22:14] scenario when like we're trying to learn
+[1:22:15] from our mistakes in Q bullish bish. We
+[1:22:18] want to wait for inq turn bearish then
+[1:22:21] engage.
+[1:22:23] Yes. Yes. Just drop super quickly. Uh so
+[1:22:29] I started trading when it was 2022.
+[1:22:34] I started trading ICT
+[1:22:36] 4 and a half years ago.
+[1:22:52] >> [cough]
+[1:22:53] [clears throat]
+[1:22:55] >> What was my pre? Okay, I I mean I was
+[1:22:58] university student but
+[1:23:00] guys like try to guess what I was doing
+[1:23:03] before started trading.
+[1:23:06] Like if you know the answer don't say
+[1:23:08] this because some people know this but
+[1:23:10] what I was doing before I started
+[1:23:11] trading I was studying computer science
+[1:23:14] at university.
+[1:23:17] I mean computer science at university.
+[1:23:19] Yes, it was my major. But what I was
+[1:23:23] doing like to make money
+[1:23:26] like guess looking at me
+[1:23:30] probably you will never guess.
+[1:23:33] I mean some people know this so they're
+[1:23:35] going to say probably
+[1:23:43] okay it's going to be interesting right
+[1:23:45] now. I was basketball coach for little
+[1:23:47] kids like three, five, six years old
+[1:23:50] kids. I don't remember. I had like I had
+[1:23:51] No, I had one girl eight years old.
+[1:23:57] That's crazy, right?
+[1:24:01] Yeah. I used to be a professional
+[1:24:02] basketball player in the past.
+[1:24:05] In the past.
+[1:24:09] I'm not tall by 56.
+[1:24:13] But you need to be either tall or you
+[1:24:15] need to be super fast. So I was super
+[1:24:16] fast
+[1:24:29] drugs.
+[1:24:32] Yeah,
+[1:24:38] I'm not tall. I'm 5'6. It's not tall.
+[1:24:40] It's like evage.
+[1:24:44] What do Russian eat? Like what kind of
+[1:24:46] food you eat.
+[1:24:58] So, um,
+[1:25:01] how to say this in in English? So, I
+[1:25:03] mean, I'm going to call like like
+[1:25:04] Russian names. We eat like it calls
+[1:25:06] bini. It's like
+[1:25:10] it's like flat pancakes.
+[1:25:13] So, we can add like cottage cheese,
+[1:25:15] farmer cheese. Um there my kids love it.
+[1:25:19] By the way, you can do with like with
+[1:25:21] meat, with honey. Uh so, this kind of
+[1:25:24] like food we can eat for breakfast.
+[1:25:26] Also, we do
+[1:25:29] how we call this in English? Cheese
+[1:25:30] pancakes. So, we use farmer cheese for
+[1:25:33] this with eggs, sugar, and some flour.
+[1:25:36] So, and we do like this cheese pancakes.
+[1:25:38] It's also like Russian kind of
+[1:25:40] breakfast. Oh, crepes. Yeah. Yeah.
+[1:25:41] Exactly. Exactly.
+[1:25:47] Talking about soups, I mean aka. Yes. I
+[1:25:50] don't like it. By the way, uh we can do
+[1:25:52] uh like different soups with like be and
+[1:25:55] beef. It's also like traditional, I
+[1:25:58] would say, Ukrainian soup, but we like
+[1:25:59] cook this in in Barus, in Russia, like
+[1:26:02] everywhere.
+[1:26:04] I mean,
+[1:26:07] we do like meatballs, some sort of
+[1:26:08] meatballs, but Russian version of
+[1:26:10] meatballs,
+[1:26:12] uh, as well. Pretty much similar recipe,
+[1:26:14] I would say, with mashed potatoes. Like
+[1:26:16] my kids love it.
+[1:26:19] Yeah,
+[1:26:23] yeah, that's good.
+[1:26:27] Yeah, I would say.
+[1:26:30] Mhm. It's across the world.
+[1:26:34] Borch. Yes, I only eat when I like
+[1:26:37] borch, but I don't like to cook this.
+[1:26:39] And we have Russian uh stores here, like
+[1:26:41] grocery stores, when you can buy like
+[1:26:44] cooked soups like borch, like we call
+[1:26:47] this halik, but it's something like they
+[1:26:50] call this summer soup or like cold
+[1:26:52] soups. It's like also be with different
+[1:26:55] vegetables and they add kefir or sour
+[1:26:57] cream to this and they eat this like
+[1:27:00] cold
+[1:27:02] um
+[1:27:05] what else?
+[1:27:10] You know what I used to I mean I saw
+[1:27:13] this couple of months ago as well in
+[1:27:15] Kaska here. I saw like uh this blini
+[1:27:19] with sweet cheese is basically uh what
+[1:27:22] we call uh farmer cheese or cottage
+[1:27:24] cheese
+[1:27:29] soup. It's like it's be with uh carrots
+[1:27:32] and potato, some greens there.
+[1:27:37] And once it's ready, you need to like do
+[1:27:39] you just need to put this to
+[1:27:40] refrigerate. It needs to cool down. And
+[1:27:42] after this, you usually add like kefir
+[1:27:44] or sour cream. It's actually good. My
+[1:27:46] husband love it.
+[1:27:50] Cucumber and yogurt. Oh, interesting.
+[1:27:53] Interesting combination.
+[1:27:55] Oh, not yogurt. Have you ever tried to
+[1:27:58] eat salad with cucumbers and tomatoes?
+[1:28:01] Add some sour cream and some salt. Damn,
+[1:28:04] guys.
+[1:28:07] That's best salad ever. Even my kids
+[1:28:09] love it.
+[1:28:11] Yeah, it's called cold soup. Yeah, cold
+[1:28:13] soup. Yeah. Some people call this summer
+[1:28:16] soup because it's cold and it's hot
+[1:28:18] outside.
+[1:28:23] And eggs. No, no, no, no. H for soup.
+[1:28:25] Cold soup. Yes. Add uh boiled eggs.
+[1:28:28] Yeah. Yeah. Cooking channel. Here you
+[1:28:32] go. We can talk about sport. We can talk
+[1:28:34] about proteins because guys, you know,
+[1:28:37] like I trying to work on my body heart.
+[1:28:40] Uh we can talk about everything.
+[1:28:44] Um,
+[1:28:45] what's that?
+[1:28:53] No, I never tried this one.
+[1:28:57] [clears throat]
+[1:28:58] My favorite food, I'm not going to talk
+[1:29:00] only about Russian food, but I I feel
+[1:29:03] like I can eat like every single day, is
+[1:29:05] going to be Mexican food. I can eat this
+[1:29:07] every single day. I can eat butter
+[1:29:10] chicken every single day because d it's
+[1:29:13] so good.
+[1:29:15] I can eat Greek food every single day as
+[1:29:19] well.
+[1:29:22] And Russian food. Yeah, Mexican is just
+[1:29:25] number one.
+[1:29:33] I don't eat pork. I mean, I don't I'm
+[1:29:35] not fan of meat, guys. I can eat chicken
+[1:29:37] but butter chicken guys
+[1:29:41] I don't know who created this like
+[1:29:45] you did like you did like something
+[1:29:47] unbelievable
+[1:29:51] you did something unbelievable
+[1:30:02] do you trade oil like sometimes not
+[1:30:04] often
+[1:30:07] Yeah, I know. It's Indian food. It's
+[1:30:08] It's so good.
+[1:30:18] So,
+[1:30:22] that's a great question for Ch.
+[1:30:28] Oh man, that's super crazy market trying
+[1:30:31] to stay above weekly open on in Q but
+[1:30:33] way below this level on ES concerning
+[1:30:36] concern here
+[1:30:43] [clears throat]
+[1:30:48] na [gasps] bread. It's so good. I first
+[1:30:50] time I tried this uh kind of bread in I
+[1:30:52] bought this in Trader Joe's. So good
+[1:30:56] guys. The seasoning food is like I can I
+[1:31:00] can eat this every single day as well.
+[1:31:04] So good.
+[1:31:09] You heard about?
+[1:31:11] No. Probably no. Do you believe in God?
+[1:31:14] Yes.
+[1:31:17] You know what? Uh I started believing
+[1:31:20] this like basically can I say like
+[1:31:22] accepted this when I was 18. Uh why?
+[1:31:25] Because once you a kid like kid you
+[1:31:28] don't even realize who is God like
+[1:31:31] should I believe in him or not right so
+[1:31:35] uh that's why I decided like when I'm
+[1:31:36] going to be old not old big enough when
+[1:31:39] I'm going to be adult I will start
+[1:31:42] thinking about this once I'm a kid I
+[1:31:44] cannot say like uh you know to seven
+[1:31:46] years old son like you know you need to
+[1:31:48] believe in God why
+[1:31:51] it needs to it needs he needs to realize
+[1:31:55] if he wants.
+[1:31:58] So I started like believing in this like
+[1:32:00] thinking about this like when I turned
+[1:32:02] 18
+[1:32:06] is the dog same
+[1:32:15] nothing to short right now sell side was
+[1:32:17] taken so we just observe right now and
+[1:32:19] see what in Q wants to do First
+[1:32:32] seal is something interesting. My M on
+[1:32:34] CL works great but I believe when I was
+[1:32:37] watching initiated like oh it text books
+[1:32:40] so good but I'm watching in real time
+[1:32:42] I'm like
+[1:32:44] what's that like what's that I don't
+[1:32:47] want to tra this
+[1:32:49] has a gender probably no
+[1:32:56] hard to Okay.
+[1:33:04] Wow. 10:22 in this market is just I mean
+[1:33:07] it was great. It was great guys
+[1:33:12] on S&P as always. SPX treat as well but
+[1:33:15] $0 on my accounts today.
+[1:33:37] >> [snorts]
+[1:33:41] [laughter]
+[1:33:43] >> That's [clears throat] funny.
+[1:33:50] Okay, it was good.
+[1:33:53] Once again, even looking in hand side,
+[1:33:55] it was great setup, but in Q was my
+[1:33:57] problem.
+[1:34:05] I mean, great perception.
+[1:34:09] Let's keep waiting.
+[1:34:11] Long time. Yeah. Where were you? I
+[1:34:13] didn't see for like a month or so.
+[1:34:19] Yes. I'm cute for 15 minute chart and
+[1:34:21] why I'm making SMT. I think it's nice
+[1:34:23] long. Not yet for me.
+[1:34:26] It's preparing long because we wanted to
+[1:34:28] see this long from sell side yesterday.
+[1:34:33] But once again, yes, we took sell side.
+[1:34:34] What happens next? Do we have structure
+[1:34:36] to talk about reversal? Not yet. Keep
+[1:34:39] waiting. Not in rush.
+[1:34:48] especially
+[1:34:54] London L over lower over.
+[1:35:01] Yeah, by the way guys, uh I believe it
+[1:35:05] it can take long and low in offer
+[1:35:06] reversal. But let's talk about this.
+[1:35:09] Did you hear about lucid competition?
+[1:35:13] So basically what you need to have
+[1:35:15] either funded account or evaluation
+[1:35:17] account and you simply need to trade
+[1:35:19] this account and you you don't have like
+[1:35:23] certain rules. You need to have bigger
+[1:35:24] balance for the day to uh be uh at first
+[1:35:27] place in this competition. Yesterday
+[1:35:30] guy blew his account for 12 seconds.
+[1:35:35] Let's listen. Yesterday guy blew account
+[1:35:38] for 12 seconds
+[1:35:41] and he got $10,000 because yesterday
+[1:35:43] winner was a guy who blew blew accounts
+[1:35:46] like who was first who blew account
+[1:35:49] yesterday.
+[1:35:52] So basically he blew for 12 seconds and
+[1:35:54] he got $10,000.
+[1:35:57] Like imagine I believe first like first
+[1:36:00] day in this competition won a guy who
+[1:36:03] made $69
+[1:36:06] who made $69. He won $10,000 for this.
+[1:36:10] All you need to do guys is just to have
+[1:36:12] evaluation or funded account and simply
+[1:36:14] trade this.
+[1:36:17] So it's it's insane dummy. That's
+[1:36:19] insane. I simp you know what I bought
+[1:36:22] 150k evaluation to the simple trade.
+[1:36:25] Maybe I'm going to be lucky because I
+[1:36:27] placed like trade with one micro and I
+[1:36:29] made like $1 and I'm going to be first
+[1:36:31] one who made it and I'm going to win
+[1:36:33] $10,000 next day [laughter]
+[1:36:38] 50. Oh, that's wild. Guys, they have 40%
+[1:36:42] off on List accounts. If you want to be
+[1:36:44] part of this funny competition, guys, go
+[1:36:46] and get this account.
+[1:36:50] Yesterday, I got account as well. 150k
+[1:36:52] flex.
+[1:36:54] simply you know what maybe maybe
+[1:36:58] something will happen and I'm gonna do
+[1:37:01] like just one trade with one mic and I'm
+[1:37:03] going to make $1 and I'm going to be
+[1:37:04] first one who made it
+[1:37:08] guys that's actually great idea because
+[1:37:11] not every single person can uh place so
+[1:37:13] many trades during the day
+[1:37:15] but he wants to participate in
+[1:37:17] competition and win the prize right
+[1:37:21] so guys if you want to try to
+[1:37:23] participate in lucid competition ition
+[1:37:24] as well. Use code limit to get any
+[1:37:26] evaluation, any size of evaluation
+[1:37:28] because once you have account, you're in
+[1:37:30] this competition. You can trade your
+[1:37:32] funded, you can trade your valuation, it
+[1:37:33] doesn't really matter. I saw one guy, he
+[1:37:36] had just 150k of valuation and he made
+[1:37:38] over 100k a day.
+[1:37:46] Yeah, Tra finally will be in Miami in
+[1:37:48] Fort Lauderdale. I'm going to be there.
+[1:37:55] That's crazy, guys.
+[1:38:02] 67. Oh, Michael, you know that's a great
+[1:38:04] idea. I bought one evaluation simply to
+[1:38:07] trade. Like maybe I'm going to be lucky
+[1:38:08] as well. You never know.
+[1:38:17] Okay, let's wait for two minutes. Shift
+[1:38:18] in structure.
+[1:38:33] this competition at September by end of
+[1:38:36] September. I don't remember which day
+[1:38:37] exactly but yeah you simply need to
+[1:38:40] trade this account evaluation fund it
+[1:38:42] doesn't really matter just place a trade
+[1:38:49] [snorts]
+[1:38:51] going DC
+[1:38:57] I'm a guest of DCA
+[1:39:00] I never I I don't like to losing
+[1:39:02] positions unless I see like strong
+[1:39:05] confirmation okay From this level we can
+[1:39:07] uh we can reject and go higher from a
+[1:39:09] long I can add couple of contract to my
+[1:39:11] losing position but I'm against of this
+[1:39:18] to win like there is no rules guys for
+[1:39:20] lo competition you can win simply
+[1:39:21] because you placed one trade a day you
+[1:39:23] can win simply because you made $1. You
+[1:39:25] can win because you blow your account.
+[1:39:26] You were first who blow account this
+[1:39:28] day.
+[1:39:30] Everything can happen like no rules.
+[1:39:32] They decide rules by the end of the day.
+[1:39:34] For example, today winner gonna be that
+[1:39:38] guy who traded for one second, open and
+[1:39:41] close position for one second. He was
+[1:39:43] first and he going to win $10,000,
+[1:39:45] which is actually such a cool idea.
+[1:39:55] It's up to 40% in different account
+[1:39:57] sizes. Yeah.
+[1:40:09] It can be for you need to have account
+[1:40:11] evaluation funded. It doesn't really
+[1:40:13] matter.
+[1:40:16] Come on. We actually could Oh god, I
+[1:40:19] feel so bad about this simply because
+[1:40:21] like it could be the trait of the day.
+[1:40:24] But I'm going to save the trade because
+[1:40:25] we call this live and I'm going to keep
+[1:40:27] this trait for uh my webinar next week.
+[1:40:31] simply because like we we wanted to take
+[1:40:33] this one
+[1:40:35] [clears throat]
+[1:40:40] sounds like lottery tickets but you
+[1:40:41] never know and training Q you never know
+[1:40:43] maybe like today's winner going to be
+[1:40:45] like the guy who lost $1 today or $10
+[1:40:52] right
+[1:40:57] different plans you need to just jump
+[1:40:58] between plans and
+[1:41:01] because right now the evaluation is
+[1:41:03] customizable. So really hard to say like
+[1:41:04] which uh price for each one. Just check
+[1:41:07] on the webinar about SPX next week. So
+[1:41:11] I'm saving all trades I either called or
+[1:41:13] took uh on stream and I'm just going to
+[1:41:16] like go through each trade
+[1:41:21] explaining my strategy. That's why I
+[1:41:23] never delete like my trades. Some break
+[1:41:24] even some losses which is perfectly
+[1:41:26] fine. By the way,
+[1:41:28] this one was last. I remember this day.
+[1:41:32] But once again, yeah, I'm going to like
+[1:41:33] talk about my strategy and I'm going to
+[1:41:35] show examples. That's why I Oops. I
+[1:41:38] don't delete my
+[1:41:40] trades.
+[1:41:43] One, I mean, top three win money like
+[1:41:46] two 6,000, 4,000, and 10,000.
+[1:41:55] Yeah. I s in straight like we call this
+[1:41:58] in real time once it formed. The problem
+[1:42:00] was with a trade in Q but we call this
+[1:42:02] like in real time. So yeah, I don't want
+[1:42:04] to delete this because we saw this in
+[1:42:05] real time. It's not hand sideight.
+[1:42:06] Everything that happened in hand side I
+[1:42:08] don't have this on my chart as you can
+[1:42:09] see. I simply don't have it. No reason
+[1:42:11] for me to like say okay this is a trade
+[1:42:13] that we need to like take. If it was in
+[1:42:15] hand side like I don't care if it's not
+[1:42:18] in hand side but in real time. So I'm
+[1:42:20] going to save it. As you can see, not
+[1:42:21] for every single day I have set up
+[1:42:23] simply because some of them in hand side
+[1:42:27] I I'm not saving them. No reason. It's
+[1:42:29] all about you see your setup in real
+[1:42:31] time.
+[1:42:40] Today wasn't bad wasn't bad. Spx was not
+[1:42:43] good enough but the problem was this
+[1:42:45] dumb and queue. But even like once again
+[1:42:49] once you got closure below New York
+[1:42:50] midnight open maybe we didn't need to
+[1:42:52] like look for ES short maybe on Q short
+[1:42:55] it will be on Indo trader live it's
+[1:42:58] going to be Thursday at 400 p.m.
+[1:43:03] I'm going to do announcement. Don't
+[1:43:04] worry guys. I'm going to do
+[1:43:05] announcement. We will talk about this
+[1:43:06] one.
+[1:43:09] [laughter]
+[1:43:09] I will share like everything I know
+[1:43:12] about my strategy, examples,
+[1:43:16] um everything, guys.
+[1:43:21] Yeah, random winner. No, no rules. Just
+[1:43:24] just trade this account. Yesterday, I
+[1:43:26] bought evaluation simply because I don't
+[1:43:28] want to trade my funded every single day
+[1:43:30] on Lucid, but I want to have a trade on
+[1:43:32] Lucid. So, I bought accounts.
+[1:43:38] I'm employed. What do you command me to
+[1:43:40] make money? Okay, listen guys.
+[1:43:43] We live in 2026. We have so many
+[1:43:45] resources right now with AI. With AI,
+[1:43:48] you can do like lots of different stuff.
+[1:43:50] You can create fitness tracker for
+[1:43:52] example, fitness apps, lots of people
+[1:43:54] going to use, especially in US. You can
+[1:43:57] create like color pictures for kids,
+[1:43:59] books, kids, everything for free.
+[1:44:01] Especially talking about books like you
+[1:44:04] can like in order to sell for for
+[1:44:06] example on Amazon your entry to Amazon
+[1:44:09] going to cost you $0 for any book. With
+[1:44:12] AI you can do like lots of free
+[1:44:13] different stuff. You can talk with AI
+[1:44:16] about this. So many different options to
+[1:44:18] make money right now.
+[1:44:22] Especially once again with AI
+[1:44:25] like world is open for you.
+[1:44:29] You can create an agent to blow your
+[1:44:31] account. Yeah, it's a great idea.
+[1:44:38] You cannot do I you know, you know what?
+[1:44:42] Listen to me. Uh I trade ICT concept for
+[1:44:45] four years, four and a half years. But
+[1:44:47] listen, I still have no idea how to
+[1:44:51] trade for a value gaps. Every single
+[1:44:53] time when I'm trying to look for trade
+[1:44:55] off for a value gap, not every single
+[1:44:56] time, but often it doesn't work.
+[1:44:59] So what you need to do as ICT trader
+[1:45:02] pick like something small from his ICT
+[1:45:05] concept and try to build a strategy
+[1:45:07] using his concept. Once again lots of
+[1:45:10] people profitable from for value gap. I
+[1:45:11] am not I have no idea how to use for
+[1:45:14] volume gaps. I have no idea how to use
+[1:45:16] mitigation block. I have no idea how to
+[1:45:19] use what else like volume imbalances.
+[1:45:31] Are you? Yeah. Yeah. And I don't use
+[1:45:34] breaker blocks uh as well. But once
+[1:45:36] again, everything works.
+[1:45:41] You know, when I was learning ICT
+[1:45:43] concept, unfortunately AI wasn't
+[1:45:45] popular. No one use AI charge or
+[1:45:47] something like this. So unfortunately
+[1:45:50] you were googling everything and back
+[1:45:53] 2022 like to find information about
+[1:45:55] breaker blog good information or about
+[1:45:58] order blog was nearly impossible
+[1:46:01] all you had some like YouTube sources in
+[1:46:03] Google you didn't have AI or something
+[1:46:05] like this that's why people who started
+[1:46:07] learning ICT like back 2021 2022 doing
+[1:46:11] better than
+[1:46:13] than now why because back then we didn't
+[1:46:16] have resources we basically wasted not
+[1:46:19] wasted spend lots of time on charts to
+[1:46:21] figure this out. Right now with AI
+[1:46:23] obviously have like millions of way to
+[1:46:25] learn like break a block mitigation
+[1:46:27] block for a while gap and since like
+[1:46:30] it's so easy people don't want to spend
+[1:46:32] time on this. Yeah. at 10 millions years
+[1:46:34] ago. Suspension block. I have no idea
+[1:46:37] about that.
+[1:46:52] Yep.
+[1:46:59] Talking about overlap RTH gap. It's
+[1:47:01] available on my website. I'm going to
+[1:47:03] send you lesson right now in the chat.
+[1:47:05] It's available. Guys, I'm so
+[1:47:07] disappointed like we're sitting in like
+[1:47:09] no trade right now. I'm going to steam
+[1:47:11] longer. We will get our setup.
+[1:47:14] I'm going to send link in the chat.
+[1:47:16] Scroll down. You will find information
+[1:47:17] about overlap gap
+[1:47:20] chart colors.
+[1:47:22] I'm going to send link from my discord.
+[1:47:25] Try to join because I added some BS
+[1:47:28] there. So, it's block some people. Not
+[1:47:29] some people spam and scam.
+[1:47:35] internal s error I mean like try to join
+[1:47:37] let me know if you can join you will
+[1:47:39] find chart settings there because
+[1:47:40] sometimes I need to like send like
+[1:47:42] private invite and I need to like change
+[1:47:44] role manually I don't know why
+[1:47:49] so I just sent uh invite for discord try
+[1:47:52] to join let me know if you can
+[1:48:00] and go to chart settings You'll find
+[1:48:01] chart colors there.
+[1:48:05] Done. Discord done. I told you like it's
+[1:48:08] interesting.
+[1:48:16] ATR. I mean, once again, try to keep
+[1:48:18] your trading simple.
+[1:48:23] No, before we tested this uh short on
+[1:48:26] SPX and nothing else.
+[1:48:36] You cannot trade CL on Epics. You can
+[1:48:44] because I know when I'm trying to send
+[1:48:46] invite, I have this kind of error. So, I
+[1:48:49] don't know what what does it mean?
+[1:48:56] Maybe it's down for new users. Like I
+[1:48:59] mean it's it's common nowadays
+[1:49:18] for five minutes. Yeah.
+[1:49:29] Yeah, seems like on their side. Let's
+[1:49:31] wait.
+[1:49:42] I will check later for you for heel.
+[1:49:45] Okay.
+[1:50:06] I speak Russian. Yes.
+[1:50:11] Yeah, it's going to London. All good.
+[1:50:14] Good and not good.
+[1:50:19] Where my husband is going?
+[1:50:24] I'm below Russian. Yes, I mean I speak
+[1:50:26] Russian.
+[1:50:32] Let's hit 701 like and it will start
+[1:50:34] give it. Yeah, Discord is down right
+[1:50:37] now.
+[1:50:46] Yes, sure. I have it.
+[1:50:50] Since I'm going to stream longer today,
+[1:50:51] go to funed.now slash not slash
+[1:50:55] funed.now learn ICT videos. So I
+[1:50:59] collected pretty much all ICT videos and
+[1:51:02] I put them in proper order. So basically
+[1:51:04] syllabus from foundation to a market
+[1:51:07] maker model. So foundation core
+[1:51:10] um after some of I recommend to watch
+[1:51:13] additional videos. After watching don't
+[1:51:15] forget to put complete here.
+[1:51:19] like that you completed after watching
+[1:51:21] like a video you learn something you can
+[1:51:22] add notes here completely for free by
+[1:51:24] the way okay don't save it okay
+[1:51:30] so I put everything in proper order for
+[1:51:33] uh those who want to learn IC
+[1:51:36] once again for Zers 0 cents
+[1:51:40] it will show you your progress how many
+[1:51:42] videos left how much completed and so on
+[1:51:45] for Zentn/
+[1:51:47] / ICT mentorship.
+[1:51:50] I'm going to send in the chat now.
+[1:51:57] Okay. London low is going. Ah, I feel
+[1:51:59] bad about this. Would be nice trade.
+[1:52:05] How many videos?
+[1:52:08] 144.
+[1:52:10] It's okay. Not every single IC video
+[1:52:12] because he has like like 400 300 videos.
+[1:52:15] even more, I guess. So, I put on the
+[1:52:17] important ones.
+[1:52:25] I mean, I didn't try to place any trace,
+[1:52:27] but you scaring me right now.
+[1:52:47] Yeah, London law is about to be
+[1:52:49] disappointed.
+[1:52:58] If it's keep dropping guys, we will hit
+[1:53:00] the 7617. I will look for continuation
+[1:53:02] lower. Just need to get nice set up for
+[1:53:04] this. So my objective will be Where's my
+[1:53:09] drawings on Q? Oh okay my objective will
+[1:53:11] be 7617 which was on old contract 7550.
+[1:53:19] So let's see if it will offer
+[1:53:20] continuation stop. If so I will I will
+[1:53:22] look for lower today.
+[1:53:30] Guys, straight away is down.
+[1:53:53] Okay. Okay.
+[1:53:57] Yeah. Guys, come on. Let's hit 701 like
+[1:54:00] and let's start giveaway. If we're going
+[1:54:02] to hit 1,000 likes, I will do extra
+[1:54:04] giveaway with a straight to fund
+[1:54:05] account.
+[1:54:13] I sent yesterday. Oh, I forgot to check.
+[1:54:15] I was busy yesterday. I'm so sorry about
+[1:54:18] that. I told you I'm going to check, but
+[1:54:19] I forgot.
+[1:54:22] I mean, it's going to be guaranteed
+[1:54:23] giveaway, but if you're going to hit
+[1:54:24] 1,000 likes, I will do straight to fund
+[1:54:26] it. basically extra giveaway. Do funded
+[1:54:29] next. It's hard with fun next.
+[1:54:48] But I like how this model offers pretty
+[1:54:49] much like good reversal points.
+[1:54:55] I wanted to see the cell side.
+[1:54:56] yesterday.
+[1:55:01] So yesterday we were trying to short and
+[1:55:04] Q over here but we were looking for
+[1:55:07] lower.
+[1:55:13] Let's see how good this place going to
+[1:55:15] be below London low with pullback and
+[1:55:16] continuation lower to uh 7617.
+[1:55:27] [sighs and gasps]
+[1:55:39] So listen, I'm tired of waiting for my
+[1:55:41] setup as well. It's it's really hard
+[1:55:44] guys and I remember when I didn't stream
+[1:55:46] like back like no streaming days I was
+[1:55:49] tired to wait for my setup as well and
+[1:55:51] what I was doing I was just clicking
+[1:55:53] buttons
+[1:55:54] I had this problem seriously simply
+[1:55:57] because okay it's so boring for me let
+[1:55:59] me try here if like I'm wrong like it's
+[1:56:00] going to be small risk I will enter I
+[1:56:02] will enter later no
+[1:56:05] sometimes you just have to wait to get
+[1:56:08] your setup unfortunately I know it's
+[1:56:10] boring but thanks god I'm steaming so I
+[1:56:12] and talk with you guys because it keeps
+[1:56:14] me disciplined.
+[1:56:18] I'm also human. I mean I still making
+[1:56:20] mistakes. So so it helps.
+[1:56:24] Give a link. One second.
+[1:56:30] Can you show us your execution chart
+[1:56:32] platform daily chart? I mean sure. Can I
+[1:56:36] do this on Ninja Trader?
+[1:56:41] Lots of drawings here. Let me delete the
+[1:56:44] drawings from my chart. What do you want
+[1:56:47] to see there?
+[1:57:12] What are you talking about?
+[1:57:18] I didn't get your question.
+[1:57:27] Why is there no arrows?
+[1:57:30] Are you 5 years old?
+[1:57:47] Okay, I didn't get this. Seems like guys
+[1:57:49] I stop understanding people. It's It
+[1:57:51] sounds like a guy who was searching for
+[1:57:54] uh Tesla service in Facebook instead of
+[1:57:56] go to Google map.
+[1:58:04] Guys, you know what I realized? I guess
+[1:58:07] before start trading, people need to
+[1:58:09] check their IQ first because I started
+[1:58:13] questioning this world.
+[1:58:24] You said I need to go on daily chair to
+[1:58:27] show executions.
+[1:58:29] Do you hear yourself
+[1:58:35] please? I know who controls uh
+[1:58:37] properformms. Can you please add option
+[1:58:39] to check IQ first because I don't know
+[1:58:43] how people live without brain.
+[1:58:51] I feel bad for these people. It's okay.
+[1:58:56] I need to have like guys good hate. I
+[1:59:00] mean my son hates me like in a better
+[1:59:02] way. Like if you're trying to hate me
+[1:59:04] like trying to find better way for this,
+[1:59:06] okay?
+[1:59:14] Like hate and yes uh you can hate you
+[1:59:17] can be hater but don't show you how
+[1:59:19] don't show us how stupid you are. That's
+[1:59:21] different. Okay. That's different. No,
+[1:59:24] no, no. Don't ban him, guys. Don't ban
+[1:59:25] him. We want to keep looking for this
+[1:59:30] for for his posts because guys, he keep
+[1:59:33] us like internet right now.
+[1:59:37] Don't block him. I want to look at this.
+[1:59:42] Don't block him. Okay, Daniel, don't
+[1:59:45] touch him. I need to look at this.
+[1:59:50] Are they ready to fight? Challenge
+[1:59:52] accepted.
+[1:59:54] Let's go.
+[1:59:57] Ready to fight. Come on. Come on. Write
+[1:59:59] something.
+[2:00:02] How often you trade?
+[2:00:05] You miss the drama. Come on. He said go
+[2:00:07] on daily chart and show executions.
+[2:00:15] [gasps]
+[2:00:37] I don't even know how to show this
+[2:00:39] execution on daily chart because I
+[2:00:40] believe it's reset every single day.
+[2:00:45] You missed everything.
+[2:00:57] We need to get to be first for the
+[2:00:58] tracement.
+[2:01:00] Give us straight. Give us straight. give
+[2:01:02] us straight. Please, please, please
+[2:01:04] guys. Come on. We approaching 700 likes
+[2:01:06] to the first giveaway. Come on,
+[2:01:13] Frank. What did you say? Did I miss
+[2:01:15] something?
+[2:01:17] Oh, okay.
+[2:01:23] You missed everything, guys. I mean, it
+[2:01:26] wasn't funny, but it was kind of like um
+[2:01:30] well,
+[2:01:31] I saw a lot, but maybe not a lot. Not
+[2:01:34] like,
+[2:01:36] oh god, whatever, guys. Let's focus on
+[2:01:38] trading.
+[2:01:42] Let's focus on trading. It was funny,
+[2:01:44] but let's find set up first.
+[2:01:49] Did you try to see daily trade frequency
+[2:01:50] from errors on daily chart? I mean I
+[2:01:53] opened executions when I go to my data
+[2:01:56] series like plot executions market only
+[2:02:00] markers only and it shows nothing for
+[2:02:02] some reason but I took trades yesterday
+[2:02:04] for example if I go on daily chart it
+[2:02:06] shows like nothing for some reason
+[2:02:11] how to show this I mean it's daily chart
+[2:02:13] if I will go here see markers only I
+[2:02:16] guess it says every single day because
+[2:02:18] we just trade this account yesterday.
+[2:02:24] I don't know
+[2:02:30] how I know how to show this.
+[2:02:34] I mean, I didn't know like I need to
+[2:02:36] actually have this option.
+[2:02:40] I believe that it says every single day.
+[2:02:46] Dasha wants to hide trade history. Like,
+[2:02:48] are you kidding me?
+[2:02:55] They're just trying. I was trying to
+[2:02:56] show you, but it doesn't show anything.
+[2:03:11] D.
+[2:03:36] Okay, guys. Let's see if you're going to
+[2:03:37] get your mental beer.
+[2:04:05] I mean, whatever, guys. Who cares? I
+[2:04:07] mean
+[2:04:09] you know we trade this account yesterday
+[2:04:10] so
+[2:04:12] what we are even talking about
+[2:04:17] you show PNL you can compare with my
+[2:04:19] executions like I know what you're
+[2:04:20] talking about
+[2:04:27] in case you think I'm hiding something
+[2:04:28] for you.
+[2:04:31] See it? I made nothing today.
+[2:04:38] [snorts]
+[2:04:53] Let's see what happened with London low.
+[2:04:55] We just swept this level on both yes and
+[2:04:57] in Q. I still believe we have room to go
+[2:04:59] lower.
+[2:05:03] Maybe it's going to be pull back to 50%
+[2:05:04] 62% and continuation lower.
+[2:05:08] I use replicant as my copier guys.
+[2:05:19] Usually when I trade Asia, usually not
+[2:05:23] all the time, I trade my personal
+[2:05:24] account because I'm not going to scared
+[2:05:26] of rules. Maybe I'm going to break
+[2:05:27] something on my uh prop accounts. I
+[2:05:30] trade my personal account for Asia
+[2:05:32] session from my phone. Sometimes I trade
+[2:05:34] props. It's usually take profit trader.
+[2:05:37] Don't trade any other one. But yeah, I
+[2:05:40] do trade my personal but it's for Asia
+[2:05:42] only. So I don't often trade my personal
+[2:05:45] with my uh props during AM session
+[2:05:47] streams. But once again, I do trade this
+[2:05:50] two times a week, sometimes once a week
+[2:05:53] uh doing Asia.
+[2:06:05] >> [cough and clears throat]
+[2:06:06] >> Guys, I told you I don't take trades off
+[2:06:09] stream. If I do, I usually post in
+[2:06:12] Discord.
+[2:06:16] Like, no reason for me to trade off
+[2:06:17] stream simply because I don't have time
+[2:06:19] for this. After Steam, I have to go to
+[2:06:22] school to pick my kids up and go to
+[2:06:24] classes.
+[2:06:26] So I usually if I see something you guys
+[2:06:28] if you know me well I post like this in
+[2:06:30] Discord and I trade from my phone but I
+[2:06:34] never hide this.
+[2:06:41] I mean of course I could be like a
+[2:06:43] trader who takes uh trades offstream but
+[2:06:45] I could show you this on exit but I
+[2:06:47] never did this right. Where is my huge
+[2:06:49] P&Ls if I take like lots of uh take lots
+[2:06:51] of trades upstream?
+[2:06:53] Mhm.
+[2:06:56] I never post this because simple don't
+[2:06:58] have it. I know why people still
+[2:07:00] question this like what's the point for
+[2:07:02] me to take trades off stream.
+[2:07:09] Yeah. Honestly speaking, it's really
+[2:07:10] hard for me to do this without you guys.
+[2:07:12] I mean, I'm open about this. You keep me
+[2:07:14] disciplined. Like I'm I swear to God,
+[2:07:17] thank you for this.
+[2:07:21] I don't I didn't uh stream live in Asia
+[2:07:24] because I'm with my kids. I have no time
+[2:07:26] for this but I post in Discord.
+[2:07:29] Don't drink it.
+[2:07:33] No, no, no. I'm just trying to keep this
+[2:07:34] clear because for some people still for
+[2:07:36] some reason people still question this
+[2:07:37] and my brain refused to understand why.
+[2:07:40] I mean I would understand this if I sell
+[2:07:42] uh courses like subscriptions saying
+[2:07:45] like I have 100 10% win rate but I don't
+[2:07:48] have it. That's why I don't really
+[2:07:50] understand this. I don't have even
+[2:07:52] perfect win rate. I don't have perfect
+[2:07:54] riskreward to hide something. I don't
+[2:07:56] flex huge P&Ls or payouts. Like what are
+[2:07:59] you talking about?
+[2:08:01] Why people still question?
+[2:08:09] Like seriously, like I'm just trying to
+[2:08:10] understand
+[2:08:16] what's the point behind this. [cough]
+[2:08:20] No, no, just just interesting.
+[2:08:28] It was nice drop
+[2:08:36] maybe. Maybe
+[2:08:39] [snorts]
+[2:08:40] I stop the hat. I'm just trying to like
+[2:08:43] understand because like when I see like
+[2:08:45] this kind of comments like my brain like
+[2:08:47] why
+[2:08:49] like why
+[2:08:52] because nothing is going on the market.
+[2:08:54] I mean I could ignore if it was like
+[2:08:56] just once or like twice but this happens
+[2:08:59] like pretty much daily. That's why I'm
+[2:09:01] trying to understand why this happens. I
+[2:09:04] mean I'm fine. Thank you. You you just
+[2:09:06] have to listen this guys because I'm not
+[2:09:09] going to say this to my husband. He will
+[2:09:10] say like you can wear this. Why you
+[2:09:12] always like spend time on when they
+[2:09:14] could spend time on something more
+[2:09:15] useful. That's what he said every single
+[2:09:18] time. Every single time. But you like
+[2:09:20] you can support me saying like d it's
+[2:09:22] okay. We support you. You're the best.
+[2:09:25] We love you. My husband not going to say
+[2:09:27] this. He will say like you wasting your
+[2:09:29] time and guys. Everyone entered
+[2:09:32] giveaway.
+[2:09:39] It's classic husband behavior. Guys,
+[2:09:42] [laughter]
+[2:09:44] I send link in the chat guys.
+[2:09:46] Participate in giveaway. Just fill the
+[2:09:47] short form.
+[2:09:51] Uh if it's your first time, confirm your
+[2:09:52] email.
+[2:10:03] Yes, Chris, you can say OT will not be
+[2:10:05] valid once draw remains lower.
+[2:10:19] most [snorts and laughter] intelligent.
+[2:10:22] You always support him but not me.
+[2:10:25] Behave please. You always support him.
+[2:10:27] You always chat with him but not with
+[2:10:29] me. Where's support for for me? like
+[2:10:31] leave some
+[2:10:35] or is my my husband's fake account? H
+[2:10:39] maybe
+[2:10:45] I still believe it go lower. So I'm
+[2:10:46] looking for a pullback and continuation
+[2:10:48] lower.
+[2:10:50] [snorts]
+[2:10:51] I'm kidding guys. Everyone entered gway.
+[2:10:56] I believe we may go to the August uh
+[2:10:58] open. So, it's going to be pulled back
+[2:11:00] to 50% of this move down and possible
+[2:11:03] continuation lower unless I see nice
+[2:11:04] signature for longs.
+[2:11:09] Hey, behave please. I'm going to repeat
+[2:11:11] the second time
+[2:11:16] for giveaways because lots of scammers,
+[2:11:18] lots of scammers, lots of boss who
+[2:11:20] participate in giveaway, lots of people
+[2:11:21] who change IP to participate in
+[2:11:23] giveaway. One person creating like 10 10
+[2:11:26] 12 IPs. So just to enter 10 or 12 times.
+[2:11:30] So that's why
+[2:11:32] because it must be for your play.
+[2:11:37] Today going to be tradify 50k draw
+[2:11:39] accounts. Two of them. If you're going
+[2:11:41] to hit 1,000 likes, I will do tradeify
+[2:11:43] lightning funded like extra one.
+[2:11:47] That's crazy. But it's true. Even like
+[2:11:50] right now, let me see how many
+[2:11:54] people were excluded.
+[2:11:58] See,
+[2:12:01] 45 people were were excluded today
+[2:12:04] because they playing with with me and
+[2:12:06] with my system.
+[2:12:09] See,
+[2:12:12] I can check this. I'm smart enough for
+[2:12:14] this already.
+[2:12:18] Okay, guys. Let's let's run first
+[2:12:20] giveaway.
+[2:12:24] So yeah, I'm looking for uh minor
+[2:12:27] pullback and I will try to short it
+[2:12:33] was not working
+[2:12:41] on his [clears throat]
+[2:12:43] no I didn't say anything. Did I call
+[2:12:46] your name? I don't think so.
+[2:12:54] First winner. Oh, you fast.
+[2:12:57] You're fast enough.
+[2:13:01] You got it. You got it, my friend.
+[2:13:09] You saw your name.
+[2:13:14] And winner is
+[2:13:17] easy.
+[2:13:23] Interesting name, by the way. I like it.
+[2:13:25] I like it.
+[2:13:31] You here. Woohoo. You got it. You got
+[2:13:35] it, my friend. Guys, once we hit 1,000
+[2:13:37] likes, I will do extra one.
+[2:13:43] I'm I'm in good mood today.
+[2:13:52] You got it, my friend.
+[2:13:56] Since I'm going to steam longer today,
+[2:13:57] let's focus uh on um a new setup after
+[2:14:01] 11. So, basically, we get a new AR
+[2:14:03] candle. We just got new candle.
+[2:14:12] [cough]
+[2:14:14] Just today. Yes, just today because I
+[2:14:16] slept well like a baby today
+[2:14:20] for admin. Oh, Sean. And you know what?
+[2:14:38] I can send send you messages.
+[2:14:52] Sean, can you please accept my friend
+[2:14:53] request in Discord while you're here? I
+[2:14:56] remember you new user in Discord, but
+[2:14:58] can you please do this like right now?
+[2:15:02] I wanted to ask you yesterday something,
+[2:15:04] but I forgot.
+[2:15:35] Yeah, this year I give away like 400
+[2:15:37] something accounts. 400 to accounts. I
+[2:15:39] see. Thank you.
+[2:15:45] >> [cough]
+[2:15:49] >> going to do something.
+[2:15:51] I I wanted to do yesterday. I forgot
+[2:16:24] >> [laughter]
+[2:16:29] >> So, it's classic consolidation here. New
+[2:16:31] move is coming by the way like around
+[2:16:34] 11:30 or so. So, I'm going to give this
+[2:16:36] 15 minutes to form a next setup.
+[2:16:48] What is my expectation now? So I want to
+[2:16:50] see pull back then strong break below
+[2:16:52] London low. I will try to short to 7617.
+[2:16:54] So I'm not sure about exact setup just
+[2:16:56] yet like about exact entry but it's
+[2:16:59] going to be something like that. So it's
+[2:17:00] a break below London low again.
+[2:17:12] Please, why you so negative today? Like,
+[2:17:16] what happened?
+[2:17:22] I'm going to save this for later.
+[2:17:26] We don't even have to minute change in
+[2:17:28] the state of the delivery yet.
+[2:17:36] I like 7617 as well.
+[2:17:40] It used to be 7550 on old contract by
+[2:17:43] the way. Let's see if it's going to
+[2:17:44] offer like minor pullback reaction. I
+[2:17:46] will try
+[2:17:49] maybe slightly higher.
+[2:17:59] We get there today. Where?
+[2:18:04] I need this pullback. Anyway,
+[2:18:09] my son broke my nail yesterday because I
+[2:18:11] was trying to like wear uh ice skates
+[2:18:14] and he was trying he was just trying to
+[2:18:16] like fight with my youngest son and I
+[2:18:20] broke my nail because of him. I was
+[2:18:21] like, "It's new nails. It's new nails.
+[2:18:24] What are you doing?
+[2:18:29] But since I was not at home, it was in
+[2:18:31] public. I cannot say and I cannot do
+[2:18:33] anything with this. I was like just
+[2:18:37] [snorts] okay we will talk about this at
+[2:18:39] home.
+[2:18:47] In Russian in Russian [laughter]
+[2:18:50] [gasps]
+[2:18:52] guys
+[2:18:53] where we go like in play in in place
+[2:18:55] where we do hi lots of Russian speaking
+[2:18:58] people [snorts] sometimes I'm scared to
+[2:19:01] speak Russian as well. [laughter] So I
+[2:19:03] cannot yell on them in Russian because
+[2:19:05] lots of Russian speaking people there.
+[2:19:07] So I have just I have to behave
+[2:19:10] [laughter]
+[2:19:10] and say like okay we will talk at home
+[2:19:12] my my friend we will talk at home.
+[2:19:14] [clears throat]
+[2:19:15] Wait for this.
+[2:19:17] It's going to be interesting
+[2:19:18] conversation
+[2:19:23] from here tomorrow. I I believe they
+[2:19:25] build in liquidity.
+[2:19:29] [laughter]
+[2:19:30] Don't worry, I don't hit my or I don't
+[2:19:32] beat my kids.
+[2:19:41] Don't worry yet because they young
+[2:20:00] need to get pull back to 50%.
+[2:20:08] Run. So
+[2:20:11] just 10 points higher
+[2:20:16] we didn't get to be yet.
+[2:20:25] The problem is from tomorrow they may
+[2:20:27] build liquidity once again.
+[2:20:42] Yes, it's tomorrow.
+[2:21:01] just feels like my problem is how like
+[2:21:04] we broke below weekly open. We stand
+[2:21:06] below this level and yes looks way more
+[2:21:08] bullish compared to Q. So I believe they
+[2:21:10] may offer pullback but most likely it's
+[2:21:12] going to be continuation lower. So we
+[2:21:13] look something for like that on my
+[2:21:15] screen on ES
+[2:21:20] but I'm looking for test of 50%. Yes.
+[2:21:23] Somewhere here like 10 15 points higher.
+[2:21:42] I mean once again really great price per
+[2:21:43] se action. Uh I I do like we got this
+[2:21:46] kind of setup.
+[2:21:59] Still no change in the state of the
+[2:22:09] keeping of weekly open
+[2:22:19] I got what I've wrote here.
+[2:22:29] would like to get good structure for
+[2:22:31] possible continuation lower.
+[2:22:56] This I would say this there are two
+[2:22:58] chances to engage in shorts is to get uh
+[2:23:01] break below London low just strong
+[2:23:02] displacement and try to short
+[2:23:04] immediately to August open at 7617 or
+[2:23:07] wait for 15 I would say since we're
+[2:23:09] looking for minor pullback waiting for
+[2:23:11] 15 minute liquidity s will be great
+[2:23:14] option for shorts as well
+[2:23:18] so I don't mind to see slightly higher
+[2:23:20] then 15 minute liquidity sip 3 million
+[2:23:22] tob and it will give me better
+[2:23:24] discreward
+[2:23:27] trade.
+[2:23:32] Yeah, Robert, I'm not in Russia. We'll
+[2:23:34] see.
+[2:23:36] Yeah, I can stay longer. It's not a
+[2:23:38] problem. Let's see.
+[2:23:41] I'll take my time.
+[2:23:44] Where's my husband? I need to ask him to
+[2:23:46] wash my car.
+[2:23:51] Oh, he's at home. I was thinking he went
+[2:23:54] outside. Whatever then
+[2:24:06] no.
+[2:24:14] Yeah, I would wait for 50% 50 minute
+[2:24:16] liquidity. I would try to short I guess.
+[2:24:19] So, it's going to look like
+[2:24:22] Yeah. 50% not that far away like 17
+[2:24:25] years or 70s.
+[2:24:30] [laughter]
+[2:24:37] 15 minute liquidity sweep.
+[2:24:40] So, 15 minute liquidity when a second
+[2:24:42] candle. So, at this point we call it
+[2:24:44] liquidity. When a candle sweeps and
+[2:24:46] closes inside previous candle range
+[2:24:48] sweeps previous candle high and low and
+[2:24:50] closes within this range for example
+[2:24:51] like we got here like we got here like
+[2:24:55] we got here but once again we cannot
+[2:24:57] take every single liquidity sweep we
+[2:24:58] need to get confirmation so what I'm
+[2:25:00] going to wait for if it's going to be uh
+[2:25:02] it is to 50% 15 minute liquidity sweep
+[2:25:05] and 3 million OB because I don't trust
+[2:25:07] man I will try to short
+[2:25:11] 10 bucks more to pass evaluations I hate
+[2:25:13] this kind of numbers bird.
+[2:25:25] We just got two minute OB once again
+[2:25:27] don't want to engage in long simply
+[2:25:28] because for me person doesn't make any
+[2:25:30] sense to risk more than I'm going to
+[2:25:32] make. There's no reason for this. I'm no
+[2:25:34] way I'm going to do this
+[2:25:39] hardest and bug. That's true.
+[2:25:51] I don't want too long. I said like I
+[2:25:53] don't like it because for now I'm
+[2:25:54] looking at test of 50%. So basically
+[2:25:56] you're going to risk more than you're
+[2:25:57] going to make. No, thank you.
+[2:26:06] I will I will make short video just it
+[2:26:08] takes time guys. I will do
+[2:26:14] Hey, hey, hey. Don't touch Barbara.
+[2:26:16] Don't touch her.
+[2:26:46] Oh, no way. I will go to the gym after
+[2:26:50] team as well. You know what what I did
+[2:26:52] husband? I'm not sure if in the chat,
+[2:26:54] but I'm going to say this. I hired a
+[2:26:56] private train private coach for gym for
+[2:26:59] my husband. Did I call this right? He's
+[2:27:02] gonna be he's gonna be uh it's gonna be
+[2:27:05] his first workout today. He he said like
+[2:27:08] we will do this on Monday. I said no
+[2:27:10] Mondays I don't want to hear that. You
+[2:27:13] will go today at 5:00 p.m. So I hired
+[2:27:16] private coach for him like yesterday.
+[2:27:19] And he said let's start on Monday. I
+[2:27:21] said no Monday my friend we will start
+[2:27:23] tomorrow.
+[2:27:26] He said like I'm not ready for tomorrow.
+[2:27:27] I said who cares who's ready who's not?
+[2:27:30] He will go tomorrow because if you keep
+[2:27:33] saying like I will start on Monday, you
+[2:27:34] will not start on Monday, my friend. So
+[2:27:37] you will start on random day it's
+[2:27:39] Tuesday, right? You will start on
+[2:27:40] Tuesday.
+[2:27:42] Wait a minute. He wants to wait for six
+[2:27:44] days.
+[2:27:46] No, no, no, no, no, no, no, no, no.
+[2:27:52] Put one on him.
+[2:27:54] [laughter]
+[2:28:01] I'm going to try tomorrow. Yeah. Yeah.
+[2:28:06] You train here? No way. I'm going to do
+[2:28:08] this.
+[2:28:10] My mental health is much more important
+[2:28:12] than his workout. Trust me. You know
+[2:28:14] what I remember was it was 2018. My
+[2:28:18] husband was trying to teach me how to
+[2:28:20] drive because you need to hire like uh
+[2:28:22] you need to go to school to learn how to
+[2:28:24] drive here in US. That's why we have so
+[2:28:26] many bad drivers. But guys, 2018 or 17,
+[2:28:30] don't remember for sure which year it
+[2:28:31] was. He was trying to learn teach me how
+[2:28:34] to drive.
+[2:28:37] You cannot imagine how many times I said
+[2:28:39] we're going to divorce.
+[2:28:41] Like, you cannot imagine how many times
+[2:28:44] I said this. I was sitting for the first
+[2:28:47] time in my life and the car I was trying
+[2:28:49] to drive and he was screaming at me
+[2:28:51] saying, "You don't do this right." And I
+[2:28:54] was like, Dashan, [snorts]
+[2:28:57] after this, I said, "My mental health is
+[2:29:00] much more important than your workouts,
+[2:29:02] everything else. No way I'm going to ask
+[2:29:05] you to teach me something in my life
+[2:29:07] anymore.
+[2:29:10] No way.
+[2:29:16] Yeah, we will take a picture.
+[2:29:19] It's not o content to flex something.
+[2:29:23] >> [laughter]
+[2:29:23] >> on YouTube.
+[2:29:28] Why not long kind of strong by the trend
+[2:29:30] here? So don't want to like trade uh
+[2:29:32] against the trend.
+[2:29:34] Not a good teacher. He's not good at
+[2:29:36] teacher. That's true.
+[2:29:40] Uh I mean I do like to teach but not
+[2:29:44] him.
+[2:29:46] Not him. And I hate when teach me
+[2:29:48] something as well. I just
+[2:29:51] I'm just becoming monster guys. Same
+[2:29:54] when I do homework with my kids like I
+[2:29:56] don't know why guys I don't know why I'm
+[2:29:59] really become monster when I do homework
+[2:30:01] with my kids. I cannot like react like
+[2:30:03] normal person. When I'm trying to
+[2:30:05] explain something like twice, three
+[2:30:08] times, four times. He doesn't listen to
+[2:30:10] me. I'm like Dasha
+[2:30:12] it's your kid. It was your choice. It's
+[2:30:16] okay. Calm down. I cannot calm down
+[2:30:18] guys.
+[2:30:20] I keep acting crazy
+[2:30:22] because when someone doesn't listen to
+[2:30:24] me guys that's it game is over it's not
+[2:30:27] dasha anymore
+[2:30:31] especially I'm trying to explain try
+[2:30:33] different ways and I'm saying okay I got
+[2:30:35] it I got it when I do like completely
+[2:30:37] different like example and he said I
+[2:30:39] have no idea how to do this and I'm like
+[2:30:44] dasha relax dasha relax and you know my
+[2:30:47] husband like running to the room saying,
+[2:30:49] "Dasha, calm down. It's not okay." And I
+[2:30:52] know like it's not okay, but I cannot do
+[2:30:54] this.
+[2:30:57] I cannot do this.
+[2:31:00] Yesterday was easy because uh yesterday
+[2:31:02] we had only math for homework. It was
+[2:31:04] kind of easy. I was trying to explain
+[2:31:06] like an easier way. He did this fast.
+[2:31:08] But when we have like reading guys,
+[2:31:11] no
+[2:31:15] because he needs to write sentence
+[2:31:16] answering questions on like what he read
+[2:31:18] before and he like he has short line to
+[2:31:21] write like three words. He cannot his
+[2:31:24] three words in this line. I keep erasing
+[2:31:26] everything. We starting over and over
+[2:31:28] and over again and like Dasha he's only
+[2:31:33] seven. Relax. He doesn't understand it.
+[2:31:36] He relax Dasha. It's okay.
+[2:31:44] [laughter]
+[2:31:45] It's fine guys.
+[2:31:50] But it's true. Like I really become
+[2:31:52] monster. I don't know why I cannot
+[2:31:54] control myself. I can like repeat three,
+[2:31:57] four times, but if it if he doesn't
+[2:31:59] listen to me after this. No.
+[2:32:03] And it's funny because like my husband
+[2:32:05] just like running into the room saying
+[2:32:06] like dash relax calm down but he never
+[2:32:08] ever does homework with my kids
+[2:32:13] like a reminder guys he he was trying to
+[2:32:16] teach me how to drive how it ended like
+[2:32:18] imagine when he going to do this with
+[2:32:20] kids [laughter]
+[2:32:21] [gasps] I mean probably he understands
+[2:32:23] this but it either me or him so he
+[2:32:27] picked me for this task unfortunately
+[2:32:39] >> [cough]
+[2:32:42] >> guys. It's really crazy.
+[2:33:05] What time is this? 11:32.
+[2:33:10] Okay, I did today. I made um Let me flex
+[2:33:14] my P&L, guys. I want to do this.
+[2:33:19] No way, guys.
+[2:33:23] Buy the course. Uh, you will never ever
+[2:33:26] see this anywhere. It's
+[2:33:29] just no words.
+[2:33:32] Expensive course. Show arrows.
+[2:33:35] [laughter]
+[2:33:37] I'm going to show arrows for this trade,
+[2:33:39] guys. It was insane trade with like 1,3
+[2:33:43] like R.
+[2:33:45] So, it was like I never was in draw
+[2:33:47] down. I was immediately in profit. It
+[2:33:49] was just easy easy trade. Can you see my
+[2:33:52] arson chart? See this executions dumbs?
+[2:33:55] That's so good. You never ever find this
+[2:33:57] anywhere. It's just perfect executions.
+[2:34:04] Yeah, it's expensive course guys.
+[2:34:09] Um
+[2:34:10] I will announce um when you can join uh
+[2:34:14] my weight list for this course.
+[2:34:18] I know like you need to like take credit
+[2:34:20] like in bank. I don't know. It's going
+[2:34:22] to be expensive if you want to have 101%
+[2:34:25] win V rate strategy. Like,
+[2:34:29] guys, I will keep you updated. It's
+[2:34:31] going to be expensive.
+[2:34:33] I saw someone sell courses for $10,000,
+[2:34:36] guys. Like, jokes aside, what the heck?
+[2:34:41] Yeah, it's only like $999, but with code
+[2:34:45] Lumi, only today you can get 0.1%
+[2:34:48] off.
+[2:34:50] Only today, only today guys,
+[2:34:54] you will get 0.1%
+[2:34:56] off this code aluminum.
+[2:35:01] [sighs]
+[2:35:04] Mhm.
+[2:35:06] Is it can watch right now?
+[2:35:12] [laughter]
+[2:35:13] He'll be collecting. Okay. All right.
+[2:35:29] This going to probably change in this
+[2:35:31] video. I don't like this candle.
+[2:35:33] [clears throat]
+[2:35:46] Yeah, Discord is down. I don't know why
+[2:35:50] you have to pass interview as well.
+[2:35:52] That's a great option by the way. I like
+[2:35:53] it. You have to pass interview because
+[2:35:55] not every single person going to be
+[2:35:56] eligible for this course.
+[2:35:59] Yeah,
+[2:36:03] first.
+[2:36:05] That's funny.
+[2:36:08] You know guys, I bought a course
+[2:36:11] uh it's only course I ever bought. It
+[2:36:14] was $5,000. And back then I couldn't
+[2:36:16] afford this guys to like it was like
+[2:36:17] really like big amount for me. It was
+[2:36:21] 2021 I bought video trading course.
+[2:36:24] Video trader course. Video trading
+[2:36:25] course. I don't from Ros Cameron for
+[2:36:28] 5,000 something. 5,500 bucks.
+[2:36:32] Damn. It was expensive back then.
+[2:36:38] It's only course I ever bought.
+[2:36:41] I mean, yeah, it was super expensive.
+[2:37:05] And funny to say because I started
+[2:37:07] trading video uh after I started trading
+[2:37:09] stocks small cap stocks after watching
+[2:37:12] this video trading course he provided
+[2:37:14] platform like scanners and so on and for
+[2:37:16] some reason I don't know why like really
+[2:37:18] have no I started trading my life
+[2:37:20] account my personal account
+[2:37:29] deleted socials because
+[2:37:32] I don't understand how people sell
+[2:37:34] courses without proper education because
+[2:37:35] I believe like truly believe you need to
+[2:37:37] have some sort of license for this.
+[2:37:45] I mean,
+[2:37:48] I remember Ros Cameron, he was sued for
+[2:37:51] $1 million because he didn't have he
+[2:37:53] didn't have disclaimers or something
+[2:37:55] like that on his course or YouTube.
+[2:37:59] Yeah. But yeah, I truly believe in order
+[2:38:01] to sell education like where you
+[2:38:03] actually teach strategies and be
+[2:38:05] profitable according to your course
+[2:38:08] description, you need to have license
+[2:38:09] for this. How financial license or how
+[2:38:12] to call this? I know
+[2:38:15] because it's legal.
+[2:38:19] Yeah, I lost money on small gaps. I know
+[2:38:21] why I decided to trade on my life
+[2:38:22] account immediately.
+[2:38:25] I was trading on thinker swim. It was
+[2:38:27] crazy huge commission as well.
+[2:38:30] I don't know why my brain decided to do
+[2:38:33] this certificates. Yeah, education
+[2:38:35] license something like that.
+[2:38:38] I believe you can like do this like on
+[2:38:40] there are online courses for this but
+[2:38:41] people still like sell courses without
+[2:38:43] proper education. Like what the heck?
+[2:38:52] I mean he still trades I believe but
+[2:38:56] what I realized No, no, I'm flat.
+[2:38:59] What idealized
+[2:39:00] I'm going to look for a trade on Yes,
+[2:39:04] I forgot what I want to Oh, yeah. When I
+[2:39:07] was trading small caps back then, it was
+[2:39:09] hard for me because he said I remember
+[2:39:11] he was streaming every single day and he
+[2:39:13] was executing like super fast. He was
+[2:39:16] switching between instruments like with
+[2:39:17] closed eyes. He was opening uh uh
+[2:39:20] instruments and I simply simply wasn't
+[2:39:23] fast enough to execute something. I saw
+[2:39:25] screener like like we got news. I said
+[2:39:27] like, "Okay, it's going to be momentum
+[2:39:28] here." I was like, "Okay, let me open
+[2:39:31] this instrument." A move already
+[2:39:32] happened. That's it. It was hard.
+[2:39:46] [snorts]
+[2:39:47] It may go up to 50%. I I can expect this
+[2:39:51] one.
+[2:39:54] Yeah, you need to be like momentum
+[2:39:55] trader. Um, my brain guys, I had like
+[2:39:58] newborn kid, not really newborn, but he
+[2:40:01] was like super young. I still it was it
+[2:40:04] he was breastfeed and maybe my brain
+[2:40:07] didn't work good enough. I don't know
+[2:40:10] like seriously. But I I really really
+[2:40:13] did not have time to enter like symbol
+[2:40:16] switch on instrument and the stinker
+[2:40:18] swim execute something. No way.
+[2:40:23] I'm going to repeat this process again.
+[2:40:25] But his course itself like education was
+[2:40:28] good.
+[2:40:30] Yeah, I remember hard keys. I even
+[2:40:31] bought
+[2:40:34] I cannot show you. I mean
+[2:40:37] I got see this. I bought this stream
+[2:40:41] deck
+[2:40:43] for hot keys as well.
+[2:40:46] It didn't help
+[2:40:49] I believe because on thinker swim hot
+[2:40:51] keys kind of a small delay. Did Did you
+[2:40:53] Did you realize this
+[2:41:06] when you like press by and it's kind of
+[2:41:08] delay?
+[2:41:11] Maybe it's me.
+[2:41:40] This chart is ES. Where's my By the way,
+[2:41:43] no, it's
+[2:41:47] it's a yes chart.
+[2:41:49] Yes,
+[2:41:56] I believe S&PX wants to bounce to 50%
+[2:41:59] first
+[2:42:04] like okay my very first experience in
+[2:42:06] trading started in 2021 with small caps
+[2:42:09] about ICT I learned about ICT in 2022
+[2:42:18] volumes coming Yeah, after consolidation
+[2:42:20] I expect to get some sort of move.
+[2:42:32] Gold. I didn't know if I wanted to trade
+[2:42:34] gold. [cough]
+[2:42:45] Probably no.
+[2:42:47] Looking for move towards this area once
+[2:42:49] again. First I just need it for me
+[2:43:09] now point technically we have room to go
+[2:43:11] lower but the question is if it's going
+[2:43:13] to happen today maybe tomorrow during
+[2:43:16] FMC but yeah pullback is coming here
+[2:43:20] minute will be just over it like bullish
+[2:43:22] water block not long time ago we barely
+[2:43:25] moved a point from there
+[2:43:29] but once again as we discussed before
+[2:43:31] like I don't really want to uh risk more
+[2:43:34] than this trade it's around like 1 hour
+[2:43:36] even less so I don't see like good point
+[2:43:39] to engage
+[2:44:04] I don't have mentorship
+[2:44:10] you know guys my husband just it's funny
+[2:44:12] because like every single time when my
+[2:44:14] husband ask me like random questions
+[2:44:16] next day someone ask this questions in
+[2:44:17] the chat I'm bad sculper guys for me
+[2:44:20] personally it's way easier to find like
+[2:44:22] big move is a small move for five points
+[2:44:25] or 10 points on Q. I swear to the god I
+[2:44:27] do I cannot find anything like scalps on
+[2:44:30] chart when I'm trying to find it's
+[2:44:32] always like bad
+[2:44:51] >> [snorts]
+[2:44:58] >> Still no trades. Maybe I will finish the
+[2:45:00] day with no trades. Just keep running
+[2:45:02] probably. I just don't feel comfortable.
+[2:45:08] Still guys made $0 today. I mean, don't
+[2:45:11] feel bad about this,
+[2:45:16] but it's fine. You know,
+[2:45:20] today we got great trade, but once
+[2:45:21] again, it was kind of hard to engage.
+[2:45:31] You know what? I cannot say like no
+[2:45:33] trade is better better than last. Not
+[2:45:36] really. If last was taken according to
+[2:45:38] your strategy, it's okay.
+[2:45:41] I just feel like it still has room to go
+[2:45:43] over. That's why I don't want to engage
+[2:45:45] in longs like at all.
+[2:45:50] Yeah, definitely we can bounce to 50%.
+[2:45:52] Like this scenario is possible but dumb
+[2:45:54] guys. I don't like it. For me
+[2:45:56] personally, ideal going down first to uh
+[2:45:58] to August low, not low open and then
+[2:46:01] reoption maybe even tomorrow.
+[2:46:10] [cough]
+[2:46:34] Maybe I'm wrong, but I feel like I'm not
+[2:46:35] tra to long this.
+[2:46:38] It's not indicator, just my drawings.
+[2:46:46] Please, what is S? You keep ignoring me.
+[2:46:49] What S means?
+[2:46:55] I want to drop like the waterfall like
+[2:46:57] yeah please give us free fall we don't
+[2:46:59] mind
+[2:47:02] and entry using ICT concept always
+[2:47:05] confusion and guessing
+[2:47:08] you just answer it like your statement
+[2:47:10] is wrong because concept not equal
+[2:47:12] strategy
+[2:47:14] orderflow concept I know like supply and
+[2:47:17] demand concept entries always going to
+[2:47:20] different if you don't have strategy but
+[2:47:23] you're saying like you're ICT trader you
+[2:47:25] don't have strategy then this means
+[2:47:26] you're not ICT trader you're just using
+[2:47:29] lots of like bunch of random stuff from
+[2:47:32] ICT
+[2:47:34] concept of course it's going to be
+[2:47:35] guessing and it's going to be confusing
+[2:47:37] for you
+[2:47:41] so guys go on my website funed now I'm
+[2:47:44] going to send you like syllabus for ICT
+[2:47:48] channel completely for $0 I created
+[2:47:51] syllabus. So basically it's my
+[2:47:52] recommendation how you need to approach
+[2:47:54] ICT YouTube channel. It's over here.
+[2:48:01] I'm going to actually mention you
+[2:48:09] guys. I'm not going to do I mean maybe I
+[2:48:12] will do this but it's going to be free.
+[2:48:18] [laughter]
+[2:48:27] more than I would say more in high time
+[2:48:28] frame talking about institutional order
+[2:48:31] flow.
+[2:48:39] Guys, let's hit 1,000 likes. I will do
+[2:48:41] light infinite account for giveaway.
+[2:48:43] Actually, I had this
+[2:48:55] Then I will go to the gym.
+[2:48:59] Yeah. May I go see you tomorrow?
+[2:49:05] See guys, you're saying sell because you
+[2:49:07] have inform right now. Do you have
+[2:49:09] structure for this yet? No,
+[2:49:15] we have 841.
+[2:49:36] Yeah, I will create separate giveaway
+[2:49:37] for this.
+[2:49:42] Yes, since I got two close candles, it
+[2:49:44] doesn't mean that we will drop
+[2:50:08] Let me highlight this on my chart as
+[2:50:10] well.
+[2:50:15] I think I want to try the V. I guess
+[2:50:17] because of time.
+[2:50:24] Just because of time.
+[2:50:30] Okay. Less than 2 minutes left on this
+[2:50:31] candle. three minute because we got 50
+[2:50:34] minutes
+[2:50:38] to be maybe also will work since we got
+[2:50:40] 50 minutes liquidity sweep.
+[2:50:43] Let me see chart.
+[2:50:59] I see him.
+[2:51:04] 40 seconds left on this candle.
+[2:51:06] So far a fake one. Nothing else. Looks
+[2:51:09] like a trap.
+[2:51:12] Yeah, more like chop. Yeah.
+[2:51:23] Nothing yet. Still bullish. I mean,
+[2:51:25] still trying to bounce to 50% in my
+[2:51:28] opinion. Look what happened here. We
+[2:51:30] retraced to basically to 50% of Tob
+[2:51:33] trying to reject. Still bullish on both
+[2:51:36] and Q.
+[2:51:39] We got 15 minute liquidity but no
+[2:51:41] confirmation for this yet.
+[2:51:44] Chill guys.
+[2:51:48] No shorts possible in this scenario yet.
+[2:51:51] We closed inside this range. It's still
+[2:51:53] bullish
+[2:51:55] unless we're going to get break or
+[2:51:57] displacement below this level.
+[2:52:01] So well that's I discussed before we
+[2:52:03] need to get something like that. It's
+[2:52:06] not valid like at all
+[2:52:11] this one but it's once again it's not
+[2:52:13] valid
+[2:52:16] because we don't got we don't have don't
+[2:52:17] have break below uh 50%. We don't have
+[2:52:20] the change in the state of just yet.
+[2:52:37] Ow.
+[2:52:47] You mean a chart? Yeah. Nothing yet.
+[2:52:59] >> [snorts]
+[2:53:07] >> Let me check financial just real quick.
+[2:53:17] Nothing. Okay, whatever then.
+[2:53:20] Come on guys, let's hit 1,000 likes and
+[2:53:22] I will do straight to funed account for
+[2:53:23] giveaway.
+[2:53:26] Yeah. Yeah. Nothing yet.
+[2:53:29] Guys, don't have for more because no
+[2:53:30] setup yet. You're trying to have for
+[2:53:32] it's it's it's bad. Like so what we're
+[2:53:36] waiting for is I just highlighted this
+[2:53:38] on chart
+[2:53:40] is order block. We don't have this yet.
+[2:53:43] We're still respecting 50%, right?
+[2:53:46] Nothing yet.
+[2:54:06] Once we hit 1,000 likes, I will do
+[2:54:08] giveway for straight to funded 50k
+[2:54:10] tradeify account.
+[2:54:25] Oh, it's here. Okay.
+[2:54:46] Looks checking.
+[2:54:52] Yeah, you will need to enter rea. Yes,
+[2:54:55] it's going to be separate link for this.
+[2:55:02] Yes guys, I will post separate link.
+[2:55:12] Okay, more than 2 minutes left on this
+[2:55:14] candle. Let's see.
+[2:55:17] Don't get trapped here, guys.
+[2:55:29] Oops.
+[2:55:35] Oops. Twice. Dasha, are you kidding me?
+[2:55:43] Yeah, guys. You know, like my brain
+[2:55:45] sometimes works works better when I see
+[2:55:48] beish market only be bullish market or
+[2:55:49] bullish market really depends. So, for
+[2:55:51] example, when I invert chart, I'm like,
+[2:55:53] okay, just looking at this structure, I
+[2:55:55] will try to long or short. If I'm
+[2:55:57] looking at at inversion chart like short
+[2:55:59] so most likely it's going to be
+[2:56:00] continuation higher make sense. It just
+[2:56:03] sometimes it just helps when structure
+[2:56:05] not super obvious in current picture.
+[2:56:14] I guess it's not only me, right?
+[2:56:17] Okay. Let's see. Let's see. Trying to
+[2:56:18] just please.
+[2:56:21] More than two minute. Uh more than two
+[2:56:23] one minute left. Less than two minutes
+[2:56:24] left. Who's me? It's my trading name.
+[2:56:32] I don't know why. Just it's easier for
+[2:56:34] me sometimes.
+[2:56:40] Let's see. Maybe I will trade
+[2:56:41] evaluations due to time because time
+[2:56:43] already like not perfect one. Oh no,
+[2:56:46] never mind.
+[2:56:49] No closure, no trade.
+[2:56:52] See how they keep tra trapping people
+[2:56:54] here thinking like okay sweeping but no
+[2:56:57] closure
+[2:57:10] they playing games here so it's fine
+[2:57:15] that's why guys I I keep saying no for
+[2:57:18] more here you need to wait and wait for
+[2:57:20] the closure without this you're just
+[2:57:21] chasing the price nothing else limits
+[2:57:24] from in no
+[2:57:30] it looks like oh okay it's so close it's
+[2:57:32] so close it's going to be st but no
+[2:57:35] it's all about patience see guys I was
+[2:57:37] talking about this like if I wasn't on
+[2:57:39] steam I was like okay we just broke this
+[2:57:40] level let me try but in reality see this
+[2:57:42] fix it get stopped here for no them.
+[2:58:14] I mean, maybe it's going to drop, but
+[2:58:15] the question when?
+[2:58:18] I don't think it's ready to drop yet.
+[2:58:21] What's up, guys? Hello. Hello, everyone.
+[2:58:27] Guys, let's be faster. Let's hit 75 more
+[2:58:31] likes, right? And I will start straight
+[2:58:33] to funded account for giveaway. I will
+[2:58:36] share the link. Let's hit like the goal
+[2:58:38] first. I already did first give away
+[2:58:41] today.
+[2:58:54] [snorts]
+[2:58:56] Yeah, you will need to enter giveway uh
+[2:58:58] again. Yes.
+[2:59:01] Oh god, look at you. That's This chop is
+[2:59:04] real.
+[2:59:08] Yes, guys, you need to enter again.
+[2:59:16] I need to make 425 bucks to request list
+[2:59:19] as well, but seems like it's not going
+[2:59:22] to happen today.
+[2:59:30] Unfortunately,
+[2:59:35] just stuck inside this consistency
+[2:59:37] gel
+[2:59:46] just stuck inside your gel. Consistency
+[2:59:48] gel, guys. It's crazy.
+[3:00:02] Chappy chappy guys if we see you
+[3:00:03] tomorrow so it's okay I mean guys I'm
+[3:00:06] ready to say this today's price action
+[3:00:09] they were good especially here and I
+[3:00:12] cannot say we miss the we were
+[3:00:14] looking at this trade in real time
+[3:00:15] probably was in Q and probably we had to
+[3:00:17] short in Q because uh once we got
+[3:00:19] confirmation in Q price was already here
+[3:00:21] like for me personally I was no reason
+[3:00:23] to engage but price was okay today yeah
+[3:00:26] I have restrictive one direct accounts
+[3:00:28] 20% consistency rule. I have 24
+[3:00:33] 23 like something like 24.
+[3:00:40] Oh god. I mean I'm so disappointed. My
+[3:00:42] husband keeps saying like consistency
+[3:00:44] rule like it will destroy your account
+[3:00:46] because you already met like conditions
+[3:00:48] for payout but not consistency rule. So
+[3:00:51] it's easier to mentally it's easier to
+[3:00:52] blow account. My husband keeps saying
+[3:00:54] this. So I'm like are you kidding me?
+[3:00:56] You have to support me not saying this.
+[3:01:00] No, I'm talking about I have straight to
+[3:01:02] funded accounts
+[3:01:04] straight to finders. I'm talking about
+[3:01:05] list right now
+[3:01:08] because my balance is
+[3:01:11] almost 54,000 on each account. I have
+[3:01:13] 50k account
+[3:01:15] and I cannot request pay out. That's
+[3:01:18] crazy.
+[3:01:21] Don't worry on trade also cannot request
+[3:01:22] payout. My balance is one one
+[3:01:26] 7,000 on each account.
+[3:01:30] 157 something like that. I'm checking
+[3:01:32] every Friday. So, uh 7,000 each account
+[3:01:36] on on trading. Also, I cannot request
+[3:01:38] because of consistency. I love it. It's
+[3:01:41] so good. It's like so good.
+[3:01:51] just stuck there.
+[3:01:57] That's why I I love to trade take profit
+[3:01:59] traders. I don't have consistency on
+[3:02:01] funded.
+[3:02:02] But I have great experience with Lucid
+[3:02:04] and Trader. Just my problem with
+[3:02:06] consistency.
+[3:02:09] Not going to like blame anyone. Just me.
+[3:02:15] See guys, one, two, three. Three sweeps
+[3:02:18] but no closure. It's definitely trying
+[3:02:20] to stay bullish.
+[3:02:21] Crystal Bull somewhere here on the
+[3:02:23] shelf. What about Top Step? Top step
+[3:02:26] have has different platform. Dumb. I
+[3:02:28] really want to try their new like new
+[3:02:31] lab, but I don't want to jump between
+[3:02:33] platforms to execute. It's going to be
+[3:02:36] different, guys. Once we hit 1,000
+[3:02:38] likes. Come on. 40 more likes for
+[3:02:40] giveaway.
+[3:02:52] Alan, I updated my height from candles
+[3:02:55] yesterday, but I didn't publish this
+[3:02:57] yet.
+[3:03:00] It's going to be new, guys. Yes,
+[3:03:05] guys, it's still old one. Don't Don't
+[3:03:06] enter now. Let me finish that giveaway
+[3:03:09] by the way because might be looking
+[3:03:11] confusing and
+[3:03:14] It's going to be new link
+[3:03:21] account blow and press action. Hey guys.
+[3:03:27] Okay, let me start creating giveaway for
+[3:03:29] for straight to funded account.
+[3:03:32] Create live giveaway tradeify 50k
+[3:03:38] lightning funed.
+[3:03:43] What time is this now? Now it's going to
+[3:03:45] be longer.
+[3:03:58] I like elucid flex. The rules are
+[3:04:01] amazing. I like trade if I select but
+[3:04:03] top one going to get the place number
+[3:04:06] one is going to be take profit trader.
+[3:04:09] Absolutely
+[3:04:12] in love with take profit trader best
+[3:04:15] perform for me personally for now but
+[3:04:17] lucid and traify also nice one like top
+[3:04:20] three take
+[3:04:23] but it's my personal choice.
+[3:04:38] Wow,
+[3:04:40] I use this. Yeah, I use Apex. It's just
+[3:04:42] not top three. But yeah, I like Apex.
+[3:04:49] I'm not going to add new properforms for
+[3:04:51] now. I have some with new props, but for
+[3:04:53] now, no plan. Yes, we take perfected
+[3:04:55] monthly subscription,
+[3:04:58] but still I love it. That's why I
+[3:05:00] recommend to pass 50K. It's easier
+[3:05:03] to pass comparing to 150K. for 150k guys
+[3:05:07] it takes me like six eight weeks to
+[3:05:09] pass. I went with uh legacy intra
+[3:05:13] trailing draw down on Apex. It's my
+[3:05:15] option. I like it more.
+[3:05:18] [snorts]
+[3:05:19] Yes, link is out for straight to funded
+[3:05:24] guys. Link is out for straight to funded
+[3:05:31] account. Enter now. I just posted this
+[3:05:40] >> [snorts]
+[3:05:47] >> Yeah. Yeah, it's already out.
+[3:05:51] Enter giveaway guys. I just posted link
+[3:05:53] in the chat for straight to fund it.
+[3:05:55] Damn. It's just account bling price
+[3:05:57] action. That's wild.
+[3:06:03] But see how they keep failing to close.
+[3:06:06] That's wild as well.
+[3:06:22] It's going to be trade. Yeah. Yeah. I
+[3:06:24] mean you can pick. So I will I will send
+[3:06:26] you coupon code. You can pick rhythmic
+[3:06:28] or trade. It's really up to you.
+[3:06:32] with new account Apex accounts. Not yet.
+[3:06:34] I will keep you updated guys. I will
+[3:06:35] show you everything like once I will be
+[3:06:37] eligible for Apex payout. I'm still
+[3:06:38] building the buffer. I will show you
+[3:06:41] everything. Okay.
+[3:06:55] What?
+[3:07:10] I hate it.
+[3:07:14] Well,
+[3:07:17] divorce is coming.
+[3:07:24] My husband just destroyed garage and he
+[3:07:27] said, "I'm gonna clean this." Divorce is
+[3:07:30] coming, guys.
+[3:07:36] We will see. No trades.
+[3:07:38] Don't feel bad about this, but no trades
+[3:07:40] yet. Uh,
+[3:07:45] [laughter]
+[3:07:46] I don't know. [gasps]
+[3:07:52] Divorce is coming.
+[3:07:59] >> [laughter]
+[3:08:02] >> Don't open DMs. That's actually true.
+[3:08:05] [laughter]
+[3:08:12] I'm not going to clean anything because
+[3:08:15] I said like I'm not going to break my
+[3:08:17] nails to clean garage. I can do this
+[3:08:18] like day before appointment.
+[3:08:23] But guys, you will know like why
+[3:08:25] divorced
+[3:08:26] just in case this happens. Mhm. Mhm.
+[3:08:40] And yeah, I don't know why he decided to
+[3:08:43] went to garage. I was thinking like he
+[3:08:45] left the house but he just uh they
+[3:08:47] parked car just outside. Put car
+[3:08:50] outside. Okay.
+[3:08:52] Okay. All right. All right. Okay. 50
+[3:08:54] seconds left.
+[3:08:57] Because last time I did my nails, guys,
+[3:08:59] and I broke my nail next day because he
+[3:09:01] decided I need to clean garage. I know.
+[3:09:03] He said, "We need to clean garage, guys.
+[3:09:05] We need to clean garage." Guess what? He
+[3:09:08] did nothing.
+[3:09:13] And last time when like I I come home
+[3:09:15] from my appointment, he said like we
+[3:09:17] need to cleaner again because like we
+[3:09:19] bought new TV, we need to like throw
+[3:09:20] away like previous box from previous TV.
+[3:09:22] And I'm not going to do this because I
+[3:09:24] got new nails. And now he's doing now
+[3:09:26] this like
+[3:09:28] [clears throat]
+[3:09:29] if I'm going to break nails, it's going
+[3:09:30] to be his fault. It's going to be like
+[3:09:31] main reason of divorce.
+[3:09:35] 15 seconds left.
+[3:09:42] It's going to be divorce.
+[3:09:50] Chris, what's wrong with you today?
+[3:09:53] You're acting crazy.
+[3:10:00] Broken nails. Yes. [laughter]
+[3:10:04] No, he will go to the gym. He will have
+[3:10:07] no let's see this by the way set up is
+[3:10:09] forming maybe
+[3:10:13] worth to try but I will try to
+[3:10:14] evaluations [cough]
+[3:10:18] we got three minute candle closure
+[3:10:26] it's going to be a wild trade
+[3:10:36] probably
+[3:10:44] we just got the closure below 50% right
+[3:10:46] we got 3 minute do we got two minute 2
+[3:10:48] [snorts] minute OB as well I mean didn't
+[3:10:51] break bel actually just broke this
+[3:11:03] trying to stay below NQ and P looks good
+[3:11:09] but I will try an evaluation not going
+[3:11:11] to straight fund it 8 point stop loss no
+[3:11:14] it's not going to be here it's going to
+[3:11:15] be here 10 point stop loss for micers
+[3:11:17] probably for this trade then
+[3:11:27] Let's see. I'm thinking about entering
+[3:11:28] here. Let's see.
+[3:11:43] Okay, I don't joke about this anymore.
+[3:11:52] I'm thinking about this shirt right now.
+[3:11:53] Like kind of like it. Let's check real
+[3:11:56] quick.
+[3:12:06] Awesome. I mean, looks good.
+[3:12:18] Let's see once again I will try not
+[3:12:19] going to trade fund it kind of don't
+[3:12:21] want to risk on them but we'll trade for
+[3:12:22] micros probably
+[3:12:30] contract
+[3:12:32] yeah for according to risk for contract
+[3:12:34] it's going to be 10 points so why I'm
+[3:12:36] struggling to enter right now I don't
+[3:12:38] like hover stack below 50% give me some
+[3:12:40] sort of displacement to try we'll use
+[3:12:41] like market order immediately.
+[3:12:44] And he looks better though. Oh, and here
+[3:12:47] actually
+[3:12:59] trying to stay below this level. SPX
+[3:13:02] looks promising as well. So ideal
+[3:13:04] scenario for me short below 70.5% as
+[3:13:08] well.
+[3:13:09] Let's try to find targets.
+[3:13:14] not in trade yet. I will show you.
+[3:13:27] This keyboard is not perfect.
+[3:13:53] Come on this place.
+[3:13:55] I will trade evaluations guys. Not going
+[3:13:58] to trade funded accounts. Not going to
+[3:14:00] even connect them.
+[3:14:05] Come on. Come on. You can do this. Give
+[3:14:07] me. I want to enter around like 48 76
+[3:14:10] 48. So basically it will confirm
+[3:14:12] displacement below this level below 50%
+[3:14:14] of Tobx
+[3:14:26] looks good.
+[3:14:28] I don't like how we stuck here but looks
+[3:14:30] promising even for evaluation.
+[3:14:34] We got closure below 70.5% as well
+[3:14:54] give me entry. I just want to see this
+[3:14:56] stand really below 70.5% and 50%. That's
+[3:14:59] why my entry going to be basically at
+[3:15:00] the break below this low at 7648.
+[3:15:05] No reaction from 50%. That's a problem.
+[3:15:08] And not be closure below this level.
+[3:15:15] Come on. Break it. Break it. Break it.
+[3:15:24] But I will enter. But on evaluations
+[3:15:31] the stock at 49 and 50
+[3:15:40] trade eval
+[3:15:44] because five evolves
+[3:15:49] not risking unfunded. Come on.
+[3:15:52] Looks good. See how it's trying to stay
+[3:15:54] below 70.5% and 50% of Tobi kind of
+[3:15:58] struggling here but that's why I'm
+[3:15:59] waiting for displacement some sort of
+[3:16:02] reaction below this level keep closing
+[3:16:04] below I mean threshold it's good
+[3:16:16] [snorts]
+[3:16:29] That's how it's going to look on SPX
+[3:16:31] around. So maybe maybe like even here.
+[3:16:34] We will see
+[3:16:37] something like that because once you're
+[3:16:39] breaking below 70.5%, we don't want to
+[3:16:41] see price breaking above 50% again. So
+[3:16:44] if I'm going to put my stop loss
+[3:16:45] somewhere here, so yeah, it's going to
+[3:16:46] be better riskreward.
+[3:16:51] very consolidated enough, right?
+[3:16:58] Let me open 15 minute chart real quick.
+[3:17:04] Yeah, I mean it look good for me.
+[3:17:08] Is a three minute chart. Yes.
+[3:17:27] because we do have 15 minute liquidity
+[3:17:29] sweep, right? And this 15-minute
+[3:17:30] liquidity confirmed by 3 to that's
+[3:17:32] pretty much exactly what I was looking
+[3:17:33] for before.
+[3:17:36] We have SMT at highest as well. Not
+[3:17:38] significant one, but we still have it.
+[3:17:48] Guys, everyone entered giveway like I
+[3:17:51] will look for this trait right now. But
+[3:17:52] let's enter give way as well.
+[3:18:09] I don't want to long 100%. only if it's
+[3:18:11] going to displace right now below 50% I
+[3:18:13] will try it's going to be only my try
+[3:18:14] and it's going to be an evaluations
+[3:18:18] maybe I'm not going to place any trade
+[3:18:19] on fun today not maybe I'm not going to
+[3:18:21] place because I'm not going to trade off
+[3:18:26] come on baby below 48 to try come on
+[3:18:31] [snorts]
+[3:18:39] I will Giveaway. Yeah. One second.
+[3:18:42] People enter giveaway now.
+[3:18:49] You have 10 minutes.
+[3:18:52] Be careful. I mean, it's fine.
+[3:18:56] I will trade like four micro contracts.
+[3:18:57] It's going to be an evaluation. So,
+[3:18:59] technically, this going to be 200 bucks.
+[3:19:00] It's perfect for me.
+[3:19:03] I mean, worst to try. See, not right
+[3:19:05] now, but see how we closed below 70.5%.
+[3:19:09] We got 15 liquid. Nice action from this
+[3:19:11] for a while gap.
+[3:19:13] So it will look like that. I like it.
+[3:19:18] It's possible still for me to engage.
+[3:19:20] Not in short, guys. Not in short yet.
+[3:19:22] Not in trade yet. We'll show you
+[3:19:23] immediately once I enter the trade.
+[3:19:32] The chicken queue.
+[3:19:37] So I speak a lot.
+[3:19:42] See also look at in Q guys look how we
+[3:19:44] failed close abovely open we below this
+[3:19:47] level on only yes
+[3:19:55] we'll place at 7648 run so
+[3:20:03] oops I guess I move this a little
+[3:20:32] Oh, this shop is a deal.
+[3:20:35] But honestly speaking, the second
+[3:20:36] opportunity I see for the day, first one
+[3:20:38] was here, but this one that's something
+[3:20:41] that I really want to try once getting
+[3:20:43] below 70.5% again. Like really that
+[3:20:46] second opportunity I see for the day.
+[3:20:52] I'm not fan of not strong closure below
+[3:20:54] mean threshold of tim. So it's not
+[3:20:56] strong one. That's why I'm going to wait
+[3:20:58] for 70.5% break and it's going to be
+[3:21:00] enter at 76 49 48 on a yes. So basically
+[3:21:04] we breaking below this level again and I
+[3:21:07] will try this one. Stop loss going to be
+[3:21:08] around like 6 eight points on ES target
+[3:21:12] going to be
+[3:21:17] 11 points. Wait a minute. Yeah run. So
+[3:21:22] that's something I like to try.
+[3:21:28] It's going to be partial 10 points. I'm
+[3:21:30] going to hold uh final TP uh for final
+[3:21:32] TP here
+[3:21:35] a team
+[3:21:38] and I truly believe exactly same
+[3:21:40] opportunity will happen in case it wants
+[3:21:41] to keep pumping from here but I will not
+[3:21:44] be on steam this means I will not trade
+[3:21:46] it but something something like that can
+[3:21:48] happen as well
+[3:21:50] you'll just observe probably if I will
+[3:21:52] be busy
+[3:22:07] No, it's not ready.
+[3:22:11] I will show the walls anyway. Let's sit
+[3:22:13] here longer because I will do G in 10
+[3:22:16] minutes.
+[3:22:24] Dispected 50%. It's not good sign.
+[3:22:34] position two minute chart. Well, it's
+[3:22:37] kind of it's still kind of trying to
+[3:22:38] stay bullish.
+[3:22:44] Two minute shirt.
+[3:22:48] You know what?
+[3:23:28] I believe it wants to hit 50% first
+[3:23:34] minute
+[3:23:43] point. Yeah, let's try.
+[3:23:47] What the heck is that?
+[3:24:02] It's evaluations, guys.
+[3:24:07] [cough]
+[3:24:08] I'm on evaluations.
+[3:24:52] Range is tight like really tight. Range
+[3:25:32] My disc is like nothing.
+[3:25:45] strong rejection from 50. I don't know.
+[3:25:47] I'm going to put my stop loss I guess
+[3:25:49] here. 6 points four micros. It's like
+[3:25:52] 120 bucks. But once again, I'm on
+[3:25:54] evaluation. I'm not even trading funded.
+[3:26:16] Oh,
+[3:26:31] yeah. Let's see.
+[3:26:35] I guess my concern was I entered a 2
+[3:26:37] minute OB. My concern at this placement,
+[3:26:40] not 2 minutes to be a displacement break
+[3:26:41] above this range here.
+[3:26:44] My concern was how it really barely
+[3:26:47] closed below 50% of bullish dollar which
+[3:26:49] validated possible retracement. So
+[3:26:53] I didn't like it.
+[3:27:00] That's why
+[3:27:04] but still like I decide to trade on
+[3:27:07] valuations don't want to risk
+[3:27:08] confounded.
+[3:27:11] This trade has a chance but once again
+[3:27:13] not for funed.
+[3:27:30] market barley moon.
+[3:27:41] Yeah, evaluation trade guys. I didn't
+[3:27:44] want to trade on my funded.
+[3:27:46] I mean I said this from the very
+[3:27:47] beginning. We got first you cannot see
+[3:27:49] this but on we got first closure above
+[3:27:51] weekly open. Good signature for us.
+[3:28:33] It's my first trade for the day.
+[3:28:37] I wanted to trade SPX before, but I
+[3:28:40] didn't take this one. I I wanted to
+[3:28:41] trade S&P before, but the problem was in
+[3:28:44] Q, but right now it's my first trade. I
+[3:28:46] didn't I cannot say I miss this setup.
+[3:28:48] Not really. But I follow my rules, so
+[3:28:52] it's okay.
+[3:29:01] Lots of volume imbalances on MS, but we
+[3:29:03] don't have them. Oh, maybe we have them
+[3:29:05] on. Yes. No, we don't.
+[3:29:09] My stop loss here. Entry set at 56.
+[3:29:13] Target is this one.
+[3:29:22] That's a partial.
+[3:29:33] [cough]
+[3:29:45] >> [sighs and gasps]
+[3:29:56] >> I wish I could save templates for
+[3:29:58] drawings because I know this kind of
+[3:30:00] option.
+[3:30:18] just to separate other blocks.
+[3:30:21] Yeah, let's see.
+[3:30:57] No, I will do give you we did first give
+[3:30:59] it second. It's going to be second one.
+[3:31:01] [cough]
+[3:31:10] This chop is real. I mean,
+[3:31:24] but it's a well, so I just want to try
+[3:31:25] an evaluation. So, this nothing more
+[3:31:28] fun.
+[3:31:34] I do like how we closed at this level.
+[3:31:36] So, no reason for me to
+[3:31:39] Damn it. I I feel like I'm getting sick
+[3:31:42] probably
+[3:31:45] for me to show this yet.
+[3:31:48] Yeah, I guess it it was my concern here.
+[3:32:16] I don't know, guys.
+[3:32:19] I feel like I'm forcing trades right now
+[3:32:20] inside this shop. Yeah, I'm going to
+[3:32:23] close it.
+[3:32:27] Doesn't look promising.
+[3:32:35] I mean, I want to see higher here, but I
+[3:32:37] don't know.
+[3:32:45] It's questionable.
+[3:32:49] Like, yes and no. You know, [laughter]
+[3:32:52] it doesn't look bad.
+[3:32:59] No, I will not trade this.
+[3:33:04] Good sign for me in Q closed above
+[3:33:06] weekly open but I don't like ch I guess
+[3:33:08] in general
+[3:33:25] feel like I'm you know what guys I feel
+[3:33:27] like I'm forcing
+[3:33:30] It's it's great setup here, but you
+[3:33:32] know, like looking at this overall chop,
+[3:33:35] I don't know.
+[3:33:45] Market me. Guess you were You were
+[3:33:46] waiting for me to close.
+[3:33:51] What?
+[3:34:04] Yeah, I'm I'm forcing this. I'm not
+[3:34:07] going to go trade this anymore. Feel
+[3:34:09] like like enough, Dasha. Like enough is
+[3:34:11] enough.
+[3:34:14] If it's going to go in my favor,
+[3:34:16] perfect. I will not make like 200 bucks,
+[3:34:19] 150 bucks. It's okay, guys. Everyone
+[3:34:21] entered, right?
+[3:34:25] I like [clears throat] this one. But
+[3:34:27] once again, I don't like timing. I don't
+[3:34:28] like how choppy it is. Like no volume. I
+[3:34:31] close this trade. Just closes in one
+[3:34:33] point profit. No, no. One sick profit.
+[3:34:48] Not bad, but not going to force it.
+[3:34:51] Yeah,
+[3:34:53] it doesn't look bad once again. But no,
+[3:34:56] let's try tomorrow.
+[3:34:59] Okay, guys. Time for giveaway.
+[3:35:02] I mean, since it failed to close 50
+[3:35:05] below 50% of Tob looks good. I shared
+[3:35:10] link. Yeah, giveaway is over.
+[3:35:16] Yeah, it's time for a giveaway.
+[3:35:32] I was trading TPT while I'm not going to
+[3:35:34] win anything,
+[3:35:40] man. Watch in replay. One point, not one
+[3:35:43] tick profit. What are you talking about?
+[3:35:46] I closed an open trade right on stream.
+[3:35:51] like you have this kind of
+[3:35:54] things over here. Just watching replay.
+[3:36:00] He's not here. I mean 18 seconds left.
+[3:36:17] No, we waiting for winner.
+[3:36:23] Not in shot.
+[3:36:25] No, guys. Must be fair game.
+[3:36:29] Okay. Picking another one.
+[3:36:58] Why people already questioning me while
+[3:37:01] I'm doing all stuff on life in front of
+[3:37:03] your eyes? Guys, make it make sense,
+[3:37:06] please.
+[3:37:09] Oh, no way.
+[3:37:12] Look at this. Nice. fast enough. See,
+[3:37:22] I'm going to explain. I mean, I already
+[3:37:24] like out. I close this trade. Nice. We
+[3:37:27] got three winners today. So, guys, the
+[3:37:28] reason why I took this one, but I
+[3:37:30] already closes because I don't like
+[3:37:31] chop. Yes, we got two minute order block
+[3:37:36] here. Price was consolidating was
+[3:37:38] absolutely and ugly. I know, I
+[3:37:40] know. But see how what happened here. It
+[3:37:42] was trying to break below 50% but price
+[3:37:44] barely closed below it which was my
+[3:37:46] concern like I want to short this but at
+[3:37:49] the same time it makes me feel like um
+[3:37:53] not strong closure. What happened right
+[3:37:55] after this price? I retraced up form two
+[3:37:59] minute we entered here. I entered right
+[3:38:02] on steam with 0 seconds delay like with
+[3:38:07] zero seconds delay.
+[3:38:09] Price keep chopping here. So I just cut
+[3:38:11] like in one s profit I guess
+[3:38:15] but I don't mind this is slightly higher
+[3:38:17] and my partial idea my partial level was
+[3:38:19] here but once again I don't like overall
+[3:38:21] job so 2 million B was entry
+[3:38:34] I don't remember that
+[3:38:37] that's I mean like seriously It
+[3:38:41] make it make sense.
+[3:39:00] Yeah. Kind of. Yeah, he's strong. He's
+[3:39:03] good.
+[3:39:08] Yeah, guys. I mean, it's built on
+[3:39:10] liquidity for tomorrow.
+[3:39:14] No, he was [clears throat] he's just
+[3:39:15] messing with me. It's fine, guys. Don't
+[3:39:16] worry. He's he's good.
+[3:39:37] No, I mean like well whatever guys. I
+[3:39:39] show executions with zero delay. Like
+[3:39:41] what are you even talking about?
+[3:39:49] Yeah, I did two giveaways. We got three
+[3:39:51] winners for today, guys. I guess I'm
+[3:39:54] going Yeah, I'm going to lock out even
+[3:39:55] evaluations. I'm going to lock out
+[3:39:57] evaluations. Like, you know what? Uh I
+[3:40:00] feel like I'm going to force if I'm
+[3:40:01] going to keep trading like no reason,
+[3:40:02] right? I will close here. I closed like
+[3:40:06] for $0. It's fine. Like one second
+[3:40:08] profit is just paid for my commission
+[3:40:09] that I paid for this trade. Like yeah,
+[3:40:13] before the trade like this job, nothing
+[3:40:15] else. So guys, I'm not going to trade I
+[3:40:18] guess today, which is good.
+[3:40:21] And here just inside consolidation.
+[3:40:27] Yeah, I'm not going to touch it.
+[3:40:30] Uh guys, if you have any questions, feel
+[3:40:32] free to send me questions in Discord or
+[3:40:35] Twitter. Don't send this Instagram
+[3:40:36] because I'm not always able to see your
+[3:40:38] questions. Okay.
+[3:40:42] Um
+[3:40:46] I mean once again it's fine like we we
+[3:40:51] got we got nice to engage in the short
+[3:40:53] on SPX but we didn't here like I mean
+[3:40:57] not bad but also like not good right. I
+[3:41:01] see you guys tomorrow at 9:00 a.m. I
+[3:41:03] guess tomorrow. I mean tomorrow so from
+[3:41:06] PM session maybe it's not going to be
+[3:41:07] perfect but I hope it's going to be
+[3:41:09] good.
+[3:41:10] Um
+[3:41:12] yeah guys if you want to support the
+[3:41:13] channel use code limit to get 40% off on
+[3:41:16] trade for Lucid and take pre 90% off on
+[3:41:18] Apex also up to 50% off on funded next
+[3:41:21] futures. They also good by the way.
+[3:41:25] I already stayed longer. I'm almost I'm
+[3:41:27] here for almost like 4 hours.
+[3:41:32] It just yeah it's just changing right
+[3:41:34] now. I mean so that doesn't look bad but
+[3:41:37] once again once it's trading it's really
+[3:41:39] like low probability conditions in in
+[3:41:40] general right?
+[3:41:45] No I don't like it.
+[3:41:48] I mean I I tried but once again it's
+[3:41:51] better it's best to cut the trade when
+[3:41:52] you're not confident in this trade than
+[3:41:54] holding this. Right. So I'm done.
+[3:41:58] Done. No trades anymore. not going to
+[3:42:00] take anything anymore. Um, yeah, guys.
+[3:42:03] See you tomorrow at 9:00 a.m. I will go
+[3:42:04] to the gym now because it's time. If I'm
+[3:42:08] not going to now, I will not go like at
+[3:42:09] all today.
+[3:42:12] Yeah, it's lunch. I mean, still still
+[3:42:14] has a chance to bounce slightly higher
+[3:42:16] on ES and SPX, which I don't mind to get
+[3:42:18] 7665 probably, but no.
+[3:42:23] See you guys tomorrow at 9:00 a.m. Uh,
+[3:42:25] don't make stupid mistakes. So don't get
+[3:42:27] chopped inside this consolidation.
+[3:42:30] I don't want to eat by the way. I will
+[3:42:33] eat after workout.
+[3:42:38] [laughter] No then no thanks. Yeah, I
+[3:42:40] will go to workout guys. Don't make
+[3:42:42] stupid mistakes. Don't lo your accounts.
+[3:42:44] No reason to wasting your money and time
+[3:42:46] inside this consolidation for now. Wait
+[3:42:48] for better structure. Right. Uh I would
+[3:42:51] say main move already happened like
+[3:42:52] before 10. right now just forcing trades
+[3:42:56] which is like no reason for this right
+[3:43:01] so guys I will see you tomorrow uh I'm
+[3:43:03] locking out all my accounts like lock
+[3:43:05] out so I will not be able to trade until
+[3:43:06] the end of the day not trading you find
+[3:43:09] like 100% so guys don't make stupid
+[3:43:12] mistakes see you tomorrow love you uh
+[3:43:14] thank you for support likes and I will
+[3:43:15] send you account that you want today
+[3:43:17] soon not now after workout okay love you
+[3:43:21] guys bye

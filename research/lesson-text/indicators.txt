@@ -1,0 +1,163 @@
+ Free TradingView Indicators by LumiTraders | Funded.Now 
+ Skip to content 
+ Limited Lucid 40% OFF LucidDaily One Time Fee New Plan - Daily Payouts Use code LUMI . LUMI 
+ New Apex 90% OFF NO ACTIVATION FEE with code: Use code LUMI . LUMI 
+ Free Join the LumiTraders Club - Free Discord! 
+ Limited Lucid 40% OFF LucidDaily One Time Fee New Plan - Daily Payouts Use code LUMI . LUMI 
+[IMG /_next/image?url=%2Flogos%2Ffunded-now-logo-best-prop-firm-deals.png&w=3840&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ Prop Firms 
+ Compare 
+ Trading Tools 
+ Learn 
+ Giveaways 
+ LUMI 
+ Sign in Sign Up 
+[IMG /flags/3x2/US.svg]
+ LUMI 
+ ES +0.00% NQ +0.00% 
+ Trading tools 
+ Indicators The LumiTraders collection
+ Free TradingView indicators.
+ Built for your chart. 
+ Free TradingView indicators by LumiTraders for session levels, higher-timeframe structure and RTH gaps. Compare what each script draws, check its chart requirements and follow the setup guide.
+ Explore indicators 
+ Compare tools 
+ Free scripts. Add directly from TradingView. No download needed.
+ Your chart, with context. Chart preview 
+[IMG /_next/image?url=%2Fimages%2Findicators%2Fkey-levels.webp&w=3840&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ Key Levels
+ Session ranges, opens & reference levels
+ 3 indicators
+ One focused collection
+ Free access
+ No script subscription
+ Built by LumiTraders
+ The team behind the tools
+ Documented settings
+ Know what each tool draws
+ Find your chart companion
+ Three tools. Three perspectives.
+ Map the session, read higher-timeframe structure, or track the opening gap. Start with the context you want on your chart.
+ How to add a script 
+[IMG /_next/image?url=%2Fimages%2Findicators%2Frth-gap-fibs.webp&w=3840&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ RTH gaps & Fibonacci 0 1 Free indicator 
+ SPX RTH Gap with Fibonacci 
+ Fibonacci levels across every RTH gap, the unfilled part of past gaps carried forward, and a box wherever an old gap overlaps today's — drawn automatically on any intraday chart.
+ Measures the RTH gap
+ Ten customizable Fibonacci levels
+ Unfilled-gap projection
+ Explore indicator 
+ Add to TradingView 
+ (opens in a new tab) 
+[IMG /_next/image?url=%2Fimages%2Findicators%2Fict-htf-candles-cisd-2026-09-22.png&w=3840&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ HTF structure & CISD 0 2 Free indicator 
+ ICT HTF Candles + CISD 
+ Higher-timeframe candles with multi-timeframe SMT, ICT projections and CISD levels — now with retest, Early CISD and possible CISD/sweep labels on the chart.
+ Six HTF candle sets
+ Automatic timeframe pairing
+ FVGs, imbalances and sweeps
+ Explore indicator 
+ Add to TradingView 
+ (opens in a new tab) 
+[IMG /_next/image?url=%2Fimages%2Findicators%2Fkey-levels.webp&w=3840&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ Sessions & reference levels 0 3 Free indicator 
+ Key Levels 
+ Killzones, session pivots, period opens, previous-range midpoints and equal highs and lows — every reference level you draw by hand, built once and kept current on any intraday chart.
+ Five killzone sessions
+ Session pivots with mitigation
+ Daily, weekly and monthly anchors
+ Explore indicator 
+ Add to TradingView 
+ (opens in a new tab) 
+ Side by side
+ Which indicator fits your workflow?
+ Each tool adds a different layer of chart context. The scripts are free; TradingView plan limits still apply.
+ Compare free LumiTraders TradingView indicators by purpose and chart requirements Indicator Use it to Chart requirements Access 
+ SPX RTH Gap with Fibonacci 
+ You want to map the gap from the prior regular-session close to the next open, then track which Fibonacci levels remain unfilled. Intraday charts; 4H or lower Free 
+ ICT HTF Candles + CISD 
+ You want higher-timeframe candles beside the live chart, paired sweep and CISD reclaim levels, plus SMT and ICT projections. Even timeframe pairs, such as 5m / 1H Free 
+ Key Levels 
+ You want session highs and lows, period opens, range midpoints and equal highs or lows marked automatically on an intraday chart. Intraday for sessions and opening lines Free 
+ Scroll the table horizontally to compare chart requirements.
+ From here to your chart
+ Set up in three steps.
+ You’ll need to be signed in to TradingView. Start with the script you want, then add it from your chart’s Favorites.
+ View LumiTraders on TradingView 
+ (opens in a new tab) 
+ 0 1 Save the script
+ Sign in to TradingView, open the official script page and select Add to favorites.
+ 0 2 Open a compatible chart
+ Choose your instrument and timeframe. Each indicator guide explains the chart requirements.
+ 0 3 Add it from Favorites
+ Open Indicators › Favorites, select the LumiTraders script and adjust its settings to your session.
+ A few useful answers
+ Frequently asked questions
+ Are LumiTraders TradingView indicators free? 
+ Yes. These are free, protected-source scripts on TradingView. You need a TradingView account to add them to a chart. TradingView's own plan limits, market-data access and drawing limits still apply.
+ Which indicator should I use? 
+ Use Key Levels to map session ranges, opens and reference levels. Use ICT HTF Candles + CISD for higher-timeframe candles, sweep and reclaim levels, SMT and ICT projections. Use RTH Gap Fibs to map Fibonacci levels across regular-session gaps and track their unfilled portions.
+ How do I add an indicator to TradingView? 
+ Sign in to TradingView, open the indicator's script page and select Add to favorites. Then open a compatible chart and choose the script under Indicators › Favorites. Each guide lists the exact TradingView name and any timeframe requirements.
+ Can I use all three indicators together? 
+ The scripts draw different reference points, so you can combine them on a compatible chart if your TradingView plan has enough indicator slots. Check each script's timeframe requirements and reduce the enabled drawings if the chart becomes crowded.
+ Do these indicators generate buy or sell signals? 
+ No. They draw reference levels and chart structure. Key Levels maps sessions and anchors, ICT HTF Candles + CISD shows sweeps and reclaim levels, and RTH Gap Fibs tracks session gaps. These drawings do not place orders or promise trading outcomes.
+ Where can I find the source and release notes? 
+ Each guide links to the original LumiTraders script publication on TradingView and includes its documented release history. The scripts are protected source, so their Pine code is hidden. Open-source foundations are credited on the relevant indicator pages.
+ Put the context to work
+ The tool draws it. Learn to read it.
+ Explore the concepts behind the levels, then build a chart setup you understand.
+ Explore trading lessons 
+ More trading tools 
+ Published by LumiTraders, the education brand of the Funded.Now team. Each guide links to the original TradingView script, its settings and release history. Educational tools, not financial advice. TradingView is a trademark of TradingView, Inc.
+ Latest script update
+ SEP 22 2026 
+ Cookie Preferences
+ Choose Accept to allow optional cookies, or Decline to continue without them. Privacy Policy 
+ Decline Accept 
+ Join Our Community
+ Live trading discussions
+ Loading community stats… 
+ Join Discord 
+ Stay Updated
+ Get the latest deals & tips
+ Subscribe 
+[IMG /_next/image?url=%2Flogos%2Ffunded-now-logo-best-prop-firm-deals.png&w=1920&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ Empowering traders with the capital they need to succeed. Find your perfect prop firm and start your funded trading journey today.
+ Platform
+ All Prop Firms 
+ Discounts & Promo Codes 
+ Compare Firms 
+ Futures Prop Firms 
+ Best Prop Firms 
+ Trading Tools 
+ Giveaways 
+ Challenges 
+ Tools
+ All Trading Tools 
+ Lot Size Calculator 
+ Consistency Calculator 
+ Return Calculator 
+ Drawdown Simulator 
+ Resources
+ Blog 
+ Economic Calendar 
+ TradingView Indicators 
+ Glossary 
+ News 
+ Newsletter 
+ Restricted Countries 
+ Firms by Country 
+ Firms by Trader Type 
+ Company
+ Review Methodology 
+ About Us 
+ Contact 
+ Privacy Policy 
+ Terms of Service 
+ FTC Disclosure: Funded.Now is an independent affiliate marketing platform. We receive commissions when you purchase through our affiliate links at no extra cost to you. This revenue helps us maintain and improve our services. All reviews and comparisons are based on our honest analysis and user feedback.
+ Risk Disclaimer: Trading involves a substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. The information provided is for educational purposes only and should not be considered investment advice. Always conduct your own due diligence before choosing a prop firm.
+ © 2026 Funded.Now. All rights reserved.
+ Privacy Terms Contact 
+ 

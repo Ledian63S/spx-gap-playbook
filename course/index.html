@@ -1,0 +1,1413 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body><title>SPX Gap Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: docs reader — sticky left contents with progress, one reading column, wide figures. Dark-first, after the funded.now docs look. */
+:root{
+  --bg:#06080a; --panel:#0c0f13; --panel2:#12161b; --line:#1d232b; --line2:#29313b;
+  --fg:#e7ebf0; --muted:#8d97a5; --dim:#5f6875;
+  --accent:#6fb4ff; --accent-ink:#06121f;
+  --up:#3fb68b; --down:#e0605a; --amber:#e9b04d; --violet:#a58bff;
+  --l25:#6fb4ff; --l50:#3fb68b; --lote:#e9b04d;
+  --zone:rgba(160,175,195,.07); --zone-gap:rgba(160,175,195,.06); --zone-ote:rgba(233,176,77,.13); --zone-ov:rgba(111,180,255,.20); --zone-key:rgba(111,180,255,.12);
+  --pos-t:rgba(63,182,139,.16); --pos-s:rgba(224,96,90,.16);
+  --font:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#f6f7f9; --panel:#ffffff; --panel2:#f0f2f5; --line:#e2e6eb; --line2:#cfd5dd;
+  --fg:#12161c; --muted:#56606d; --dim:#8a93a0;
+  --accent:#1f6fd1; --accent-ink:#ffffff;
+  --up:#1c9a6c; --down:#cc4740; --amber:#b9780f; --violet:#6c4fd6;
+  --l25:#1f6fd1; --l50:#1c9a6c; --lote:#b9780f;
+  --zone:rgba(80,95,115,.06); --zone-gap:rgba(80,95,115,.05); --zone-ote:rgba(185,120,15,.12); --zone-ov:rgba(31,111,209,.14); --zone-key:rgba(31,111,209,.09);
+  --pos-t:rgba(28,154,108,.14); --pos-s:rgba(204,71,64,.13);
+  color-scheme:light; } }
+:root[data-theme="light"]{
+  --bg:#f6f7f9; --panel:#ffffff; --panel2:#f0f2f5; --line:#e2e6eb; --line2:#cfd5dd;
+  --fg:#12161c; --muted:#56606d; --dim:#8a93a0;
+  --accent:#1f6fd1; --accent-ink:#ffffff;
+  --up:#1c9a6c; --down:#cc4740; --amber:#b9780f; --violet:#6c4fd6;
+  --l25:#1f6fd1; --l50:#1c9a6c; --lote:#b9780f;
+  --zone:rgba(80,95,115,.06); --zone-gap:rgba(80,95,115,.05); --zone-ote:rgba(185,120,15,.12); --zone-ov:rgba(31,111,209,.14); --zone-key:rgba(31,111,209,.09);
+  --pos-t:rgba(28,154,108,.14); --pos-s:rgba(204,71,64,.13);
+  color-scheme:light; }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15.5px;line-height:1.65;margin:0;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+button{font-family:inherit}
+
+.shell{display:grid;grid-template-columns:260px minmax(0,1fr);gap:56px;max-width:1240px;margin:0 auto;padding-inline:28px}
+nav.toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padding-block:36px 32px;scrollbar-width:thin}
+.toc .brand{font-weight:650;font-size:15px}
+.toc .brand small{display:block;color:var(--muted);font-weight:400;font-size:12.5px;line-height:1.5;margin-top:4px}
+.prog{margin:18px 0 6px;font:12px var(--mono);color:var(--muted);display:flex;justify-content:space-between}
+.progress{height:5px;background:var(--panel2);border-radius:99px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s}
+.toc h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:500;margin:24px 0 8px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.toc li a{display:flex;gap:10px;align-items:baseline;padding:5px 0 5px 16px;margin-left:-1px;border-left:1px solid transparent;color:var(--muted);font-size:13.5px;line-height:1.35}
+.toc li a span{font-family:var(--mono);font-size:11px;color:var(--dim);min-width:18px}
+.toc li a em{font-style:normal;margin-left:auto;color:var(--up);font-size:12px;visibility:hidden}
+.toc li a.done em{visibility:visible}
+.toc li a:hover{color:var(--fg);text-decoration:none}
+.toc li a.on{color:var(--fg);border-left-color:var(--accent)}
+.toc li a.on span{color:var(--accent)}
+.toc .themebtn{margin-top:26px;background:none;border:1px solid var(--line2);color:var(--muted);font:12px var(--mono);padding:6px 10px;border-radius:6px;cursor:pointer}
+
+main{padding-block:36px 120px;min-width:0}
+.mobile-toc{display:none}
+section{padding-block:30px 34px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(34px,5vw,50px);line-height:1.08;letter-spacing:-.02em;margin:0 0 18px;font-weight:700;text-wrap:balance}
+h2{font-size:clamp(26px,3.4vw,34px);line-height:1.15;letter-spacing:-.015em;margin:0 0 14px;font-weight:700;text-wrap:balance}
+h3{font-size:18px;margin:30px 0 10px;font-weight:600;letter-spacing:-.005em}
+p{margin:0 0 14px;max-width:72ch}
+.lede{font-size:18px;color:var(--muted);max-width:68ch}
+.lede strong{color:var(--fg)}
+ul.plain{margin:0 0 14px;padding-left:20px;max-width:72ch}
+ul.plain li{margin:4px 0}
+strong{font-weight:600}
+.k{font-family:var(--mono);font-size:.86em;background:var(--panel2);border:1px solid var(--line);padding:1px 6px;border-radius:5px;white-space:nowrap}
+.src{font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.02em;line-height:1.6}
+
+.callout{border:1px solid var(--line2);background:var(--panel);border-radius:12px;padding:16px 18px;margin:18px 0;max-width:80ch}
+.callout b.t{display:block;color:var(--accent);font-size:13.5px;margin-bottom:4px;font-weight:600}
+.callout.warn b.t{color:var(--amber)}
+.callout.bad b.t{color:var(--down)}
+.callout.good b.t{color:var(--up)}
+.callout p:last-child,.callout ul:last-child{margin-bottom:0}
+blockquote.q{margin:18px 0;padding:2px 0 2px 16px;border-left:2px solid var(--violet);max-width:72ch}
+blockquote.q cite{display:block;font-style:normal;color:var(--dim);font-family:var(--mono);font-size:11.5px;margin-top:6px}
+
+.grid{display:grid;border:1px solid var(--line2);border-radius:14px;overflow:hidden;margin:20px 0;background:var(--panel)}
+.grid.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid>div{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.grid.c2>div:nth-child(2n){border-right:0}
+.grid.c3>div:nth-child(3n){border-right:0}
+.grid>div .n{font-family:var(--mono);font-size:11.5px;color:var(--accent);margin-bottom:8px;letter-spacing:.04em}
+.grid>div h4{margin:0 0 6px;font-size:16px;font-weight:600}
+.grid>div p{color:var(--muted);font-size:14px;margin:0}
+.grid>div ul{color:var(--muted);font-size:14px;margin:6px 0 0;padding-left:18px}
+
+/* quick-start flow */
+.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;border:1px solid var(--line2);border-radius:14px;overflow:hidden;background:var(--panel);margin:22px 0}
+.flow>div{padding:16px 14px 18px;border-right:1px solid var(--line);min-width:0;position:relative}
+.flow>div:last-child{border-right:0}
+.flow .t{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.04em}
+.flow .s{font-family:var(--mono);font-size:22px;color:var(--accent);line-height:1;margin:8px 0 8px}
+.flow h4{margin:0 0 4px;font-size:14.5px;font-weight:600;line-height:1.3}
+.flow p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+
+.rules5{counter-reset:r;list-style:none;padding:0;margin:16px 0;display:grid;gap:8px;max-width:80ch}
+.rules5 li{counter-increment:r;display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.rules5 li::before{content:counter(r);font:600 14px var(--mono);color:var(--accent-ink);background:var(--accent);width:26px;height:26px;border-radius:50%;display:grid;place-items:center}
+.rules5 li span{color:var(--muted);font-size:14px;display:block}
+
+figure{margin:22px 0;max-width:100%}
+figure .frame{border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:var(--panel)}
+figure img{display:block;width:100%;height:auto}
+figure svg{display:block;width:100%;height:auto}
+figcaption{color:var(--muted);font-size:13.5px;margin-top:10px;max-width:84ch;line-height:1.55}
+figcaption b{color:var(--fg);font-weight:600}
+figcaption ol{margin:6px 0 0;padding-left:0;list-style:none;display:grid;gap:4px}
+figcaption ol li{display:block;position:relative;padding-left:32px}
+figcaption ol li::before{content:attr(data-n);position:absolute;left:0;top:1px;font:600 11px var(--mono);color:var(--accent-ink);background:var(--accent);width:20px;height:20px;border-radius:50%;display:grid;place-items:center}
+.figpair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.figpair figure{margin:0}
+.fighead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.fighead .tag{font:12px var(--mono);color:var(--dim);letter-spacing:.06em;text-transform:uppercase}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:8px;overflow:hidden;background:var(--panel)}
+.seg button{background:none;border:0;color:var(--muted);font:12px var(--mono);padding:6px 12px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line2)}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.vdn{display:none}
+.isdn .vup{display:none}
+.isdn .vdn{display:inline}
+
+.tbl{overflow-x:auto;margin:16px 0;border:1px solid var(--line2);border-radius:12px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);font-weight:500;background:var(--panel2)}
+tr:last-child td{border-bottom:0}
+td.g{color:var(--up)} td.r{color:var(--down)} td.a{color:var(--amber)}
+td.nowrap{white-space:nowrap}
+
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line2);color:var(--muted);white-space:nowrap}
+.pill.g{color:var(--up);border-color:color-mix(in srgb,var(--up) 45%,transparent)}
+.pill.r{color:var(--down);border-color:color-mix(in srgb,var(--down) 45%,transparent)}
+.pill.a{color:var(--amber);border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
+.pill.b{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+
+.play{border:1px solid var(--line2);border-radius:14px;background:var(--panel);margin:20px 0;overflow:hidden}
+.play .row{display:grid;grid-template-columns:120px minmax(0,1fr);border-bottom:1px solid var(--line)}
+.play .row:last-child{border-bottom:0}
+.play .row>div{padding:12px 18px;min-width:0}
+.play .row>div:first-child{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);border-right:1px solid var(--line);padding-top:14px}
+.play .row>div:last-child{font-size:14.5px}
+
+.steps{counter-reset:s;list-style:none;padding:0;margin:18px 0;max-width:82ch}
+.steps>li{position:relative;padding:0 0 20px 48px;border-left:1px solid var(--line2);margin-left:14px}
+.steps>li:last-child{border-left-color:transparent;padding-bottom:4px}
+.steps>li::before{counter-increment:s;content:counter(s);position:absolute;left:-15px;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--panel2);border:1px solid var(--line2);font:500 13px var(--mono);display:grid;place-items:center;color:var(--accent)}
+.steps>li b.h{display:block;font-weight:600;margin-bottom:2px}
+.steps>li p{color:var(--muted);margin:0 0 4px}
+.steps .time{font-family:var(--mono);font-size:12px;color:var(--amber);margin-left:8px;font-weight:400}
+.steps figure{margin:12px 0 4px}
+
+.tree{display:grid;gap:12px;margin:18px 0}
+.node{border:1px solid var(--line2);border-radius:12px;padding:14px 16px;background:var(--panel)}
+.node .qq{font-weight:600}
+.branches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.branch{border:1px solid var(--line2);border-radius:12px;padding:14px 16px;background:var(--panel)}
+.branch .if{font-family:var(--mono);font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.branch .then{font-weight:600;margin:4px 0}
+.branch p{color:var(--muted);font-size:13.5px;margin:0}
+.branch a.go{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:12px}
+
+.tool{border:1px solid var(--line2);border-radius:14px;background:var(--panel);padding:20px;margin:20px 0}
+.tool h4{margin:0 0 4px;font-size:16px}
+.tool .sub{color:var(--muted);font-size:13.5px;margin:0 0 16px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.fields label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted);font-family:var(--mono);letter-spacing:.02em}
+.fields input,.fields select{background:var(--bg);border:1px solid var(--line2);color:var(--fg);border-radius:8px;padding:9px 10px;font:14px var(--mono);width:100%}
+.out{display:grid;gap:10px}
+.out.c6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.out.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.out .cell{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0}
+.out .cell .l{font-family:var(--mono);font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.out .cell .v{font-family:var(--mono);font-size:16.5px;font-variant-numeric:tabular-nums;margin-top:2px;overflow-wrap:anywhere}
+.verdict{margin-top:12px;padding:12px 14px;border-radius:10px;border:1px solid var(--line2);font-size:14px}
+.verdict.g{border-color:color-mix(in srgb,var(--up) 50%,transparent);background:color-mix(in srgb,var(--up) 8%,transparent)}
+.verdict.a{border-color:color-mix(in srgb,var(--amber) 50%,transparent);background:color-mix(in srgb,var(--amber) 8%,transparent)}
+.verdict.r{border-color:color-mix(in srgb,var(--down) 50%,transparent);background:color-mix(in srgb,var(--down) 8%,transparent)}
+
+.check{list-style:none;padding:0;margin:0}
+.check li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.check li:last-child{border-bottom:0}
+.check input{margin-top:4px;width:17px;height:17px;accent-color:var(--accent);flex:none}
+.check label{cursor:pointer}
+.check label small{display:block;color:var(--muted);font-size:13px}
+.check .grp{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding-top:16px;border-bottom:0}
+.btn{background:var(--panel2);border:1px solid var(--line2);color:var(--fg);font:13px var(--mono);padding:7px 12px;border-radius:8px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+.understood{margin-top:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.understood button{background:none;border:1px solid var(--line2);color:var(--muted);font:12.5px var(--mono);padding:7px 12px;border-radius:8px;cursor:pointer}
+.understood button[aria-pressed="true"]{border-color:color-mix(in srgb,var(--up) 55%,transparent);color:var(--up)}
+.understood a{font:12.5px var(--mono)}
+
+/* quiz */
+.quiz{display:grid;gap:14px;margin:18px 0}
+.qcard{border:1px solid var(--line2);border-radius:14px;background:var(--panel);padding:18px 20px}
+.qcard .qn{font:11.5px var(--mono);color:var(--accent);letter-spacing:.06em}
+.qcard .qt{font-weight:600;margin:6px 0 12px;max-width:80ch}
+.qcard .opts{display:grid;gap:8px}
+.qcard .opts button{text-align:left;background:var(--panel2);border:1px solid var(--line);color:var(--fg);padding:10px 12px;border-radius:9px;cursor:pointer;font-size:14px}
+.qcard .opts button:hover{border-color:var(--line2)}
+.qcard .opts button.ok{border-color:var(--up);background:color-mix(in srgb,var(--up) 10%,transparent)}
+.qcard .opts button.no{border-color:var(--down);background:color-mix(in srgb,var(--down) 10%,transparent)}
+.qcard .why{margin-top:10px;color:var(--muted);font-size:14px;max-width:80ch}
+.qscore{font:13px var(--mono);color:var(--muted)}
+
+/* worked example timeline */
+.tl{list-style:none;margin:20px 0;padding:0}
+.tl>li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:18px;padding:0 0 22px;position:relative}
+.tl>li::before{content:"";position:absolute;left:92px;top:8px;bottom:0;width:1px;background:var(--line2)}
+.tl>li:last-child::before{display:none}
+.tl .when{font:600 13px var(--mono);color:var(--amber);text-align:right;padding-top:1px}
+.tl .what{padding-left:16px;position:relative;min-width:0}
+.tl .what::before{content:"";position:absolute;left:-10px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--bg)}
+.tl .what b{display:block}
+.tl .what p{color:var(--muted);margin:2px 0 0}
+.tl figure{margin:12px 0 0}
+
+/* svg diagram tokens */
+svg .bg{fill:var(--panel)}
+svg .up{fill:var(--up);stroke:var(--up)}
+svg .dn{fill:var(--down);stroke:var(--down)}
+svg .wick{stroke-width:1.5}
+svg .gapz{fill:var(--zone-gap)}
+svg .zone{fill:var(--zone)}
+svg .zone.ote{fill:var(--zone-ote)}
+svg .zone.key{fill:var(--zone-key)}
+svg .zone.ov{fill:var(--zone-ov)}
+svg .zone.ob{fill:none;stroke:var(--muted);stroke-dasharray:3 3}
+svg .lvl{stroke:var(--line2);stroke-width:1}
+svg .lvl.edge{stroke:var(--muted)}
+svg .lvl.s25{stroke:var(--l25)} svg .lvl.s50{stroke:var(--l50)} svg .lvl.sote{stroke:var(--lote)}
+svg .lvl.liq{stroke:var(--violet);stroke-dasharray:6 4}
+svg .lvl.htf{stroke:var(--fg);stroke-dasharray:2 3}
+svg .lvl.mt{stroke:var(--muted);stroke-dasharray:3 3}
+svg .lbl{fill:var(--muted);font:500 11.5px var(--mono)}
+svg .lbl.s25{fill:var(--l25)} svg .lbl.s50{fill:var(--l50)} svg .lbl.sote{fill:var(--lote)} svg .lbl.liq{fill:var(--violet)} svg .lbl.htf{fill:var(--fg)} svg .lbl.edge{fill:var(--fg)}
+svg .zl{fill:var(--muted);font:500 11.5px var(--font)}
+svg .tick{fill:var(--dim);font:10.5px var(--mono)}
+svg .pt{fill:var(--pos-t)} svg .ps{fill:var(--pos-s)}
+svg .pe{stroke:var(--fg);stroke-width:1.2}
+svg .ptx{fill:var(--up);font:600 10.5px var(--mono)} svg .psx{fill:var(--down);font:600 10.5px var(--mono)}
+svg .cisd{stroke:var(--accent);stroke-width:2}
+svg .mk{fill:var(--accent)}
+svg .mkt{fill:var(--accent-ink);font:700 11px var(--mono)}
+svg .lead{stroke:var(--accent);stroke-width:1}
+svg .brk{stroke:var(--muted);stroke-width:1;fill:none}
+svg .brkt{fill:var(--fg);font:600 12px var(--font)}
+
+@media (max-width: 1100px){ .flow{grid-template-columns:repeat(3,minmax(0,1fr))} .flow>div:nth-child(3n){border-right:0} .flow>div:nth-child(-n+3){border-bottom:1px solid var(--line)} .out.c6{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width: 960px){
+  .shell{grid-template-columns:minmax(0,1fr);gap:0;padding-inline:16px}
+  nav.toc{display:none}
+  .mobile-toc{display:block;border:1px solid var(--line2);border-radius:12px;background:var(--panel);padding:10px 14px;margin-bottom:24px}
+  .mobile-toc summary{cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .mobile-toc ol{margin:10px 0 4px;padding-left:22px;font-size:14px;line-height:1.9}
+  .grid.c2,.grid.c3,.branches,.figpair{grid-template-columns:minmax(0,1fr)}
+  .grid>div{border-right:0!important}
+  .play .row{grid-template-columns:minmax(0,1fr)}
+  .play .row>div:first-child{border-right:0;padding-bottom:0}
+  .out.c4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 720px){ figure.dg .frame{overflow-x:auto;-webkit-overflow-scrolling:touch} figure.dg svg{min-width:700px} figure.dg .fighead .tag::after{content:" · swipe to scroll"} }
+@media (max-width: 560px){
+  .flow{grid-template-columns:minmax(0,1fr)} .flow>div{border-right:0!important;border-bottom:1px solid var(--line)} .flow>div:last-child{border-bottom:0}
+  .out.c6{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tl>li{grid-template-columns:minmax(0,1fr);gap:4px} .tl>li::before{display:none} .tl .when{text-align:left} .tl .what{padding-left:0} .tl .what::before{display:none}
+}
+
+/* ---- course mode ---- */
+.course-top{position:sticky;top:0;z-index:5;background:var(--bg);padding-block:14px 12px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.course-top .row1{display:flex;justify-content:space-between;align-items:center;gap:12px;font:12px var(--mono);color:var(--muted);flex-wrap:wrap}
+.course-top .row1 b{color:var(--accent);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.course-top .progress{margin-top:8px}
+main section.step{display:none;border-bottom:0;padding-top:22px}
+main section.step.show{display:block}
+.goal{border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);background:color-mix(in srgb,var(--accent) 7%,transparent);border-radius:12px;padding:14px 18px;margin:6px 0 22px;max-width:80ch}
+.goal b{display:block;font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.goal p{margin:0}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:-4px 0 16px}
+.part{font:500 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:30px 0 10px;display:flex;align-items:center;gap:10px}
+.part::after{content:"";flex:1;height:1px;background:var(--line)}
+.do{border:1px solid var(--line2);background:var(--panel);border-radius:14px;padding:18px 20px;margin:26px 0 0}
+.do h3{margin:0 0 4px}
+.do .sub{color:var(--muted);font-size:13.5px;margin:0 0 6px}
+.check-q{border:1px solid var(--line2);background:var(--panel);border-radius:14px;padding:18px 20px;margin:16px 0 0}
+.check-q h3{margin:0 0 10px}
+.check-q .qcard{border:0;padding:0;background:none;margin-bottom:16px}
+.check-q .qcard:last-child{margin-bottom:0}
+.stepnav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.stepnav .btn{padding:10px 16px;font-size:13.5px}
+.stepnav .btn[disabled]{opacity:.45;cursor:not-allowed}
+.stepnav .state{font:12.5px var(--mono);color:var(--muted)}
+.stepnav .state.ok{color:var(--up)}
+.toc li a i{font-style:normal;font-family:var(--mono);font-size:12px;min-width:14px;color:var(--dim)}
+.toc li a.done i{color:var(--up)}
+.toc li a.cur{color:var(--fg);border-left-color:var(--accent)}
+.toc .stage-n{color:var(--accent)}
+.mobile-nav{display:none}
+.howto{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line2);border-radius:14px;overflow:hidden;background:var(--panel);margin:20px 0}
+.howto>div{padding:16px 16px 18px;border-right:1px solid var(--line);min-width:0}
+.howto>div:last-child{border-right:0}
+.howto .h{font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.howto h4{margin:6px 0 4px;font-size:15px}
+.howto p{margin:0;color:var(--muted);font-size:13.5px}
+.stagelist{display:grid;gap:10px;margin:18px 0}
+.stagelist>div{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;border:1px solid var(--line2);border-radius:12px;padding:12px 16px;background:var(--panel)}
+.stagelist .sn{font:600 12px var(--mono);color:var(--accent);letter-spacing:.06em}
+.stagelist b{display:block}
+.stagelist span{color:var(--muted);font-size:13.5px}
+.stagelist em{font-style:normal;font:12px var(--mono);color:var(--dim);white-space:nowrap}
+.inbrief{border-left:2px solid var(--amber);padding:2px 0 2px 14px;margin:18px 0;max-width:76ch}
+.inbrief b{display:block;font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:2px}
+.inbrief p{margin:0}
+@media (max-width: 960px){
+  .mobile-nav{display:flex;gap:8px;align-items:center;margin-top:8px}
+  .mobile-nav select{flex:1;min-width:0;background:var(--panel);border:1px solid var(--line2);color:var(--fg);border-radius:8px;padding:8px;font:13px var(--font)}
+  .howto{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .howto>div:nth-child(2n){border-right:0}
+  .howto>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media (max-width: 560px){
+  .howto{grid-template-columns:minmax(0,1fr)} .howto>div{border-right:0;border-bottom:1px solid var(--line)}
+  .stagelist>div{grid-template-columns:minmax(0,1fr)}
+}
+</style>
+<div class="shell">
+<nav class="toc" aria-label="Course outline">
+  <div class="brand">SPX Gap Playbook<small>Learn LumiTraders' SPX RTH gap model one step at a time. Built from her lessons and 29 live sessions (Aug 21 – Oct 2, 2026).</small></div>
+  <div class="prog"><span>Course progress</span><span id="prog-n">0 / 0</span></div>
+  <div class="progress"><i id="prog-bar"></i></div>
+  <div id="outline"></div>
+  <button class="themebtn" id="themebtn" type="button">Switch light / dark</button>
+</nav>
+
+<main>
+<div class="course-top">
+  <div class="row1"><b id="ct-stage">Start</b><span id="ct-step">Step 0 of 20</span></div>
+  <div class="progress"><i id="ct-bar"></i></div>
+  <div class="mobile-nav"><label class="src" for="jump" style="white-space:nowrap">Go to</label><select id="jump"></select></div>
+</div>
+
+<!-- ===================== STEP 0 ===================== -->
+<section class="step" id="s0" data-stage="0" data-title="How this course works" data-time="3 min">
+<h1>Learn the SPX gap model, step by step</h1>
+<p class="lede">LumiTraders (Dasha) trades one main setup on almost every New York morning. She calls it <strong>"my SPX strategy"</strong>. This course teaches it in 20 short steps. Do them in order. Each step builds on the one before.</p>
+<h3>Every step has the same four parts</h3>
+<div class="howto">
+  <div><div class="h">1 · Goal</div><h4>What you will learn</h4><p>One sentence at the top tells you what you can do after the step.</p></div>
+  <div><div class="h">2 · Learn</div><h4>Read and look</h4><p>A short explanation with diagrams and her real charts.</p></div>
+  <div><div class="h">3 · Do</div><h4>Practise it now</h4><p>Small tasks on your own chart. Tick them off as you go.</p></div>
+  <div><div class="h">4 · Check</div><h4>Prove you got it</h4><p>One or two questions. Answer them correctly to complete the step.</p></div>
+</div>
+<h3>The path from first to last</h3>
+<div class="stagelist">
+  <div><div class="sn">STAGE 1</div><div><b>Foundations</b><span>The idea, your chart setup, the words, how to draw the gap, when to trade, what to watch at 9:30.</span></div><em>Steps 1–6 · ~2 h</em></div>
+  <div><div class="sn">STAGE 2</div><div><b>The entry and the three main setups</b><span>The 2-minute entry signal, then Playbooks A, B and C. This is the core of the model.</span></div><em>Steps 7–10 · ~2 h</em></div>
+  <div><div class="sn">STAGE 3</div><div><b>Advanced setups</b><span>What happens after the gap fills, overlapping gaps, and old gaps. Learn these after A–C feel easy.</span></div><em>Steps 11–13 · ~1 h</em></div>
+  <div><div class="sn">STAGE 4</div><div><b>Placing and managing trades</b><span>How to turn SPX levels into ES orders, how to take profit, and her risk rules.</span></div><em>Steps 14–16 · ~1 h</em></div>
+  <div><div class="sn">STAGE 5</div><div><b>Practice</b><span>Two real days walked through, your daily routine, a final test, and a 4-week practice plan.</span></div><em>Steps 17–20 · 4 weeks</em></div>
+</div>
+<div class="callout"><b class="t">Your progress is saved</b><p>Ticks and completed steps are stored in this browser, so you can stop and come back later. Use the outline on the left (or the "Go to" menu on a phone) to jump around, but the first time through, follow the order.</p></div>
+<p class="src">Personal study aid. Lesson charts © LumiTraders / Funded.Now; stream screenshots from her public YouTube streams. Not financial advice.</p>
+</section>
+
+<!-- ===================== STEP 1 ===================== -->
+<section class="step" id="s1" data-stage="1" data-title="The big idea" data-time="10 min">
+<h2>The big idea</h2>
+<div class="goal"><b>Goal</b><p>Explain the whole model in one sentence, and know how often it really works.</p></div>
+<div class="part">Learn</div>
+<p>Every weekday the US stock market closes at 4:00 PM and opens again at 9:30 AM New York time. The S&amp;P 500 index usually opens at a different price than it closed. The empty space between the two prices on the chart is called the <strong>gap</strong>.</p>
+<p>Her model in one sentence:</p>
+<div class="inbrief"><b>The model</b><p>Draw yesterday's close and today's open on the <strong>SPX</strong> chart. Watch what price does in the first 30 minutes. Wait for price to pull back to one of four fixed levels inside the gap. Enter on <strong>ES futures</strong> when a 2-minute candle confirms the turn.</p></div>
+<div class="grid c3">
+  <div><div class="n">WHAT</div><h4>Chart SPX, trade ES</h4><p>SPX is the S&amp;P 500 index itself. You cannot buy it directly, so she places the order on MES, the micro S&amp;P 500 futures contract. She says levels drawn on ES only "work like 30–40% of the time".</p></div>
+  <div><div class="n">WHEN</div><h4>9:30 – about 11:30 AM</h4><p>She streams 9:00–11:30. Most of her entries come between 9:45 and 11:00. She is done by lunch.</p></div>
+  <div><div class="n">HOW</div><h4>Four levels, one signal</h4><p>25%, 50%, 62% and 70.5% of the gap. One entry signal: a 2-minute candle called a CISD (you will learn it in step 7).</p></div>
+</div>
+<h3>The six things she does every morning</h3>
+<div class="flow">
+  <div><div class="t">before 9:30</div><div class="s">1</div><h4>Set the bias</h4><p>Is the bigger picture pointing up or down?</p></div>
+  <div><div class="t">9:30</div><div class="s">2</div><h4>Measure the gap</h4><p>Under 10 points: no trade today.</p></div>
+  <div><div class="t">9:30–10:00</div><div class="s">3</div><h4>Watch liquidity</h4><p>Did price take the nearest high or low?</p></div>
+  <div><div class="t">by 10:00</div><div class="s">4</div><h4>Pick the setup</h4><p>That answer decides Playbook A, B or C.</p></div>
+  <div><div class="t">9:45–11:00</div><div class="s">5</div><h4>Wait for the signal</h4><p>A 2-minute CISD in the zone, then enter.</p></div>
+  <div><div class="t">until ~11:30</div><div class="s">6</div><h4>Manage, then stop</h4><p>Take profit early. Two losses and done.</p></div>
+</div>
+<h3>How good is it? Be realistic</h3>
+<div class="callout warn">
+<b class="t">Her numbers are self-reported and do not agree with each other</b>
+<ul class="plain">
+<li>"This strategy has 60% win rate" (Sep 16).</li>
+<li>"63% win rate, 1.3R average, over 12 months" (Sep 8).</li>
+<li>"76% on the SPX model over 12 months" (Sep 29).</li>
+</ul>
+<p>Plan around <strong>about 6 wins in 10 trades, each win about 1–1.3 times the size of a loss</strong>. That only works if you follow the rules. In the 29 sessions reviewed for this course, almost every loss she took came from breaking one of her own rules.</p>
+</div>
+<p>Where the model came from: she first built it for ES and options. On Sep 17 she said it "stopped working [on ES] almost two years ago", so she tested other charts and found only SPX levels held. Her explanation: SPX does not trade overnight, so its gap is clean.</p>
+<div class="do" data-step="s1"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s1-1"><label for="t-s1-1">Write the model in one sentence in your own words, on paper or in a notes app.</label></li>
+<li><input type="checkbox" id="t-s1-2"><label for="t-s1-2">Write down the six morning steps from memory.</label></li>
+</ul></div>
+<div class="check-q" data-step="s1"></div>
+</section>
+
+<!-- ===================== STEP 2 ===================== -->
+<section class="step" id="s2" data-stage="1" data-title="Set up your charts" data-time="30 min">
+<h2>Set up your charts</h2>
+<div class="goal"><b>Goal</b><p>Have the same three charts and indicators on your screen that she uses.</p></div>
+<div class="part">Learn</div>
+<div class="tbl"><table>
+<tr><th>Chart</th><th>Symbol</th><th>Timeframe</th><th>What it is for</th></tr>
+<tr><td><strong>SPX</strong></td><td><span class="k">SPCFD:SPX</span> on TradingView (free)</td><td>2-minute</td><td>The gap, the levels and the entry signal. Every decision is made here.</td></tr>
+<tr><td><strong>MES</strong></td><td><span class="k">MES1!</span></td><td>2-minute</td><td>Where you place the order. Micro contract: $5 per point.</td></tr>
+<tr><td><strong>NQ</strong></td><td><span class="k">NQ1!</span></td><td>2-minute</td><td>A second opinion. If NQ points the other way, she skips or trades smaller.</td></tr>
+</table></div>
+<figure><div class="frame"><img src="img/tv_symbol.jpg" alt="TradingView symbol search showing SPX S&amp;P 500 index cfd from SPCFD"></div>
+<figcaption><b>Pick this exact symbol:</b> SPX from the SPCFD feed. Her lesson: "The gap levels are cleaner on the cash index."</figcaption></figure>
+<h3>The indicators (free, by LumiTraders)</h3>
+<div class="grid c3">
+  <div><div class="n">REQUIRED</div><h4>RTH Gap Fibs</h4><p>Draws today's gap and its four levels automatically, and keeps old unfilled gaps on the chart.</p><p style="margin-top:8px"><a href="https://www.tradingview.com/script/5As6Was2-LumiTraders-RTH-Gap-Fibs/">Open on TradingView →</a></p></div>
+  <div><div class="n">RECOMMENDED</div><h4>Key Levels</h4><p>Marks yesterday's high and low, the overnight session highs and lows, and the important opening prices.</p><p style="margin-top:8px"><a href="https://www.tradingview.com/script/U4bXTNCb-LumiTraders-Key-Levels/">Open on TradingView →</a></p></div>
+  <div><div class="n">LATER</div><h4>HTF Candles + CISD</h4><p>Optional. Mostly used for her separate gold model. Skip it for now.</p><p style="margin-top:8px"><a href="https://www.tradingview.com/script/vP0G8Rhs-LumiTraders-ICT-HTF-Candles-CISD/">Open on TradingView →</a></p></div>
+</div>
+<h3>RTH Gap Fibs settings</h3>
+<div class="tbl"><table>
+<tr><th>Setting</th><th>Set it to</th></tr>
+<tr><td>Levels</td><td><span class="k">0.25</span> <span class="k">0.5</span> <span class="k">0.62</span> <span class="k">0.705</span> plus 0 and 1. Turn the others off.</td></tr>
+<tr><td>Direction</td><td>0% on the <strong>9:30 open</strong>, 100% on <strong>yesterday's close</strong>. The 25% line must be the one nearest the open. If it is the other way round, switch "Invert anchors".</td></tr>
+<tr><td>Yesterday's close</td><td>The <strong>4:08 PM</strong> price. "I always backtested with 4:08 closure."</td></tr>
+</table></div>
+<figure><div class="frame"><img src="img/a26_entry705.jpg" alt="Her ES 2-minute chart with Key Levels next to NQ 30-minute candles"></div>
+<figcaption><b>Her screen, Aug 26, 9:53 AM.</b> Left: NQ. Right: ES 2-minute with the Key Levels indicator showing yesterday's high, the weekly open, the daily open, the midnight open and the overnight lows. The green/red box is one of her trades.</figcaption></figure>
+<div class="do" data-step="s2"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s2-1"><label for="t-s2-1">Create a free TradingView account if you don't have one.</label></li>
+<li><input type="checkbox" id="t-s2-2"><label for="t-s2-2">Open <span class="k">SPCFD:SPX</span> on the 2-minute timeframe.</label></li>
+<li><input type="checkbox" id="t-s2-3"><label for="t-s2-3">Add "LumiTraders RTH Gap Fibs" and set the levels to 0.25, 0.5, 0.62, 0.705.</label></li>
+<li><input type="checkbox" id="t-s2-4"><label for="t-s2-4">Check that the 25% line sits closest to the 9:30 open on today's gap.</label></li>
+<li><input type="checkbox" id="t-s2-5"><label for="t-s2-5">Add "LumiTraders Key Levels" to the same chart.</label></li>
+<li><input type="checkbox" id="t-s2-6"><label for="t-s2-6">Open MES1! and NQ1! 2-minute charts next to it (a 3-chart layout, or separate tabs).</label></li>
+</ul></div>
+<div class="check-q" data-step="s2"></div>
+</section>
+
+<!-- ===================== STEP 3 ===================== -->
+<section class="step" id="s3" data-stage="1" data-title="Learn 8 words" data-time="15 min">
+<h2>Learn 8 words</h2>
+<div class="goal"><b>Goal</b><p>Understand every word she uses when she talks about this model.</p></div>
+<div class="part">Learn</div>
+<p>She uses trading slang from a teacher called ICT. You only need these eight words.</p>
+<div class="grid c2">
+  <div><div class="n">1 · GAP</div><h4>RTH gap</h4><p>The empty space on the SPX chart between yesterday's close (4:08 PM) and today's open (9:30 AM). RTH means "regular trading hours".</p></div>
+  <div><div class="n">2 · LIQUIDITY</div><h4>BSL and SSL</h4><p>Obvious highs and lows where many traders have stop orders. A high is buy-side liquidity (BSL), a low is sell-side liquidity (SSL). Only highs and lows you can see on the 15-minute chart count.</p></div>
+  <div><div class="n">3 · SWEEP</div><h4>"Taking" liquidity</h4><p>When price pokes past one of those highs or lows, it has "taken" or "swept" it. Whether this happens in the first minutes decides which setup you trade.</p></div>
+  <div><div class="n">4 · OTE</div><h4>Optimal trade entry</h4><p>The deep zone of the gap, between 62% and 70.5%.</p></div>
+  <div><div class="n">5 · CISD</div><h4>Change in state of delivery</h4><p>Her entry signal: a 2-minute candle closes past the start of the last run of opposite candles. In plain words, the 2-minute chart shows that price has turned. Step 7 teaches it.</p></div>
+  <div><div class="n">6 · ORDER BLOCK</div><h4>OB and its 50%</h4><p>The box drawn around those candles. Its middle line (the 50%, also called "mean threshold") must hold, or the signal is failing.</p></div>
+  <div><div class="n">7 · NQ / DECOUPLED</div><h4>The second opinion</h4><p>NQ is the Nasdaq futures. Normally it moves with ES. When one goes up and the other down, she calls the market "decoupled" and stays out.</p></div>
+  <div><div class="n">8 · R</div><h4>Risk unit</h4><p>1R is what you lose if your stop is hit. A +1.5R trade made one and a half times what it risked.</p></div>
+</div>
+<div class="do" data-step="s3"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s3-1"><label for="t-s3-1">Cover the cards and say what each word means out loud.</label></li>
+<li><input type="checkbox" id="t-s3-2"><label for="t-s3-2">On your SPX 15-minute chart, point to one clear high (BSL) and one clear low (SSL) from yesterday.</label></li>
+</ul></div>
+<div class="check-q" data-step="s3"></div>
+</section>
+
+<!-- ===================== STEP 4 ===================== -->
+<section class="step" id="s4" data-stage="1" data-title="Draw the gap" data-time="20 min">
+<h2>Draw the gap and its four levels</h2>
+<div class="goal"><b>Goal</b><p>Find the gap on any day and know where the 25%, 50%, 62% and 70.5% levels are.</p></div>
+<div class="part">Learn</div>
+<p>The levels measure how far price has come back into the gap, counted from the open. 25% is a small pullback. 70.5% means price has come back almost all the way to yesterday's close.</p>
+<figure class="dg" data-dg="anatomy">
+<div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
+<div class="frame"><svg viewBox="0 0 900 430" role="img" aria-label="The gap and its levels"></svg></div>
+<figcaption><b><span class="vup">Gap up:</span><span class="vdn">Gap down:</span></b> today opened <span class="vup">above</span><span class="vdn">below</span> yesterday's close. 0% is the open, 100% is yesterday's close. 25% is always the line nearest the open. Switch between gap up and gap down to see that the picture just flips.</figcaption>
+</figure>
+<div class="tbl"><table>
+<tr><th>Level</th><th>In plain words</th><th>What she uses it for</th></tr>
+<tr><td style="color:var(--l25)"><strong>25%</strong></td><td>A small pullback</td><td>Entry zone for Playbook A. Also her first place to take profit.</td></tr>
+<tr><td style="color:var(--l50)"><strong>50%</strong></td><td>Halfway back</td><td>The bottom of the Playbook A zone. A common stop on big gaps.</td></tr>
+<tr><td style="color:var(--lote)"><strong>62%</strong></td><td>A deep pullback (start of the OTE)</td><td>Target in Playbook B. Her best entries start here.</td></tr>
+<tr><td style="color:var(--lote)"><strong>70.5%</strong></td><td>Almost all the way back</td><td>The line in the sand. If a 2-minute candle closes past it, the gap usually fills completely (Playbook C).</td></tr>
+</table></div>
+<div class="tool">
+<h4>Gap calculator</h4>
+<p class="sub">Type yesterday's SPX close and today's SPX open. You get the size, direction and the price of every level.</p>
+<div class="fields">
+<label for="gc-close">Yesterday's close (4:08 PM)<input id="gc-close" type="number" step="0.01" value="7706.02"></label>
+<label for="gc-open">Today's 9:30 open<input id="gc-open" type="number" step="0.01" value="7666.98"></label>
+</div>
+<div class="out c6" id="gc-out"></div>
+<div class="verdict" id="gc-verdict"></div>
+<p class="src" style="margin-top:10px">Filled in with her real Sep 24 gap. Compare with her chart below.</p>
+</div>
+<figure><div class="frame"><img src="img/s24_a_overlap_open.jpg" alt="Her SPX chart at 9:32 on Sep 24 with the gap levels"></div>
+<figcaption><b>Her live chart, Sep 24, 9:32 AM.</b> 100% = 7,706.02 (yesterday's close), 70.5% = 7,694.50, 62% = 7,691.18, 50% = 7,686.50, 25% = 7,676.74, 0% = 7,666.98 (today's open). The same numbers as the calculator. The hand-drawn line is her plan for the morning.</figcaption></figure>
+<div class="do" data-step="s4"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s4-1"><label for="t-s4-1">On your SPX chart, find yesterday's 4:08 PM close and today's 9:30 open. Type them into the calculator.</label></li>
+<li><input type="checkbox" id="t-s4-2"><label for="t-s4-2">Check that the calculator matches the lines your indicator drew.</label></li>
+<li><input type="checkbox" id="t-s4-3"><label for="t-s4-3">Scroll back and write down the gap size and direction for the last 5 trading days.</label></li>
+</ul></div>
+<div class="check-q" data-step="s4"></div>
+</section>
+
+<!-- ===================== STEP 5 ===================== -->
+<section class="step" id="s5" data-stage="1" data-title="Is today tradeable?" data-time="15 min">
+<h2>Is today tradeable?</h2>
+<div class="goal"><b>Goal</b><p>Decide before 9:30 whether today is a day to trade the model, and how big.</p></div>
+<div class="part">Learn</div>
+<p>Many days she does not trade at all. These filters decide it.</p>
+<div class="tbl"><table>
+<tr><th>Situation</th><th>What she does</th></tr>
+<tr><td><span class="pill r">Gap under 10 points</span></td><td>No trade with this model. "Anything less than 10 points it's most likely going to be chop session."</td></tr>
+<tr><td><span class="pill g">Gap 10–60 points</span></td><td>Normal day. 20–40 points is ideal.</td></tr>
+<tr><td><span class="pill a">Gap over 60 points</span></td><td>She has not tested these. Very small size only.</td></tr>
+<tr><td><span class="pill r">ES and NQ disagree</span></td><td>Stay out, or tiny size on a practice account. "Decoupled equals stay away."</td></tr>
+<tr><td><span class="pill a">Big news (FOMC), Friday</span></td><td>Smaller size, or no trade. "Most biggest losses happens on Friday."</td></tr>
+<tr><td><span class="pill a">Trend day</span></td><td>Price runs one way with tiny pullbacks: never trade against it. "When we have trend day I cannot win."</td></tr>
+</table></div>
+<h3>Setting the bias (which way you expect the market to go)</h3>
+<ol class="steps">
+<li><b class="h">Look at the daily chart</b><p>Where is price heading? Toward yesterday's high, an old unfilled gap, or last week's high or low?</p></li>
+<li><b class="h">Compare ES and NQ with their opening prices</b><p>Use the Key Levels indicator. If both are above the daily open and the midnight open, the day leans up. Both below: leans down. One above and one below: decoupled, stay careful.</p></li>
+<li><b class="h">Write two plans</b><p>One for "price does not take the nearest high/low" and one for "price takes it". You will learn both in steps 8 and 9.</p></li>
+</ol>
+<div class="do" data-step="s5"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s5-1"><label for="t-s5-1">Grade your 5 days from step 4: skip (under 10), normal, or very large.</label></li>
+<li><input type="checkbox" id="t-s5-2"><label for="t-s5-2">For today, write down whether ES and NQ are above or below their midnight open.</label></li>
+</ul></div>
+<div class="check-q" data-step="s5"></div>
+</section>
+
+<!-- ===================== STEP 6 ===================== -->
+<section class="step" id="s6" data-stage="1" data-title="The first 30 minutes" data-time="15 min">
+<h2>The first 30 minutes choose the setup</h2>
+<div class="goal"><b>Goal</b><p>Answer her most important question at 9:30–10:00, and know which setup it points to.</p></div>
+<div class="part">Learn</div>
+<blockquote class="q">"Did we take near liquidity level first 15 minutes on S&amp;P? You need to answer this question before entering the trade."<cite>Aug 25 live stream</cite></blockquote>
+<p>At 9:30, find the nearest clear high (for a gap up) or low (for a gap down) beyond the open. A high or low only counts if you can see it on the 15-minute chart. Then simply watch. Since July she waits until <strong>10:00</strong> before acting.</p>
+<div class="tree">
+<div class="branches">
+<div class="branch"><div class="if">Price does NOT take it</div><div class="then">Playbook A</div><p>Expect a small pullback to 25–50%, then a move to take that high or low.</p></div>
+<div class="branch"><div class="if">Price takes it</div><div class="then">Playbook B</div><p>Expect a deep pullback to 62–70.5% (the OTE).</p></div>
+<div class="branch"><div class="if">Price crashes through 70.5%</div><div class="then">Playbook C</div><p>Expect the whole gap to fill, back to yesterday's close.</p></div>
+</div></div>
+<div class="callout"><b class="t">The rule she repeats most</b><p>"If it goes up without me, it goes up without me." If price never pulls back into the zone, there is no trade. Missing a move is fine. Chasing it is not.</p></div>
+<div class="do" data-step="s6"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s6-1"><label for="t-s6-1">For your 5 past days: mark the nearest 15-minute high or low at 9:30.</label></li>
+<li><input type="checkbox" id="t-s6-2"><label for="t-s6-2">For each day, note whether it was taken before 10:00, and which playbook (A, B or C) that points to.</label></li>
+</ul></div>
+<div class="check-q" data-step="s6"></div>
+</section>
+
+<!-- ===================== STEP 7 ===================== -->
+<section class="step" id="s7" data-stage="2" data-title="The entry signal (CISD)" data-time="30 min">
+<h2>The entry signal: a 2-minute CISD</h2>
+<div class="goal"><b>Goal</b><p>Spot her entry signal on a 2-minute chart and know exactly where to enter and where to put the stop.</p></div>
+<div class="part">Learn</div>
+<p>A level only tells you where to look. You never buy or sell just because price touched it. You wait for the 2-minute chart to show the turn. Every setup in this course uses this same signal.</p>
+<figure class="dg" data-dg="cisd">
+<div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Direction"><button type="button" aria-pressed="true" data-dir="up">For a long</button><button type="button" aria-pressed="false" data-dir="dn">For a short</button></div></div>
+<div class="frame"><svg viewBox="0 0 900 430" role="img" aria-label="CISD diagram"></svg></div>
+<figcaption><ol>
+<li data-n="1">Price reaches the level (for example 25% of the gap).</li>
+<li data-n="2">Find the <em>first</em> <span class="vup">red (down)</span><span class="vdn">green (up)</span> candle that touched the level. Draw a line at its open price. That is the CISD line.</li>
+<li data-n="3">Wait for a 2-minute candle to <strong>close</strong> <span class="vup">above</span><span class="vdn">below</span> that line with a strong body. That is the signal.</li>
+<li data-n="4">Enter at the open of the next candle. Stop goes beyond the swing <span class="vup">low</span><span class="vdn">high</span>. The dashed box is the "order block"; its middle line (50%) must hold.</li>
+</ol></figcaption>
+</figure>
+<h3>Five rules for a good signal</h3>
+<ol class="rules5">
+<li><div><strong>It starts at the level.</strong><span>Use the first candle that touched the level, not a random run of candles.</span></div></li>
+<li><div><strong>It is a close, with a strong candle.</strong><span>A wick poking through does not count. A slow, grinding turn is where she loses: "most my losses happens in this kind of situation."</span></div></li>
+<li><div><strong>The 50% line holds.</strong><span>If price later closes back through the middle of the box, the signal is failing.</span></div></li>
+<li><div><strong>It shows on SPX.</strong><span>The signal must appear on the SPX chart, not just on ES.</span></div></li>
+<li><div><strong>Not a V, not from nowhere.</strong><span>A sharp V-shape or a turn in the middle of nowhere is not valid.</span></div></li>
+</ol>
+<div class="figpair">
+<figure><div class="frame"><img src="img/ob_cisd.jpg" alt="Lesson diagram: OB/CISD line at the open of the first down candle at the level"></div><figcaption><b>Her lesson.</b> The blue line is the open of the first red candle at the level. The green candle closing above it is the signal.</figcaption></figure>
+<figure><div class="frame"><img src="img/ob_invalid.jpg" alt="Lesson diagram: order block failing"></div><figcaption><b>A failing signal.</b> Left: price closes back above the middle of the box (warning). Right: the setup fails.</figcaption></figure>
+</div>
+<figure><div class="frame"><img src="img/a25_model_onchart.jpg" alt="Her live 2-minute CISD short on SPX on Aug 25"></div><figcaption><b>Live, Aug 25.</b> A real signal on her SPX chart: the blue "2m CISD" line, the red stop box above, the green target box below.</figcaption></figure>
+<div class="do" data-step="s7"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s7-1"><label for="t-s7-1">Open SPX 2-minute in TradingView "Replay" mode on a past morning.</label></li>
+<li><input type="checkbox" id="t-s7-2"><label for="t-s7-2">Find 5 signals at a gap level. For each, draw the CISD line and the box with its 50% line.</label></li>
+<li><input type="checkbox" id="t-s7-3"><label for="t-s7-3">Mark which of the 5 broke one of the five rules.</label></li>
+</ul></div>
+<div class="check-q" data-step="s7"></div>
+</section>
+
+<!-- ===================== STEP 8 ===================== -->
+<section class="step" id="s8" data-stage="2" data-title="Playbook A · 25–50%" data-time="30 min">
+<h2>Playbook A: the small pullback</h2>
+<div class="goal"><b>Goal</b><p>Trade the day when price does <strong>not</strong> take the nearest high or low early.</p></div>
+<div class="part">Learn</div>
+<p>Price opens near a high (or low) but does not reach it. The market still "wants" that level. So it pulls back a little into the gap, to 25–50%, and then goes to get it. That pullback is your entry.</p>
+<figure class="dg" data-dg="a">
+<div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
+<div class="frame"><svg viewBox="0 0 900 450" role="img" aria-label="Playbook A diagram"></svg></div>
+<figcaption><ol>
+<li data-n="1">Price fails to reach the <span class="vup">high above</span><span class="vdn">low below</span> in the first 15–30 minutes.</li>
+<li data-n="2">It pulls back into 25–50% of the gap (the blue zone).</li>
+<li data-n="3">The 2-minute signal: a candle closes <span class="vup">above</span><span class="vdn">below</span> the blue CISD line.</li>
+<li data-n="4"><span class="vup">Buy</span><span class="vdn">Sell</span> at the next candle's open. Red box = stop. Green box = target: the high or low that was not taken.</li>
+</ol></figcaption>
+</figure>
+<div class="play">
+<div class="row"><div>When</div><div>The nearest high/low was <strong>not</strong> taken by 10:00, and the gap is 10+ points.</div></div>
+<div class="row"><div>Where</div><div>25–50% of the gap. Price must really get there. "Not being one tick above or one tick below… it's all about enter this area."</div></div>
+<div class="row"><div>Entry</div><div>The 2-minute signal (step 7), at the next candle's open.</div></div>
+<div class="row"><div>Stop</div><div>Beyond the swing low (for a buy) or swing high (for a sell).</div></div>
+<div class="row"><div>Target</div><div>The high or low that was not taken. Take some profit at the 9:30 open on the way.</div></div>
+</div>
+<div class="figpair">
+<figure><div class="frame"><img src="img/lesson_a_shallow1.jpg" alt="Lesson chart: pullback to 25 percent, signal, run to the high"></div><figcaption><b>Her lesson, Jul 21.</b> Gap up, the high (BSL) not taken. Pullback to 0.25, signal at 7,473, run to the high at 7,495.</figcaption></figure>
+<figure><div class="frame"><img src="img/s17_plan.jpg" alt="Her live plan on Sep 17 with a key area at 25 to 50 percent"></div><figcaption><b>Live, Sep 17.</b> A 100-point gap up, equal highs (EQH) above not taken. Her plan: drop into the "Key Area" (25–50%), then buy toward the highs. She took two buys, +10 points each.</figcaption></figure>
+</div>
+<div class="do" data-step="s8"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s8-1"><label for="t-s8-1">In replay, find 3 past days where the high/low was not taken early.</label></li>
+<li><input type="checkbox" id="t-s8-2"><label for="t-s8-2">On each, mark the 25–50% zone, the signal, the entry, stop and target. Did it work?</label></li>
+</ul></div>
+<div class="check-q" data-step="s8"></div>
+</section>
+
+<!-- ===================== STEP 9 ===================== -->
+<section class="step" id="s9" data-stage="2" data-title="Playbook B · Sweep → OTE" data-time="30 min">
+<h2>Playbook B: the deep pullback</h2>
+<div class="goal"><b>Goal</b><p>Trade the day when price <strong>does</strong> take the nearest high or low early.</p></div>
+<div class="part">Learn</div>
+<p>Price takes the nearest high (or low) in the first 15 minutes. That was a fake move to grab stop orders. Now she expects a deep pullback into the gap, all the way to 62–70.5%. You can trade that move, and sometimes the bounce after it.</p>
+<figure class="dg" data-dg="b">
+<div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
+<div class="frame"><svg viewBox="0 0 900 450" role="img" aria-label="Playbook B diagram"></svg></div>
+<figcaption><ol>
+<li data-n="1">Price takes the <span class="vup">high above</span><span class="vdn">low below</span> in the first minutes.</li>
+<li data-n="2">A 2-minute signal back into the gap. Trade 1: <span class="vup">sell</span><span class="vdn">buy</span>, stop beyond the sweep, target 62%.</li>
+<li data-n="3">Price reaches the OTE (amber zone). Trade 1 is done. She takes her profit here.</li>
+<li data-n="4">Optional trade 2: a new signal at the OTE, aiming at a bigger level. Skip it if that level was already hit.</li>
+</ol></figcaption>
+</figure>
+<div class="play">
+<div class="row"><div>When</div><div>The nearest 15-minute high/low was taken within 15 minutes of 9:30.</div></div>
+<div class="row"><div>Trade 1</div><div>2-minute signal after the sweep. Stop beyond the sweep. Target 62%. Done there.</div></div>
+<div class="row"><div>Not valid</div><div>If price only pulls back to 50%: "wait for OTE or no trades."</div></div>
+<div class="row"><div>Trade 2</div><div>Optional, for later. A new signal at the OTE toward the next big level.</div></div>
+</div>
+<div class="figpair">
+<figure><div class="frame"><img src="img/lesson_b_ote_short.jpg" alt="Lesson chart: high swept, signal, sell to the OTE"></div><figcaption><b>Her lesson.</b> High swept at the open, signal at 7,504, sell into 62–70.5%.</figcaption></figure>
+<figure><div class="frame"><img src="img/s10_recap_entry.jpg" alt="Her live buy on Sep 10 after the low was swept"></div><figcaption><b>Live, Sep 10.</b> Gap down 40 points. The low (SSL) was taken in the first 15 minutes, so she bought aiming for the OTE above. Price stalled at 25%, where she took profit.</figcaption></figure>
+</div>
+<div class="do" data-step="s9"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s9-1"><label for="t-s9-1">In replay, find 3 past days where the high/low was taken early.</label></li>
+<li><input type="checkbox" id="t-s9-2"><label for="t-s9-2">Mark the sweep, the signal, and whether price reached 62%.</label></li>
+</ul></div>
+<div class="check-q" data-step="s9"></div>
+</section>
+
+<!-- ===================== STEP 10 ===================== -->
+<section class="step" id="s10" data-stage="2" data-title="Playbook C · 70.5% break" data-time="25 min">
+<h2>Playbook C: the full fill</h2>
+<div class="goal"><b>Goal</b><p>Recognise when the gap is going to fill completely, and trade with it.</p></div>
+<div class="part">Learn</div>
+<p>Sometimes price does not stop in the OTE. If a 2-minute candle <strong>closes</strong> past 70.5%, she expects price to go all the way back to yesterday's close, and usually a bit further. She says this happens "nine of 10 times".</p>
+<figure class="dg" data-dg="c">
+<div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
+<div class="frame"><svg viewBox="0 0 900 450" role="img" aria-label="Playbook C diagram"></svg></div>
+<figcaption><ol>
+<li data-n="1">Price runs into the OTE without stopping.</li>
+<li data-n="2">A 2-minute candle <strong>closes</strong> <span class="vup">below</span><span class="vdn">above</span> 70.5%. No other signal is needed.</li>
+<li data-n="3">Enter on that close. Stop beyond 50% (or 25% to be safer). Target 1: yesterday's close. Target 2: the next <span class="vup">low</span><span class="vdn">high</span> beyond it.</li>
+</ol></figcaption>
+</figure>
+<div class="play">
+<div class="row"><div>Trigger</div><div>A 2-minute candle <strong>closes</strong> past 70.5%. A wick does not count. Her indicator turns the line red.</div></div>
+<div class="row"><div>Entry</div><div>On the close. If price is already close to yesterday's close (small reward), wait for it to come back to 70.5% first.</div></div>
+<div class="row"><div>Stop</div><div>Beyond 50% of the gap, or 25% to be safer. On a gap under 10 points, beyond the whole gap.</div></div>
+<div class="row"><div>Wrong if</div><div>Price closes back through 70.5% or 25% with a strong candle. Get out.</div></div>
+</div>
+<div class="figpair">
+<figure><div class="frame"><img src="img/lesson_c_break_short.jpg" alt="Lesson chart: close below 70.5 percent, sell to the low"></div><figcaption><b>Her lesson, sell.</b> Close below 0.705, stop above 0.5, run to the low.</figcaption></figure>
+<figure><div class="frame"><img src="img/lesson_c_break_long.jpg" alt="Lesson chart: close above 70.5 percent, buy to the high"></div><figcaption><b>Her lesson, buy.</b> Close above 0.705, stops under 0.5, run to the high.</figcaption></figure>
+</div>
+<div class="do" data-step="s10"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s10-1"><label for="t-s10-1">In replay, find 3 days where a 2-minute candle closed past 70.5%.</label></li>
+<li><input type="checkbox" id="t-s10-2"><label for="t-s10-2">Count how many filled the whole gap.</label></li>
+<li><input type="checkbox" id="t-s10-3"><label for="t-s10-3">Review: for your 5 days from step 4, write which of A, B or C happened.</label></li>
+</ul></div>
+<div class="check-q" data-step="s10"></div>
+</section>
+
+<!-- ===================== STEP 11 ===================== -->
+<section class="step" id="s11" data-stage="3" data-title="D · After the fill" data-time="20 min">
+<h2>Playbook D: after the gap fills</h2>
+<div class="goal"><b>Goal</b><p>Know the follow-up trades once Playbook C is finished.</p></div>
+<div class="part">Learn</div>
+<p>After the gap fills and price takes the next high or low, the move often turns around. She trades that turn in two steps, each with its own signal.</p>
+<figure class="dg" data-dg="d">
+<div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
+<div class="frame"><svg viewBox="0 0 900 450" role="img" aria-label="Playbook D diagram"></svg></div>
+<figcaption><ol>
+<li data-n="1">The gap is filled and the <span class="vup">low</span><span class="vdn">high</span> beyond it is taken.</li>
+<li data-n="2">A 2-minute signal the other way. First trade, target: 25% of the gap.</li>
+<li data-n="3">A 2-minute close back through 25%. Second trade, target: the next big level.</li>
+</ol></figcaption>
+</figure>
+<div class="figpair">
+<figure><div class="frame"><img src="img/lesson_d_cisd.jpg" alt="Lesson chart: after the fill, the signal"></div><figcaption><b>Her lesson, Jul 31, step 2.</b> Gap filled, the low at 7,402 taken, signal at 7,431.</figcaption></figure>
+<figure><div class="frame"><img src="img/lesson_d_htf.jpg" alt="Lesson chart: close above 25 percent, buy to the next level"></div><figcaption><b>Step 3.</b> Close above 0.25, buy to the bigger level at 7,499.</figcaption></figure>
+</div>
+<div class="do" data-step="s11"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s11-1"><label for="t-s11-1">On one of your Playbook C days, look at what happened after the fill. Was there a signal back?</label></li>
+</ul></div>
+<div class="check-q" data-step="s11"></div>
+</section>
+
+<!-- ===================== STEP 12 ===================== -->
+<section class="step" id="s12" data-stage="3" data-title="E · Overlap gap" data-time="20 min">
+<h2>Playbook E: the overlap gap</h2>
+<div class="goal"><b>Goal</b><p>Find and use an overlap between today's gap and an older gap.</p></div>
+<div class="part">Learn</div>
+<p>Sometimes today opens inside an older gap that never filled. The price area that both gaps share is extra strong: she calls it "one of the highest-probability setups".</p>
+<figure class="dg" data-dg="e">
+<div class="fighead"><span class="tag">Diagram · gap down into an older gap</span></div>
+<div class="frame"><svg viewBox="0 0 900 430" role="img" aria-label="Overlap gap diagram"></svg></div>
+<figcaption><ol>
+<li data-n="1">An older gap is still partly unfilled (gray).</li>
+<li data-n="2">Today opens inside it. Use only the shared area (blue). Draw 25% and 50% on that area only.</li>
+<li data-n="3">Price reaches 25–50% of the shared area and gives a 2-minute signal. Trade away from it.</li>
+</ol></figcaption>
+</figure>
+<figure><div class="frame"><img src="img/s24_b_cisd_ote.jpg" alt="Her live chart Sep 24 at 10:15 with price at the OTE"></div><figcaption><b>Live, Sep 24.</b> An overlap day. Price came up into 62–70.5% and gave a signal (blue line). You will follow this whole day in step 17.</figcaption></figure>
+<div class="do" data-step="s12"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s12-1"><label for="t-s12-1">Turn on old gaps in the RTH Gap Fibs indicator and find one day where today's gap overlapped an old one.</label></li>
+</ul></div>
+<div class="check-q" data-step="s12"></div>
+</section>
+
+<!-- ===================== STEP 13 ===================== -->
+<section class="step" id="s13" data-stage="3" data-title="F · Old gaps" data-time="10 min">
+<h2>Playbook F: old gaps and unfinished moves</h2>
+<div class="goal"><b>Goal</b><p>Know what she does when today's gap is too small.</p></div>
+<div class="part">Learn</div>
+<div class="grid c2">
+<div><div class="n">OLD GAP</div><h4>Today's gap is under 10 points</h4><ul><li>She uses an older unfilled SPX gap instead.</li><li>Its 25–50% is the entry zone, and its 70.5% is where the idea is wrong.</li><li>Example, Sep 8: a 1-point gap. She bought from 25–50% of an old gap and made 1R.</li></ul></div>
+<div><div class="n">UNFINISHED MOVE</div><h4>"Delayed delivery"</h4><ul><li>If yesterday's setup ran out of time, today's open may finish it.</li><li>She treats this as a weaker (B+) setup: smaller size.</li></ul></div>
+</div>
+<figure><div class="frame"><img src="img/lesson_unfilled1.jpg" alt="Lesson chart: old unfilled gaps react later"></div><figcaption><b>Old gaps stay on the chart.</b> "These gaps can act as strong magnets for price."</figcaption></figure>
+<div class="check-q" data-step="s13"></div>
+</section>
+
+<!-- ===================== STEP 14 ===================== -->
+<section class="step" id="s14" data-stage="4" data-title="SPX levels → ES orders" data-time="20 min">
+<h2>Turn SPX levels into ES orders</h2>
+<div class="goal"><b>Goal</b><p>Place the order on MES with the right stop, target and number of contracts.</p></div>
+<div class="part">Learn</div>
+<p>SPX and ES trade at different prices, so you cannot copy prices from one to the other. She copies <strong>distances</strong> instead.</p>
+<ol class="steps">
+<li><b class="h">Measure on SPX</b><p>How many points from your entry to the stop, and to the target? For example: stop 7 points, target 14 points.</p></li>
+<li><b class="h">Buy or sell MES at market</b><p>When the SPX signal appears, place a market order on MES.</p></li>
+<li><b class="h">Add the distances to your MES fill price</b><p>"If your stop loss according to S&amp;P 7 points, your entry at 7747, you need to add seven points… 7754." Set the target about 1 point early: "ES loves to play games."</p></li>
+<li><b class="h">Take profit by the SPX chart</b><p>When SPX reaches the level, take your profit, even if ES has not quite got there.</p></li>
+</ol>
+<div class="tool">
+<h4>Order calculator</h4>
+<p class="sub">Fill in the SPX numbers and your MES fill price. You get the MES stop, target and how many contracts fit your risk.</p>
+<div class="fields">
+<label for="pc-dir">Direction<select id="pc-dir"><option value="long">Long (buy)</option><option value="short" selected>Short (sell)</option></select></label>
+<label for="pc-se">SPX entry<input id="pc-se" type="number" step="0.01" value="7690.00"></label>
+<label for="pc-ss">SPX stop<input id="pc-ss" type="number" step="0.01" value="7697.00"></label>
+<label for="pc-st">SPX target<input id="pc-st" type="number" step="0.01" value="7676.74"></label>
+<label for="pc-ef">Your MES fill<input id="pc-ef" type="number" step="0.25" value="7747.00"></label>
+<label for="pc-risk">Risk ($)<input id="pc-risk" type="number" step="10" value="150"></label>
+<label for="pc-ct">Contract<select id="pc-ct"><option value="5" selected>MES ($5/pt)</option><option value="50">ES ($50/pt)</option></select></label>
+</div>
+<div class="out c4" id="pc-out"></div>
+<div class="verdict" id="pc-verdict"></div>
+</div>
+<div class="do" data-step="s14"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s14-1"><label for="t-s14-1">Take one of your replay trades from steps 8–10 and run it through the calculator.</label></li>
+<li><input type="checkbox" id="t-s14-2"><label for="t-s14-2">Practise placing a market order with a stop and target in your platform's simulator.</label></li>
+</ul></div>
+<div class="check-q" data-step="s14"></div>
+</section>
+
+<!-- ===================== STEP 15 ===================== -->
+<section class="step" id="s15" data-stage="4" data-title="Manage the trade" data-time="15 min">
+<h2>Manage the trade</h2>
+<div class="goal"><b>Goal</b><p>Know when to take profit and when to move your stop.</p></div>
+<div class="part">Learn</div>
+<ol class="steps">
+<li><b class="h">Trade at least 2 micros</b><p>So you can close part of the position early.</p></li>
+<li><b class="h">Take the first profit early</b><p>At +10 ES points ("my base hit"), or at the next SPX level: 25% of the gap, the 9:30 open, or 62%.</p></li>
+<li><b class="h">Only then move the stop to your entry (break-even)</b><p>"I never moved to break even while I was in trade without partial."</p></li>
+<li><b class="h">Move the stop further only at a level</b><p>"Simply because I'm in profit does not mean I need to trail… I trail when we hit key level."</p></li>
+<li><b class="h">Expect about 1–1.5R</b><p>"I almost never go for 2R" in the morning on funded accounts.</p></li>
+</ol>
+<div class="callout bad"><b class="t">Her mistake on Sep 23</b><p>She moved her stop "without any significant reason". It was hit for +$15, then price went straight to her target. Move the stop only at a level.</p></div>
+<div class="check-q" data-step="s15"></div>
+</section>
+
+<!-- ===================== STEP 16 ===================== -->
+<section class="step" id="s16" data-stage="4" data-title="Risk rules" data-time="15 min">
+<h2>Risk rules</h2>
+<div class="goal"><b>Goal</b><p>Write your own risk limits and know her hard rules.</p></div>
+<div class="part">Learn</div>
+<div class="tbl"><table>
+<tr><th>Account</th><th>Most you lose in a day</th><th>Typical trade</th></tr>
+<tr><td>25K</td><td>$200</td><td>2–3 MES</td></tr>
+<tr><td>50K</td><td>$200–250 (first trade about $150)</td><td>3–4 MES, 7–10 point stop</td></tr>
+<tr><td>150K</td><td>$400–450</td><td>4–6 MES</td></tr>
+</table></div>
+<ol class="rules5">
+<li><div><strong>No setup, no trade.</strong><span>"Rule number one. Sometimes you're going to miss the trade."</span></div></li>
+<li><div><strong>Two losses and you stop for the day.</strong><span>"Once I took two losses in a row, I usually done for the day."</span></div></li>
+<li><div><strong>Size by quality.</strong><span>Best setups: normal size. Doubtful setups: half size, or a practice account.</span></div></li>
+<li><div><strong>Size by the stop.</strong><span>A wider stop means fewer contracts, never more dollars at risk.</span></div></li>
+<li><div><strong>No revenge trades.</strong><span>After a loss on a messy day: "that's a sign for you, walk away."</span></div></li>
+</ol>
+<div class="do" data-step="s16"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s16-1"><label for="t-s16-1">Write your own limits: account size, $ risk per trade, $ max per day.</label></li>
+<li><input type="checkbox" id="t-s16-2"><label for="t-s16-2">Write "Two losses = done" where you will see it while trading.</label></li>
+</ul></div>
+<div class="check-q" data-step="s16"></div>
+</section>
+
+<!-- ===================== STEP 17 ===================== -->
+<section class="step" id="s17" data-stage="5" data-title="Two real days" data-time="45 min">
+<h2>Follow two real days from start to finish</h2>
+<div class="goal"><b>Goal</b><p>See every step of the model happen in order, on her real charts.</p></div>
+<div class="part">Learn</div>
+<h3>Sep 24 · Playbook B on an overlap gap · sell · about +$500</h3>
+<ol class="tl">
+<li><div class="when">Before</div><div class="what"><b>She sets one rule for the day</b><p>"I'm going to only trade my strategy. If nothing will be presented, it's perfectly fine."</p></div></li>
+<li><div class="when">9:30</div><div class="what"><b>She measures the gap: 39 points down, inside an older gap</b><p>"Oh, huge gap. We have overlap gap. That's even better." Plan: wait for a bounce into the gap, then sell.</p>
+<figure><div class="frame"><img src="img/s24_a_overlap_open.jpg" alt="Sep 24, 9:32: gap levels and her plan"></div><figcaption><b>9:32.</b> Gap levels drawn; her pen line shows the plan.</figcaption></figure></div></li>
+<li><div class="when">10:15</div><div class="what"><b>Price reaches 62–70.5% and gives a signal</b><p>"I'm going to use the very first touch [of] my key level, which was OTE."</p>
+<figure><div class="frame"><img src="img/s24_b_cisd_ote.jpg" alt="Sep 24, 10:15: price at the OTE with the signal line"></div><figcaption><b>10:15.</b> Price in 62–70.5% (7,691–7,694.50). The blue line is the signal.</figcaption></figure></div></li>
+<li><div class="when">10:15–10:44</div><div class="what"><b>She waits for NQ to agree</b><p>"I wouldn't short until NQ will show any signs of reversal." She waited about 30 minutes.</p></div></li>
+<li><div class="when">10:44</div><div class="what"><b>She sells 10 MES</b><p>Stop about 7–8 points above the swing high.</p></div></li>
+<li><div class="when">10:53</div><div class="what"><b>First profit at 25% of the gap</b><p>"Since the stop according to SPX, will partial according to SPX as well."</p>
+<figure><div class="frame"><img src="img/s24_c_partial25.jpg" alt="Sep 24, 10:53: the trade with profit taken at 25 percent"></div><figcaption><b>10:53.</b> Left: the sell with profit taken at 25%. Right: her MES order screen.</figcaption></figure></div></li>
+<li><div class="when">11:13</div><div class="what"><b>She closes the rest, about +$500</b><p>She would not sell again above 25%: "This 25% at this point is basically resistance."</p></div></li>
+</ol>
+<h3>Sep 17 · Playbook A on a 100-point gap · two buys · +10 points each</h3>
+<ol class="tl">
+<li><div class="when">Before</div><div class="what"><b>Bias: buy a pullback</b><p>"I see no reason to look for longs without pull back to this gap."</p></div></li>
+<li><div class="when">9:33</div><div class="what"><b>The equal highs were not taken, so: wait for 25–50%</b><p>"Going down to 25-50% but fails to take buy side… I will wait for two minute order block."</p>
+<figure><div class="frame"><img src="img/s17_plan.jpg" alt="Sep 17, 9:33: key area and her drawn path"></div><figcaption><b>9:33.</b> "Key Area" = 25–50%. Her drawn path: down into it, then up to the highs.</figcaption></figure></div></li>
+<li><div class="when">10:14</div><div class="what"><b>Buy 1, half size</b><p>The signal came about 5 points before 25%, so she used 3 micros instead of 5. Profit taken, then stop to entry.</p></div></li>
+<li><div class="when">11:11</div><div class="what"><b>Buy 2 on a fresh signal</b><p>Stop below the swing low, profit at the top of the gap.</p></div></li>
+<li><div class="when">11:42</div><div class="what"><b>Done for the day</b><p>"First trade was 10 points, second trade 10 points. It's my base hits on ES."</p></div></li>
+</ol>
+<div class="do" data-step="s17"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s17-1"><label for="t-s17-1">Watch the Sep 24 stream from 1:05:00 to 1:50:00: <a href="https://www.youtube.com/watch?v=krzpjj6jUCc&amp;t=3900s">open on YouTube</a>.</label></li>
+<li><input type="checkbox" id="t-s17-2"><label for="t-s17-2">Watch the Sep 17 stream from 0:33:00 to 1:25:00: <a href="https://www.youtube.com/watch?v=SesgOJuhoK8&amp;t=1980s">open on YouTube</a>.</label></li>
+<li><input type="checkbox" id="t-s17-3"><label for="t-s17-3">For each day, write which of the six morning steps you saw her do.</label></li>
+</ul></div>
+<div class="check-q" data-step="s17"></div>
+</section>
+
+<!-- ===================== STEP 18 ===================== -->
+<section class="step" id="s18" data-stage="5" data-title="Your daily routine" data-time="15 min">
+<h2>Your daily routine and checklist</h2>
+<div class="goal"><b>Goal</b><p>Have a fixed morning routine and a checklist you run before every trade.</p></div>
+<div class="part">Learn</div>
+<ol class="steps">
+<li><b class="h">Bias <span class="time">8:30–9:15</span></b><p>Daily chart objective. ES and NQ vs. their opening prices. Any news at 10:00?</p></li>
+<li><b class="h">Two plans <span class="time">9:15–9:29</span></b><p>"If it doesn't take X: 25–50%. If it takes X: OTE."</p></li>
+<li><b class="h">Measure the gap <span class="time">9:30</span></b><p>On SPX, with the calculator. Under 10 points: no trade.</p></li>
+<li><b class="h">Watch, don't trade <span class="time">9:30–10:00</span></b><p>Was the nearest high/low taken? Pick A, B or C.</p></li>
+<li><b class="h">Wait for the zone and signal <span class="time">9:45–11:00</span></b><p>Price in the zone, 2-minute signal on SPX, NQ agrees.</p></li>
+<li><b class="h">Run the checklist, then enter</b><p>Market order on MES. Stop and target from the SPX distances.</p></li>
+<li><b class="h">Manage</b><p>Profit at +10 points or the next level, then stop to entry.</p></li>
+<li><b class="h">Stop <span class="time">by ~11:30</span></b><p>After your target, after 2 losses, or when nothing sets up.</p></li>
+</ol>
+<h3>Pre-trade checklist</h3>
+<p>Tick each line before you click buy or sell. Ticks are saved for today only.</p>
+<div class="tool">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><strong id="ck-count">0 / 0</strong><button class="btn" id="ck-reset" type="button">Clear</button></div>
+<div class="progress" style="margin:8px 0 4px"><i id="ck-bar"></i></div>
+<ul class="check" id="ck"></ul>
+<div class="verdict" id="ck-verdict" style="margin-top:14px"></div>
+</div>
+<div class="do" data-step="s18"><h3>Do this now</h3><ul class="check">
+<li><input type="checkbox" id="t-s18-1"><label for="t-s18-1">Do one full live morning with the routine and checklist, without placing a trade.</label></li>
+</ul></div>
+<div class="check-q" data-step="s18"></div>
+</section>
+
+<!-- ===================== STEP 19 ===================== -->
+<section class="step" id="s19" data-stage="5" data-title="Final test" data-time="15 min">
+<h2>Final test</h2>
+<div class="goal"><b>Goal</b><p>Score 8 out of 10 or better. Then you are ready for the practice plan.</p></div>
+<div class="part">Check</div>
+<p>Ten situations taken from her streams. Pick an answer to see her reasoning.</p>
+<div class="qscore" id="qscore"></div>
+<div class="quiz" id="qz"></div>
+<div style="margin-top:8px"><button class="btn" id="qreset" type="button">Restart test</button></div>
+</section>
+
+<!-- ===================== STEP 20 ===================== -->
+<section class="step" id="s20" data-stage="5" data-title="Your 4-week plan" data-time="4 weeks">
+<h2>Your 4-week practice plan</h2>
+<div class="goal"><b>Goal</b><p>Go from understanding the model to trading it with small, controlled risk.</p></div>
+<div class="part">Plan</div>
+<ol class="steps">
+<li><b class="h">Week 1: draw only</b><p>Every morning: measure the gap, mark the nearest high/low, predict A, B or C. At 11:30 check what happened. No trades.</p></li>
+<li><b class="h">Weeks 2–3: replay 50 days</b><p>TradingView replay on SPX 2-minute. Log every trade with the fields below. Only count trades with a real signal in the zone.</p></li>
+<li><b class="h">Week 4: paper trade live</b><p>Full routine, checklist and simulated MES orders. Compare with her stream that day.</p></li>
+<li><b class="h">After that: 1–2 MES on one practice or evaluation account</b><p>Fixed $150 risk. Two losses and done. Best setups only, until you have 30 live trades logged.</p></li>
+</ol>
+<h3>What to write down for every trade</h3>
+<div class="tbl"><table>
+<tr><th>Field</th><th>Example (Sep 24)</th></tr>
+<tr><td>Date</td><td>2026-09-24, Thursday</td></tr>
+<tr><td>Gap size and direction</td><td>39 points down</td></tr>
+<tr><td>Nearest high/low taken before 10:00?</td><td>No</td></tr>
+<tr><td>Playbook</td><td>E / B</td></tr>
+<tr><td>NQ agrees?</td><td>Not until 10:44</td></tr>
+<tr><td>Entry, stop, target (SPX points)</td><td>OTE, 7 pts, to 25%</td></tr>
+<tr><td>Result in R</td><td>about +1.8R</td></tr>
+<tr><td>Did I break a rule?</td><td>No</td></tr>
+</table></div>
+<div class="callout good"><b class="t">Watch her live while you practise</b><p>She streams 9:00–11:30 AM New York time on <a href="https://www.youtube.com/@LumiTraders/streams">YouTube</a>. Seeing what she skips teaches as much as seeing what she trades.</p></div>
+<div class="do" data-step="s20"><h3>Track your weeks</h3><ul class="check">
+<li><input type="checkbox" id="t-s20-1"><label for="t-s20-1">Week 1 done: 5 mornings drawn and predicted.</label></li>
+<li><input type="checkbox" id="t-s20-2"><label for="t-s20-2">Weeks 2–3 done: 50 replay days logged.</label></li>
+<li><input type="checkbox" id="t-s20-3"><label for="t-s20-3">Week 4 done: 5 live paper-trading mornings.</label></li>
+<li><input type="checkbox" id="t-s20-4"><label for="t-s20-4">First 30 small live trades logged.</label></li>
+</ul></div>
+</section>
+
+<!-- ===================== REFERENCE ===================== -->
+<section class="step" id="r1" data-stage="R" data-title="When she does not trade">
+<h2>When she does not trade</h2>
+<p>Most of what she teaches is what she skips.</p>
+<div class="tbl"><table>
+<tr><th>Situation</th><th>Her reason</th></tr>
+<tr><td>Price leaves without a pullback</td><td>"If it's going to be straight down at the open and nothing else, no trade." (Sep 28)</td></tr>
+<tr><td>Price misses the zone by a tick</td><td>"It's all about enter this area." (Sep 16)</td></tr>
+<tr><td>Good SPX setup, NQ the other way</td><td>"I wouldn't short until NQ will show any signs of reversal." (Sep 24)</td></tr>
+<tr><td>Slow signal, no strong candle</td><td>"Most my losses happens in this kind of situation." (Aug 25)</td></tr>
+<tr><td>Turn "from nowhere"</td><td>"From here, no thank you." (Sep 14)</td></tr>
+<tr><td>Less than 1R possible</td><td>"I don't want .5 R trade." (Oct 1)</td></tr>
+<tr><td>High taken but only a 50% pullback</td><td>"Wait for OTE or no trades." (Sep 11)</td></tr>
+</table></div>
+<h3>Her losses and why</h3>
+<div class="tbl"><table>
+<tr><th>Date</th><th>Loss</th><th>What went wrong</th></tr>
+<tr><td class="nowrap">Aug 21</td><td class="r">−$268</td><td>Entered before her own signal.</td></tr>
+<tr><td class="nowrap">Aug 24</td><td class="r">−$350</td><td>Sold above the 10 AM open: "Vital mistake."</td></tr>
+<tr><td class="nowrap">Sep 16</td><td class="r">−$145</td><td>FOMC day, ES/NQ disagreeing, entered before the candle closed.</td></tr>
+<tr><td class="nowrap">Sep 21</td><td class="r">−$160</td><td>Ignored NQ.</td></tr>
+<tr><td class="nowrap">Sep 23</td><td class="r">−$200</td><td>Trades outside the model; moved her stop for no reason.</td></tr>
+<tr><td class="nowrap">Sep 25</td><td class="r">−$255</td><td>Sold before 10:00 without a 2-minute signal.</td></tr>
+</table></div>
+</section>
+
+<section class="step" id="r2" data-stage="R" data-title="29 sessions reviewed">
+<h2>29 sessions reviewed</h2>
+<p>Every live stream from Aug 21 to Oct 2, 2026, as she reported it. "Comp" = a competition account with no loss limit.</p>
+<div class="tbl"><table>
+<tr><th>Date</th><th>Gap</th><th>Setup</th><th>Trades</th><th>Result</th></tr>
+<tr><td class="nowrap">Aug 21</td><td>~30 up</td><td>C (planned)</td><td>ES sell, too early</td><td class="r">−$268</td></tr>
+<tr><td class="nowrap">Aug 24</td><td>down</td><td>Delayed delivery</td><td>MES sell above 10 AM open</td><td class="r">−$350</td></tr>
+<tr><td class="nowrap">Aug 25</td><td>~30 up, overlap</td><td>B</td><td>Skipped a sell that worked; ES buy</td><td>~flat</td></tr>
+<tr><td class="nowrap">Aug 26</td><td>~10–15 down</td><td>C</td><td>2 ES buys</td><td class="g">Win, 1.6R</td></tr>
+<tr><td class="nowrap">Aug 27</td><td>~30 up</td><td>B</td><td>ES buy, half size</td><td class="g">Win</td></tr>
+<tr><td class="nowrap">Aug 28</td><td>~6–10 up</td><td>C → D</td><td>Sell (loss), buy</td><td class="g">~+$700</td></tr>
+<tr><td class="nowrap">Aug 31</td><td>~20</td><td>None</td><td>Gold instead</td><td class="g">Small win</td></tr>
+<tr><td class="nowrap">Sep 1</td><td>large down</td><td>B</td><td>NQ buy</td><td class="g">Win</td></tr>
+<tr><td class="nowrap">Sep 2</td><td>~3 up</td><td>F</td><td>NQ, MES</td><td>~BE</td></tr>
+<tr><td class="nowrap">Sep 3</td><td>large down</td><td>B</td><td>2 sells, 1 buy</td><td class="g">~+$945</td></tr>
+<tr><td class="nowrap">Sep 4</td><td>tiny</td><td>C (weak)</td><td>ES and NQ sells</td><td class="g">Win</td></tr>
+<tr><td class="nowrap">Sep 8</td><td>~1</td><td>F</td><td>ES buy</td><td class="g">1R</td></tr>
+<tr><td class="nowrap">Sep 10</td><td>40+ down</td><td>B</td><td>ES buy</td><td class="g">~1R</td></tr>
+<tr><td class="nowrap">Sep 11</td><td>overlap</td><td>No pullback</td><td>None</td><td>—</td></tr>
+<tr><td class="nowrap">Sep 14</td><td>large down</td><td>E</td><td>NQ sell (loss), ES buy</td><td class="g">+$151</td></tr>
+<tr><td class="nowrap">Sep 15</td><td>7</td><td>Skipped</td><td>Scratch</td><td>~0</td></tr>
+<tr><td class="nowrap">Sep 16</td><td>&gt;10 up, FOMC</td><td>Missed A</td><td>NQ, ES sell</td><td class="r">−$145</td></tr>
+<tr><td class="nowrap">Sep 17</td><td>~100 up</td><td>A</td><td>2 ES buys</td><td class="g">+10 pts each</td></tr>
+<tr><td class="nowrap">Sep 18</td><td>small</td><td>C</td><td>ES sell</td><td class="g">Win</td></tr>
+<tr><td class="nowrap">Sep 21</td><td>large</td><td>Old gap</td><td>ES sell, gold buy</td><td class="r">−$160</td></tr>
+<tr><td class="nowrap">Sep 22</td><td>~6 up</td><td>B scalp</td><td>ES (comp)</td><td class="g">+$181</td></tr>
+<tr><td class="nowrap">Sep 23</td><td>small</td><td>Off-model</td><td>3 ES trades</td><td class="r">−$200</td></tr>
+<tr><td class="nowrap">Sep 24</td><td>~39 down</td><td>E / B</td><td>MES sell (comp)</td><td class="g">+$500</td></tr>
+<tr><td class="nowrap">Sep 25</td><td>small</td><td>B</td><td>Loss, then 2 wins</td><td class="g">~+$300</td></tr>
+<tr><td class="nowrap">Sep 28</td><td>~20 down</td><td>No pullback</td><td>ES BE, oil buy</td><td class="g">+$300</td></tr>
+<tr><td class="nowrap">Sep 29</td><td>&lt;10</td><td>C</td><td>ES, NQ (comp)</td><td class="g">+$1,051</td></tr>
+<tr><td class="nowrap">Sep 30</td><td>&lt;10</td><td>F</td><td>ES buy</td><td class="g">~+$300</td></tr>
+<tr><td class="nowrap">Oct 1</td><td>small</td><td>Missed</td><td>3 trades (comp)</td><td class="g">+$80</td></tr>
+<tr><td class="nowrap">Oct 2</td><td>~60 up</td><td>A</td><td>3 trades</td><td class="g">~+$480</td></tr>
+</table></div>
+</section>
+
+<section class="step" id="r3" data-stage="R" data-title="Sources">
+<h2>Sources</h2>
+<ul class="plain">
+<li><a href="https://funded.now/lessons/spx-rth-gap">funded.now/lessons/spx-rth-gap</a>: her written lesson.</li>
+<li><a href="https://funded.now/lessons/order-block">Order Block / CISD</a>, <a href="https://funded.now/lessons/ict-optimal-trade-entry-ote">OTE</a> and <a href="https://funded.now/lessons/10-am-open">10 AM Open</a> lessons.</li>
+<li><a href="https://funded.now/indicators">funded.now/indicators</a>: the free indicators.</li>
+<li><a href="https://www.youtube.com/@LumiTraders/streams">Her YouTube streams</a>: 29 sessions reviewed, Aug 21 – Oct 2, 2026.</li>
+<li><a href="https://x.com/LumiTraders">@LumiTraders on X</a>.</li>
+</ul>
+<p class="src">Funded.Now is her prop-firm affiliate site (code LUMI). Prices quoted from streams come from auto-generated transcripts and are approximate.</p>
+</section>
+
+<div class="stepnav" id="stepnav">
+  <button class="btn" id="prevbtn" type="button">← Back</button>
+  <span class="state" id="stepstate"></span>
+  <button class="btn primary" id="nextbtn" type="button">Next step →</button>
+</div>
+</main>
+</div>
+
+<script>
+(function(){
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v));}catch(e){return null;}}
+/* ---------- diagram engine ---------- */
+var NS='http://www.w3.org/2000/svg';
+function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+/* price units: yesterday's close = 0, 9:30 open = 100 (gap up). Level price = 100 - pct.
+   Flipped (gap down / bearish): p -> F - p, candles mirrored, alt labels used. */
+function render(svg,cfg,flip){
+  while(svg.firstChild)svg.removeChild(svg.firstChild);
+  var vb=svg.viewBox.baseVal,W=vb.width,H=vb.height;
+  var L=34,R=cfg.gutter||176,T=26,B=36,plotR=W-R;
+  var F=cfg.F!=null?cfg.F:100;
+  function P(p){return flip?F-p:p;}
+  var lo=flip?F-cfg.max:cfg.min,hi=flip?F-cfg.min:cfg.max;
+  function y(p){p=P(p);return T+(hi-p)/(hi-lo)*(H-T-B);}
+  var n=cfg.candles.length,step=(plotR-L-10)/n,cw=Math.max(6,Math.min(16,step*0.6));
+  function x(i){return L+step*i+step/2;}
+  function xl(i){return i==null?L:x(i)-step/2;}
+  function xr(i){return i==null?plotR:x(i)+step/2;}
+  function T_(t){return (flip&&t&&typeof t==='object')?t.dn:(t&&typeof t==='object'?t.up:t);}
+  svg.appendChild(el('rect',{x:0,y:0,width:W,height:H,class:'bg'}));
+  (cfg.zones||[]).forEach(function(z){
+    var a=y(z.a),b=y(z.b),top=Math.min(a,b);
+    svg.appendChild(el('rect',{x:xl(z.from),y:top,width:xr(z.to)-xl(z.from),height:Math.abs(a-b),class:z.cls}));
+    if(z.label){svg.appendChild(el('text',{x:xl(z.from)+8,y:top+15,class:'zl'},T_(z.label)));}
+  });
+  (cfg.levels||[]).forEach(function(l){
+    svg.appendChild(el('line',{x1:xl(l.from),x2:plotR+6,y1:y(l.p),y2:y(l.p),class:'lvl '+(l.cls||'')}));
+    svg.appendChild(el('text',{x:plotR+12,y:y(l.p)+4+(l.dy||0)*(flip?-1:1),class:'lbl '+(l.cls||'')},T_(l.label)));
+  });
+  (cfg.pos||[]).forEach(function(ps){
+    var x1=xl(ps.i),x2=xr(ps.to),ye=y(ps.e),yt=y(ps.t),ys=y(ps.s);
+    svg.appendChild(el('rect',{x:x1,y:Math.min(ye,yt),width:x2-x1,height:Math.abs(ye-yt),class:'pt'}));
+    svg.appendChild(el('rect',{x:x1,y:Math.min(ye,ys),width:x2-x1,height:Math.abs(ye-ys),class:'ps'}));
+    svg.appendChild(el('line',{x1:x1,x2:x2,y1:ye,y2:ye,class:'pe'}));
+    var tUp=yt<ye;
+    svg.appendChild(el('text',{x:x1+5,y:tUp?yt+13:yt-5,class:'ptx'},ps.tl||'TARGET'));
+    svg.appendChild(el('text',{x:x1+5,y:tUp?ys-5:ys+13,class:'psx'},'STOP'));
+  });
+  (cfg.cisd||[]).forEach(function(c){svg.appendChild(el('line',{x1:xl(c.i1)+2,x2:xr(c.i2)-2,y1:y(c.p),y2:y(c.p),class:'cisd'}));});
+  (cfg.mt||[]).forEach(function(c){svg.appendChild(el('line',{x1:xl(c.i1),x2:xr(c.i2),y1:y(c.p),y2:y(c.p),class:'lvl mt'}));});
+  cfg.candles.forEach(function(c,i){
+    if(!c)return;
+    var o=P(c[0]),h=P(c[1]),l=P(c[2]),cl=P(c[3]);
+    var hh=Math.max(h,l),ll=Math.min(h,l),cls=cl>=o?'up':'dn';
+    function yy(p){return T+(hi-p)/(hi-lo)*(H-T-B);}
+    svg.appendChild(el('line',{x1:x(i),x2:x(i),y1:yy(hh),y2:yy(ll),class:'wick '+cls}));
+    var top=yy(Math.max(o,cl)),ht=Math.max(1.5,Math.abs(yy(o)-yy(cl)));
+    svg.appendChild(el('rect',{x:x(i)-cw/2,y:top,width:cw,height:ht,class:cls,rx:1.5}));
+  });
+  (cfg.brk||[]).forEach(function(b){
+    var xx=xr(b.i)+8,y1=y(b.a),y2=y(b.b);
+    svg.appendChild(el('path',{d:'M'+(xx-5)+' '+y1+' H'+xx+' V'+y2+' H'+(xx-5),class:'brk'}));
+    svg.appendChild(el('text',{x:xx+7,y:(y1+y2)/2+4,class:'brkt'},T_(b.label)));
+  });
+  (cfg.ticks||[]).forEach(function(t){svg.appendChild(el('text',{x:x(t.i),y:H-12,'text-anchor':'middle',class:'tick'},t.label));});
+  (cfg.marks||[]).forEach(function(m){
+    var cx=x(m.i)+(m.dx||0),py=y(m.p),off=(m.dy||-22)*(flip?-1:1),cy=py+off;
+    svg.appendChild(el('line',{x1:x(m.i)+(m.dx||0)*0.3,y1:py,x2:cx,y2:cy,class:'lead'}));
+    svg.appendChild(el('circle',{cx:cx,cy:cy,r:10,class:'mk'}));
+    svg.appendChild(el('text',{x:cx,y:cy+4,'text-anchor':'middle',class:'mkt'},m.n));
+  });
+}
+var GAPLV=[{p:100,label:'0%  9:30 open',cls:'edge'},{p:75,label:'25%',cls:'s25'},{p:50,label:'50%',cls:'s50'},{p:38,label:'62%',cls:'sote',dy:-3},{p:29.5,label:'70.5%',cls:'sote',dy:5},{p:0,label:'100%  prior close',cls:'edge'}];
+function lv(from,extra){return GAPLV.map(function(l){var o={};for(var k in l)o[k]=l[k];o.from=from;return o;}).concat(extra||[]);}
+var pre=[[-10,-4,-16,-6],[-6,0,-9,-2],[-2,4,-5,2],[2,5,-2,0]];
+
+var D={
+ anatomy:{min:-22,max:118,gutter:190,
+  candles:pre.concat([null,[100,107,96,104],[104,106,92,94],[94,98,88,96],[96,102,94,100]]),
+  zones:[{a:100,b:0,from:5,cls:'gapz'},{a:38,b:29.5,from:5,cls:'zone ote',label:'OTE 62–70.5%'}],
+  levels:lv(5), brk:[{i:3,a:100,b:0,label:{up:'THE GAP',dn:'THE GAP'}}],
+  ticks:[{i:0,label:'3:56'},{i:3,label:'4:08'},{i:5,label:'9:30'},{i:8,label:'9:36'}]},
+ a:{min:-8,max:122,
+  candles:pre.slice(1).concat([null,[100,108,97,104],[104,106,92,94],[94,96,80,82],[82,84,70,73],[73,76,61,64],[64,87,63,85],[85,95,83,93],[93,104,91,102],[102,115,100,114]]),
+  zones:[{a:75,b:50,from:4,cls:'zone key',label:{up:'entry zone 25–50%',dn:'entry zone 25–50%'}}],
+  levels:lv(4,[{p:112,label:{up:'BSL not taken',dn:'SSL not taken'},cls:'liq',from:0}]),
+  cisd:[{i1:7,i2:9,p:82}],
+  pos:[{i:10,to:12,e:85,s:59,t:112}],
+  marks:[{n:'1',i:4,p:108,dy:-20},{n:'2',i:7,p:70,dy:24,dx:-10},{n:'3',i:9,p:87,dy:-26},{n:'4',i:10,p:85,dy:-30,dx:6}],
+  ticks:[{i:4,label:'9:30'},{i:7,label:'9:36'},{i:10,label:'9:42'},{i:12,label:'9:46'}]},
+ b:{min:-8,max:124,
+  candles:pre.slice(1).concat([null,[100,109,98,107],[107,108,96,97],[97,99,85,86],[86,88,71,73],[73,75,56,58],[58,60,40,42],[42,44,31,34],[34,36,31,33],[33,47,32,46],[46,61,44,59],[59,72,57,70],[70,86,68,84]]),
+  zones:[{a:38,b:29.5,from:4,cls:'zone ote',label:'OTE'}],
+  levels:lv(4,[{p:106,label:{up:'BSL (swept)',dn:'SSL (swept)'},cls:'liq',from:0,dy:-6},{p:118,label:'HTF level',cls:'htf',from:0}]),
+  cisd:[{i1:4,i2:5,p:100},{i1:10,i2:12,p:42}],
+  pos:[{i:6,to:10,e:97,s:111,t:38,tl:'TARGET 62%'},{i:13,to:15,e:46,s:29,t:118}],
+  marks:[{n:'1',i:4,p:109,dy:-22,dx:-14},{n:'2',i:5,p:97,dy:-40,dx:14},{n:'3',i:10,p:31,dy:28},{n:'4',i:12,p:46,dy:-34,dx:-6}],
+  ticks:[{i:4,label:'9:30'},{i:6,label:'9:34'},{i:10,label:'9:42'},{i:13,label:'9:48'}]},
+ c:{min:-22,max:112,
+  candles:pre.concat([null,[100,104,90,92],[92,94,70,72],[72,74,51,53],[53,55,36,38],[38,40,24,26],[26,30,12,14],[14,16,-1,1],[1,3,-16,-14]]),
+  zones:[{a:38,b:29.5,from:5,cls:'zone ote',label:'OTE'}],
+  levels:lv(5,[{p:-12,label:{up:'SSL (opposite)',dn:'BSL (opposite)'},cls:'liq',from:0,dy:6}]),
+  pos:[{i:10,to:12,e:26,s:50,t:-12,tl:'TP1 fill → TP2'}],
+  marks:[{n:'1',i:8,p:38,dy:-26,dx:-16},{n:'2',i:9,p:24,dy:24,dx:-14},{n:'3',i:10,p:26,dy:-32,dx:10}],
+  ticks:[{i:5,label:'9:30'},{i:9,label:'9:38'},{i:12,label:'9:44'}]},
+ d:{min:-26,max:124,
+  candles:[[38,40,24,26],[26,30,12,14],[14,16,-1,1],[1,3,-16,-14],[-14,-10,-20,-17],[-17,-2,-18,-4],[-4,10,-6,8],[8,24,6,22],[22,38,20,36],[36,52,34,50],[50,64,48,62],[62,76,60,73],[73,74,66,68],[68,84,67,82],[82,96,80,94],[94,108,92,106],[106,118,104,116]],
+  zones:[{a:38,b:29.5,cls:'zone ote'}],
+  levels:GAPLV.concat([{p:-14,label:{up:'SSL (taken)',dn:'BSL (taken)'},cls:'liq',dy:6},{p:115,label:'HTF level',cls:'htf'}]),
+  cisd:[{i1:3,i2:6,p:1}],
+  pos:[{i:7,to:11,e:8,s:-22,t:75,tl:'TARGET 25%'},{i:14,to:16,e:82,s:27,t:115}],
+  marks:[{n:'1',i:3,p:-16,dy:26},{n:'2',i:6,p:10,dy:-30,dx:-10},{n:'3',i:13,p:84,dy:-30,dx:-12}]},
+ cisd:{min:44,max:108,F:152,gutter:200,
+  candles:[[100,103,94,96],[96,98,86,88],[88,90,79,80],[80,81,62,64],[64,66,56,58],[58,70,57,68],[68,86,66,84],[84,95,82,93],[93,104,91,102]],
+  zones:[{a:62,b:50,cls:'zone key',label:{up:'key level',dn:'key level'}},{a:80,b:56,from:3,to:5,cls:'zone ob'}],
+  levels:[{p:80,label:'CISD line',cls:'s25',from:3},{p:68,label:'50% mean threshold',cls:'',from:3}],
+  cisd:[{i1:3,i2:6,p:80}],
+  pos:[{i:7,to:8,e:84,s:55,t:104}],
+  marks:[{n:'1',i:3,p:62,dy:28,dx:-18},{n:'2',i:3,p:80,dy:-28,dx:-18},{n:'3',i:6,p:84,dy:-30,dx:-12},{n:'4',i:7,p:84,dy:-46,dx:10}]},
+ e:{min:20,max:136,gutter:186,
+  candles:[[30,38,26,36],[36,42,32,40],null,[120,124,112,116],[116,118,92,96],[96,104,90,102],[102,112,100,110],null,[60,64,56,62],[62,69,60,67],[67,70,63,64],[64,66,58,60],[60,61,48,50],[50,52,40,42]],
+  zones:[{a:90,b:40,from:2,cls:'zone',label:'old gap, still unfilled'},{a:110,b:60,from:7,cls:'gapz',label:'today’s gap'},{a:90,b:60,from:7,cls:'zone ov',label:'overlap'}],
+  levels:[{p:110,label:'prior close',cls:'edge',from:7},{p:75,label:'50% of overlap',cls:'s50',from:7},{p:67.5,label:'25% of overlap',cls:'s25',from:7},{p:60,label:'today 9:30 open',cls:'edge',from:7}],
+  cisd:[{i1:9,i2:11,p:62}],
+  pos:[{i:12,to:13,e:60,s:72,t:42}],
+  marks:[{n:'1',i:1,p:90,dy:-22,dx:10},{n:'2',i:8,p:90,dy:-24,dx:4},{n:'3',i:11,p:62,dy:30,dx:-6}],
+  ticks:[{i:0,label:'2 days ago'},{i:4,label:'yesterday'},{i:8,label:'today 9:30'}]}
+};
+document.querySelectorAll('figure.dg').forEach(function(f){
+  var key=f.getAttribute('data-dg'),svg=f.querySelector('svg'),cfg=D[key];
+  function go(flip){render(svg,cfg,flip);f.classList.toggle('isdn',flip);f.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',(b.getAttribute('data-dir')==='dn')===flip?'true':'false');});}
+  f.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){go(b.getAttribute('data-dir')==='dn');});});
+  go(false);
+});
+
+/* gap calculator */
+var gc=document.getElementById('gc-close'),go2=document.getElementById('gc-open');
+function f2(v){return isFinite(v)?v.toFixed(2):'—';}
+function gcalc(){
+  var c=parseFloat(gc.value),o=parseFloat(go2.value),out=document.getElementById('gc-out'),vd=document.getElementById('gc-verdict');
+  if(!isFinite(c)||!isFinite(o)){out.innerHTML='';vd.className='verdict';vd.textContent='Enter both prices.';return;}
+  var g=o-c,size=Math.abs(g),dir=g>0?'Gap up':(g<0?'Gap down':'No gap');
+  function lvl(p){return o-(o-c)*p;}
+  var cells=[['Gap',size.toFixed(2)+' pts · '+(g>0?'up':g<0?'down':'—')],['25%',f2(lvl(.25))],['50%',f2(lvl(.5))],['62%',f2(lvl(.62))],['70.5%',f2(lvl(.705))],['100% (close)',f2(c)]];
+  out.innerHTML=cells.map(function(x){return '<div class="cell"><div class="l">'+x[0]+'</div><div class="v">'+x[1]+'</div></div>'}).join('');
+  var cls,msg;
+  if(size<10){cls='r';msg=dir+' of '+size.toFixed(1)+' points: under 10, she expects chop. Skip the SPX model today, or work from an older unfilled gap (Playbook F).';}
+  else if(size<=60){cls='g';msg=dir+' of '+size.toFixed(1)+' points: workable. Mark the nearest 15-minute liquidity '+(g>0?'above':'below')+' the open and watch it until 10:00.';}
+  else{cls='a';msg=dir+' of '+size.toFixed(1)+' points: very large. She has not backtested these. Micros only; a reaction slightly before 25% is acceptable.';}
+  vd.className='verdict '+cls;vd.textContent=msg;
+}
+gc.addEventListener('input',gcalc);go2.addEventListener('input',gcalc);gcalc();
+
+/* order calculator */
+['pc-dir','pc-se','pc-ss','pc-st','pc-ef','pc-risk','pc-ct'].forEach(function(i){var e=document.getElementById(i);e.addEventListener('input',pcalc);e.addEventListener('change',pcalc);});
+function pcalc(){
+  function v(i){return parseFloat(document.getElementById(i).value);}
+  var d=document.getElementById('pc-dir').value,se=v('pc-se'),ss=v('pc-ss'),st=v('pc-st'),ef=v('pc-ef'),risk=v('pc-risk'),pv=v('pc-ct');
+  var sgn=d==='long'?1:-1,stopPts=(se-ss)*sgn,tgtPts=(st-se)*sgn;
+  var out=document.getElementById('pc-out'),vd=document.getElementById('pc-verdict');
+  if(!(stopPts>0)||!(tgtPts>0)||!isFinite(ef)){out.innerHTML='';vd.className='verdict r';vd.textContent=d==='long'?'For a long, the stop must be below the entry and the target above it.':'For a short, the stop must be above the entry and the target below it.';return;}
+  function q(x){return Math.round(x*4)/4;}
+  var esStop=q(ef-sgn*stopPts),esTgt=q(ef+sgn*tgtPts),esTgtE=q(esTgt-sgn*1),perCt=stopPts*pv,n=Math.max(0,Math.floor(risk/perCt)),rr=tgtPts/stopPts;
+  var cells=[['Stop distance',stopPts.toFixed(2)+' pts'],['Target distance',tgtPts.toFixed(2)+' pts'],['Reward : risk',rr.toFixed(2)+'R'],['Contracts',String(n)],['ES stop',esStop.toFixed(2)],['ES target',esTgt.toFixed(2)],['ES target −1 pt',esTgtE.toFixed(2)],['Risk / contract','$'+perCt.toFixed(0)]];
+  out.innerHTML=cells.map(function(x){return '<div class="cell"><div class="l">'+x[0]+'</div><div class="v">'+x[1]+'</div></div>'}).join('');
+  var msg,cls,name=pv===5?'MES':'ES';
+  if(n<1){cls='r';msg='One contract already risks more than $'+risk+'. Skip it or switch to MES.';}
+  else if(rr<1){cls='r';msg='Below 1R. She skips these: "I don’t want .5 R trade."';}
+  else if(n<2){cls='a';msg='Only 1 contract fits, so you cannot take a partial. She trades at least 2 micros.';}
+  else{cls='g';msg='Order: '+(d==='long'?'buy ':'sell ')+n+' '+name+' at market, stop '+esStop.toFixed(2)+', final target '+esTgtE.toFixed(2)+'. Partial at the first SPX level. Total risk $'+(n*perCt).toFixed(0)+'.';}
+  vd.className='verdict '+cls;vd.textContent=msg;
+}
+pcalc();
+
+/* checklist */
+var items=[
+ ['G','Before 9:30'],
+ ['I','Higher-timeframe objective is marked','Previous day high/low, weekly open, old SPX gaps, daily OB/FVG.'],
+ ['I','ES and NQ are on the same side of the daily open and NYMO','If not, the market is decoupled: evaluation account or no trade.'],
+ ['I','I wrote my two scenarios','Liquidity not taken → 25–50%. Taken → OTE.'],
+ ['I','No FOMC; for 10:00 news I will wait for the hourly close',''],
+ ['G','At the open'],
+ ['I','The SPX gap is 10 points or more','SPCFD:SPX, prior close = 4:08 PM print.'],
+ ['I','I know whether the nearest 15-minute+ liquidity was taken','Decided by 9:45, confirmed by 10:00.'],
+ ['I','I picked one playbook (A–F)',''],
+ ['G','The entry'],
+ ['I','Price actually traded into the playbook zone','Not "almost".'],
+ ['I','A 2-minute CISD closed on SPX, with displacement','From the first candle that touched the level. Not a V. Not from nowhere.'],
+ ['I','NQ agrees, and after 10:00 I am on the right side of the 10 AM open','Otherwise half size, or skip.'],
+ ['I','Reward is at least 1R to the first real target',''],
+ ['I','Stop is at the swing and the dollar risk fits my daily limit','$150 first trade on 50K, max $250 per day.'],
+ ['I','I have fewer than 2 losses today','']
+];
+var key='spxgap-check-'+new Date().toISOString().slice(0,10),saved=store(key)||{};
+var ul=document.getElementById('ck'),total=0;
+items.forEach(function(it,i){
+  var li=document.createElement('li');
+  if(it[0]==='G'){li.className='grp';li.textContent=it[1];ul.appendChild(li);return;}
+  total++;var id='ck-'+i;
+  li.innerHTML='<input type="checkbox" id="'+id+'"><label for="'+id+'">'+it[1]+(it[2]?'<small>'+it[2]+'</small>':'')+'</label>';
+  ul.appendChild(li);
+  var cb=li.querySelector('input');cb.checked=!!saved[id];
+  cb.addEventListener('change',function(){saved[id]=cb.checked;store(key,saved);ck();});
+});
+function ck(){
+  var n=ul.querySelectorAll('input:checked').length;
+  document.getElementById('ck-count').textContent=n+' / '+total+' checked';
+  document.getElementById('ck-bar').style.width=(n/total*100)+'%';
+  var v=document.getElementById('ck-verdict');
+  if(n===total){v.className='verdict g';v.textContent='All checks pass. This is a model trade: take it at your normal size.';}
+  else if(n===total-1){v.className='verdict a';v.textContent='One item missing. If it is the NQ check, trade half size. Anything else: no trade.';}
+  else{v.className='verdict r';v.textContent='Not a model trade yet. "No model, no trade."';}
+}
+document.getElementById('ck-reset').addEventListener('click',function(){saved={};store(key,saved);ul.querySelectorAll('input').forEach(function(c){c.checked=false});ck();});
+ck();
+
+
+/* ---------- storage ---------- */
+var KEY='spxgap-course-v1';
+var S=(function(){try{return JSON.parse(localStorage.getItem(KEY)||'null')}catch(e){return null}})()||{done:{},tasks:{},ans:{},last:'s0'};
+S.done=S.done||{};S.tasks=S.tasks||{};S.ans=S.ans||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+
+/* ---------- theme ---------- */
+document.getElementById('themebtn').addEventListener('click',function(){
+  var r=document.documentElement,cur=r.getAttribute('data-theme');
+  var dark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;
+  r.setAttribute('data-theme',dark?'light':'dark');
+});
+
+/* ---------- quiz bank ---------- */
+var BANK={
+ gap6:{q:'At 9:30 SPX opens 6 points above yesterday’s close. What does she do with the model today?',o:['Trade Playbook A as normal','Skip it: under 10 points means choppy, messy price action','Trade double size because small gaps fill fast'],a:1,w:'"Anything less than 10 points it’s most likely going to be chop session." She skips, uses an older gap, or trades something else.'},
+ pA:{q:'Gap up of 35 points. By 10:00 price has not reached the high above. It pulls back to 30% of the gap and a 2-minute signal prints with a strong candle. NQ agrees. What is the trade?',o:['Buy at the next candle’s open, stop under the swing low, target the high above','Sell, because price is falling','Wait for 62% first'],a:0,w:'Playbook A: high not taken, pullback into 25–50%, signal, NQ agrees. Target the high that was not taken.'},
+ pB:{q:'Gap up of 30 points. At 9:36 price takes the high above the open, then a 2-minute signal down appears. Where is the target?',o:['The 25% level','62% of the gap','Yesterday’s close'],a:1,w:'Playbook B: the high was taken early, so she expects a deep pullback. Her trade is "done" at 62%.'},
+ pC:{q:'Price falls through the OTE of a gap up and a 2-minute candle closes below 70.5%. What does she expect?',o:['A bounce from 70.5%','The whole gap to fill, then the low below to be taken','Nothing; 70.5% is not important'],a:1,w:'Playbook C: a close past 70.5% means "gap fill… nine of 10 times". Target 1 = yesterday’s close, target 2 = the next low.'},
+ nq:{q:'A clean SPX sell signal appears at the OTE, but NQ is still rising to new highs. What does she do?',o:['Sell full size: SPX is what matters','Wait for NQ to turn, or trade half size on a practice account','Buy instead'],a:1,w:'On Sep 24 she waited about 30 minutes for NQ. On Sep 21 she ignored NQ and lost.'},
+ be:{q:'You are +8 points with no profit taken yet. Price stalls. Do you move the stop to your entry?',o:['Yes, always protect profit','No. Only after taking some profit, or at a level','Close everything now'],a:1,w:'"I never moved to break even while I was in trade without partial." On Sep 23 a needless stop move cost her a winner.'},
+ fifty:{q:'Price took the high in the first 15 minutes, then pulled back only to 50% and gave a signal. Trade it?',o:['Yes, 50% is a level','No: after a sweep she waits for 62–70.5%'],a:1,w:'"If price takes nearest liquidity… but only retrace to 50, I don’t like it… wait for OTE or no trades." (Sep 11)'},
+ twoL:{q:'You already lost twice today. At 11:05 a perfect setup appears. What do you do?',o:['Take it, perfect setups are rare','Take it with half size','Nothing. Two losses and you are done for the day'],a:2,w:'"Once I took two losses in a row, I usually done for the day."'},
+ tick:{q:'Price stops one tick before 25% and then runs to the target without you. Did you miss a trade?',o:['Yes, you should have entered early','No. Price never entered the zone, so there was no trade'],a:1,w:'"Not being one tick above or one tick below… it’s all about enter this area." (Sep 16)'},
+ calc62:{q:'Yesterday’s SPX close was 7,704.00 and today’s open is 7,746.00. Where is the 62% level?',o:['7,729.96','7,719.96','7,730.04'],a:1,w:'Gap = 42 points. 62% from the open = 7,746 − 42 × 0.62 = 7,719.96. You can check with the gap calculator.'}
+};
+var CHECKS={
+ s1:[{q:'On which chart are the levels drawn?',o:['ES futures','The SPX index (SPCFD:SPX)','NQ futures'],a:1,w:'Levels come from SPX. She only places the order on ES/MES.'},{q:'What makes her enter a trade?',o:['Price touching a level','A 2-minute confirmation candle (CISD) at a level','A news headline'],a:1,w:'A level is only where to look. The 2-minute signal is the trigger.'}],
+ s2:[{q:'Which symbol do you use for the levels?',o:['ES1!','SPCFD:SPX','SPY'],a:1,w:'SPX from the SPCFD feed, 2-minute chart.'},{q:'The 25% line should be the one closest to…',o:['yesterday’s close','today’s 9:30 open'],a:1,w:'0% is the open and 25% is the first line away from it. If yours is reversed, switch "Invert anchors".'}],
+ s3:[{q:'What is the OTE?',o:['0–25% of the gap','62–70.5% of the gap','Yesterday’s high'],a:1,w:'The deep zone of the gap.'},{q:'ES is rising and NQ is falling. What does she call it and what does she do?',o:['Decoupled: stay out or trade tiny','Trend day: trade bigger'],a:0,w:'"Decoupled equals stay away."'}],
+ s4:[BANK.calc62,{q:'On a gap down, which line is closest to the 9:30 open?',o:['25%','70.5%'],a:0,w:'25% is always nearest the open, whether the gap is up or down.'}],
+ s5:[BANK.gap6,{q:'ES is above its midnight open, NQ is below its own. What kind of day is it?',o:['A normal day','Decoupled: stay out or trade tiny'],a:1,w:'When the two disagree she stays away or uses a practice account.'}],
+ s6:[{q:'Gap up. At 9:38 price takes the 15-minute high above the open. Which playbook?',o:['A','B','C'],a:1,w:'Liquidity taken early means Playbook B: expect a deep pullback to 62–70.5%.'},{q:'Gap up. By 10:00 the high above was never reached. Which playbook?',o:['A','B','C'],a:0,w:'Not taken means Playbook A: expect a small pullback to 25–50%, then a move to take it.'}],
+ s7:[{q:'Where do you draw the CISD line?',o:['At the last candle before the signal','At the open of the first opposite candle that touched the level','At the 9:30 open'],a:1,w:'The first candle that touched the level. Not the whole run of candles.'},{q:'When exactly do you enter?',o:['As soon as price touches the level','At the open of the candle after the signal candle closes','At 10:00 sharp'],a:1,w:'Signal candle closes past the line, then you enter at the next open.'},{q:'After your entry, price closes back through the 50% line of the box. What does it mean?',o:['The signal is getting stronger','The signal is failing'],a:1,w:'"Once price closes above or below the mean threshold, the OB has a higher chance of failing."'}],
+ s8:[BANK.pA,BANK.tick],
+ s9:[BANK.pB,BANK.fifty],
+ s10:[BANK.pC,{q:'A wick pokes below 70.5% but the 2-minute candle closes above it. Is that Playbook C?',o:['Yes','No, it needs a close past the line'],a:1,w:'A wick does not count. Only a 2-minute close.'}],
+ s11:[{q:'The gap has filled and the low below was taken. A 2-minute signal up appears. What is the first target?',o:['25% of the gap','Yesterday’s close','A brand-new high'],a:0,w:'First trade back targets 25%. A close back through 25% gives the second trade.'}],
+ s12:[{q:'With an overlap gap, where do you draw 25% and 50%?',o:['Across both whole gaps','Only on the area both unfilled gaps share','Only on today’s gap'],a:1,w:'Only the shared, unfilled part.'}],
+ s13:[{q:'Today’s gap is only 3 points. What does she look at?',o:['Today’s gap anyway','An older unfilled gap','Nothing, she never trades on those days'],a:1,w:'She falls back to an older unfilled gap (Sep 8: +1R).'}],
+ s14:[{q:'SPX sell: the stop is 8 points above your entry. Your MES fill is 7,750. Where is the MES stop?',o:['7,742','7,758','7,750'],a:1,w:'Copy the distance: 7,750 + 8 = 7,758.'},{q:'Why not copy the SPX prices straight onto ES?',o:['SPX and ES trade at different prices','ES is closed in the morning'],a:0,w:'Same moves, different price. So she copies distances.'}],
+ s15:[BANK.be,{q:'Where do you take the first profit?',o:['At +10 points or the next SPX level','Only at the final target'],a:0,w:'"Small partials always pay."'}],
+ s16:[BANK.twoL,{q:'Today’s setup needs a wider stop than usual. What changes?',o:['You risk more dollars','You use fewer contracts and risk the same dollars'],a:1,w:'A wide stop means fewer micros, never more dollars.'}],
+ s17:[{q:'On Sep 24, why did she wait about 30 minutes after the signal before selling?',o:['The gap was too small','NQ had not turned down yet','It was before 10:00'],a:1,w:'"I wouldn’t short until NQ will show any signs of reversal."'}],
+ s18:[{q:'It is 9:35. What should you be doing?',o:['Entering the first big move','Watching whether the nearest high/low gets taken'],a:1,w:'9:30–10:00 is for watching. The setup is picked by 10:00.'}]
+};
+var FINAL=[BANK.gap6,BANK.pA,BANK.pB,BANK.pC,BANK.nq,BANK.be,BANK.fifty,BANK.twoL,BANK.tick,BANK.calc62];
+
+function qcard(item,num,stored,onAnswer){
+  var card=document.createElement('div');card.className='qcard';
+  card.innerHTML='<div class="qn">QUESTION '+num+'</div><div class="qt"></div><div class="opts"></div><div class="why" hidden></div>';
+  card.querySelector('.qt').textContent=item.q;
+  var opts=card.querySelector('.opts'),why=card.querySelector('.why');
+  function mark(oi){
+    opts.querySelectorAll('button').forEach(function(x,xi){x.classList.remove('ok','no');if(oi===item.a&&xi===item.a)x.classList.add('ok');if(oi!==item.a&&xi===oi)x.classList.add('no');});
+    why.hidden=false;why.textContent=(oi===item.a?'Correct. ':'Not quite, try again. ')+item.w;
+  }
+  item.o.forEach(function(t,oi){
+    var b=document.createElement('button');b.type='button';b.textContent=t;
+    b.addEventListener('click',function(){ if(stored()===item.a)return; mark(oi); onAnswer(oi); });
+    opts.appendChild(b);
+  });
+  var st=stored(); if(st!=null) mark(st);
+  return card;
+}
+
+/* step checks */
+document.querySelectorAll('.check-q').forEach(function(box){
+  var id=box.getAttribute('data-step'),qs=CHECKS[id];if(!qs)return;
+  S.ans[id]=S.ans[id]||{};
+  box.innerHTML='<h3>Check yourself</h3>';
+  qs.forEach(function(item,qi){
+    box.appendChild(qcard(item,qi+1,function(){return S.ans[id][qi]},function(oi){S.ans[id][qi]=oi;evalStep(id);save();paint();}));
+  });
+});
+function evalStep(id){
+  var qs=CHECKS[id];if(!qs)return;
+  S.done[id]=qs.every(function(item,qi){return S.ans[id]&&S.ans[id][qi]===item.a;});
+}
+
+/* tasks */
+document.querySelectorAll('.do input[type=checkbox]').forEach(function(cb){
+  cb.checked=!!S.tasks[cb.id];
+  cb.addEventListener('change',function(){S.tasks[cb.id]=cb.checked;
+    if(cb.id.indexOf('t-s20-')===0){var all=[].every.call(document.querySelectorAll('[id^="t-s20-"]'),function(x){return x.checked});S.done.s20=all;}
+    save();paint();});
+});
+
+/* final test */
+var qz=document.getElementById('qz');S.ans.s19=S.ans.s19||{};
+function buildFinal(){
+  qz.innerHTML='';
+  FINAL.forEach(function(item,qi){
+    var first=(S.ans.s19['f'+qi]);
+    qz.appendChild((function(){
+      var card=qcard(item,qi+1,function(){return S.ans.s19['f'+qi]},function(oi){ if(S.ans.s19['f'+qi]==null){S.ans.s19['f'+qi]=oi;} else {S.ans.s19['f'+qi]=oi;} S.ans.s19['first'+qi]=S.ans.s19['first'+qi]!=null?S.ans.s19['first'+qi]:oi; scoreFinal(); save(); paint();});
+      return card;})());
+  });
+  scoreFinal();
+}
+function scoreFinal(){
+  var ans=0,ok=0;FINAL.forEach(function(item,qi){var f=S.ans.s19['first'+qi];if(f!=null){ans++;if(f===item.a)ok++;}});
+  var el=document.getElementById('qscore');
+  if(ans<FINAL.length){el.textContent='Answered '+ans+' of '+FINAL.length+'. Your first answer to each question counts.';}
+  else{el.textContent='Score: '+ok+' / '+FINAL.length+(ok>=8?' · Passed. Go on to your practice plan.':' · Not yet. Re-read the steps you missed, then restart the test.');}
+  S.done.s19=(ans===FINAL.length&&ok>=8);
+}
+document.getElementById('qreset').addEventListener('click',function(){S.ans.s19={};S.done.s19=false;save();buildFinal();paint();});
+buildFinal();
+
+/* ---------- navigation ---------- */
+var steps=[].slice.call(document.querySelectorAll('section.step'));
+var main=steps.filter(function(s){return s.getAttribute('data-stage')!=='R'});
+var counted=main.filter(function(s){return s.id!=='s0'});
+var STAGE={'0':'Start','1':'Stage 1 · Foundations','2':'Stage 2 · Entry and core setups','3':'Stage 3 · Advanced setups','4':'Stage 4 · Placing trades','5':'Stage 5 · Practice','R':'Reference'};
+var outline=document.getElementById('outline'),jump=document.getElementById('jump'),links={};
+var lastStage=null,ol=null,og=null;
+steps.forEach(function(s){
+  var st=s.getAttribute('data-stage');
+  if(st!==lastStage){
+    var h=document.createElement('h4');h.innerHTML=st==='0'||st==='R'?STAGE[st]:'<span class="stage-n">'+STAGE[st].split(' · ')[0]+'</span> · '+STAGE[st].split(' · ')[1];
+    outline.appendChild(h);ol=document.createElement('ol');outline.appendChild(ol);
+    og=document.createElement('optgroup');og.label=STAGE[st];jump.appendChild(og);lastStage=st;
+  }
+  var num=st==='R'?'':(s.id==='s0'?'0':s.id.slice(1));
+  var li=document.createElement('li'),a=document.createElement('a');a.href='#'+s.id;
+  a.innerHTML='<i>'+(st==='R'?'·':'○')+'</i><span>'+num+'</span>'+s.getAttribute('data-title');
+  li.appendChild(a);ol.appendChild(li);links[s.id]=a;
+  var op=document.createElement('option');op.value=s.id;op.textContent=(num!==''?num+'. ':'')+s.getAttribute('data-title');og.appendChild(op);
+});
+jump.addEventListener('change',function(){location.hash=jump.value;});
+
+function paint(){
+  var n=counted.filter(function(s){return S.done[s.id]}).length;
+  document.getElementById('prog-n').textContent=n+' / '+counted.length+' steps';
+  document.getElementById('prog-bar').style.width=(n/counted.length*100)+'%';
+  steps.forEach(function(s){var a=links[s.id];if(s.getAttribute('data-stage')==='R')return;var d=!!S.done[s.id];a.classList.toggle('done',d);a.querySelector('i').textContent=d?'●':'○';});
+  var cur=document.querySelector('section.step.show');if(cur)paintNav(cur);
+}
+function paintNav(sec){
+  var i=main.indexOf(sec),st=document.getElementById('stepstate'),prev=document.getElementById('prevbtn'),next=document.getElementById('nextbtn');
+  var isRef=sec.getAttribute('data-stage')==='R';
+  prev.disabled=isRef?false:i<=0;
+  if(isRef){next.textContent='Back to the course →';st.textContent='Reference';st.className='state';return;}
+  next.disabled=i>=main.length-1;
+  next.textContent=sec.id==='s0'?'Start step 1 →':(i>=main.length-1?'Course finished':'Next step →');
+  if(sec.id==='s0'){st.textContent='';return;}
+  if(S.done[sec.id]){st.textContent='✓ Step complete';st.className='state ok';}
+  else{st.textContent=sec.id==='s19'?'Score 8/10 to complete':(sec.id==='s20'?'Tick the four weeks as you finish them':'Answer the check questions to complete this step');st.className='state';}
+}
+function show(id){
+  var sec=document.getElementById(id);if(!sec||!sec.classList.contains('step'))sec=document.getElementById(S.last||'s0')||steps[0];
+  steps.forEach(function(s){s.classList.toggle('show',s===sec)});
+  Object.keys(links).forEach(function(k){links[k].classList.toggle('cur',k===sec.id)});
+  jump.value=sec.id;
+  var st=sec.getAttribute('data-stage'),i=main.indexOf(sec);
+  document.getElementById('ct-stage').textContent=STAGE[st];
+  document.getElementById('ct-step').textContent=st==='R'?'Reference':('Step '+(sec.id==='s0'?0:sec.id.slice(1))+' of '+counted.length+(sec.getAttribute('data-time')?' · about '+sec.getAttribute('data-time'):''));
+  document.getElementById('ct-bar').style.width=st==='R'?'0%':(Math.max(0,i)/counted.length*100)+'%';
+  if(st!=='R'){S.last=sec.id;save();}
+  paintNav(sec);
+  window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0);},0);
+}
+document.getElementById('prevbtn').addEventListener('click',function(){var cur=document.querySelector('section.step.show');if(cur.getAttribute('data-stage')==='R'){location.hash=S.last||'s0';return;}var i=main.indexOf(cur);if(i>0)location.hash=main[i-1].id;});
+document.getElementById('nextbtn').addEventListener('click',function(){var cur=document.querySelector('section.step.show');if(cur.getAttribute('data-stage')==='R'){location.hash=S.last||'s0';return;}var i=main.indexOf(cur);if(i<main.length-1)location.hash=main[i+1].id;});
+window.addEventListener('hashchange',function(){show(location.hash.slice(1));});
+show(location.hash.slice(1)||S.last||'s0');
+paint();
+
+})();
+</script>
+</body></html>

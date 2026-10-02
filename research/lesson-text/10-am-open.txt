@@ -1,0 +1,432 @@
+Before you begin
+What you’ll learn
+- Po3
+- OB
+[IMG 1786045830387-cdf0e95c.png]
+Full size 
+The 10:00 AM Open and the 4-Hour Candle Playbook
+The 10:00 AM Open is important because it marks the beginning of a new 4-hour candle on our chart.
+When the new 4-hour candle opens, we expect price to begin creating two important parts of the candle:
+- The manipulation wick
+- The candle body
+The opening price remains fixed throughout the entire 4-hour period. Because of this, it gives us a clear reference for determining whether price is forming a bullish or bearish candle.
+When price trades above the 10:00 AM Open, the 4-hour candle is forming a bullish body.
+When price trades below the 10:00 AM Open, the 4-hour candle is forming a bearish body.
+However, price may first trade on the opposite side of the open to create manipulation before the real candle-body formation begins.
+Bullish 4-Hour Candle Formation
+When we expect the new candle to form bullish, we anticipate an:
+Open–Low–High–Close formation.
+After the candle opens at 10:00 AM, price may initially trade below the 10:00 AM Open.
+This move below the open may create:
+- The low of the 4-hour candle
+- A sell-side liquidity/HTF level
+- A retracement into a bullish PD Array
+- Manipulation before bullish body formation.
+Once the manipulation is complete, price may reverse and break back above the 10:00 AM Open.
+This break is important because it suggests that price may be transitioning from lower-wick formation into bullish candle-body formation.
+[IMG 1786046206478-adb3b05a.png]
+Full size The bullish sequence is:
+Manipulation below the open → break above the open → bullish body formation.
+Bearish 4-Hour Candle Formation
+When we expect the new 4-hour candle to form bearish, we anticipate an:
+Open–High–Low–Close formation.
+After the candle opens at 10:00 AM, price may initially trade above the 10:00 AM Open.
+This move above the open may create:
+- The high of the 4-hour candle
+- A buy-side liquidity/HTF level
+- A retracement into a bearish PD Array
+- Manipulation before bearish body formation
+Once manipulation is complete, price may reverse and break below the 10:00 AM Open.
+This break suggests that price may be transitioning from upper-wick formation into bearish candle-body formation.
+[IMG 1786046317370-edc48304.png]
+Full size The bearish sequence is:
+Manipulation above the open → break below the open → bearish body formation.
+Why We Look for Longs Above the 10:00 AM Open
+We look for long trades above the 10:00 AM Open because price must trade above the opening price to form the body of a bullish 4-hour candle.
+While price remains below the open, we do not yet have confirmation that the 4-hour candle is bullish.
+The move below the open could be:
+- The lower wick of a bullish candle.
+- Sell-side manipulation.
+- Genuine bearish distribution.
+We cannot know which one it is simply because price traded below the open.
+When price creates bullish displacement and breaks above the 10:00 AM Open, it gives us evidence that the move below the open may have been manipulation.
+Price may now be beginning the bullish body formation of the 4-hour candle.
+This is why we do not blindly buy while price is below the 10:00 AM Open.
+We wait for price to prove that it can reclaim the opening price and begin building a candle body above it.
+A bullish setup becomes stronger when:
+- Sell-side liquidity was taken below the open.
+- Price reached a bullish higher-timeframe PD Array.
+- Bullish displacement formed.
+- A relevant short-term high was broken (optional).
+- A 2-minute candle closed above the 10:00 AM Open.
+- Price remained above the open during a retracement.
+- Buy-side liquidity remained available as the target.
+The move below the open may create the low.
+The break above the open may begin bullish distribution.
+[IMG 1786046985980-e416252f.png]
+Full size Why We Look for Shorts Below the 10:00 AM Open
+We look for short trades below the 10:00 AM Open because price must trade below the opening price to form the body of a bearish 4-hour candle.
+While price remains above the open, we do not yet have confirmation that the 4-hour candle is bearish.
+The move above the open could be:
+- The upper wick of a bearish candle.
+- Buy-side manipulation.
+- Genuine bullish distribution.
+When price creates bearish displacement and breaks below the 10:00 AM Open, it gives us evidence that the move above the open may have been manipulation.
+Price may now be beginning bearish body formation.
+This is why we do not blindly sell while price is still above the 10:00 AM Open.
+We wait for price to prove that it can move below the opening price and begin building the 4-hour candle body beneath it.
+A bearish setup becomes stronger when:
+- Buy-side liquidity was taken above the open.
+- Price reached a bearish higher-timeframe PD Array.
+- Bearish displacement formed.
+- A relevant short-term low was broken.
+- A 2-minute candle closed below the 10:00 AM Open.
+- Price remained below the open during a retracement.
+- Sell-side liquidity remained available as the target.
+The move above the open may create the high.
+The break below the open may begin bearish distribution.
+[IMG 1786047118261-507c1877.png]
+Full size The 10:00 AM Open Is a Directional Filter
+The 10:00 AM Open is not an automatic entry level.
+It is a directional filter that helps us align our lower-timeframe trade with the body formation of the new 4-hour candle.
+Our basic rule is:
+Look for long setups after price breaks and closes above the 10:00 AM Open.
+Look for short setups after price breaks and closes below the 10:00 AM Open.
+This rule prevents us from trying to predict the reversal too early.
+Instead of buying below the open while price may still be bearish, we wait for bullish confirmation above it.
+Instead of selling above the open while price may still be bullish, we wait for bearish confirmation below it.
+We sacrifice the exact top or bottom in exchange for confirmation.
+[IMG 1786047556683-38794b0d.png]
+Full size A Wick Through the Open Is Not Enough
+Price may cross the 10:00 AM Open several times while accumulating.
+A small wick above or below the open does not confirm body formation.
+For bullish confirmation, we ideally want:
+- Bullish displacement through the open.
+- A 2-minute candle-body closure above the open.
+- A bullish FVG or order block
+- Price holding above the open during a retracement.
+For bearish confirmation, we ideally want:
+- Bearish displacement through the open.
+- A 2-minute candle-body closure below the open.
+- A bearish FVG or order block.
+- Price remaining below the open during a retracement.
+The goal is not simply to see price cross the level.
+The goal is to see a signature and body formation on one side of the open.
+Using the 2-Minute Chart
+The 4-hour candle provides the narrative.
+The 10:00 AM Open provides the directional filter.
+The 2-minute chart provides the execution.
+We are not using the 2-minute chart to create our higher-timeframe bias.
+We use it to find a precise entry after the 4-hour candle begins showing its intended body formation.
+The correct sequence is:
+- Understand the higher-timeframe objective.
+- Mark the 10:00 AM Open.
+- Observe the manipulation around the open.
+- Wait for price to break to the correct side.
+- Use the 2-minute chart to find the entry model.
+Do not reverse this process.
+A random 2-minute signal without a clear 4-hour candle narrative has less meaning.
+[IMG 1786048135423-3156e3b0.png]
+Full size Bullish 2-Minute Playbook
+Narrative
+We expect the new 4-hour candle to form bullish.
+Our anticipated formation is:
+Open–Low–High–Close
+Price may manipulate below the 10:00 AM Open, create the candle low, and then break above the open to begin bullish body formation.
+Conditions
+Before considering a long, we want to see:
+- A bullish higher-timeframe objective.
+- Buy-side liquidity available above price.
+- Price trading below or around the 10:00 AM Open.
+- Sell-side liquidity taken below the open.
+- A reaction from a bullish PD Array, discount area, or relevant support.
+- Bullish displacement on the 2-minute chart.
+- A break and candle-body close above the 10:00 AM Open.
+- A bullish entry array forming above or near the open.
+Entry
+After price closes above the 10:00 AM Open, wait for a retracement into one of the following:
+- 2-minute bullish order block.
+- 2-minute bullish fair value gap.
+- 2-minute breaker.
+- OTE retracement
+- A combination of the opening price and a bullish PD Array.
+Enter only if price continues respecting the 10:00 AM Open or quickly reclaims it after a shallow retest.
+Stop Loss
+Place the stop below the level that invalidates the bullish narrative.
+This may be:
+- Below the 2-minute protected low.
+- Below the nearest swing low.
+- Below the bullish order block.
+- Below the swing that created displacement.
+Do not automatically place the stop one tick below the 10:00 AM Open.
+The open is the directional filter, not necessarily the invalidation point.
+Targets
+Potential bullish targets include:
+- A short-term 2-minute swing high.
+- The morning high.
+- The London/Asia high.
+- Premarket buy-side liquidity.
+- The previous day high.
+- Equal highs.
+- A higher-timeframe bearish PD Array.
+- External buy-side liquidity.
+The final target should be based on the higher-timeframe draw on liquidity.
+[IMG 1786048781753-074c2686.png]
+Full size Bearish 2-Minute Playbook
+Narrative
+We expect the new 4-hour candle to form bearish.
+Our anticipated formation is:
+Open–High–Low–Close
+Price may manipulate above the 10:00 AM Open, create the candle high, and then break below the open to begin bearish body formation.
+Conditions
+Before considering a short, we want to see:
+- A bearish higher-timeframe objective.
+- Sell-side liquidity available below price.
+- Price trading above or around the 10:00 AM Open.
+- Buy-side liquidity taken above the open.
+- A reaction from a bearish PD Array, premium area, or relevant resistance.
+- Bearish displacement on the 2-minute chart.
+- A break and candle-body close below the 10:00 AM Open.
+- A bearish entry array forming below or near the open.
+Entry
+After price closes below the 10:00 AM Open, wait for a retracement into one of the following:
+- 2-minute bearish order block.
+- 2-minute bearish fair value gap.
+- 2-minute breaker.
+- OTE retracement
+- A combination of the opening price and a bearish PD Array.
+Enter only if price continues respecting the 10:00 AM Open as resistance or quickly rejects it after a retest.
+Stop Loss
+Place the stop above the level that invalidates the bearish narrative.
+This may be:
+- Above the 2-minute protected high.
+- Above the nearest swing high.
+- Above the bearish order block.
+- Above the swing that created displacement.
+Do not use the 10:00 AM Open as the stop simply because it is the reference level.
+Targets
+Potential bearish targets include:
+- A short-term 2-minute swing low.
+- The morning low.
+- The London/Asia low.
+- Premarket sell-side liquidity.
+- The previous day low.
+- Equal lows.
+- A higher-timeframe bullish PD Array.
+- External sell-side liquidity.
+[IMG 1786050366828-9879bd10.png]
+Full size 10:00 AM Open: Reversal Setup vs. 4-Hour Continuation Setup
+When this candle opens, there are two main formations we want to understand:
+- A 4-hour reversal setup.
+- A 4-hour continuation setup.
+This distinction is extremely important.
+Many traders expect every new 4-hour candle to create a large manipulation around its opening price.
+That is not always the case.
+Sometimes the new 4-hour candle needs to create manipulation before distribution begins.
+Other times, the manipulation has already happened during the previous candle, and the new 4-hour candle is ready to continue delivering immediately.
+[IMG 1786136456071-5e8d1e81.png]
+Full size Why the 10:00 AM Open May Not Retest Deeply During Continuation
+During continuation, the market already has direction.
+The new candle does not need to search deeply for liquidity before expanding.
+Therefore, waiting for price to return perfectly to the 10:00 AM Open may cause you to miss the trade.
+The open may only create:
+- A small wick.
+- A shallow retracement.
+- A brief 2-minute pullback.
+- A small FVG or order block near the opening price.
+Then price continues aggressively.
+This is why continuation setups often look different from reversal setups.
+In a reversal, we expect more manipulation.
+In continuation, we expect more immediate body formation.
+[IMG 1786136767387-fc4bff0b.png]
+Full size Reversal vs. Continuation Around the 10:00 AM Open
+The easiest way to separate the two setups is by asking:
+Has manipulation already happened?
+Reversal Setup
+Manipulation still needs to happen.
+Expect:
+- A more visible wick.
+- Liquidity/HTF level taken around or after the new 4-hour open.
+- A stronger reversal through the opening price.
+- A more meaningful retest of the open.
+Bullish:
+Manipulation below → reclaim open → long
+Bearish:
+Manipulation above → lose open → short
+Continuation Setup
+Manipulation already happened before 10:00 AM.
+Expect:
+- A small wick.
+- Limited retracement.
+- A large candle body.
+- Strong continuation toward the existing draw.
+A strong 4-hour continuation candle often has:
+- A small wick against the direction of the move.
+- A large candle body.
+- Strong displacement.
+- Little overlap with previous lower-timeframe candles.
+- Multiple lower-timeframe FVGs.
+- Shallow retracements.
+- A clear liquidity objective still open.
+This is exactly why waiting for a deep pullback can be a mistake.
+The candle is not trying to reverse.
+It is trying to continue delivering.
+Bullish:
+Small wick below → hold above open → large bullish body
+Bearish:
+Small wick above → hold below open → large bearish body
+[IMG 1786137089554-76c9db7c.png]
+Full size 
+[IMG 1786137236803-83eb7675.png]
+Full size Why We Still Want Longs Above and Shorts Below the Open
+The rule remains the same.
+For a bullish continuation setup, we still want to trade long while price is accepting above the 10:00 AM Open.
+For a bearish continuation setup, we still want to trade short while price is accepting below the 10:00 AM Open.
+The difference is the type of retracement we expect.
+During a reversal setup, price may provide a deeper retracement around the opening price.
+During a continuation setup, the retracement may be extremely shallow.
+This is why we should not blindly wait for the 10:00 AM Open to be retested.
+The open is primarily a directional reference.
+It tells us which side of the 4-hour candle body is developing.
+Practical Rule
+At 10:00 AM, ask:
+Did manipulation already happen before this candle opened?
+If no:
+Expect the new 4-hour candle to create manipulation first.
+Use the reversal playbook.
+If yes:
+Expect a small wick and strong body formation.
+Use the continuation playbook.
+Reversal Playbook
+Use this playbook when manipulation has not yet been completed before 10:00 AM.
+We expect a more significant move to the opposite side of the 10:00 AM Open.
+Bullish Reversal Playbook
+We expect the 4-hour candle to form:
+Open → Low → High → Close
+Step 1 — Establish the Higher-Timeframe Draw
+We first need a reason to expect price higher.
+Look for:
+- Buy-side liquidity above.
+- An untapped higher-timeframe bearish PD Array as the target.
+- Previous day high.
+- Equal highs.
+- Session high.
+- External liquidity.
+The higher-timeframe draw should be above price.
+Step 2 — Let Price Manipulate Below the 10:00 AM Open
+After the 4-hour candle opens, allow price to trade below the open.
+Do not immediately buy just because price is below the level.
+We want that move lower to accomplish something.
+Ideally, it takes:
+- Internal sell-side liquidity.
+- A 2-minute swing low.
+- Session liquidity.
+- Equal lows.
+- Another meaningful SSL/PDA level.
+It may also retrace into:
+- Bullish FVG.
+- Bullish order block.
+- Discount.
+- Another higher-timeframe bullish PD Array.
+This move may create the lower wick of the 4-hour candle.
+Step 3 — Wait for 2-Minute Confirmation
+Now switch your attention to the 2-minute chart.
+We want to see evidence that the move lower was manipulation rather than bearish continuation.
+Look for:
+- Bullish CISD.
+- Bullish displacement.
+- Break of a relevant swing high.
+- Bullish FVG.
+Most importantly, price should begin moving back toward the 10:00 AM Open.
+Step 4 — Break Above the 10:00 AM Open
+This is the confirmation we are waiting for.
+Once price breaks and closes above the 10:00 AM Open, the new 4-hour candle begins forming a bullish body.
+Now the idea becomes:
+The move below the open created the wick.The move above the open is beginning the body.
+This is when we start actively looking for longs.
+Step 5 — Wait for the 2-Minute Entry
+Do not necessarily enter on the first candle that breaks the open.
+Wait for a 2-minute retracement into:
+- Bullish FVG.
+- CISD.
+- Breaker.
+- Small internal SSL sweep.
+- Another bullish PD Array.
+Ideally, this retracement remains above the 10:00 AM Open.
+A shallow move slightly below the open can still be valid if price immediately reclaims it and the bullish structure remains intact.
+Step 6 — Enter Long
+Entry:
+2-minute bullish setup after price has broken above the 10:00 AM Open.
+Stop:
+Below the protected 2-minute low or the low that invalidates the bullish idea.
+Target:
+The next buy-side liquidity objective.
+Same idea applies for Bearish Reversal Playbook.
+[IMG 1786139532509-fd51fbd6.png]
+Full size Continuation Playbook
+Use this playbook when the important manipulation has already happened before 10:00 AM.
+This is completely different from the reversal setup.
+We do not expect the new 4-hour candle to create another large manipulation.
+Instead, we expect:
+Small wick → large body
+The market already knows where it wants to go.
+The 10:00 AM candle is simply continuing the existing delivery.
+Bullish Continuation Playbook
+Before 10:00 AM, price has already completed the bullish setup.
+For example:
+- Sell-side liquidity was already taken.
+- Price already reached a bullish higher-timeframe PD Array.
+- Bullish displacement already occurred.
+- Relevant structure already broke higher.
+- The higher-timeframe draw remains above.
+The manipulation has already occurred.
+Therefore, when the new 4-hour candle opens at 10:00 AM, we do not want to wait for a major drop below its open.
+The new candle may create only a small lower wick.
+Then it may immediately begin forming a large bullish body.
+Step 1 — Confirm Manipulation Is Already Complete
+Before 10:00 AM, ask:
+- Was sell-side liquidity already taken?
+- Did price already react from the bullish area?
+- Did bullish displacement already occur?
+- Is bullish structure already established?
+- Is the target above still open?
+If yes, prepare for continuation.
+Step 2 — Mark the 10:00 AM Open
+Once the new 4-hour candle begins, watch how price behaves relative to the open.
+In a strong bullish continuation setup, price may:
+- Trade only slightly below the open.
+- Create a tiny lower wick.
+- Immediately move back above.
+- Or simply hold above the open almost immediately.
+Do not demand a large liquidity sweep below the new open.
+Step 3 — Look for Immediate Bullish Body Formation
+Once price starts holding above the 10:00 AM Open, the new 4-hour candle is beginning to form its bullish body.
+We want to see:
+- Strong bullish displacement.
+- Very little hesitation around the open.
+- Shallow pullbacks.
+- 2-minute bullish FVGs.
+- 2-minute bullish order blocks.
+- Internal SSL being created and respected.
+This is continuation behavior.
+Step 4 — Do Not Wait for a Deep Retest
+This is one of the biggest differences between reversal and continuation.
+In a reversal setup, the 10:00 AM Open may offer a significant retracement.
+In a continuation setup, it often does not.
+If price immediately expands away from the 10:00 AM Open, waiting for a perfect retest of the open may cause you to miss the move.
+Instead, use the 2-minute chart.
+Look for the first clean shallow retracement.
+Step 5 — 2-Minute Long Entry
+Look for:
+- 2-minute bullish FVG.
+- CISD.
+- Internal SSL sweep.
+- Small pullback.
+Enter long while price remains above the 10:00 AM Open and the bullish structure remains intact.
+Stop:
+Below the protected 2-minute low.
+Target:
+The higher-timeframe buy-side liquidity objective.
+Same idea applies for Bearish Reversal Playbook.
+[IMG 1786150203839-3c489aaf.png]
+Full size 

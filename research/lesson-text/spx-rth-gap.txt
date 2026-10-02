@@ -1,0 +1,626 @@
+
+
+SPX Regular Trading Hours (RTH) Gap | Funded.Now
+
+Skip to content
+
+Limited
+
+Lucid
+
+ 40% OFF 
+
+LucidDaily
+
+ One Time Fee
+
+ New Plan - Daily Payouts
+
+ Use code 
+LUMI
+.
+
+LUMI
+
+New
+
+Apex 
+
+ 90% OFF
+
+ NO ACTIVATION FEE
+
+ with code:
+
+ Use code 
+LUMI
+.
+
+LUMI
+
+Free
+
+Join the 
+
+ LumiTraders Club
+
+ - Free Discord!
+
+Limited
+
+Lucid
+
+ 40% OFF 
+
+LucidDaily
+
+ One Time Fee
+
+ New Plan - Daily Payouts
+
+ Use code 
+LUMI
+.
+
+LUMI
+
+Prop Firms
+
+Compare
+
+Trading Tools
+
+Learn
+
+Giveaways
+
+LUMI
+
+Sign in
+
+Sign Up
+
+LUMI
+
+ES
+
++0.00%
+
+NQ
+
++0.00%
+
+Loading lesson…
+
+Cookie Preferences
+
+Choose Accept to allow optional cookies, or Decline to continue without them.
+
+Privacy Policy
+
+Decline
+
+Accept
+
+ Lesson library
+
+/
+
+SPX Regular Trading Hours (RTH) Gap
+
+ICT Concept
+
+Advanced
+
+SPX Regular Trading Hours (RTH) Gap
+
+How to trade the gap between yesterday's close and today's open — levels, scenarios, and entries.
+
+15
+ min read
+
+14
+
+sections
+
+Free to read
+
+By
+
+Funded.Now Editorial Team
+
+Reviewed
+
+July 31, 2026
+
+In this lesson
+14
+
+sections
+
+01
+
+What is the RTH gap?
+
+02
+
+Anatomy of the gap
+
+03
+
+The gap as a map of the open
+
+04
+
+Four scenarios to know
+
+05
+
+Shallow retracement · 25–50%
+
+06
+
+OTE retracement · 62–70.5%
+
+07
+
+What happens next?
+
+08
+
+What to do with unfilled gaps
+
+09
+
+Break of 70.5% - complete fill
+
+10
+
+What Happens After the Gap Is Filled?
+
+11
+
+The Overlap Gap
+
+12
+
+How to trade the overlap gap
+
+13
+
+Applying OTE to the overlap zone
+
+14
+
+Price seeks balance, not fills
+
+In this lesson
+
+01
+
+What is the RTH gap?
+
+02
+
+Anatomy of the gap
+
+03
+
+The gap as a map of the open
+
+04
+
+Four scenarios to know
+
+05
+
+Shallow retracement · 25–50%
+
+06
+
+OTE retracement · 62–70.5%
+
+07
+
+What happens next?
+
+08
+
+What to do with unfilled gaps
+
+09
+
+Break of 70.5% - complete fill
+
+10
+
+What Happens After the Gap Is Filled?
+
+11
+
+The Overlap Gap
+
+12
+
+How to trade the overlap gap
+
+13
+
+Applying OTE to the overlap zone
+
+14
+
+Price seeks balance, not fills
+
+Save lesson
+
+My notes
+
+Share
+
+Before you begin
+
+What you’ll learn
+
+RTH GAP
+
+OTE
+
+Full size 
+
+If you trade indices, I highly recommend using the SPX RTH Gap and watching how price reacts from the 25%, 50%, and OTE zones every single day. I track the levels on SPX and trade the reactions on ES — it has been a great addition to my trading.
+
+Chart the levels on SPX (S&P 500 index), execute on ES futures. The gap levels are cleaner on the cash index.
+
+Full size 
+
+What is the RTH gap?
+
+The RTH (Regular Trading Hours) gap is the area between yesterday's 4:00 PM close and today's 9:30 AM open. When SPX opens higher or lower than it closed, it leaves a gap on the chart — and that gap becomes a map of levels for the session.
+
+Anatomy of the gap
+
+Two reference points define the gap. Everything else — the 25%, 50%, 62% and 70.5% retracement levels — is measured inside this range.
+
+Full size 
+
+4:00 PM close
+
+Yesterday's regular-session closing price.
+
+The upper or lower boundary of the gap.
+
+9:30 AM open
+
+Today's regular-session opening print. The other boundary — the gap is everything in between.
+
+The gap represents unbalanced price delivery. It doesn't need to fill immediately — price may only partially fill it while balancing everything that happened overnight.
+
+The gap as a map of the open
+
+Once the open prints, drop a fib from one boundary of the gap to the other. The 
+0.25, 0.5, 0.62 and 0.705
+ levels become the reference zones for the entire morning session.
+
+Full size 
+
+Four scenarios to know
+
+Shallow retracement (25–50%)
+
+SPX opens near liquidity but fails to take it in the first 15 minutes.
+
+OTE retracement (62–70.5%)
+
+SPX takes the nearest liquidity level in the first 15 minutes, then retraces deep.
+
+Break of 70.5% �full fill
+
+Price drives straight through the OTE — continuation toward a complete gap fill.
+
+Overlap Gap
+
+SPX opens inside an old unfilled RTH gap, creating a new RTH gap within the old one. 
+
+Shallow retracement · 25–50%
+
+A shallow retracement — typically into the 25%–50% zone — occurs when the market doesn't require a deeper correction. This often happens when SPX opens near a liquidity level but fails to take it during the first 15 minutes after the open.
+
+Full size 
+
+This is where I anticipate a shallow retracement followed by continuation toward the original liquidity objective.
+
+Full size 
+
+Full size 
+
+Both examples below: price fails to take the buy-side liquidity at the open, retraces into the 25% zone, prints a 2-minute CISD, then continues to the liquidity target (BSL).
+
+Reaction from 25% doesn't need perfection — the CISD is what turns the level into a trade.
+
+OTE retracement · 62–70.5%
+
+A retracement into the OTE of the RTH gap — between 62% and 70.5% — often occurs when SPX takes the nearest liquidity level during the first 15 minutes after the open.
+
+Full size 
+
+Full size 
+
+Sell-side liquidity is swept at the open, a 2-minute CISD confirms the reversal, and price delivers into the OTE of the gap
+
+What happens next?
+
+If SPX has already reached an important HTF level before retracing into the OTE, I usually don't expect a strong reaction from the OTE area. Price may completely fill the gap or consolidate within the OTE range.
+
+However, if SPX takes the nearest liquidity level without reaching a significant HTF level, the OTE can become a potential reversal area — traded with the same confirmation, a 2-minute CISD.
+
+This scenario can offer two separate trades:
+
+A reaction from the liquidity level toward the OTE of the RTH gap.
+
+A reversal from the OTE toward the important higher-timeframe level.
+
+Full size 
+
+Full size 
+
+What to do with unfilled gaps
+
+Sometimes SPX moves away from the gap without even reaching the 25% level. In other cases, price takes the nearest liquidity level but lacks the volume or time to reach the OTE before the session ends.
+
+Keep them marked on your chart. These gaps can act as strong magnets for price — future targets, reversal areas, or important reaction zones when SPX returns to them.
+
+Remember: the 25% and OTE levels of old RTH gaps will offer strong reactions when price returns to those old gaps!
+
+Full size 
+
+Full size 
+
+Break of 70.5% - complete fill
+
+The final scenario occurs when SPX opens and immediately moves into the OTE of the RTH gap. If price breaks through the 70.5% level, this can offer a continuation trade targeting the complete fill of the gap and the opposite liquidity level.
+
+Full size 
+
+Full size 
+
+Full size 
+
+Price knifes through the OTE at the open, closes beyond 70.5%, and continues to a complete fill — sweeping the sell-side liquidity (SSL) on the other side of the gap.
+
+A close beyond 70.5% flips the gap from a reversal map into a continuation map — the target becomes the opposite side of the gap.
+
+What Happens After the Gap Is Filled?
+
+As we learned, when SPX breaks above or below the 70.5% level of an RTH gap, price will often continue to fill the gap and then reach for nearby buy-side liquidity (BSL) or sell-side liquidity (SSL).
+
+But what happens after the gap is filled?
+
+If the gap has been filled while the main higher-timeframe objective remains open, we want to look for a reversal after price takes BSL or SSL.
+
+The first trade should be based on a 2-minute market structure shift or CISD. The initial target is the 25% level of the RTH gap, because this level can act as a barrier and produce a reaction.
+
+For example, if the main objective remains higher, price may first take SSL and then retrace back toward the gap. The 25% level becomes the first target. 
+
+From there, one of two scenarios is likely to unfold: price may remain within the gap for the rest of the trading session, or it may break and hold beyond the 25% level. Once the 25% level is successfully broken, price is more likely to continue toward the remaining higher-timeframe objective.
+
+Full size 
+
+Full size 
+
+Why did I use this sequence of down-close candles as my Order Block?
+
+You can learn more about Order Blocks here.
+
+Order Block Lesson
+
+Full size 
+
+We want to enter once price breaks above the 25% level. The ideal entry occurs when a two-minute candle closes above 25%. We then enter at the open of the next candle and place the stop loss below the OTE range.  The target is the remaining higher-timeframe level or buy-side liquidity (BSL).
+
+The Overlap Gap
+
+Sometimes SPX opens inside an old unfilled RTH gap, creating a new gap within the old one. The area where the two gaps overlap becomes a key zone — that's where we want to see price retrace and get rejected.
+
+Full size 
+
+The blue zone marks where the old and new gaps overlap. Watch for rejection when price retraces into it.
+
+How to trade the overlap gap
+
+We're not going to use the entire overlap area. We only use the overlap between the unfilled portion of the previous gap and the current gap — that's the true overlap zone that matters.
+
+Why? When trading an RTH gap, the goal is to see whether price has balanced everything that happened overnight. Sometimes that balancing is only partial — SPX may reverse from the gap's OTE, leaving part of the gap unfilled. That remaining unfilled portion becomes an area we expect price to revisit in the future — not the same day, but eventually.
+
+When a new gap opens and overlaps with that remaining unfilled portion of the old gap, it creates one of the highest-probability setups: unfinished business from the previous imbalance, plus a fresh imbalance at the same price level. The confluence often produces a much stronger reaction than a standard gap overlap.
+
+Full size 
+
+Applying OTE to the overlap zone
+
+Once the overlap zone has been identified, we apply OTE to that overlap area.
+
+Full size 
+
+This confirms the market is responding to the overlap zone before we commit to a trade
+
+Full size 
+
+Full size 
+
+Price retraces into the 25% level of the overlap zone, a 2-minute CISD confirms the rejection, and the move continues away from the overlap.
+
+Price seeks balance, not fills
+
+Remember — price does not seek to fill gaps. Price seeks to balance everything that happened during the overnight session.
+
+Full size 
+
+Of course, SPX may sometimes fill the gap immediately, ignoring both the nearby liquidity level and the OTE. Nothing works 100% of the time. That is exactly why we wait for confirmation from a 2-minute shift in structure or a 2-minute CISD before entering the trade.
+
+We never blindly anticipate a reaction simply because price has reached a Fibonacci level. The level gives us an area of interest — price action must confirm the entry.
+
+Draw this automatically — the free SPX RTH Gap with Fibonacci indicator for TradingView maps the gap and its 25%, 50%, 62% and 70.5% levels, keeps unfilled gaps on the chart and marks overlap zones.
+
+Get the free indicator
+
+Your learning progress
+
+Finished reading?
+
+Finished reading? Mark this lesson complete to keep track of what you’ve covered.
+
+Mark complete
+
+Know someone this could help?
+
+Share the lesson with them.
+
+Keep learning
+
+Build on what you’ve learned
+
+All lessons
+
+ICT Concept
+
+Liquidity Sweep
+
+Best way to trade liquidity sweep. Step-by-step guide
+
+Beginner
+·
+20
+ min read
+
+ICT Concept
+
+10 AM OPEN
+
+The 10:00 AM Open and the 4-Hour Candle Playbook
+
+Intermediate
+·
+20
+ min read
+
+ICT Concept
+
+ICT Po3 - Candlestick Formation
+
+How to Trade the Power of Three. Understanding Candlestick Formation.
+
+Beginner
+·
+25
+ min read
+
+Put it into practice
+
+Compare prop firm rules and costs
+
+Explore account structures, restrictions, and costs side by side.
+
+Loading your notes…
+
+These lessons explain trading concepts through educational examples. For current account terms, confirm the rules with the firm’s official documentation.
+
+Explore more lessons
+
+Join Our Community
+
+Live trading discussions
+
+Loading community stats…
+
+Join Discord
+
+Stay Updated
+
+Get the latest deals & tips
+
+Subscribe
+
+Empowering traders with the capital they need to succeed. Find your perfect prop firm and start your funded trading journey today.
+
+Platform
+
+All Prop Firms
+
+Discounts & Promo Codes
+
+Compare Firms
+
+Futures Prop Firms
+
+Best Prop Firms
+
+Trading Tools
+
+Giveaways
+
+Challenges
+
+Tools
+
+All Trading Tools
+
+Lot Size Calculator
+
+Consistency Calculator
+
+Return Calculator
+
+Drawdown Simulator
+
+Resources
+
+Blog
+
+Economic Calendar
+
+TradingView Indicators
+
+Glossary
+
+News
+
+Newsletter
+
+Restricted Countries
+
+Firms by Country
+
+Firms by Trader Type
+
+Company
+
+Review Methodology
+
+About Us
+
+Contact
+
+Privacy Policy
+
+Terms of Service
+
+FTC Disclosure:
+
+ Funded.Now is an independent affiliate marketing platform. We receive commissions when you purchase through our affiliate links at no extra cost to you. This revenue helps us maintain and improve our services. All reviews and comparisons are based on our honest analysis and user feedback.
+
+Risk Disclaimer:
+
+ Trading involves a substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. The information provided is for educational purposes only and should not be considered investment advice. Always conduct your own due diligence before choosing a prop firm.
+
+© 
+2026
+ Funded.Now. All rights reserved.
+
+Privacy
+
+Terms
+
+Contact
+
+

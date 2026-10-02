@@ -1,0 +1,137 @@
+ Order Block | Funded.Now 
+ Skip to content 
+ Limited Lucid 40% OFF LucidDaily One Time Fee New Plan - Daily Payouts Use code LUMI . LUMI 
+ New Apex 90% OFF NO ACTIVATION FEE with code: Use code LUMI . LUMI 
+ Free Join the LumiTraders Club - Free Discord! 
+ Limited Lucid 40% OFF LucidDaily One Time Fee New Plan - Daily Payouts Use code LUMI . LUMI 
+[IMG /_next/image?url=%2Flogos%2Ffunded-now-logo-best-prop-firm-deals.png&w=3840&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ Prop Firms 
+ Compare 
+ Trading Tools 
+ Learn 
+ Giveaways 
+ LUMI 
+ Sign in Sign Up 
+[IMG /flags/3x2/US.svg]
+ LUMI 
+ ES +0.00% NQ +0.00% 
+ Loading lesson… 
+ Cookie Preferences
+ Choose Accept to allow optional cookies, or Decline to continue without them. Privacy Policy 
+ Decline Accept 
+ Lesson library / Order Block 
+ ICT Concept Beginner 
+ Order Block
+ Introduction to the Change in the State of Delivery Concept
+ 10 min read 
+ Free to read 
+ By Funded.Now Editorial Team Reviewed July 26, 2026 
+ Save lesson 
+ My notes 
+ Share 
+ Before you begin
+ What you’ll learn
+ OB 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/order-block/1785073113410-4f3a6325.png]
+ Full size 
+ Order block is a change in the state of delivery. 
+ In order for us to get a real CISD, we need to use:
+ The sequence of last up close (bullish) or down close (bearish) candles before a reversal (preferred).
+ The very 1st candle that tapped HTF level. 
+ OB is a strong confirmation of SMR.
+ If price taps into an HTF level and an LTF OB forms, we want to see price stay below 50% of the OB in a bearish setup and above 50% of the OB in a bullish setup. That keeps the OB high probability.
+ Once price closes above or below the Mean Threshold, the OB has a higher chance of failing.
+ What is SMR? SMR - Smart Money Reversal - a transition from Sell Program to Buy Program and vice versa.
+ SMR:
+ HTF Level
+ LTF MSS / IFVG
+ LTF CISD
+ Example
+ We have a sequence of consecutive up-close or down-close candles. Once price reaches a higher-timeframe level and reacts, we wait for a candle to close above the sequence of down-close candles or below the sequence of up-close candles. We then use that entire sequence as an order block.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/order-block/1785073634151-13046d2c.png]
+ Full size 
+ Sometimes the candles have long wicks, making it difficult to use the entire candle range as an order block. In this case, we use only the bodies of the candles that form the sequence of consecutive up-close or down-close candles.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/order-block/1785073908962-250b2aff.png]
+ Full size 
+ When the wicks are small, we can use the entire candle range - from the lowest wick to the highest wick - as our order block.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/order-block/1785074112494-1021bee7.png]
+ Full size 
+ Example
+ The first candle in the sequence must be the candle that taps the higher-timeframe level.
+ Why is this important? When you review your charts, you may notice long sequences of consecutive up-close or down-close candles. Sometimes, this sequence covers an entire range, including both premium and discount. In that case, waiting for price to close above or below the entire sequence would not make sense because we would likely miss most of the move.
+ To avoid this, we only use the sequence that begins with the first candle that taps the higher-timeframe level. That candle marks the beginning of the order block sequence.
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/order-block/1785074632069-3c850b81.png]
+ Full size 
+ It does not matter when price retests the order block. The retest may happen immediately after the order block forms, two hours later, or even the next day. As long as price respects the 50% level of the order block, it remains a high-probability setup.
+ For a bullish order block, we do not want to see price close below its 50% level.
+ For a bearish order block, we do not want to see price close above its 50% level.
+ This is Rule #1.
+ An order block becomes invalid once price delivers a clear break or displacement beyond its 50% level. 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/order-block/1785075264826-c9480e99.png]
+ Full size 
+ Your learning progress 
+ Finished reading?
+ Finished reading? Mark this lesson complete to keep track of what you’ve covered.
+ Mark complete 
+ Know someone this could help?
+ Share the lesson with them.
+ Keep learning
+ Build on what you’ve learned
+ All lessons 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/liquidity-sweep/1790626804353-bc8f1907.png]
+ ICT Concept Liquidity Sweep Best way to trade liquidity sweep. Step-by-step guide Beginner · 20 min read 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/spx-rth-gap/1785447214862-fd03fe48.png]
+ ICT Concept SPX Regular Trading Hours (RTH) Gap How to trade the gap between yesterday's close and today's open — levels, scenarios, and entries. Advanced · 15 min read 
+[IMG https://msmunepiqkpqzcocqwgg.supabase.co/storage/v1/object/public/lesson-images/lessons/10-am-open/1786045830387-cdf0e95c.png]
+ ICT Concept 10 AM OPEN The 10:00 AM Open and the 4-Hour Candle Playbook Intermediate · 20 min read 
+ Put it into practice
+ Compare prop firm rules and costs
+ Explore account structures, restrictions, and costs side by side.
+ Loading your notes…
+ These lessons explain trading concepts through educational examples. For current account terms, confirm the rules with the firm’s official documentation.
+ Explore more lessons 
+ Join Our Community
+ Live trading discussions
+ Loading community stats… 
+ Join Discord 
+ Stay Updated
+ Get the latest deals & tips
+ Subscribe 
+[IMG /_next/image?url=%2Flogos%2Ffunded-now-logo-best-prop-firm-deals.png&w=1920&q=75&dpl=dpl_EnXLDUujfukk7KHXNuUrmKodcXQv]
+ Empowering traders with the capital they need to succeed. Find your perfect prop firm and start your funded trading journey today.
+ Platform
+ All Prop Firms 
+ Discounts & Promo Codes 
+ Compare Firms 
+ Futures Prop Firms 
+ Best Prop Firms 
+ Trading Tools 
+ Giveaways 
+ Challenges 
+ Tools
+ All Trading Tools 
+ Lot Size Calculator 
+ Consistency Calculator 
+ Return Calculator 
+ Drawdown Simulator 
+ Resources
+ Blog 
+ Economic Calendar 
+ TradingView Indicators 
+ Glossary 
+ News 
+ Newsletter 
+ Restricted Countries 
+ Firms by Country 
+ Firms by Trader Type 
+ Company
+ Review Methodology 
+ About Us 
+ Contact 
+ Privacy Policy 
+ Terms of Service 
+ FTC Disclosure: Funded.Now is an independent affiliate marketing platform. We receive commissions when you purchase through our affiliate links at no extra cost to you. This revenue helps us maintain and improve our services. All reviews and comparisons are based on our honest analysis and user feedback.
+ Risk Disclaimer: Trading involves a substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. The information provided is for educational purposes only and should not be considered investment advice. Always conduct your own due diligence before choosing a prop firm.
+ © 2026 Funded.Now. All rights reserved.
+ Privacy Terms Contact 
+ 
