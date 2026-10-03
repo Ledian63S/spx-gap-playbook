@@ -3,7 +3,7 @@
 Study material for LumiTraders' (Dasha) "SPX strategy": the SPX regular-trading-hours gap model.
 
 ## Start here
-**Online:** https://ledian63s.github.io/spx-gap-playbook/ (works on phone; add it to your home screen).
+**Online:** https://ledianleka.com/spx-gap-playbook/ (works on phone; add it to your home screen).
 
 Or open `course/index.html` in your browser (double-click it). It is a 20-step course:
 each step has a goal, a short lesson with diagrams, tasks to do, and check questions.
