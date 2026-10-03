@@ -2,32 +2,34 @@
 <title>SPX Gap Playbook</title>
 <meta name="description" content="A step-by-step study course on LumiTraders' SPX RTH gap model: gap levels, the 2-minute CISD entry, Playbooks A–F, ES execution and risk rules.">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#06080a" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#080b10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f3f5f8" media="(prefers-color-scheme: light)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="SPX Gap">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2306080a'/%3E%3Crect x='7' y='6' width='5' height='12' rx='1' fill='%233fb68b'/%3E%3Crect x='20' y='14' width='5' height='12' rx='1' fill='%23e0605a'/%3E%3Cpath d='M9.5 3v18M22.5 11v18' stroke='%23e7ebf0' stroke-width='1.5'/%3E%3C/svg%3E">
 <script>try{var t=JSON.parse(localStorage.getItem('spxgap-theme'));if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
-/* Layout: docs reader — sticky left contents with progress, one reading column, wide figures. Dark-first, after the funded.now docs look. */
+/* Layout: trading-desk reader. Sticky left outline with progress, one reading column, wide figures. Dark-first like a chart screen; the gap-level colours (25 blue, 50 green, OTE amber) double as the palette. */
 :root{
-  --bg:#06080a; --panel:#0c0f13; --panel2:#12161b; --line:#1d232b; --line2:#29313b;
-  --fg:#e7ebf0; --muted:#8d97a5; --dim:#5f6875;
+  --bg:#080b10; --panel:#0e131a; --panel2:#151c26; --line:#1c2531; --line2:#2a3646;
+  --fg:#e6ebf2; --muted:#93a0b2; --dim:#64718a;
   --accent:#6fb4ff; --accent-ink:#06121f;
   --up:#3fb68b; --down:#e0605a; --amber:#e9b04d; --violet:#a58bff;
   --l25:#6fb4ff; --l50:#3fb68b; --lote:#e9b04d;
   --zone:rgba(160,175,195,.07); --zone-gap:rgba(160,175,195,.06); --zone-ote:rgba(233,176,77,.13); --zone-ov:rgba(111,180,255,.20); --zone-key:rgba(111,180,255,.12);
   --pos-t:rgba(63,182,139,.16); --pos-s:rgba(224,96,90,.16);
-  --font:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"Geist Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --font:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Archivo","Arial Narrow",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --r:10px; --r-sm:6px;
   color-scheme:dark;
 }
 @media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
-  --bg:#f6f7f9; --panel:#ffffff; --panel2:#f0f2f5; --line:#e2e6eb; --line2:#cfd5dd;
-  --fg:#12161c; --muted:#56606d; --dim:#8a93a0;
+  --bg:#f3f5f8; --panel:#ffffff; --panel2:#eaeef4; --line:#dce2ea; --line2:#c6cfdb;
+  --fg:#111822; --muted:#4f5b6c; --dim:#7a8699;
   --accent:#1f6fd1; --accent-ink:#ffffff;
   --up:#1c9a6c; --down:#cc4740; --amber:#b9780f; --violet:#6c4fd6;
   --l25:#1f6fd1; --l50:#1c9a6c; --lote:#b9780f;
@@ -35,8 +37,8 @@
   --pos-t:rgba(28,154,108,.14); --pos-s:rgba(204,71,64,.13);
   color-scheme:light; } }
 :root[data-theme="light"]{
-  --bg:#f6f7f9; --panel:#ffffff; --panel2:#f0f2f5; --line:#e2e6eb; --line2:#cfd5dd;
-  --fg:#12161c; --muted:#56606d; --dim:#8a93a0;
+  --bg:#f3f5f8; --panel:#ffffff; --panel2:#eaeef4; --line:#dce2ea; --line2:#c6cfdb;
+  --fg:#111822; --muted:#4f5b6c; --dim:#7a8699;
   --accent:#1f6fd1; --accent-ink:#ffffff;
   --up:#1c9a6c; --down:#cc4740; --amber:#b9780f; --violet:#6c4fd6;
   --l25:#1f6fd1; --l50:#1c9a6c; --lote:#b9780f;
@@ -46,9 +48,9 @@
 :root[data-theme="dark"]{color-scheme:dark}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:24px}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15.5px;line-height:1.65;margin:0;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.62;margin:0;-webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
@@ -89,7 +91,7 @@ strong{font-weight:600}
 .k{font-family:var(--mono);font-size:.86em;background:var(--panel2);border:1px solid var(--line);padding:1px 6px;border-radius:5px;white-space:nowrap}
 .src{font-family:var(--mono);font-size:11.5px;color:var(--dim);letter-spacing:.02em;line-height:1.6}
 
-.callout{border:1px solid var(--line2);background:var(--panel);border-radius:12px;padding:16px 18px;margin:18px 0;max-width:80ch}
+.callout{border:1px solid var(--line2);background:var(--panel);border-radius:var(--r);padding:16px 18px;margin:18px 0;max-width:80ch}
 .callout b.t{display:block;color:var(--accent);font-size:13.5px;margin-bottom:4px;font-weight:600}
 .callout.warn b.t{color:var(--amber)}
 .callout.bad b.t{color:var(--down)}
@@ -98,7 +100,7 @@ strong{font-weight:600}
 blockquote.q{margin:18px 0;padding:2px 0 2px 16px;border-left:2px solid var(--violet);max-width:72ch}
 blockquote.q cite{display:block;font-style:normal;color:var(--dim);font-family:var(--mono);font-size:11.5px;margin-top:6px}
 
-.grid{display:grid;border:1px solid var(--line2);border-radius:14px;overflow:hidden;margin:20px 0;background:var(--panel)}
+.grid{display:grid;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;margin:20px 0;background:var(--panel)}
 .grid.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .grid>div{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
@@ -110,7 +112,7 @@ blockquote.q cite{display:block;font-style:normal;color:var(--dim);font-family:v
 .grid>div ul{color:var(--muted);font-size:14px;margin:6px 0 0;padding-left:18px}
 
 /* quick-start flow */
-.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;border:1px solid var(--line2);border-radius:14px;overflow:hidden;background:var(--panel);margin:22px 0}
+.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--panel);margin:22px 0}
 .flow>div{padding:16px 14px 18px;border-right:1px solid var(--line);min-width:0;position:relative}
 .flow>div:last-child{border-right:0}
 .flow .t{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.04em}
@@ -124,7 +126,7 @@ blockquote.q cite{display:block;font-style:normal;color:var(--dim);font-family:v
 .rules5 li span{color:var(--muted);font-size:14px;display:block}
 
 figure{margin:22px 0;max-width:100%}
-figure .frame{border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:var(--panel)}
+figure .frame{border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--panel)}
 figure img{display:block;width:100%;height:auto}
 figure svg{display:block;width:100%;height:auto}
 figcaption{color:var(--muted);font-size:13.5px;margin-top:10px;max-width:84ch;line-height:1.55}
@@ -144,7 +146,7 @@ figcaption ol li::before{content:attr(data-n);position:absolute;left:0;top:1px;f
 .isdn .vup{display:none}
 .isdn .vdn{display:inline}
 
-.tbl{overflow-x:auto;margin:16px 0;border:1px solid var(--line2);border-radius:12px;background:var(--panel)}
+.tbl{overflow-x:auto;margin:16px 0;border:1px solid var(--line2);border-radius:var(--r);background:var(--panel)}
 table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
 th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);font-weight:500;background:var(--panel2)}
@@ -158,7 +160,7 @@ td.nowrap{white-space:nowrap}
 .pill.a{color:var(--amber);border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
 .pill.b{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
 
-.play{border:1px solid var(--line2);border-radius:14px;background:var(--panel);margin:20px 0;overflow:hidden}
+.play{border:1px solid var(--line2);border-radius:var(--r);background:var(--panel);margin:20px 0;overflow:hidden}
 .play .row{display:grid;grid-template-columns:120px minmax(0,1fr);border-bottom:1px solid var(--line)}
 .play .row:last-child{border-bottom:0}
 .play .row>div{padding:12px 18px;min-width:0}
@@ -175,16 +177,16 @@ td.nowrap{white-space:nowrap}
 .steps figure{margin:12px 0 4px}
 
 .tree{display:grid;gap:12px;margin:18px 0}
-.node{border:1px solid var(--line2);border-radius:12px;padding:14px 16px;background:var(--panel)}
+.node{border:1px solid var(--line2);border-radius:var(--r);padding:14px 16px;background:var(--panel)}
 .node .qq{font-weight:600}
 .branches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.branch{border:1px solid var(--line2);border-radius:12px;padding:14px 16px;background:var(--panel)}
+.branch{border:1px solid var(--line2);border-radius:var(--r);padding:14px 16px;background:var(--panel)}
 .branch .if{font-family:var(--mono);font-size:11.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
 .branch .then{font-weight:600;margin:4px 0}
 .branch p{color:var(--muted);font-size:13.5px;margin:0}
 .branch a.go{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:12px}
 
-.tool{border:1px solid var(--line2);border-radius:14px;background:var(--panel);padding:20px;margin:20px 0}
+.tool{border:1px solid var(--line2);border-radius:var(--r);background:var(--panel);padding:20px;margin:20px 0}
 .tool h4{margin:0 0 4px;font-size:16px}
 .tool .sub{color:var(--muted);font-size:13.5px;margin:0 0 16px}
 .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
@@ -218,7 +220,7 @@ td.nowrap{white-space:nowrap}
 
 /* quiz */
 .quiz{display:grid;gap:14px;margin:18px 0}
-.qcard{border:1px solid var(--line2);border-radius:14px;background:var(--panel);padding:18px 20px}
+.qcard{border:1px solid var(--line2);border-radius:var(--r);background:var(--panel);padding:18px 20px}
 .qcard .qn{font:11.5px var(--mono);color:var(--accent);letter-spacing:.06em}
 .qcard .qt{font-weight:600;margin:6px 0 12px;max-width:80ch}
 .qcard .opts{display:grid;gap:8px}
@@ -276,7 +278,7 @@ svg .brkt{fill:var(--fg);font:600 12px var(--font)}
 @media (max-width: 960px){
   .shell{grid-template-columns:minmax(0,1fr);gap:0;padding-inline:16px}
   nav.toc{display:none}
-  .mobile-toc{display:block;border:1px solid var(--line2);border-radius:12px;background:var(--panel);padding:10px 14px;margin-bottom:24px}
+  .mobile-toc{display:block;border:1px solid var(--line2);border-radius:var(--r);background:var(--panel);padding:10px 14px;margin-bottom:24px}
   .mobile-toc summary{cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
   .mobile-toc ol{margin:10px 0 4px;padding-left:22px;font-size:14px;line-height:1.9}
   .grid.c2,.grid.c3,.branches,.figpair{grid-template-columns:minmax(0,1fr)}
@@ -296,22 +298,22 @@ svg.sm .wick{stroke-width:2}
 }
 
 /* ---- course mode ---- */
-.course-top{position:sticky;top:0;z-index:5;background:var(--bg);padding-block:14px 12px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.course-top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:14px 12px;border-bottom:1px solid var(--line);margin-bottom:8px}
 .course-top .row1{display:flex;justify-content:space-between;align-items:center;gap:12px;font:12px var(--mono);color:var(--muted);flex-wrap:wrap}
 .course-top .row1 b{color:var(--accent);font-weight:500;letter-spacing:.08em;text-transform:uppercase}
 .course-top .progress{margin-top:8px}
 main section.step{display:none;border-bottom:0;padding-top:22px}
 main section.step.show{display:block}
-.goal{border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);background:color-mix(in srgb,var(--accent) 7%,transparent);border-radius:12px;padding:14px 18px;margin:6px 0 22px;max-width:80ch}
+.goal{border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);background:color-mix(in srgb,var(--accent) 7%,transparent);border-radius:var(--r);padding:14px 18px;margin:6px 0 22px;max-width:80ch}
 .goal b{display:block;font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
 .goal p{margin:0}
 .meta{display:flex;gap:8px;flex-wrap:wrap;margin:-4px 0 16px}
 .part{font:500 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:30px 0 10px;display:flex;align-items:center;gap:10px}
 .part::after{content:"";flex:1;height:1px;background:var(--line)}
-.do{border:1px solid var(--line2);background:var(--panel);border-radius:14px;padding:18px 20px;margin:26px 0 0}
+.do{border:1px solid var(--line2);background:var(--panel);border-radius:var(--r);padding:18px 20px;margin:26px 0 0}
 .do h3{margin:0 0 4px}
 .do .sub{color:var(--muted);font-size:13.5px;margin:0 0 6px}
-.check-q{border:1px solid var(--line2);background:var(--panel);border-radius:14px;padding:18px 20px;margin:16px 0 0}
+.check-q{border:1px solid var(--line2);background:var(--panel);border-radius:var(--r);padding:18px 20px;margin:16px 0 0}
 .check-q h3{margin:0 0 10px}
 .check-q .qcard{border:0;padding:0;background:none;margin-bottom:16px}
 .check-q .qcard:last-child{margin-bottom:0}
@@ -325,14 +327,14 @@ main section.step.show{display:block}
 .toc li a.cur{color:var(--fg);border-left-color:var(--accent)}
 .toc .stage-n{color:var(--accent)}
 .mobile-nav{display:none}
-.howto{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line2);border-radius:14px;overflow:hidden;background:var(--panel);margin:20px 0}
+.howto{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;background:var(--panel);margin:20px 0}
 .howto>div{padding:16px 16px 18px;border-right:1px solid var(--line);min-width:0}
 .howto>div:last-child{border-right:0}
 .howto .h{font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .howto h4{margin:6px 0 4px;font-size:15px}
 .howto p{margin:0;color:var(--muted);font-size:13.5px}
 .stagelist{display:grid;gap:10px;margin:18px 0}
-.stagelist>div{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;border:1px solid var(--line2);border-radius:12px;padding:12px 16px;background:var(--panel)}
+.stagelist>div{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;border:1px solid var(--line2);border-radius:var(--r);padding:12px 16px;background:var(--panel)}
 .stagelist .sn{font:600 12px var(--mono);color:var(--accent);letter-spacing:.06em}
 .stagelist b{display:block}
 .stagelist span{color:var(--muted);font-size:13.5px}
@@ -388,7 +390,8 @@ figure .frame img{cursor:zoom-in}
   .check li{padding:12px 0}
   .check input{width:20px;height:20px;margin-top:3px}
   .understood button,.seg button{min-height:38px}
-  .course-top{padding-top:max(12px,env(safe-area-inset-top))}
+  .course-top{padding-top:12px}
+  html{scroll-padding-top:150px}
 }
 @media (max-width: 560px){
   h2{font-size:26px}
@@ -398,6 +401,77 @@ figure .frame img{cursor:zoom-in}
   th,td{padding:9px 10px}
   .tl>li{padding-bottom:18px}
 }
+/* ---- design layer ---- */
+::selection{background:color-mix(in srgb,var(--accent) 35%,transparent)}
+h1,h2,.toc .brand{font-family:var(--display);font-stretch:112%;font-weight:750;letter-spacing:-.012em}
+h1{font-size:clamp(34px,5.2vw,54px);line-height:1.04}
+h2{font-size:clamp(27px,3.4vw,36px);line-height:1.1}
+h3{font-family:var(--display);font-stretch:104%;font-weight:650;font-size:19px;letter-spacing:-.004em}
+.grid>div h4,.flow h4,.howto h4,.branch .then,.stagelist b,.tool h4{font-family:var(--display);font-stretch:104%;font-weight:650;letter-spacing:0}
+.toc .brand{font-size:17px;letter-spacing:-.005em}
+.toc .brand small{font-family:var(--font);font-stretch:100%;font-weight:400;letter-spacing:0}
+.toc li a{border-radius:0 var(--r-sm) var(--r-sm) 0}
+.toc li a.cur{background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.toc li a:focus-visible{outline-offset:-2px}
+
+/* step goal: a statement under the title, not another box */
+.goal{display:flex;gap:14px;align-items:baseline;border:0;border-block:1px solid var(--line);border-radius:0;background:none;padding:14px 0;max-width:80ch}
+.goal b{flex:none;margin:0;padding:2px 8px;border-radius:var(--r-sm);background:color-mix(in srgb,var(--accent) 14%,transparent);font-size:11px}
+.goal p{font-size:17px;line-height:1.5}
+
+/* callouts: tinted by meaning instead of all wearing the same border */
+.callout{border:0;border-radius:var(--r-sm);background:var(--panel2)}
+.callout.warn{background:color-mix(in srgb,var(--amber) 9%,var(--panel))}
+.callout.bad{background:color-mix(in srgb,var(--down) 9%,var(--panel))}
+.callout.good{background:color-mix(in srgb,var(--up) 9%,var(--panel))}
+.callout b.t{font-family:var(--display);font-stretch:104%;font-size:14.5px;letter-spacing:0}
+blockquote.q{font-size:17px;line-height:1.55;font-style:italic;border-left-color:var(--violet)}
+blockquote.q cite{font-style:normal}
+
+/* practice and checks: the two interactive panels */
+.do{background:var(--panel)}
+.do h3::before,.check-q h3::before{display:block;font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.do h3::before{content:"Practice"}
+.check-q h3::before{content:"Check"}
+.check-q{background:color-mix(in srgb,var(--accent) 4%,var(--panel));border-color:color-mix(in srgb,var(--accent) 28%,var(--line2))}
+.qcard .opts{counter-reset:opt}
+.qcard .opts button{counter-increment:opt;display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;align-items:baseline;border-radius:var(--r-sm);transition:border-color .15s,background .15s}
+.qcard .opts button::before{content:counter(opt,upper-alpha);font:600 12px var(--mono);color:var(--dim);border:1px solid var(--line2);border-radius:4px;width:24px;height:22px;display:grid;place-items:center}
+.qcard .opts button.ok::before{color:var(--up);border-color:var(--up)}
+.qcard .opts button.no::before{color:var(--down);border-color:var(--down)}
+.qcard .opts button:hover{background:color-mix(in srgb,var(--accent) 6%,var(--panel2))}
+.qcard .why{border-left:2px solid var(--line2);padding-left:12px}
+@media (prefers-reduced-motion: reduce){.qcard .opts button{transition:none}}
+
+figure .frame{border-radius:var(--r-sm)}
+.tbl{border-radius:var(--r-sm)}
+th{font-weight:500}
+.play .row>div:first-child{color:var(--accent)}
+.k{border-radius:4px}
+.btn{border-radius:var(--r-sm)}
+.btn.primary{font-weight:500}
+.btn:hover{border-color:var(--muted)}
+.btn.primary:hover{filter:brightness(1.08)}
+
+/* the gap ladder: the course's signature. 0% at the open, 100% at yesterday's close */
+.hero{margin-top:18px;display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:40px;align-items:start}
+.ladder{position:relative;border:1px solid var(--line2);border-radius:var(--r);background:var(--panel);padding:14px 16px 12px;font:12px var(--mono);font-variant-numeric:tabular-nums}
+.ladder .cap{display:flex;justify-content:space-between;color:var(--dim);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.ladder ol{list-style:none;margin:16px 0 14px;padding:0;position:relative;height:250px}
+.ladder ol::before{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:var(--zone-gap);border-radius:4px}
+.ladder ol::after{content:"";position:absolute;left:0;right:0;top:62%;height:8.5%;background:var(--zone-ote)}
+.ladder li{position:absolute;left:0;right:0;display:flex;justify-content:space-between;align-items:center;transform:translateY(-50%)}
+.ladder li::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px solid currentColor;opacity:.75;z-index:0}
+.ladder li span,.ladder li em{position:relative;z-index:1;background:var(--panel);padding:0 6px;font-style:normal}
+.ladder li em{color:var(--muted)}
+.ladder li span{font-weight:600}
+.ladder .e{color:var(--fg)} .ladder .l25{color:var(--l25)} .ladder .l50{color:var(--l50)} .ladder .lo{color:var(--lote)}
+.ladder .foot{margin-top:10px;color:var(--muted);font:11.5px/1.45 var(--font)}
+.resume[hidden]{display:none}
+.resume{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:4px 0 8px}
+.resume .btn{padding:10px 16px;font-size:13.5px}
+@media (max-width: 760px){ .hero{grid-template-columns:minmax(0,1fr);gap:22px} .ladder ol{height:200px} }
+
 @media print{
   nav.toc,.course-top,.stepnav,.mbar,.do,.check-q{display:none!important}
   main section.step{display:block!important;break-inside:auto}
@@ -422,8 +496,25 @@ figure .frame img{cursor:zoom-in}
 
 <!-- ===================== STEP 0 ===================== -->
 <section class="step" id="s0" data-stage="0" data-title="How this course works" data-time="3 min">
+<div class="hero">
+<div>
 <h1>Learn the SPX gap model, step by step</h1>
 <p class="lede">LumiTraders (Dasha) trades one main setup on almost every New York morning. She calls it <strong>"my SPX strategy"</strong>. This course teaches it in 20 short steps. Do them in order. Each step builds on the one before.</p>
+<div class="resume" id="resume" hidden><button class="btn primary" id="resumebtn" type="button">Continue</button><span class="src" id="resumeinfo"></span></div>
+</div>
+<div class="ladder" aria-label="The four gap levels, from today's open to yesterday's close">
+<div class="cap"><span>The gap</span><span>Sep 24</span></div>
+<ol>
+<li class="e" style="top:0%"><span>0%</span><em>9:30 open · 7,666.98</em></li>
+<li class="l25" style="top:25%"><span>25%</span><em>7,676.74</em></li>
+<li class="l50" style="top:50%"><span>50%</span><em>7,686.50</em></li>
+<li class="lo" style="top:62%"><span>62%</span><em>7,691.18</em></li>
+<li class="lo" style="top:70.5%"><span>70.5%</span><em>7,694.50</em></li>
+<li class="e" style="top:100%"><span>100%</span><em>close · 7,706.02</em></li>
+</ol>
+<div class="foot">Every setup in the course happens on these six lines. Amber band = the OTE.</div>
+</div>
+</div>
 <h3>Every step has the same four parts</h3>
 <div class="howto">
   <div><div class="h">1 · Goal</div><h4>What you will learn</h4><p>One sentence at the top tells you what you can do after the step.</p></div>
@@ -1433,6 +1524,7 @@ ck();
 var KEY='spxgap-course-v1';
 var S=(function(){try{return JSON.parse(localStorage.getItem(KEY)||'null')}catch(e){return null}})()||{done:{},tasks:{},ans:{},last:'s0'};
 S.done=S.done||{};S.tasks=S.tasks||{};S.ans=S.ans||{};
+if(!S.resume&&S.last&&S.last!=='s0')S.resume=S.last;
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 
 /* ---------- theme ---------- */
@@ -1609,6 +1701,15 @@ function paintNav(sec){
   else{st.textContent=sec.id==='s19'?'Score 8/10 to complete':(sec.id==='s20'?'Tick the four weeks as you finish them':'Answer the check questions to complete this step');st.className='state';}
   mirror();
 }
+function paintResume(){
+  var r=S.resume,sec=r&&document.getElementById(r),box=document.getElementById('resume');
+  if(!sec){box.hidden=true;return;}
+  var n=counted.filter(function(x){return S.done[x.id]}).length;
+  document.getElementById('resumebtn').textContent='Continue: step '+r.slice(1)+' · '+sec.getAttribute('data-title')+' →';
+  document.getElementById('resumeinfo').textContent=n+' of '+counted.length+' steps complete';
+  box.hidden=false;
+}
+document.getElementById('resumebtn').addEventListener('click',function(){if(S.resume)location.hash=S.resume;});
 function show(id){
   var sec=document.getElementById(id);if(!sec||!sec.classList.contains('step'))sec=document.getElementById(S.last||'s0')||steps[0];
   steps.forEach(function(s){s.classList.toggle('show',s===sec)});
@@ -1618,8 +1719,9 @@ function show(id){
   document.getElementById('ct-stage').textContent=STAGE[st];
   document.getElementById('ct-step').textContent=st==='R'?'Reference':('Step '+(sec.id==='s0'?0:sec.id.slice(1))+' of '+counted.length+(sec.getAttribute('data-time')?' · about '+sec.getAttribute('data-time'):''));
   document.getElementById('ct-bar').style.width=st==='R'?'0%':(Math.max(0,i)/counted.length*100)+'%';
-  if(st!=='R'){S.last=sec.id;save();}
+  if(st!=='R'){S.last=sec.id;if(sec.id!=='s0')S.resume=sec.id;save();}
   paintNav(sec);
+  if(sec.id==='s0')paintResume();
   window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0);},0);requestAnimationFrame(function(){requestAnimationFrame(function(){window.scrollTo(0,0);});});
 }
 document.getElementById('prevbtn').addEventListener('click',function(){var cur=document.querySelector('section.step.show');if(cur.getAttribute('data-stage')==='R'){location.hash=S.last||'s0';return;}var i=main.indexOf(cur);if(i>0)location.hash=main[i-1].id;});
@@ -1635,6 +1737,7 @@ document.addEventListener('keydown',function(e){
 window.addEventListener('hashchange',function(){show(location.hash.slice(1));});
 show(location.hash.slice(1)||S.last||'s0');
 paint();
+
 window.addEventListener('load',function(){window.scrollTo(0,0);});
 
 })();
