@@ -59,4 +59,4 @@ now in the course. Where her sources disagree, the course has a new reference pa
 - Theme choice is remembered. Arrow keys move between steps.
 - New reference pages: **Cheat sheet** and **Where her sources disagree**.
 - New lesson images: the order-block run, order block on candle bodies, Playbook B with both trades, and the Jul 23 overlap gap.
-- Proper page title and description, a `noindex` tag (search engines skip it), and a GitHub Pages entry point at the repo root.
+- Proper page title and description and a `noindex` tag.
