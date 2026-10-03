@@ -1,4 +1,13 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body><title>SPX Gap Playbook</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SPX Gap Playbook</title>
+<meta name="description" content="A step-by-step study course on LumiTraders' SPX RTH gap model: gap levels, the 2-minute CISD entry, Playbooks A–F, ES execution and risk rules.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#06080a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SPX Gap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2306080a'/%3E%3Crect x='7' y='6' width='5' height='12' rx='1' fill='%233fb68b'/%3E%3Crect x='20' y='14' width='5' height='12' rx='1' fill='%23e0605a'/%3E%3Cpath d='M9.5 3v18M22.5 11v18' stroke='%23e7ebf0' stroke-width='1.5'/%3E%3C/svg%3E">
+<script>try{var t=JSON.parse(localStorage.getItem('spxgap-theme'));if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
@@ -34,6 +43,7 @@
   --zone:rgba(80,95,115,.06); --zone-gap:rgba(80,95,115,.05); --zone-ote:rgba(185,120,15,.12); --zone-ov:rgba(31,111,209,.14); --zone-key:rgba(31,111,209,.09);
   --pos-t:rgba(28,154,108,.14); --pos-s:rgba(204,71,64,.13);
   color-scheme:light; }
+:root[data-theme="dark"]{color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
@@ -178,7 +188,7 @@ td.nowrap{white-space:nowrap}
 .tool h4{margin:0 0 4px;font-size:16px}
 .tool .sub{color:var(--muted);font-size:13.5px;margin:0 0 16px}
 .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
-.fields label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted);font-family:var(--mono);letter-spacing:.02em}
+.fields label{display:flex;flex-direction:column;justify-content:space-between;gap:5px;font-size:12px;color:var(--muted);font-family:var(--mono);letter-spacing:.02em}
 .fields input,.fields select{background:var(--bg);border:1px solid var(--line2);color:var(--fg);border-radius:8px;padding:9px 10px;font:14px var(--mono);width:100%}
 .out{display:grid;gap:10px}
 .out.c6{grid-template-columns:repeat(6,minmax(0,1fr))}
@@ -275,7 +285,10 @@ svg .brkt{fill:var(--fg);font:600 12px var(--font)}
   .play .row>div:first-child{border-right:0;padding-bottom:0}
   .out.c4{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-@media (max-width: 720px){ figure.dg .frame{overflow-x:auto;-webkit-overflow-scrolling:touch} figure.dg svg{min-width:700px} figure.dg .fighead .tag::after{content:" · swipe to scroll"} }
+/* phone diagrams: the SVG is re-rendered on a narrower canvas (see render()), so text is scaled up in user units */
+svg.sm .lbl{font-size:17px} svg.sm .zl{font-size:16px} svg.sm .tick{font-size:15px}
+svg.sm .ptx,svg.sm .psx{font-size:14px} svg.sm .mkt{font-size:14px} svg.sm .brkt{font-size:16px}
+svg.sm .wick{stroke-width:2}
 @media (max-width: 560px){
   .flow{grid-template-columns:minmax(0,1fr)} .flow>div{border-right:0!important;border-bottom:1px solid var(--line)} .flow>div:last-child{border-bottom:0}
   .out.c6{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -338,6 +351,58 @@ main section.step.show{display:block}
   .howto{grid-template-columns:minmax(0,1fr)} .howto>div{border-right:0;border-bottom:1px solid var(--line)}
   .stagelist>div{grid-template-columns:minmax(0,1fr)}
 }
+
+/* images open full screen on tap */
+figure .frame img{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:flex;flex-direction:column}
+.lb[hidden]{display:none}
+.lb .lb-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));color:#c9d1db;font:12.5px var(--mono)}
+.lb .lb-bar button{background:#1d232b;border:1px solid #29313b;color:#e7ebf0;font:13px var(--mono);padding:8px 14px;border-radius:8px;cursor:pointer}
+.lb .lb-scroll{flex:1;overflow:auto;display:flex;align-items:center;justify-content:center;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y pinch-zoom}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;cursor:zoom-in;display:block}
+.lb.zoom .lb-scroll{display:block}
+.lb.zoom img{max-width:none;max-height:none;width:240%;cursor:zoom-out}
+@media (min-width: 961px){ .lb.zoom img{width:160%} }
+.lb .lb-cap{color:#aab4c0;font-size:13px;line-height:1.5;padding:10px 16px;padding-bottom:max(12px,env(safe-area-inset-bottom));max-width:90ch;margin:0 auto}
+
+/* top-bar extras (theme toggle on phones) */
+.ct-tools{display:none}
+.iconbtn{background:none;border:1px solid var(--line2);color:var(--muted);border-radius:8px;padding:7px 10px;font:12px var(--mono);cursor:pointer;white-space:nowrap}
+
+/* fixed bottom navigation on phones and tablets */
+.mbar{display:none}
+@media (max-width: 960px){
+  body{font-size:16px}
+  .ct-tools{display:flex;gap:8px}
+  .mobile-nav select{font-size:16px;padding:9px 8px}
+  .stepnav{display:none}
+  main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+  .mbar{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:20;
+    background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line2);padding:10px 16px;padding-bottom:max(10px,env(safe-area-inset-bottom))}
+  .mbar .btn{padding:11px 16px;font-size:14px;min-height:44px}
+  .mbar .btn[disabled]{opacity:.4}
+  .mbar .mid{text-align:center;font:12px var(--mono);color:var(--muted);line-height:1.35;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mbar .mid.ok{color:var(--up)}
+  .qcard .opts button{padding:12px 14px;font-size:15px;min-height:44px}
+  .check li{padding:12px 0}
+  .check input{width:20px;height:20px;margin-top:3px}
+  .understood button,.seg button{min-height:38px}
+  .course-top{padding-top:max(12px,env(safe-area-inset-top))}
+}
+@media (max-width: 560px){
+  h2{font-size:26px}
+  .lede{font-size:16.5px}
+  .goal,.do,.check-q,.tool,.callout{padding:14px 15px}
+  .tool .fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+  th,td{padding:9px 10px}
+  .tl>li{padding-bottom:18px}
+}
+@media print{
+  nav.toc,.course-top,.stepnav,.mbar,.do,.check-q{display:none!important}
+  main section.step{display:block!important;break-inside:auto}
+  body{background:#fff;color:#000}
+}
 </style>
 <div class="shell">
 <nav class="toc" aria-label="Course outline">
@@ -352,7 +417,7 @@ main section.step.show{display:block}
 <div class="course-top">
   <div class="row1"><b id="ct-stage">Start</b><span id="ct-step">Step 0 of 20</span></div>
   <div class="progress"><i id="ct-bar"></i></div>
-  <div class="mobile-nav"><label class="src" for="jump" style="white-space:nowrap">Go to</label><select id="jump"></select></div>
+  <div class="mobile-nav"><label class="src" for="jump" style="white-space:nowrap">Go to</label><select id="jump"></select><div class="ct-tools"><button class="iconbtn" id="themebtn2" type="button" aria-label="Switch light or dark theme">◐ Theme</button></div></div>
 </div>
 
 <!-- ===================== STEP 0 ===================== -->
@@ -368,7 +433,7 @@ main section.step.show{display:block}
 </div>
 <h3>The path from first to last</h3>
 <div class="stagelist">
-  <div><div class="sn">STAGE 1</div><div><b>Foundations</b><span>The idea, your chart setup, the words, how to draw the gap, when to trade, what to watch at 9:30.</span></div><em>Steps 1–6 · ~2 h</em></div>
+  <div><div class="sn">STAGE 1</div><div><b>Foundations</b><span>The idea, your chart setup, the words, how to draw the gap, when to trade, what to watch at 9:30, and the 10:00 AM open.</span></div><em>Steps 1–6 · ~2 h</em></div>
   <div><div class="sn">STAGE 2</div><div><b>The entry and the three main setups</b><span>The 2-minute entry signal, then Playbooks A, B and C. This is the core of the model.</span></div><em>Steps 7–10 · ~2 h</em></div>
   <div><div class="sn">STAGE 3</div><div><b>Advanced setups</b><span>What happens after the gap fills, overlapping gaps, and old gaps. Learn these after A–C feel easy.</span></div><em>Steps 11–13 · ~1 h</em></div>
   <div><div class="sn">STAGE 4</div><div><b>Placing and managing trades</b><span>How to turn SPX levels into ES orders, how to take profit, and her risk rules.</span></div><em>Steps 14–16 · ~1 h</em></div>
@@ -388,14 +453,14 @@ main section.step.show{display:block}
 <div class="inbrief"><b>The model</b><p>Draw yesterday's close and today's open on the <strong>SPX</strong> chart. Watch what price does in the first 30 minutes. Wait for price to pull back to one of four fixed levels inside the gap. Enter on <strong>ES futures</strong> when a 2-minute candle confirms the turn.</p></div>
 <div class="grid c3">
   <div><div class="n">WHAT</div><h4>Chart SPX, trade ES</h4><p>SPX is the S&amp;P 500 index itself. You cannot buy it directly, so she places the order on MES, the micro S&amp;P 500 futures contract. She says levels drawn on ES only "work like 30–40% of the time".</p></div>
-  <div><div class="n">WHEN</div><h4>9:30 – about 11:30 AM</h4><p>She streams 9:00–11:30. Most of her entries come between 9:45 and 11:00. She is done by lunch.</p></div>
+  <div><div class="n">WHEN</div><h4>9:30 – about 11:30 AM</h4><p>She streams 9:00–11:30 and most entries come between 9:45 and 11:00. She says the levels work "all day from 9:30 to 4:00"; stopping before lunch is her schedule, not a rule of the model.</p></div>
   <div><div class="n">HOW</div><h4>Four levels, one signal</h4><p>25%, 50%, 62% and 70.5% of the gap. One entry signal: a 2-minute candle called a CISD (you will learn it in step 7).</p></div>
 </div>
 <h3>The six things she does every morning</h3>
 <div class="flow">
   <div><div class="t">before 9:30</div><div class="s">1</div><h4>Set the bias</h4><p>Is the bigger picture pointing up or down?</p></div>
   <div><div class="t">9:30</div><div class="s">2</div><h4>Measure the gap</h4><p>Under 10 points: no trade today.</p></div>
-  <div><div class="t">9:30–10:00</div><div class="s">3</div><h4>Watch liquidity</h4><p>Did price take the nearest high or low?</p></div>
+  <div><div class="t">9:30–10:00</div><div class="s">3</div><h4>Watch liquidity</h4><p>Does price take the nearest high or low in the first 30 minutes?</p></div>
   <div><div class="t">by 10:00</div><div class="s">4</div><h4>Pick the setup</h4><p>That answer decides Playbook A, B or C.</p></div>
   <div><div class="t">9:45–11:00</div><div class="s">5</div><h4>Wait for the signal</h4><p>A 2-minute CISD in the zone, then enter.</p></div>
   <div><div class="t">until ~11:30</div><div class="s">6</div><h4>Manage, then stop</h4><p>Take profit early. Two losses and done.</p></div>
@@ -405,12 +470,13 @@ main section.step.show{display:block}
 <b class="t">Her numbers are self-reported and do not agree with each other</b>
 <ul class="plain">
 <li>"This strategy has 60% win rate" (Sep 16).</li>
-<li>"63% win rate, 1.3R average, over 12 months" (Sep 8).</li>
-<li>"76% on the SPX model over 12 months" (Sep 29).</li>
+<li>About 63% wins, 1.3R average, "for this year" (Sep 8 and Sep 17). "My risk reward used to be two R… now 1.3R" (Sep 3).</li>
+<li>"76%" on the SPX model (Sep 29), but in the same breath: "overall my win rate for this year less than 70%… because I still take B setups."</li>
+<li>"Less than 70%. But more than 65" (Oct 2). "I don't even have 65% win rate" (Sep 17).</li>
 </ul>
-<p>Plan around <strong>about 6 wins in 10 trades, each win about 1–1.3 times the size of a loss</strong>. That only works if you follow the rules. In the 29 sessions reviewed for this course, almost every loss she took came from breaking one of her own rules.</p>
+<p>Plan around <strong>about 6 wins in 10 trades, each win about 1–1.3 times the size of a loss</strong>. That only works if you follow the rules. In the 29 sessions reviewed for this course, almost every loss she took came from breaking one of her own rules. Her written lesson adds: "Nothing works 100% of the time."</p>
 </div>
-<p>Where the model came from: she first built it for ES and options. On Sep 17 she said it "stopped working [on ES] almost two years ago", so she tested other charts and found only SPX levels held. Her explanation: SPX does not trade overnight, so its gap is clean.</p>
+<p>Where the model came from: she first built it for ES. On Sep 17 she said it "stopped working [on ES] almost two years ago", so she tested other charts and found only SPX levels held; it did not work on SPY either. Her explanation (Sep 24): SPX does not trade overnight, so its gap is clean. "I backtested. I cannot explain why it goes to OTE, just it works like this." (Aug 25)</p>
 <div class="do" data-step="s1"><h3>Do this now</h3><ul class="check">
 <li><input type="checkbox" id="t-s1-1"><label for="t-s1-1">Write the model in one sentence in your own words, on paper or in a notes app.</label></li>
 <li><input type="checkbox" id="t-s1-2"><label for="t-s1-2">Write down the six morning steps from memory.</label></li>
@@ -441,16 +507,19 @@ main section.step.show{display:block}
 <div class="tbl"><table>
 <tr><th>Setting</th><th>Set it to</th></tr>
 <tr><td>Levels</td><td><span class="k">0.25</span> <span class="k">0.5</span> <span class="k">0.62</span> <span class="k">0.705</span> plus 0 and 1. Turn the others off.</td></tr>
-<tr><td>Direction</td><td>0% on the <strong>9:30 open</strong>, 100% on <strong>yesterday's close</strong>. The 25% line must be the one nearest the open. If it is the other way round, switch "Invert anchors".</td></tr>
-<tr><td>Yesterday's close</td><td>The <strong>4:08 PM</strong> price. "I always backtested with 4:08 closure."</td></tr>
+<tr><td>Invert anchors</td><td><strong>On.</strong> By default the indicator puts 0% on yesterday's close. She measures from the other end: 0% on the <strong>9:30 open</strong>, 100% on <strong>yesterday's close</strong>, so the 25% line is the one nearest the open.</td></tr>
+<tr><td>Session end</td><td><strong>16:08</strong>, timezone America/New_York. "Don't put four here. Put 4:08… a real deal closure at 4:08" (Sep 2). Her written lesson just says "4:00 PM close", but her live levels use 4:08, so use 4:08 to match her charts.</td></tr>
+<tr><td>Confirmation timeframe</td><td><strong>2 minutes.</strong> A level turns red only when a candle on this timeframe closes through it, which matches her 2-minute close rule for 70.5%.</td></tr>
+<tr><td>Auto-remove balanced gaps</td><td>On. Old gaps that are fully filled disappear, and the unfilled ones stay on the chart (you need them in steps 12–13).</td></tr>
 </table></div>
+<p class="src">Key Levels: set its timezone to America/New_York too. It also draws the 10:00 AM open, which you will use from step 6.</p>
 <figure><div class="frame"><img src="img/a26_entry705.jpg" alt="Her ES 2-minute chart with Key Levels next to NQ 30-minute candles"></div>
 <figcaption><b>Her screen, Aug 26, 9:53 AM.</b> Left: NQ. Right: ES 2-minute with the Key Levels indicator showing yesterday's high, the weekly open, the daily open, the midnight open and the overnight lows. The green/red box is one of her trades.</figcaption></figure>
 <div class="do" data-step="s2"><h3>Do this now</h3><ul class="check">
 <li><input type="checkbox" id="t-s2-1"><label for="t-s2-1">Create a free TradingView account if you don't have one.</label></li>
 <li><input type="checkbox" id="t-s2-2"><label for="t-s2-2">Open <span class="k">SPCFD:SPX</span> on the 2-minute timeframe.</label></li>
-<li><input type="checkbox" id="t-s2-3"><label for="t-s2-3">Add "LumiTraders RTH Gap Fibs" and set the levels to 0.25, 0.5, 0.62, 0.705.</label></li>
-<li><input type="checkbox" id="t-s2-4"><label for="t-s2-4">Check that the 25% line sits closest to the 9:30 open on today's gap.</label></li>
+<li><input type="checkbox" id="t-s2-3"><label for="t-s2-3">Add "LumiTraders RTH Gap Fibs" and set the levels to 0.25, 0.5, 0.62, 0.705, session end 16:08, confirmation timeframe 2 minutes.</label></li>
+<li><input type="checkbox" id="t-s2-4"><label for="t-s2-4">Switch "Invert anchors" on and check that the 25% line sits closest to the 9:30 open on today's gap.</label></li>
 <li><input type="checkbox" id="t-s2-5"><label for="t-s2-5">Add "LumiTraders Key Levels" to the same chart.</label></li>
 <li><input type="checkbox" id="t-s2-6"><label for="t-s2-6">Open MES1! and NQ1! 2-minute charts next to it (a 3-chart layout, or separate tabs).</label></li>
 </ul></div>
@@ -465,12 +534,12 @@ main section.step.show{display:block}
 <p>She uses trading slang from a teacher called ICT. You only need these eight words.</p>
 <div class="grid c2">
   <div><div class="n">1 · GAP</div><h4>RTH gap</h4><p>The empty space on the SPX chart between yesterday's close (4:08 PM) and today's open (9:30 AM). RTH means "regular trading hours".</p></div>
-  <div><div class="n">2 · LIQUIDITY</div><h4>BSL and SSL</h4><p>Obvious highs and lows where many traders have stop orders. A high is buy-side liquidity (BSL), a low is sell-side liquidity (SSL). Only highs and lows you can see on the 15-minute chart count.</p></div>
+  <div><div class="n">2 · LIQUIDITY</div><h4>BSL and SSL</h4><p>Obvious highs and lows where many traders have stop orders. A high is buy-side liquidity (BSL), a low is sell-side liquidity (SSL). For this model she only counts a clear swing you can see on the 15-minute chart or higher (step 6 lists which ones).</p></div>
   <div><div class="n">3 · SWEEP</div><h4>"Taking" liquidity</h4><p>When price pokes past one of those highs or lows, it has "taken" or "swept" it. Whether this happens in the first minutes decides which setup you trade.</p></div>
   <div><div class="n">4 · OTE</div><h4>Optimal trade entry</h4><p>The deep zone of the gap, between 62% and 70.5%.</p></div>
-  <div><div class="n">5 · CISD</div><h4>Change in state of delivery</h4><p>Her entry signal: a 2-minute candle closes past the start of the last run of opposite candles. In plain words, the 2-minute chart shows that price has turned. Step 7 teaches it.</p></div>
-  <div><div class="n">6 · ORDER BLOCK</div><h4>OB and its 50%</h4><p>The box drawn around those candles. Its middle line (the 50%, also called "mean threshold") must hold, or the signal is failing.</p></div>
-  <div><div class="n">7 · NQ / DECOUPLED</div><h4>The second opinion</h4><p>NQ is the Nasdaq futures. Normally it moves with ES. When one goes up and the other down, she calls the market "decoupled" and stays out.</p></div>
+  <div><div class="n">5 · CISD</div><h4>Change in state of delivery</h4><p>Her entry signal: at a level, a 2-minute candle closes past the run of opposite candles that started at that level. In plain words, the 2-minute chart shows that price has turned. Step 7 teaches it.</p></div>
+  <div><div class="n">6 · ORDER BLOCK</div><h4>OB and its 50%</h4><p>The box drawn around that run of candles. "It's not two different words": the OB and the CISD are the same event. Its middle line (the 50%, also called "mean threshold") must hold, or the signal is failing.</p></div>
+  <div><div class="n">7 · NQ / DECOUPLED</div><h4>The second opinion</h4><p>NQ is the Nasdaq futures. Normally it moves with ES. When ES is above its midnight open and NQ below (or the other way round), she calls the market "decoupled". Then she keeps funded accounts out, or trades half size on a practice account.</p></div>
   <div><div class="n">8 · R</div><h4>Risk unit</h4><p>1R is what you lose if your stop is hit. A +1.5R trade made one and a half times what it risked.</p></div>
 </div>
 <div class="do" data-step="s3"><h3>Do this now</h3><ul class="check">
@@ -527,17 +596,18 @@ main section.step.show{display:block}
 <p>Many days she does not trade at all. These filters decide it.</p>
 <div class="tbl"><table>
 <tr><th>Situation</th><th>What she does</th></tr>
-<tr><td><span class="pill r">Gap under 10 points</span></td><td>No trade with this model. "Anything less than 10 points it's most likely going to be chop session."</td></tr>
+<tr><td><span class="pill r">Gap under 10 points</span></td><td>No Playbook A or B. "10 points gap, that's at least what I want… Two, three points for me is like no gap" (Sep 2). Only Playbook C (step 10) or an older gap (step 13), at small size. Be careful: "I take most losses when S&amp;P doesn't have gap" (Aug 27).</td></tr>
 <tr><td><span class="pill g">Gap 10–60 points</span></td><td>Normal day. 20–40 points is ideal.</td></tr>
-<tr><td><span class="pill a">Gap over 60 points</span></td><td>She has not tested these. Very small size only.</td></tr>
-<tr><td><span class="pill r">ES and NQ disagree</span></td><td>Stay out, or tiny size on a practice account. "Decoupled equals stay away."</td></tr>
-<tr><td><span class="pill a">Big news (FOMC), Friday</span></td><td>Smaller size, or no trade. "Most biggest losses happens on Friday."</td></tr>
-<tr><td><span class="pill a">Trend day</span></td><td>Price runs one way with tiny pullbacks: never trade against it. "When we have trend day I cannot win."</td></tr>
+<tr><td><span class="pill a">Gap over 60 points</span></td><td>She has not backtested these. Smaller size. On big gaps she accepts a reaction slightly before 25% as a B setup.</td></tr>
+<tr><td><span class="pill r">ES and NQ disagree</span></td><td>"Decoupled equals stay away." She keeps funded accounts out, or trades half size on a practice account: "Better to protect your accounts when market is decoupled. Even if your model is here" (Sep 15).</td></tr>
+<tr><td><span class="pill a">News at 10:00</span></td><td>Do not trade before the 10:00 news. Wait for the 10:00 candle to close: the first minutes are "either manipulation or super choppy".</td></tr>
+<tr><td><span class="pill r">FOMC day</span></td><td>Half risk, or no morning trade. Her Sep 16 FOMC loss is in the reference table.</td></tr>
+<tr><td><span class="pill a">Trend day</span></td><td>Price runs one way with tiny pullbacks: never trade against it ("never ever"). A hint before the open: the midnight open was tested between 3 and 7 AM and price then opens far away from it.</td></tr>
 </table></div>
 <h3>Setting the bias (which way you expect the market to go)</h3>
 <ol class="steps">
 <li><b class="h">Look at the daily chart</b><p>Where is price heading? Toward yesterday's high, an old unfilled gap, or last week's high or low?</p></li>
-<li><b class="h">Compare ES and NQ with their opening prices</b><p>Use the Key Levels indicator. If both are above the daily open and the midnight open, the day leans up. Both below: leans down. One above and one below: decoupled, stay careful.</p></li>
+<li><b class="h">Compare ES and NQ with their opening prices</b><p>Use the Key Levels indicator: the midnight open (NYMO), the daily open (6 PM the evening before, on futures) and the weekly open. If both ES and NQ are holding above them, the day leans up. Both below: leans down. One above and one below: decoupled. Her PO3 lesson warns that just being above or below an open "means nothing" until a candle has closed beyond it and price stays away from it.</p></li>
 <li><b class="h">Write two plans</b><p>One for "price does not take the nearest high/low" and one for "price takes it". You will learn both in steps 8 and 9.</p></li>
 </ol>
 <div class="do" data-step="s5"><h3>Do this now</h3><ul class="check">
@@ -548,22 +618,46 @@ main section.step.show{display:block}
 </section>
 
 <!-- ===================== STEP 6 ===================== -->
-<section class="step" id="s6" data-stage="1" data-title="The first 30 minutes" data-time="15 min">
+<section class="step" id="s6" data-stage="1" data-title="First 30 min + 10 AM open" data-time="25 min">
 <h2>The first 30 minutes choose the setup</h2>
-<div class="goal"><b>Goal</b><p>Answer her most important question at 9:30–10:00, and know which setup it points to.</p></div>
+<div class="goal"><b>Goal</b><p>Answer her most important question at 9:30–10:00, know which setup it points to, and use the 10:00 AM open as a filter.</p></div>
 <div class="part">Learn</div>
 <blockquote class="q">"Did we take near liquidity level first 15 minutes on S&amp;P? You need to answer this question before entering the trade."<cite>Aug 25 live stream</cite></blockquote>
-<p>At 9:30, find the nearest clear high (for a gap up) or low (for a gap down) beyond the open. A high or low only counts if you can see it on the 15-minute chart. Then simply watch. Since July she waits until <strong>10:00</strong> before acting.</p>
+<h3>Part 1 · Find the nearest liquidity</h3>
+<p>At 9:30, find the nearest clear high <em>above</em> the open (on a gap up) or the nearest clear low <em>below</em> the open (on a gap down). It counts if it is:</p>
+<ul class="plain">
+<li>a swing high or low you can clearly see on the <strong>15-minute chart or higher</strong> (30-minute, 1-hour);</li>
+<li>yesterday's high or low, equal highs or lows, or a London/Asia session high or low, but only if it also forms such a swing. Tiny 2-minute equal highs do not count (Oct 2).</li>
+</ul>
+<p>If price <strong>opens already beyond</strong> the level, that level was not "taken" in the first minutes; look for the next one. If there is nothing nearby ("middle of nowhere"), she defaults to the 25–50% plan but still accepts a reaction from the OTE (Sep 24).</p>
+<h3>Part 2 · Watch it until 10:00</h3>
+<p>Her written lesson uses the first 15 minutes. On stream she has extended it: "I used to use only first 15 minutes from 9:30 to 9:45 but… since July… I decide to extend time to 30 minutes… wait until 10… more safe" (Sep 25). So the rule this course uses is: <strong>taken between 9:30 and 10:00 → Playbook B. Not taken by 10:00 → Playbook A.</strong> The faster it happens, the cleaner the setup ("ideal before 10").</p>
+<div class="callout"><b class="t">Waiting is for deciding, not a ban on trading</b><p>Only the "not taken" answer needs the full 30 minutes. Once the high or low is taken, Playbook B can trigger straight away; a 2-minute close past 70.5% (Playbook C) never waits. In practice she entered before 10:00 on about half of the days reviewed. "No reason for 10 for today" (Sep 18).</p></div>
 <div class="tree">
 <div class="branches">
 <div class="branch"><div class="if">Price does NOT take it</div><div class="then">Playbook A</div><p>Expect a small pullback to 25–50%, then a move to take that high or low.</p></div>
 <div class="branch"><div class="if">Price takes it</div><div class="then">Playbook B</div><p>Expect a deep pullback to 62–70.5% (the OTE).</p></div>
 <div class="branch"><div class="if">Price crashes through 70.5%</div><div class="then">Playbook C</div><p>Expect the whole gap to fill, back to yesterday's close.</p></div>
 </div></div>
-<div class="callout"><b class="t">The rule she repeats most</b><p>"If it goes up without me, it goes up without me." If price never pulls back into the zone, there is no trade. Missing a move is fine. Chasing it is not.</p></div>
+<blockquote class="q">"First 15 minutes, something should happen. We either fail to take liquidity level or we're going to take near liquidity level."<cite>Aug 25 live stream</cite></blockquote>
+<div class="callout"><b class="t">The rule she repeats most</b><p>"Big huge bold rule number one. I'm trading my model only. If it goes up without me, it goes up without me because no model entry" (Oct 2). If price never pulls back into the zone, there is no trade. Missing a move is fine. Chasing it is not.</p></div>
+<h3>Part 3 · Mark the 10:00 AM open</h3>
+<p>At 10:00 a new 4-hour candle opens. Its opening price is her second filter, and the Key Levels indicator draws it for you. The idea from her 10 AM lesson:</p>
+<div class="grid c2">
+<div><div class="n">BULLISH CANDLE</div><h4>Open → Low → High → Close</h4><p>Price often dips below the 10:00 open first (the lower wick, a stop grab), then breaks back above it and builds the body. <strong>Look for longs only after a 2-minute candle body closes above the 10:00 open.</strong></p></div>
+<div><div class="n">BEARISH CANDLE</div><h4>Open → High → Low → Close</h4><p>Price often pokes above the 10:00 open first, then breaks back below it. <strong>Look for shorts only after a 2-minute candle body closes below the 10:00 open.</strong></p></div>
+</div>
+<ul class="plain">
+<li>A wick through the open proves nothing. She wants a body close, ideally with a strong candle, and price holding that side on the pullback.</li>
+<li>It is a filter, not an entry: "The 10:00 AM Open is not an automatic entry level." You still need the gap level and the 2-minute signal.</li>
+<li>Do not put your stop one tick beyond the 10:00 open. Put it where the trade idea is wrong (the swing).</li>
+<li>Once a trade is running, a strong break back through the 10:00 open is a warning: "10 a.m. open break means shift in structure for me, shift in bias" (Sep 17).</li>
+</ul>
+<div class="callout bad"><b class="t">What jumping ahead of the morning cost her</b><p>Aug 24: the low was taken in the first 15 minutes (a buy-toward-OTE day), but she shorted and lost $350. Sep 25: she sold before 10:00 with no 2-minute signal and lost $255. Both are in the losses table.</p></div>
 <div class="do" data-step="s6"><h3>Do this now</h3><ul class="check">
-<li><input type="checkbox" id="t-s6-1"><label for="t-s6-1">For your 5 past days: mark the nearest 15-minute high or low at 9:30.</label></li>
+<li><input type="checkbox" id="t-s6-1"><label for="t-s6-1">For your 5 past days: mark the nearest 15-minute high or low beyond the open at 9:30.</label></li>
 <li><input type="checkbox" id="t-s6-2"><label for="t-s6-2">For each day, note whether it was taken before 10:00, and which playbook (A, B or C) that points to.</label></li>
+<li><input type="checkbox" id="t-s6-3"><label for="t-s6-3">On the same days, mark the 10:00 AM open. Which side of it did price build its body on by 11:00?</label></li>
 </ul></div>
 <div class="check-q" data-step="s6"></div>
 </section>
@@ -579,24 +673,32 @@ main section.step.show{display:block}
 <div class="frame"><svg viewBox="0 0 900 430" role="img" aria-label="CISD diagram"></svg></div>
 <figcaption><ol>
 <li data-n="1">Price reaches the level (for example 25% of the gap).</li>
-<li data-n="2">Find the <em>first</em> <span class="vup">red (down)</span><span class="vdn">green (up)</span> candle that touched the level. Draw a line at its open price. That is the CISD line.</li>
+<li data-n="2">Find the run of <span class="vup">red (down)</span><span class="vdn">green (up)</span> candles that <em>starts with the first candle that touched the level</em>. The open of that first candle is the CISD line. The box around the run is the order block.</li>
 <li data-n="3">Wait for a 2-minute candle to <strong>close</strong> <span class="vup">above</span><span class="vdn">below</span> that line with a strong body. That is the signal.</li>
-<li data-n="4">Enter at the open of the next candle. Stop goes beyond the swing <span class="vup">low</span><span class="vdn">high</span>. The dashed box is the "order block"; its middle line (50%) must hold.</li>
+<li data-n="4">Enter at the open of the next candle. Stop goes beyond the swing <span class="vup">low</span><span class="vdn">high</span>. The box's middle line (50%) must hold.</li>
 </ol></figcaption>
 </figure>
+<p>Why start the run at the level? Her lesson: long runs of same-colour candles sometimes cover a whole range, and waiting for price to close past all of them "would not make sense because we would likely miss most of the move". So the order block only begins at the candle that tapped the level. If the candles have long wicks, draw the box around their <strong>bodies</strong> only; with small wicks, use the full candles.</p>
 <h3>Five rules for a good signal</h3>
 <ol class="rules5">
-<li><div><strong>It starts at the level.</strong><span>Use the first candle that touched the level, not a random run of candles.</span></div></li>
-<li><div><strong>It is a close, with a strong candle.</strong><span>A wick poking through does not count. A slow, grinding turn is where she loses: "most my losses happens in this kind of situation."</span></div></li>
-<li><div><strong>The 50% line holds.</strong><span>If price later closes back through the middle of the box, the signal is failing.</span></div></li>
-<li><div><strong>It shows on SPX.</strong><span>The signal must appear on the SPX chart, not just on ES.</span></div></li>
-<li><div><strong>Not a V, not from nowhere.</strong><span>A sharp V-shape or a turn in the middle of nowhere is not valid.</span></div></li>
+<li><div><strong>It starts at a level.</strong><span>A gap level (or another higher-timeframe level). "We cannot pick just random sequence." The run of candles begins with the first one that touched it.</span></div></li>
+<li><div><strong>It is a close, with a strong candle.</strong><span>A wick poking through does not count. She wants displacement and "fast delivery". A slow, grinding turn is where she loses: "most my losses happens in this kind of situation" (Aug 25).</span></div></li>
+<li><div><strong>The 50% line holds.</strong><span>"50% of order block tells me if it's high probability or low probability OB" (Sep 17). A clear close back through it means the signal is failing. If price comes back later (even hours later) and the 50% still holds, the block is still valid.</span></div></li>
+<li><div><strong>It shows on SPX.</strong><span>"We got closure on MES… never got this closure on SPX. We trade SPX" (Sep 17). The close must happen on the SPX chart, not just on ES.</span></div></li>
+<li><div><strong>Not a V, not from nowhere.</strong><span>A sharp V-shape or a turn in the middle of nowhere is not valid: "We can't reverse from nowhere."</span></div></li>
 </ol>
+<div class="callout"><b class="t">Good to know</b><ul class="plain">
+<li>Only the 2-minute chart is backtested for this model; she never uses the 1-minute. (Earlier, until about March 2026, her posts on X used a 5-minute OB.)</li>
+<li>Her lessons also accept a 2-minute shift in structure or an inverted FVG as the turn signal. The CISD is the one she uses most and the one to learn first.</li>
+<li>If the first signal fails its 50%, a fresh one can form at the same level. A second try counts toward your two-loss limit (step 16).</li>
+</ul></div>
 <div class="figpair">
 <figure><div class="frame"><img src="img/ob_cisd.jpg" alt="Lesson diagram: OB/CISD line at the open of the first down candle at the level"></div><figcaption><b>Her lesson.</b> The blue line is the open of the first red candle at the level. The green candle closing above it is the signal.</figcaption></figure>
+<figure><div class="frame"><img src="img/ob_firsttouch.jpg" alt="Lesson diagram: the order block begins with the first candle that taps the higher-timeframe level"></div><figcaption><b>The run starts at the level.</b> The grey box covers the down candles from the one that tapped the green level. The dashed line is its 50%.</figcaption></figure>
+<figure><div class="frame"><img src="img/ob_bodies.jpg" alt="Lesson chart: order block drawn on candle bodies when wicks are long"></div><figcaption><b>Long wicks: use the bodies.</b> The box is drawn from the candle bodies, not the wick tips.</figcaption></figure>
 <figure><div class="frame"><img src="img/ob_invalid.jpg" alt="Lesson diagram: order block failing"></div><figcaption><b>A failing signal.</b> Left: price closes back above the middle of the box (warning). Right: the setup fails.</figcaption></figure>
 </div>
-<figure><div class="frame"><img src="img/a25_model_onchart.jpg" alt="Her live 2-minute CISD short on SPX on Aug 25"></div><figcaption><b>Live, Aug 25.</b> A real signal on her SPX chart: the blue "2m CISD" line, the red stop box above, the green target box below.</figcaption></figure>
+<figure><div class="frame"><img src="img/a25_model_onchart.jpg" alt="Her live 2-minute CISD short on SPX on Aug 25"></div><figcaption><b>Live, Aug 25.</b> A real signal on her SPX chart: the blue "2m CISD" line, the red stop box above, the green target box below. She skipped this one on stream, and it then worked.</figcaption></figure>
 <div class="do" data-step="s7"><h3>Do this now</h3><ul class="check">
 <li><input type="checkbox" id="t-s7-1"><label for="t-s7-1">Open SPX 2-minute in TradingView "Replay" mode on a past morning.</label></li>
 <li><input type="checkbox" id="t-s7-2"><label for="t-s7-2">Find 5 signals at a gap level. For each, draw the CISD line and the box with its 50% line.</label></li>
@@ -615,7 +717,7 @@ main section.step.show{display:block}
 <div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
 <div class="frame"><svg viewBox="0 0 900 450" role="img" aria-label="Playbook A diagram"></svg></div>
 <figcaption><ol>
-<li data-n="1">Price fails to reach the <span class="vup">high above</span><span class="vdn">low below</span> in the first 15–30 minutes.</li>
+<li data-n="1">Price fails to reach the <span class="vup">high above</span><span class="vdn">low below</span> by 10:00.</li>
 <li data-n="2">It pulls back into 25–50% of the gap (the blue zone).</li>
 <li data-n="3">The 2-minute signal: a candle closes <span class="vup">above</span><span class="vdn">below</span> the blue CISD line.</li>
 <li data-n="4"><span class="vup">Buy</span><span class="vdn">Sell</span> at the next candle's open. Red box = stop. Green box = target: the high or low that was not taken.</li>
@@ -623,14 +725,15 @@ main section.step.show{display:block}
 </figure>
 <div class="play">
 <div class="row"><div>When</div><div>The nearest high/low was <strong>not</strong> taken by 10:00, and the gap is 10+ points.</div></div>
-<div class="row"><div>Where</div><div>25–50% of the gap. Price must really get there. "Not being one tick above or one tick below… it's all about enter this area."</div></div>
-<div class="row"><div>Entry</div><div>The 2-minute signal (step 7), at the next candle's open.</div></div>
+<div class="row"><div>Where</div><div>25–50% of the gap. For full size, price must trade into this area: "Not being one tick above or one tick below… it's all about enter this area" (Sep 16).</div></div>
+<div class="row"><div>Entry</div><div>The 2-minute signal (step 7), at the next candle's open. On the right side of the 10:00 open once it is past 10:00.</div></div>
 <div class="row"><div>Stop</div><div>Beyond the swing low (for a buy) or swing high (for a sell).</div></div>
 <div class="row"><div>Target</div><div>The high or low that was not taken. Take some profit at the 9:30 open on the way.</div></div>
 </div>
+<div class="callout warn"><b class="t">What if price turns just before 25%?</b><p>Her sources do not agree exactly, so here is how she actually handles it. Her written lesson says "Reaction from 25% doesn't need perfection — the CISD is what turns the level into a trade." On stream, a turn a few points short of 25% is a <strong>B setup</strong>: she takes it only at reduced size, mostly on big gaps (Sep 17: 3 micros instead of 5; Oct 2). On a normal gap she skipped a one-tick miss (Sep 16). Rule for you: full size only inside the zone; a near-miss with a strong signal is half size or a skip.</p></div>
 <div class="figpair">
 <figure><div class="frame"><img src="img/lesson_a_shallow1.jpg" alt="Lesson chart: pullback to 25 percent, signal, run to the high"></div><figcaption><b>Her lesson, Jul 21.</b> Gap up, the high (BSL) not taken. Pullback to 0.25, signal at 7,473, run to the high at 7,495.</figcaption></figure>
-<figure><div class="frame"><img src="img/s17_plan.jpg" alt="Her live plan on Sep 17 with a key area at 25 to 50 percent"></div><figcaption><b>Live, Sep 17.</b> A 100-point gap up, equal highs (EQH) above not taken. Her plan: drop into the "Key Area" (25–50%), then buy toward the highs. She took two buys, +10 points each.</figcaption></figure>
+<figure><div class="frame"><img src="img/s17_plan.jpg" alt="Her live plan on Sep 17 with a key area at 25 to 50 percent"></div><figcaption><b>Live, Sep 17.</b> A 100-point gap up, equal highs (EQH) above not taken. Her plan: drop into the "Key Area" (25–50%), then buy toward the highs. Price turned about 5 points before 25%, so both of her buys were B-grade (smaller size), +10 points each. Step 17 walks through it.</figcaption></figure>
 </div>
 <div class="do" data-step="s8"><h3>Do this now</h3><ul class="check">
 <li><input type="checkbox" id="t-s8-1"><label for="t-s8-1">In replay, find 3 past days where the high/low was not taken early.</label></li>
@@ -644,7 +747,8 @@ main section.step.show{display:block}
 <h2>Playbook B: the deep pullback</h2>
 <div class="goal"><b>Goal</b><p>Trade the day when price <strong>does</strong> take the nearest high or low early.</p></div>
 <div class="part">Learn</div>
-<p>Price takes the nearest high (or low) in the first 15 minutes. That was a fake move to grab stop orders. Now she expects a deep pullback into the gap, all the way to 62–70.5%. You can trade that move, and sometimes the bounce after it.</p>
+<p>Price takes the nearest high (or low) soon after the open. That was a fake move to grab stop orders. Now she expects a deep pullback into the gap, all the way to 62–70.5%. You can trade that move, and sometimes the bounce after it. "We're looking for 62% only if we took liquidity level" (Sep 17).</p>
+<blockquote class="q">"Near liquidity taken first 15 minutes. You anticipate to get pulled back to OTE. Classic example, textbook example."<cite>Aug 26 live stream</cite></blockquote>
 <figure class="dg" data-dg="b">
 <div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
 <div class="frame"><svg viewBox="0 0 900 450" role="img" aria-label="Playbook B diagram"></svg></div>
@@ -656,15 +760,17 @@ main section.step.show{display:block}
 </ol></figcaption>
 </figure>
 <div class="play">
-<div class="row"><div>When</div><div>The nearest 15-minute high/low was taken within 15 minutes of 9:30.</div></div>
-<div class="row"><div>Trade 1</div><div>2-minute signal after the sweep. Stop beyond the sweep. Target 62%. Done there.</div></div>
-<div class="row"><div>Not valid</div><div>If price only pulls back to 50%: "wait for OTE or no trades."</div></div>
-<div class="row"><div>Trade 2</div><div>Optional, for later. A new signal at the OTE toward the next big level.</div></div>
+<div class="row"><div>When</div><div>The nearest high/low (step 6) was taken between 9:30 and 10:00. The sooner, the better.</div></div>
+<div class="row"><div>Trade 1</div><div>2-minute signal after the sweep, back into the gap. Stop beyond the sweep. Target 62%. Done there. No need to wait for 10:00.</div></div>
+<div class="row"><div>Not valid</div><div>If price only pulls back to 50% and turns: "wait for OTE or no trades" (Sep 11). "A plus… is from 62"; shallower is a B setup at most.</div></div>
+<div class="row"><div>Trade 2</div><div>Optional, for later. A new signal in the OTE toward the next big level, but only if price has not already reached a significant higher-timeframe level. While price holds 70.5%, the turn is valid: "As long as SPX holds 70.5% – reversal is valid." If it closes through 70.5%, it becomes Playbook C instead.</div></div>
 </div>
+<p class="src">Note: her written lesson calls 62–70.5% the OTE. In two posts on X she calls it 50–70.5%. Use 62–70.5% as the entry zone, as in her lesson and streams.</p>
 <div class="figpair">
 <figure><div class="frame"><img src="img/lesson_b_ote_short.jpg" alt="Lesson chart: high swept, signal, sell to the OTE"></div><figcaption><b>Her lesson.</b> High swept at the open, signal at 7,504, sell into 62–70.5%.</figcaption></figure>
-<figure><div class="frame"><img src="img/s10_recap_entry.jpg" alt="Her live buy on Sep 10 after the low was swept"></div><figcaption><b>Live, Sep 10.</b> Gap down 40 points. The low (SSL) was taken in the first 15 minutes, so she bought aiming for the OTE above. Price stalled at 25%, where she took profit.</figcaption></figure>
+<figure><div class="frame"><img src="img/s10_recap_entry.jpg" alt="Her live buy on Sep 10 after the low was swept"></div><figcaption><b>Live, Sep 10.</b> Gap down 40 points, also overlapping an unfilled Aug 3 gap. The low (SSL) was taken in the first 15 minutes, so she bought aiming for the OTE above. Price stalled at 25%, where she took profit.</figcaption></figure>
 </div>
+<figure><div class="frame"><img src="img/lesson_b_two_trades.jpg" alt="Lesson chart: low swept at the open, long into the OTE, then short from the OTE"></div><figcaption><b>Her lesson: both trades on one morning.</b> Gap down, the low (SSL) swept at the open. Trade 1: a 2-minute CISD long up into the gap's 62–70.5%. Trade 2: a new CISD short from that zone, running far below the open.</figcaption></figure>
 <div class="do" data-step="s9"><h3>Do this now</h3><ul class="check">
 <li><input type="checkbox" id="t-s9-1"><label for="t-s9-1">In replay, find 3 past days where the high/low was taken early.</label></li>
 <li><input type="checkbox" id="t-s9-2"><label for="t-s9-2">Mark the sweep, the signal, and whether price reached 62%.</label></li>
@@ -677,21 +783,23 @@ main section.step.show{display:block}
 <h2>Playbook C: the full fill</h2>
 <div class="goal"><b>Goal</b><p>Recognise when the gap is going to fill completely, and trade with it.</p></div>
 <div class="part">Learn</div>
-<p>Sometimes price does not stop in the OTE. If a 2-minute candle <strong>closes</strong> past 70.5%, she expects price to go all the way back to yesterday's close, and usually a bit further. She says this happens "nine of 10 times".</p>
+<p>Sometimes price does not stop in the OTE. If a 2-minute candle <strong>closes</strong> past 70.5%, she expects price to go all the way back to yesterday's close, and usually on to the next high or low. On stream she says this happens "nine of 10 times" (Sep 18). Her written lesson is more careful: it calls it "a continuation trade" and reminds you that "price does not seek to fill gaps", it seeks balance. Treat "nine of 10" as her impression, not a tested number. She calls C her "backtested continuation setup", and it is the one setup she still trades on gaps under 10 points.</p>
 <figure class="dg" data-dg="c">
 <div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
 <div class="frame"><svg viewBox="0 0 900 450" role="img" aria-label="Playbook C diagram"></svg></div>
 <figcaption><ol>
 <li data-n="1">Price runs into the OTE without stopping.</li>
 <li data-n="2">A 2-minute candle <strong>closes</strong> <span class="vup">below</span><span class="vdn">above</span> 70.5%. No other signal is needed.</li>
-<li data-n="3">Enter on that close. Stop beyond 50% (or 25% to be safer). Target 1: yesterday's close. Target 2: the next <span class="vup">low</span><span class="vdn">high</span> beyond it.</li>
+<li data-n="3">Enter on that close, or on a pullback to 70.5%. Stop beyond 50%. Target 1: yesterday's close. Target 2: the next <span class="vup">low</span><span class="vdn">high</span> beyond it.</li>
 </ol></figcaption>
 </figure>
 <div class="play">
-<div class="row"><div>Trigger</div><div>A 2-minute candle <strong>closes</strong> past 70.5%. A wick does not count. Her indicator turns the line red.</div></div>
-<div class="row"><div>Entry</div><div>On the close. If price is already close to yesterday's close (small reward), wait for it to come back to 70.5% first.</div></div>
-<div class="row"><div>Stop</div><div>Beyond 50% of the gap, or 25% to be safer. On a gap under 10 points, beyond the whole gap.</div></div>
-<div class="row"><div>Wrong if</div><div>Price closes back through 70.5% or 25% with a strong candle. Get out.</div></div>
+<div class="row"><div>Trigger</div><div>A 2-minute candle <strong>closes</strong> past 70.5%. A wick does not count. Her indicator turns the line red (if its confirmation timeframe is set to 2 minutes).</div></div>
+<div class="row"><div>Entry</div><div>Two ways. <strong>On the close</strong>, if there is still at least 1R of room to yesterday's close. <strong>On the retest</strong>: price comes back to 70.5%, holds it, and a 2-minute signal forms there (this is how her lesson charts enter). "No reason to short here… risk reward going to be garbage. Let's wait for retracement to 70.5% and trade reaction" (Sep 18).</div></div>
+<div class="row"><div>Stop</div><div>Depends on gap size. Big gap: beyond 50%. Small gap: beyond 25% or the open. Gap under 10 points: beyond the whole gap.</div></div>
+<div class="row"><div>Targets</div><div>Take a first profit at about 1R or yesterday's close, whichever comes first. On Aug 28 she did not: she was "holding 700" in open profit and finished with $313. Runner: the nearest high or low beyond the gap.</div></div>
+<div class="row"><div>Wrong if</div><div>Price closes back through 50% with a strong candle: her lesson says 50% must hold after the break. Get out.</div></div>
+<div class="row"><div>Careful</div><div>A gap that fills in the first minute or two at the open (Sep 4) leaves no clean trade. NQ does not need to agree for this one: "validate shorts without waiting for NQ" (Sep 10).</div></div>
 </div>
 <div class="figpair">
 <figure><div class="frame"><img src="img/lesson_c_break_short.jpg" alt="Lesson chart: close below 70.5 percent, sell to the low"></div><figcaption><b>Her lesson, sell.</b> Close below 0.705, stop above 0.5, run to the low.</figcaption></figure>
@@ -710,16 +818,22 @@ main section.step.show{display:block}
 <h2>Playbook D: after the gap fills</h2>
 <div class="goal"><b>Goal</b><p>Know the follow-up trades once Playbook C is finished.</p></div>
 <div class="part">Learn</div>
-<p>After the gap fills and price takes the next high or low, the move often turns around. She trades that turn in two steps, each with its own signal.</p>
+<p>After the gap fills and price takes the next high or low, the move often turns around. She trades that turn in two steps, each with its own signal. Her lesson adds one condition: the main higher-timeframe target in the new direction must still be open (not yet reached). Otherwise price may just stay inside the gap for the rest of the day.</p>
 <figure class="dg" data-dg="d">
 <div class="fighead"><span class="tag">Diagram</span><div class="seg" role="group" aria-label="Gap direction"><button type="button" aria-pressed="true" data-dir="up">Gap up</button><button type="button" aria-pressed="false" data-dir="dn">Gap down</button></div></div>
 <div class="frame"><svg viewBox="0 0 900 450" role="img" aria-label="Playbook D diagram"></svg></div>
 <figcaption><ol>
 <li data-n="1">The gap is filled and the <span class="vup">low</span><span class="vdn">high</span> beyond it is taken.</li>
 <li data-n="2">A 2-minute signal the other way. First trade, target: 25% of the gap.</li>
-<li data-n="3">A 2-minute close back through 25%. Second trade, target: the next big level.</li>
+<li data-n="3">A 2-minute close back through 25%. Second trade, stop beyond the OTE, target: the next big level.</li>
 </ol></figcaption>
 </figure>
+<ul class="plain">
+<li>The first target, 25%, is near today's open, so trade 1 means price travels back across almost the whole gap. Take profit there.</li>
+<li>If price shows no reaction at 25%, stay away (Aug 26).</li>
+<li>Her flip rule (Aug 28): a strong close back through 25% cancels any trade against it and becomes the second trade.</li>
+<li>Her own lesson example enters trade 2 at about 12:05, so don't rule it out just because it is after 11:30.</li>
+</ul>
 <div class="figpair">
 <figure><div class="frame"><img src="img/lesson_d_cisd.jpg" alt="Lesson chart: after the fill, the signal"></div><figcaption><b>Her lesson, Jul 31, step 2.</b> Gap filled, the low at 7,402 taken, signal at 7,431.</figcaption></figure>
 <figure><div class="frame"><img src="img/lesson_d_htf.jpg" alt="Lesson chart: close above 25 percent, buy to the next level"></div><figcaption><b>Step 3.</b> Close above 0.25, buy to the bigger level at 7,499.</figcaption></figure>
@@ -745,7 +859,12 @@ main section.step.show{display:block}
 <li data-n="3">Price reaches 25–50% of the shared area and gives a 2-minute signal. Trade away from it.</li>
 </ol></figcaption>
 </figure>
-<figure><div class="frame"><img src="img/s24_b_cisd_ote.jpg" alt="Her live chart Sep 24 at 10:15 with price at the OTE"></div><figcaption><b>Live, Sep 24.</b> An overlap day. Price came up into 62–70.5% and gave a signal (blue line). You will follow this whole day in step 17.</figcaption></figure>
+<figure><div class="frame"><img src="img/lesson_e_overlap_fibs.jpg" alt="Lesson chart, Jul 23: today's gap down opens inside an older gap; 25 and 50 percent drawn on the overlap only"></div><figcaption><b>Her lesson, Jul 23.</b> Today's gap down (right) opened inside the unfilled part of the Jul 21 gap (the long grey band). The blue box is the shared area, with 25% and 50% drawn on it only. Price bounced into its 25%, turned, and fell all morning.</figcaption></figure>
+<ul class="plain">
+<li>Use only the <strong>unfilled</strong> part of the old gap. The indicator shades it and draws the overlap box for you; the box shrinks as the old gap fills.</li>
+<li>Entry, stop and target work as in Playbook A: a 2-minute signal at 25–50% of the overlap, stop beyond the swing, target away from the gap.</li>
+</ul>
+<figure><div class="frame"><img src="img/s24_b_cisd_ote.jpg" alt="Her live chart Sep 24 at 10:15 with price at the OTE"></div><figcaption><b>Live, Sep 24.</b> An overlap day, but note what she actually traded: a reaction from the OTE (62–70.5%) of <em>today's</em> gap, not from the overlap levels. Overlap days make her more confident; they don't replace the normal levels. You will follow this day in step 17.</figcaption></figure>
 <div class="do" data-step="s12"><h3>Do this now</h3><ul class="check">
 <li><input type="checkbox" id="t-s12-1"><label for="t-s12-1">Turn on old gaps in the RTH Gap Fibs indicator and find one day where today's gap overlapped an old one.</label></li>
 </ul></div>
@@ -753,15 +872,16 @@ main section.step.show{display:block}
 </section>
 
 <!-- ===================== STEP 13 ===================== -->
-<section class="step" id="s13" data-stage="3" data-title="F · Old gaps" data-time="10 min">
+<section class="step" id="s13" data-stage="3" data-title="F · Old gaps" data-time="15 min">
 <h2>Playbook F: old gaps and unfinished moves</h2>
-<div class="goal"><b>Goal</b><p>Know what she does when today's gap is too small.</p></div>
+<div class="goal"><b>Goal</b><p>Use old unfilled gaps every day, and know what she does when today's gap is too small.</p></div>
 <div class="part">Learn</div>
+<p>Old gaps that never filled stay on her chart. Her lesson: "the 25% and OTE levels of old RTH gaps will offer strong reactions." She uses them every day, not only on small-gap days: as places where price may turn, and as profit targets (on Sep 1 she took profit at the 62% of an old gap).</p>
 <div class="grid c2">
-<div><div class="n">OLD GAP</div><h4>Today's gap is under 10 points</h4><ul><li>She uses an older unfilled SPX gap instead.</li><li>Its 25–50% is the entry zone, and its 70.5% is where the idea is wrong.</li><li>Example, Sep 8: a 1-point gap. She bought from 25–50% of an old gap and made 1R.</li></ul></div>
-<div><div class="n">UNFINISHED MOVE</div><h4>"Delayed delivery"</h4><ul><li>If yesterday's setup ran out of time, today's open may finish it.</li><li>She treats this as a weaker (B+) setup: smaller size.</li></ul></div>
+<div><div class="n">OLD GAP</div><h4>Today's gap is under 10 points</h4><ul><li>She trades from an older unfilled SPX gap instead.</li><li>Entry: a 2-minute signal at its 25–50% or its OTE.</li><li>Example, Sep 8: a 1-point gap. She bought from 25–50% of an old gap, stop beyond its 70.5%, and made 1R.</li><li>Be careful on these days: "I take most losses when S&amp;P doesn't have gap."</li></ul></div>
+<div><div class="n">UNFINISHED MOVE</div><h4>"Delayed delivery"</h4><ul><li>If yesterday's setup ran out of time, today's open may finish it.</li><li>Example, Sep 30: she bought on a 2-minute close back above <em>yesterday's</em> 25%.</li><li>She treats this as a weaker (B+) setup: smaller size.</li></ul></div>
 </div>
-<figure><div class="frame"><img src="img/lesson_unfilled1.jpg" alt="Lesson chart: old unfilled gaps react later"></div><figcaption><b>Old gaps stay on the chart.</b> "These gaps can act as strong magnets for price."</figcaption></figure>
+<figure><div class="frame"><img src="img/lesson_unfilled1.jpg" alt="Lesson chart: old unfilled gaps react later"></div><figcaption><b>Old gaps stay on the chart.</b> "These gaps can act as strong magnets for price." Her X posts put it another way: "Price seeks balance, not fills."</figcaption></figure>
 <div class="check-q" data-step="s13"></div>
 </section>
 
@@ -807,9 +927,9 @@ main section.step.show{display:block}
 <ol class="steps">
 <li><b class="h">Trade at least 2 micros</b><p>So you can close part of the position early.</p></li>
 <li><b class="h">Take the first profit early</b><p>At +10 ES points ("my base hit"), or at the next SPX level: 25% of the gap, the 9:30 open, or 62%.</p></li>
-<li><b class="h">Only then move the stop to your entry (break-even)</b><p>"I never moved to break even while I was in trade without partial."</p></li>
-<li><b class="h">Move the stop further only at a level</b><p>"Simply because I'm in profit does not mean I need to trail… I trail when we hit key level."</p></li>
-<li><b class="h">Expect about 1–1.5R</b><p>"I almost never go for 2R" in the morning on funded accounts.</p></li>
+<li><b class="h">Only then move the stop to your entry (break-even)</b><p>"I never moved to break even while I was in trade without partial" (Sep 29). The one exception she makes: if NQ clearly turns against the trade, she moves to break-even early.</p></li>
+<li><b class="h">Move the stop further only at a level</b><p>"I trail when we hit key level" (Sep 14). Being in profit is not a reason by itself.</p></li>
+<li><b class="h">Expect about 1–1.3R</b><p>"My risk reward used to be two R… now 1.3R" (Sep 3). The reason: on prop-firm accounts she always takes a partial at about 1R (10 ES points) to protect the account. On her own money she lets trades run for 2–3R without partials.</p></li>
 </ol>
 <div class="callout bad"><b class="t">Her mistake on Sep 23</b><p>She moved her stop "without any significant reason". It was hit for +$15, then price went straight to her target. Move the stop only at a level.</p></div>
 <div class="check-q" data-step="s15"></div>
@@ -822,15 +942,16 @@ main section.step.show{display:block}
 <div class="part">Learn</div>
 <div class="tbl"><table>
 <tr><th>Account</th><th>Most you lose in a day</th><th>Typical trade</th></tr>
-<tr><td>25K</td><td>$200</td><td>2–3 MES</td></tr>
-<tr><td>50K</td><td>$200–250 (first trade about $150)</td><td>3–4 MES, 7–10 point stop</td></tr>
-<tr><td>150K</td><td>$400–450</td><td>4–6 MES</td></tr>
+<tr><td>25K</td><td>$200–250</td><td>2–3 MES</td></tr>
+<tr><td>50K</td><td>$250–300 (first trade about $150)</td><td>3–5 MES, 7–10 point stop</td></tr>
+<tr><td>150K</td><td>$450–500</td><td>4–6 MES</td></tr>
 </table></div>
+<p class="src">Daily limits from her Aug 6 post on X; she only raises them after an account's second payout. Her stream numbers were a little lower. Examples for a $250 risk on 50K: stop 10 points → 4–5 MES; stop 5 points → 9–10 MES; stop 20 points → 2–3 MES. She skips setups that need a stop wider than about 13–14 points.</p>
 <ol class="rules5">
-<li><div><strong>No setup, no trade.</strong><span>"Rule number one. Sometimes you're going to miss the trade."</span></div></li>
-<li><div><strong>Two losses and you stop for the day.</strong><span>"Once I took two losses in a row, I usually done for the day."</span></div></li>
-<li><div><strong>Size by quality.</strong><span>Best setups: normal size. Doubtful setups: half size, or a practice account.</span></div></li>
-<li><div><strong>Size by the stop.</strong><span>A wider stop means fewer contracts, never more dollars at risk.</span></div></li>
+<li><div><strong>No setup, no trade.</strong><span>"Big huge bold rule number one. I'm trading my model only" (Oct 2).</span></div></li>
+<li><div><strong>Two losses and you stop for the day.</strong><span>"My rule number one, once I took two losses in a row, I usually done for the day… This how I keep my accounts alive" (Sep 21). A re-entry on the same idea counts.</span></div></li>
+<li><div><strong>Size by quality.</strong><span>She grades every setup: A+ and A on funded accounts at normal size; B or "50/50" setups at half size, or only on evaluation or practice accounts.</span></div></li>
+<li><div><strong>Size by the stop.</strong><span>"It's not about how many contracts… it's about how much I'm willing to lose" (Sep 1). A wider stop means fewer contracts, never more dollars at risk.</span></div></li>
 <li><div><strong>No revenge trades.</strong><span>After a loss on a messy day: "that's a sign for you, walk away."</span></div></li>
 </ol>
 <div class="do" data-step="s16"><h3>Do this now</h3><ul class="check">
@@ -845,31 +966,33 @@ main section.step.show{display:block}
 <h2>Follow two real days from start to finish</h2>
 <div class="goal"><b>Goal</b><p>See every step of the model happen in order, on her real charts.</p></div>
 <div class="part">Learn</div>
-<h3>Sep 24 · Playbook B on an overlap gap · sell · about +$500</h3>
+<h3>Sep 24 · OTE reaction on an overlap day · sell · about +$500 (≈1.4R)</h3>
+<p>No high or low was taken at the open ("middle of nowhere"), so this is not a textbook A or B. She traded the reaction from today's OTE, shorting only while price stayed below 70.5%, and graded it "A minus" because NQ was late.</p>
 <ol class="tl">
 <li><div class="when">Before</div><div class="what"><b>She sets one rule for the day</b><p>"I'm going to only trade my strategy. If nothing will be presented, it's perfectly fine."</p></div></li>
 <li><div class="when">9:30</div><div class="what"><b>She measures the gap: 39 points down, inside an older gap</b><p>"Oh, huge gap. We have overlap gap. That's even better." Plan: wait for a bounce into the gap, then sell.</p>
 <figure><div class="frame"><img src="img/s24_a_overlap_open.jpg" alt="Sep 24, 9:32: gap levels and her plan"></div><figcaption><b>9:32.</b> Gap levels drawn; her pen line shows the plan.</figcaption></figure></div></li>
 <li><div class="when">10:15</div><div class="what"><b>Price reaches 62–70.5% and gives a signal</b><p>"I'm going to use the very first touch [of] my key level, which was OTE."</p>
 <figure><div class="frame"><img src="img/s24_b_cisd_ote.jpg" alt="Sep 24, 10:15: price at the OTE with the signal line"></div><figcaption><b>10:15.</b> Price in 62–70.5% (7,691–7,694.50). The blue line is the signal.</figcaption></figure></div></li>
-<li><div class="when">10:15–10:44</div><div class="what"><b>She waits for NQ to agree</b><p>"I wouldn't short until NQ will show any signs of reversal." She waited about 30 minutes.</p></div></li>
-<li><div class="when">10:44</div><div class="what"><b>She sells 10 MES</b><p>Stop about 7–8 points above the swing high.</p></div></li>
+<li><div class="when">10:15–10:44</div><div class="what"><b>She waits for NQ to agree</b><p>"I wouldn't short until NQ will show any signs of reversal." Specifically: NQ had to sweep its London high, lose its 10:00 AM open and print its own 2-minute order block. That took about 30 minutes.</p></div></li>
+<li><div class="when">10:44</div><div class="what"><b>She sells 10 MES</b><p>Stop about 7 points above the swing high: 7 points × 10 MES × $5 = $350 at risk.</p></div></li>
 <li><div class="when">10:53</div><div class="what"><b>First profit at 25% of the gap</b><p>"Since the stop according to SPX, will partial according to SPX as well."</p>
 <figure><div class="frame"><img src="img/s24_c_partial25.jpg" alt="Sep 24, 10:53: the trade with profit taken at 25 percent"></div><figcaption><b>10:53.</b> Left: the sell with profit taken at 25%. Right: her MES order screen.</figcaption></figure></div></li>
-<li><div class="when">11:13</div><div class="what"><b>She closes the rest, about +$500</b><p>She would not sell again above 25%: "This 25% at this point is basically resistance."</p></div></li>
+<li><div class="when">11:13</div><div class="what"><b>She closes the rest near the 9:30 open, about +$500</b><p>The final target was the bottom of the gap. She would not sell again once price was back above 25%: "This 25% at this point is basically resistance." +$500 on $350 risk ≈ 1.4R.</p></div></li>
 </ol>
-<h3>Sep 17 · Playbook A on a 100-point gap · two buys · +10 points each</h3>
+<h3>Sep 17 · Playbook A on a 100-point gap · two B-grade buys · +10 points each</h3>
+<p>A real Playbook A day, but neither entry was inside 25–50%. Watch how she cuts size because of it.</p>
 <ol class="tl">
 <li><div class="when">Before</div><div class="what"><b>Bias: buy a pullback</b><p>"I see no reason to look for longs without pull back to this gap."</p></div></li>
 <li><div class="when">9:33</div><div class="what"><b>The equal highs were not taken, so: wait for 25–50%</b><p>"Going down to 25-50% but fails to take buy side… I will wait for two minute order block."</p>
 <figure><div class="frame"><img src="img/s17_plan.jpg" alt="Sep 17, 9:33: key area and her drawn path"></div><figcaption><b>9:33.</b> "Key Area" = 25–50%. Her drawn path: down into it, then up to the highs.</figcaption></figure></div></li>
-<li><div class="when">10:14</div><div class="what"><b>Buy 1, half size</b><p>The signal came about 5 points before 25%, so she used 3 micros instead of 5. Profit taken, then stop to entry.</p></div></li>
-<li><div class="when">11:11</div><div class="what"><b>Buy 2 on a fresh signal</b><p>Stop below the swing low, profit at the top of the gap.</p></div></li>
-<li><div class="when">11:42</div><div class="what"><b>Done for the day</b><p>"First trade was 10 points, second trade 10 points. It's my base hits on ES."</p></div></li>
+<li><div class="when">10:14</div><div class="what"><b>Buy 1, reduced size</b><p>The signal came about 5 points before 25%, so she used 3 micros instead of 5 with a 10-point stop. Profit taken (about 1.2R), then stop to entry.</p></div></li>
+<li><div class="when">~11:41</div><div class="what"><b>Buy 2 on a fresh signal</b><p>Again not from the zone: "kind of B setup simply because it's not like from our area… super close to 25%." Stop below the swing low, profit at the top of the gap.</p></div></li>
+<li><div class="when">~12:10</div><div class="what"><b>Done for the day</b><p>"First trade was 10 points, second trade 10 points. It's my base hits on ES."</p></div></li>
 </ol>
 <div class="do" data-step="s17"><h3>Do this now</h3><ul class="check">
-<li><input type="checkbox" id="t-s17-1"><label for="t-s17-1">Watch the Sep 24 stream from 1:05:00 to 1:50:00: <a href="https://www.youtube.com/watch?v=krzpjj6jUCc&amp;t=3900s">open on YouTube</a>.</label></li>
-<li><input type="checkbox" id="t-s17-2"><label for="t-s17-2">Watch the Sep 17 stream from 0:33:00 to 1:25:00: <a href="https://www.youtube.com/watch?v=SesgOJuhoK8&amp;t=1980s">open on YouTube</a>.</label></li>
+<li><input type="checkbox" id="t-s17-1"><label for="t-s17-1">Watch the Sep 24 stream from 1:04:00 to 2:06:00: <a href="https://www.youtube.com/watch?v=krzpjj6jUCc&amp;t=3840s">open on YouTube</a>.</label></li>
+<li><input type="checkbox" id="t-s17-2"><label for="t-s17-2">Watch the Sep 17 stream from 0:33:00 to 2:45:00 (skip the quiet middle): <a href="https://www.youtube.com/watch?v=SesgOJuhoK8&amp;t=1980s">open on YouTube</a>.</label></li>
 <li><input type="checkbox" id="t-s17-3"><label for="t-s17-3">For each day, write which of the six morning steps you saw her do.</label></li>
 </ul></div>
 <div class="check-q" data-step="s17"></div>
@@ -884,8 +1007,8 @@ main section.step.show{display:block}
 <li><b class="h">Bias <span class="time">8:30–9:15</span></b><p>Daily chart objective. ES and NQ vs. their opening prices. Any news at 10:00?</p></li>
 <li><b class="h">Two plans <span class="time">9:15–9:29</span></b><p>"If it doesn't take X: 25–50%. If it takes X: OTE."</p></li>
 <li><b class="h">Measure the gap <span class="time">9:30</span></b><p>On SPX, with the calculator. Under 10 points: no trade.</p></li>
-<li><b class="h">Watch, don't trade <span class="time">9:30–10:00</span></b><p>Was the nearest high/low taken? Pick A, B or C.</p></li>
-<li><b class="h">Wait for the zone and signal <span class="time">9:45–11:00</span></b><p>Price in the zone, 2-minute signal on SPX, NQ agrees.</p></li>
+<li><b class="h">Watch the liquidity <span class="time">9:30–10:00</span></b><p>Is the nearest high/low taken? If yes: Playbook B can trigger now. A 2-minute close past 70.5%: Playbook C. Otherwise wait for 10:00, then Playbook A. News at 10:00: no trade until the 10:00 candle has closed.</p></li>
+<li><b class="h">Wait for the zone and signal <span class="time">9:45–11:00</span></b><p>Price in the zone, 2-minute signal on SPX, NQ agrees, right side of the 10:00 open.</p></li>
 <li><b class="h">Run the checklist, then enter</b><p>Market order on MES. Stop and target from the SPX distances.</p></li>
 <li><b class="h">Manage</b><p>Profit at +10 points or the next level, then stop to entry.</p></li>
 <li><b class="h">Stop <span class="time">by ~11:30</span></b><p>After your target, after 2 losses, or when nothing sets up.</p></li>
@@ -931,11 +1054,11 @@ main section.step.show{display:block}
 <tr><th>Field</th><th>Example (Sep 24)</th></tr>
 <tr><td>Date</td><td>2026-09-24, Thursday</td></tr>
 <tr><td>Gap size and direction</td><td>39 points down</td></tr>
-<tr><td>Nearest high/low taken before 10:00?</td><td>No</td></tr>
-<tr><td>Playbook</td><td>E / B</td></tr>
+<tr><td>Nearest high/low taken before 10:00?</td><td>No (nothing nearby)</td></tr>
+<tr><td>Playbook and grade</td><td>OTE reaction on an overlap day · A−</td></tr>
 <tr><td>NQ agrees?</td><td>Not until 10:44</td></tr>
-<tr><td>Entry, stop, target (SPX points)</td><td>OTE, 7 pts, to 25%</td></tr>
-<tr><td>Result in R</td><td>about +1.8R</td></tr>
+<tr><td>Entry, stop, target (SPX points)</td><td>OTE, 7 pts, partial at 25%, rest at the 9:30 open</td></tr>
+<tr><td>Result in R</td><td>about +1.4R</td></tr>
 <tr><td>Did I break a rule?</td><td>No</td></tr>
 </table></div>
 <div class="callout good"><b class="t">Watch her live while you practise</b><p>She streams 9:00–11:30 AM New York time on <a href="https://www.youtube.com/@LumiTraders/streams">YouTube</a>. Seeing what she skips teaches as much as seeing what she trades.</p></div>
@@ -948,6 +1071,32 @@ main section.step.show{display:block}
 </section>
 
 <!-- ===================== REFERENCE ===================== -->
+<section class="step" id="r0" data-stage="R" data-title="Cheat sheet">
+<h2>Cheat sheet</h2>
+<p class="lede">The whole model on one screen. Keep it open on your phone during the morning.</p>
+<div class="play">
+<div class="row"><div>Chart</div><div>Levels and signals on <span class="k">SPCFD:SPX</span> 2-minute. Orders on MES. Copy <strong>distances</strong>, not prices.</div></div>
+<div class="row"><div>Levels</div><div>0% = 9:30 open · <span style="color:var(--l25)">25%</span> · <span style="color:var(--l50)">50%</span> · <span style="color:var(--lote)">62% · 70.5%</span> (OTE) · 100% = yesterday's 4:08 PM close.</div></div>
+<div class="row"><div>Skip if</div><div>Gap under 10 (no A/B) · ES/NQ decoupled (no funded accounts) · FOMC · trend day against you · 2 losses already · stop wider than ~14 points · less than 1R.</div></div>
+<div class="row"><div>9:30–10:00</div><div>Was the nearest 15-minute+ high (gap up) / low (gap down) beyond the open taken?</div></div>
+</div>
+<div class="tbl"><table>
+<tr><th>If</th><th>Playbook</th><th>Zone</th><th>Target</th></tr>
+<tr><td>Not taken by 10:00</td><td><strong>A</strong></td><td>25–50%</td><td>The untaken high/low (partial at the 9:30 open)</td></tr>
+<tr><td>Taken 9:30–10:00</td><td><strong>B</strong></td><td>Signal after the sweep; then OTE</td><td>62% (trade 1) · next big level (trade 2)</td></tr>
+<tr><td>2-min close past 70.5%</td><td><strong>C</strong></td><td>On the close, or the 70.5% retest</td><td>Yesterday's close, then the next high/low</td></tr>
+<tr><td>Gap filled + next level taken</td><td><strong>D</strong></td><td>Signal the other way</td><td>25%, then the next big level</td></tr>
+<tr><td>Today opens inside an old gap</td><td><strong>E</strong></td><td>25–50% of the overlap</td><td>Away from the gap</td></tr>
+<tr><td>Gap under 10 / unfinished move</td><td><strong>F</strong></td><td>Old gap's 25–50% or OTE</td><td>Small size, B+ at best</td></tr>
+</table></div>
+<ol class="rules5">
+<li><div><strong>Signal</strong><span>At the level, a 2-minute <em>body</em> closes past the run of opposite candles that began at the level. Enter next open. Stop beyond the swing. Box 50% must hold.</span></div></li>
+<li><div><strong>Filters</strong><span>Shows on SPX · NQ agrees (else half size) · after 10:00, on the right side of the 10:00 open · not a V, not from nowhere.</span></div></li>
+<li><div><strong>Manage</strong><span>2+ micros · first profit at ~1R / 10 ES points / next SPX level · then stop to entry · trail only at levels.</span></div></li>
+<li><div><strong>Risk</strong><span>Same dollars every trade (about $150 first trade on 50K) · 2 losses = done · near-miss or doubtful = half size.</span></div></li>
+</ol>
+</section>
+
 <section class="step" id="r1" data-stage="R" data-title="When she does not trade">
 <h2>When she does not trade</h2>
 <p>Most of what she teaches is what she skips.</p>
@@ -965,10 +1114,10 @@ main section.step.show{display:block}
 <div class="tbl"><table>
 <tr><th>Date</th><th>Loss</th><th>What went wrong</th></tr>
 <tr><td class="nowrap">Aug 21</td><td class="r">−$268</td><td>Entered before her own signal.</td></tr>
-<tr><td class="nowrap">Aug 24</td><td class="r">−$350</td><td>Sold above the 10 AM open: "Vital mistake."</td></tr>
-<tr><td class="nowrap">Sep 16</td><td class="r">−$145</td><td>FOMC day, ES/NQ disagreeing, entered before the candle closed.</td></tr>
-<tr><td class="nowrap">Sep 21</td><td class="r">−$160</td><td>Ignored NQ.</td></tr>
-<tr><td class="nowrap">Sep 23</td><td class="r">−$200</td><td>Trades outside the model; moved her stop for no reason.</td></tr>
+<tr><td class="nowrap">Aug 24</td><td class="r">−$350</td><td>Shorted against the model: the low had been taken in the first 15 minutes, so the model said buy toward the OTE. Her review the next day: "one of the stupidest idea."</td></tr>
+<tr><td class="nowrap">Sep 16</td><td class="r">−$145</td><td>FOMC day, ES/NQ disagreeing, entered seconds before the candle closed, "trying to trade against the trend".</td></tr>
+<tr><td class="nowrap">Sep 21</td><td class="r">−$160</td><td>Ignored NQ and shorted against the trend: "Nothing A+."</td></tr>
+<tr><td class="nowrap">Sep 23</td><td class="r">−$200</td><td>Two trades outside the model. (A third, where she moved her stop for no reason, made only +$15 before price ran to her target.)</td></tr>
 <tr><td class="nowrap">Sep 25</td><td class="r">−$255</td><td>Sold before 10:00 without a 2-minute signal.</td></tr>
 </table></div>
 </section>
@@ -978,36 +1127,59 @@ main section.step.show{display:block}
 <p>Every live stream from Aug 21 to Oct 2, 2026, as she reported it. "Comp" = a competition account with no loss limit.</p>
 <div class="tbl"><table>
 <tr><th>Date</th><th>Gap</th><th>Setup</th><th>Trades</th><th>Result</th></tr>
-<tr><td class="nowrap">Aug 21</td><td>~30 up</td><td>C (planned)</td><td>ES sell, too early</td><td class="r">−$268</td></tr>
-<tr><td class="nowrap">Aug 24</td><td>down</td><td>Delayed delivery</td><td>MES sell above 10 AM open</td><td class="r">−$350</td></tr>
+<tr><td class="nowrap">Aug 21</td><td>~30 up</td><td>C (planned)</td><td>MES sell, too early (eval accounts)</td><td class="r">−$268</td></tr>
+<tr><td class="nowrap">Aug 24</td><td>down</td><td>Delayed delivery</td><td>MES sell against the model</td><td class="r">−$350</td></tr>
 <tr><td class="nowrap">Aug 25</td><td>~30 up, overlap</td><td>B</td><td>Skipped a sell that worked; ES buy</td><td>~flat</td></tr>
 <tr><td class="nowrap">Aug 26</td><td>~10–15 down</td><td>C</td><td>2 ES buys</td><td class="g">Win, 1.6R</td></tr>
 <tr><td class="nowrap">Aug 27</td><td>~30 up</td><td>B</td><td>ES buy, half size</td><td class="g">Win</td></tr>
-<tr><td class="nowrap">Aug 28</td><td>~6–10 up</td><td>C → D</td><td>Sell (loss), buy</td><td class="g">~+$700</td></tr>
-<tr><td class="nowrap">Aug 31</td><td>~20</td><td>None</td><td>Gold instead</td><td class="g">Small win</td></tr>
-<tr><td class="nowrap">Sep 1</td><td>large down</td><td>B</td><td>NQ buy</td><td class="g">Win</td></tr>
+<tr><td class="nowrap">Aug 28</td><td>~6–8 up</td><td>C → D</td><td>Sell (eval), buy</td><td class="g">+$313 (was +$700 open)</td></tr>
+<tr><td class="nowrap">Aug 31</td><td>~20 down</td><td>None</td><td>Gold instead</td><td class="g">Small win</td></tr>
+<tr><td class="nowrap">Sep 1</td><td>large down</td><td>SPX signal rejected</td><td>NQ continuation buy</td><td class="g">Win</td></tr>
 <tr><td class="nowrap">Sep 2</td><td>~3 up</td><td>F</td><td>NQ, MES</td><td>~BE</td></tr>
-<tr><td class="nowrap">Sep 3</td><td>large down</td><td>B</td><td>2 sells, 1 buy</td><td class="g">~+$945</td></tr>
-<tr><td class="nowrap">Sep 4</td><td>tiny</td><td>C (weak)</td><td>ES and NQ sells</td><td class="g">Win</td></tr>
-<tr><td class="nowrap">Sep 8</td><td>~1</td><td>F</td><td>ES buy</td><td class="g">1R</td></tr>
-<tr><td class="nowrap">Sep 10</td><td>40+ down</td><td>B</td><td>ES buy</td><td class="g">~1R</td></tr>
+<tr><td class="nowrap">Sep 3</td><td>large up</td><td>Pullback into gap; 70.5% break on a swing</td><td>2 sells, 1 buy</td><td class="g">~+$945</td></tr>
+<tr><td class="nowrap">Sep 4</td><td>~20, filled at the open</td><td>C (weak)</td><td>ES sell (BE), NQ sell</td><td class="g">~+$500</td></tr>
+<tr><td class="nowrap">Sep 8</td><td>~1</td><td>F</td><td>ES buy (ES signal before SPX)</td><td class="g">1R</td></tr>
+<tr><td class="nowrap">Sep 10</td><td>40+ down, overlap</td><td>B</td><td>ES buy</td><td class="g">~1R</td></tr>
 <tr><td class="nowrap">Sep 11</td><td>overlap</td><td>No pullback</td><td>None</td><td>—</td></tr>
 <tr><td class="nowrap">Sep 14</td><td>large down</td><td>E</td><td>NQ sell (loss), ES buy</td><td class="g">+$151</td></tr>
 <tr><td class="nowrap">Sep 15</td><td>7</td><td>Skipped</td><td>Scratch</td><td>~0</td></tr>
-<tr><td class="nowrap">Sep 16</td><td>&gt;10 up, FOMC</td><td>Missed A</td><td>NQ, ES sell</td><td class="r">−$145</td></tr>
-<tr><td class="nowrap">Sep 17</td><td>~100 up</td><td>A</td><td>2 ES buys</td><td class="g">+10 pts each</td></tr>
+<tr><td class="nowrap">Sep 16</td><td>&gt;10 up, FOMC</td><td>A not triggered (1 tick short)</td><td>NQ, ES sell</td><td class="r">−$145</td></tr>
+<tr><td class="nowrap">Sep 17</td><td>~100 up</td><td>A (B-grade entries)</td><td>2 ES buys</td><td class="g">+10 pts each</td></tr>
 <tr><td class="nowrap">Sep 18</td><td>small</td><td>C</td><td>ES sell</td><td class="g">Win</td></tr>
-<tr><td class="nowrap">Sep 21</td><td>large</td><td>Old gap</td><td>ES sell, gold buy</td><td class="r">−$160</td></tr>
-<tr><td class="nowrap">Sep 22</td><td>~6 up</td><td>B scalp</td><td>ES (comp)</td><td class="g">+$181</td></tr>
+<tr><td class="nowrap">Sep 21</td><td>large</td><td>Counter-trend, off-model</td><td>ES sell, gold buy</td><td class="r">−$160</td></tr>
+<tr><td class="nowrap">Sep 22</td><td>~6 up</td><td>C (70.5% break)</td><td>4 MES sells (comp)</td><td class="g">+$181</td></tr>
 <tr><td class="nowrap">Sep 23</td><td>small</td><td>Off-model</td><td>3 ES trades</td><td class="r">−$200</td></tr>
-<tr><td class="nowrap">Sep 24</td><td>~39 down</td><td>E / B</td><td>MES sell (comp)</td><td class="g">+$500</td></tr>
-<tr><td class="nowrap">Sep 25</td><td>small</td><td>B</td><td>Loss, then 2 wins</td><td class="g">~+$300</td></tr>
-<tr><td class="nowrap">Sep 28</td><td>~20 down</td><td>No pullback</td><td>ES BE, oil buy</td><td class="g">+$300</td></tr>
-<tr><td class="nowrap">Sep 29</td><td>&lt;10</td><td>C</td><td>ES, NQ (comp)</td><td class="g">+$1,051</td></tr>
-<tr><td class="nowrap">Sep 30</td><td>&lt;10</td><td>F</td><td>ES buy</td><td class="g">~+$300</td></tr>
+<tr><td class="nowrap">Sep 24</td><td>~39 down, overlap</td><td>OTE reaction</td><td>MES sell (comp)</td><td class="g">+$500</td></tr>
+<tr><td class="nowrap">Sep 25</td><td>small</td><td>B</td><td>Loss, then 2 wins</td><td class="g">~+$500</td></tr>
+<tr><td class="nowrap">Sep 28</td><td>~20 down</td><td>No pullback</td><td>2 MES buys BE, oil buy</td><td class="g">+$300</td></tr>
+<tr><td class="nowrap">Sep 29</td><td>&lt;10</td><td>C</td><td>ES (model), NQ off-model (comp)</td><td class="g">+$1,051</td></tr>
+<tr><td class="nowrap">Sep 30</td><td>?</td><td>Delayed delivery</td><td>ES buy above yesterday’s 25%, + eval trade</td><td class="g">~+$300 per account</td></tr>
 <tr><td class="nowrap">Oct 1</td><td>small</td><td>Missed</td><td>3 trades (comp)</td><td class="g">+$80</td></tr>
-<tr><td class="nowrap">Oct 2</td><td>~60 up</td><td>A</td><td>3 trades</td><td class="g">~+$480</td></tr>
+<tr><td class="nowrap">Oct 2</td><td>~60 up</td><td>A</td><td>3 trades</td><td class="g">+$530 per account</td></tr>
 </table></div>
+</section>
+
+<section class="step" id="r4" data-stage="R" data-title="Where her sources disagree">
+<h2>Where her sources disagree</h2>
+<p>Her written lessons, live streams and X posts were made at different times, and the model has changed. This course follows what she does now on stream, unless noted. Here is every place they differ, so nothing surprises you when you watch her.</p>
+<div class="tbl"><table>
+<tr><th>Topic</th><th>Written lesson</th><th>Streams / X</th><th>This course uses</th></tr>
+<tr><td>Yesterday's close</td><td>4:00 PM close</td><td>"Put 4:08… a real deal closure at 4:08" (Sep 2)</td><td>4:08 (matches her charts)</td></tr>
+<tr><td>Liquidity window</td><td>First 15 minutes</td><td>"Since July… extend time to 30 minutes" (Sep 25). An older X tip: 9:30–9:40</td><td>9:30–10:00</td></tr>
+<tr><td>Waiting for 10:00</td><td>Lesson charts enter at 9:44–9:56</td><td>"Wait for 10" on choppy/news days; enters earlier on clear days</td><td>Wait only to confirm "not taken"; B and C can trigger earlier</td></tr>
+<tr><td>OTE zone</td><td>62–70.5%</td><td>Twice on X: "OTE (50–70.5%)"</td><td>62–70.5%</td></tr>
+<tr><td>Order block</td><td>Run of candles from the first one that tapped the level (preferred), or just that first candle</td><td>"Very first touch of my key level" (Sep 24); prefers the run (model video)</td><td>The run, starting at the first touch</td></tr>
+<tr><td>Signal timeframe</td><td>2-minute</td><td>5-minute OB on X until ~Mar 2026; 3-minute on ES for some overlap trades</td><td>2-minute (the only one she backtested)</td></tr>
+<tr><td>Near-miss at 25%</td><td>"Doesn't need perfection"</td><td>Skipped a one-tick miss (Sep 16); took 5-point misses at reduced size (Sep 17, Oct 2)</td><td>Full size inside the zone; near-miss = B, half size</td></tr>
+<tr><td>Gap fill after 70.5% close</td><td>"Can offer a continuation trade"; "price does not seek to fill gaps"</td><td>"Nine of 10 times" (Sep 18)</td><td>A strong tendency, not a tested number</td></tr>
+<tr><td>Playbook C entry</td><td>Retest of 70.5% with a CISD; 50% must hold</td><td>Often on the close; waits for the retest if R:R is poor</td><td>Either, with at least 1R</td></tr>
+<tr><td>Old gaps</td><td>25% and OTE give strong reactions</td><td>Used daily, as reactions and targets</td><td>Step 13</td></tr>
+<tr><td>NQ disagreeing</td><td>(not covered)</td><td>"Decoupled equals stay away", but she sometimes trades through it and doesn't wait for NQ on 70.5% breaks</td><td>Half size or practice account; C doesn't need NQ</td></tr>
+<tr><td>Fridays</td><td>(not covered)</td><td>"Biggest losses on Friday" (Sep 4) vs "my favorite day of the week" (Oct 2)</td><td>No special rule</td></tr>
+<tr><td>Win rate</td><td>(none given)</td><td>60%, 63%, 76%, "less than 70, more than 65"</td><td>Plan for ~60% at 1–1.3R</td></tr>
+<tr><td>Daily risk</td><td>(not covered)</td><td>Streams: $200–250 on 50K. X (Aug 6): $250–300, raised after the 2nd payout</td><td>Step 16 table</td></tr>
+</table></div>
+<p class="src">Not the same model: her "2-minute open-high-low-close" video (71% over ~300 trades, fixed 2R) is a different setup around the 10 AM and 1 PM opens. Her 65–68% figures on X are for her gold and liquidity-sweep models. None of these numbers apply to the gap model.</p>
 </section>
 
 <section class="step" id="r3" data-stage="R" data-title="Sources">
@@ -1017,8 +1189,9 @@ main section.step.show{display:block}
 <li><a href="https://funded.now/lessons/order-block">Order Block / CISD</a>, <a href="https://funded.now/lessons/ict-optimal-trade-entry-ote">OTE</a> and <a href="https://funded.now/lessons/10-am-open">10 AM Open</a> lessons.</li>
 <li><a href="https://funded.now/indicators">funded.now/indicators</a>: the free indicators.</li>
 <li><a href="https://www.youtube.com/@LumiTraders/streams">Her YouTube streams</a>: 29 sessions reviewed, Aug 21 – Oct 2, 2026.</li>
-<li><a href="https://x.com/LumiTraders">@LumiTraders on X</a>.</li>
+<li><a href="https://x.com/LumiTraders">@LumiTraders on X</a>: about 1,100 posts from Jul 2026 back to her first SPX gap posts (Nov 2025) were searched.</li>
 </ul>
+<p class="src">Checked on Oct 3, 2026: every rule, quote, table row and quiz answer was compared against her written lessons, all 29 stream transcripts and her X posts. Corrections from that check are already in the course; remaining differences are listed under "Where her sources disagree".</p>
 <p class="src">Funded.Now is her prop-firm affiliate site (code LUMI). Prices quoted from streams come from auto-generated transcripts and are approximate.</p>
 </section>
 
@@ -1029,19 +1202,32 @@ main section.step.show{display:block}
 </div>
 </main>
 </div>
+<nav class="mbar" aria-label="Step navigation">
+  <button class="btn" id="mprev" type="button" aria-label="Previous step">←</button>
+  <div class="mid" id="mstate"></div>
+  <button class="btn primary" id="mnext" type="button">Next →</button>
+</nav>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lb-bar"><span id="lb-hint">Tap the image to zoom</span><button type="button" id="lb-close">Close ✕</button></div>
+  <div class="lb-scroll" id="lb-scroll"><img id="lb-img" alt=""></div>
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
 
 <script>
 (function(){
 function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v));}catch(e){return null;}}
 /* ---------- diagram engine ---------- */
 var NS='http://www.w3.org/2000/svg';
+var SMALL=window.matchMedia('(max-width: 720px)');
 function el(t,a,txt){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
 /* price units: yesterday's close = 0, 9:30 open = 100 (gap up). Level price = 100 - pct.
    Flipped (gap down / bearish): p -> F - p, candles mirrored, alt labels used. */
 function render(svg,cfg,flip){
   while(svg.firstChild)svg.removeChild(svg.firstChild);
-  var vb=svg.viewBox.baseVal,W=vb.width,H=vb.height;
-  var L=34,R=cfg.gutter||176,T=26,B=36,plotR=W-R;
+  if(!svg.dataset.w){var vb0=svg.viewBox.baseVal;svg.dataset.w=vb0.width;svg.dataset.h=vb0.height;}
+  var sm=SMALL.matches,W=sm?620:+svg.dataset.w,H=+svg.dataset.h+(sm?20:0);
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);svg.classList.toggle('sm',sm);
+  var L=sm?14:34,R=sm?Math.max(196,(cfg.gutter||176)+18):(cfg.gutter||176),T=26,B=36,plotR=W-R;
   var F=cfg.F!=null?cfg.F:100;
   function P(p){return flip?F-p:p;}
   var lo=flip?F-cfg.max:cfg.min,hi=flip?F-cfg.min:cfg.max;
@@ -1059,7 +1245,7 @@ function render(svg,cfg,flip){
   });
   (cfg.levels||[]).forEach(function(l){
     svg.appendChild(el('line',{x1:xl(l.from),x2:plotR+6,y1:y(l.p),y2:y(l.p),class:'lvl '+(l.cls||'')}));
-    svg.appendChild(el('text',{x:plotR+12,y:y(l.p)+4+(l.dy||0)*(flip?-1:1),class:'lbl '+(l.cls||'')},T_(l.label)));
+    svg.appendChild(el('text',{x:plotR+12,y:y(l.p)+(sm?6:4)+(l.dy||0)*(sm?1.6:1)*(flip?-1:1),class:'lbl '+(l.cls||'')},T_(l.label)));
   });
   (cfg.pos||[]).forEach(function(ps){
     var x1=xl(ps.i),x2=xr(ps.to),ye=y(ps.e),yt=y(ps.t),ys=y(ps.s);
@@ -1090,8 +1276,8 @@ function render(svg,cfg,flip){
   (cfg.marks||[]).forEach(function(m){
     var cx=x(m.i)+(m.dx||0),py=y(m.p),off=(m.dy||-22)*(flip?-1:1),cy=py+off;
     svg.appendChild(el('line',{x1:x(m.i)+(m.dx||0)*0.3,y1:py,x2:cx,y2:cy,class:'lead'}));
-    svg.appendChild(el('circle',{cx:cx,cy:cy,r:10,class:'mk'}));
-    svg.appendChild(el('text',{x:cx,y:cy+4,'text-anchor':'middle',class:'mkt'},m.n));
+    svg.appendChild(el('circle',{cx:cx,cy:cy,r:sm?13:10,class:'mk'}));
+    svg.appendChild(el('text',{x:cx,y:cy+(sm?5:4),'text-anchor':'middle',class:'mkt'},m.n));
   });
 }
 var GAPLV=[{p:100,label:'0%  9:30 open',cls:'edge'},{p:75,label:'25%',cls:'s25'},{p:50,label:'50%',cls:'s50'},{p:38,label:'62%',cls:'sote',dy:-3},{p:29.5,label:'70.5%',cls:'sote',dy:5},{p:0,label:'100%  prior close',cls:'edge'}];
@@ -1155,6 +1341,8 @@ document.querySelectorAll('figure.dg').forEach(function(f){
   function go(flip){render(svg,cfg,flip);f.classList.toggle('isdn',flip);f.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',(b.getAttribute('data-dir')==='dn')===flip?'true':'false');});}
   f.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){go(b.getAttribute('data-dir')==='dn');});});
   go(false);
+  var redraw=function(){go(f.classList.contains('isdn'));};
+  if(SMALL.addEventListener)SMALL.addEventListener('change',redraw);else SMALL.addListener(redraw);
 });
 
 /* gap calculator */
@@ -1168,9 +1356,9 @@ function gcalc(){
   var cells=[['Gap',size.toFixed(2)+' pts · '+(g>0?'up':g<0?'down':'—')],['25%',f2(lvl(.25))],['50%',f2(lvl(.5))],['62%',f2(lvl(.62))],['70.5%',f2(lvl(.705))],['100% (close)',f2(c)]];
   out.innerHTML=cells.map(function(x){return '<div class="cell"><div class="l">'+x[0]+'</div><div class="v">'+x[1]+'</div></div>'}).join('');
   var cls,msg;
-  if(size<10){cls='r';msg=dir+' of '+size.toFixed(1)+' points: under 10, she expects chop. Skip the SPX model today, or work from an older unfilled gap (Playbook F).';}
+  if(size<10){cls='r';msg=dir+' of '+size.toFixed(1)+' points: under 10 is "like no gap" for her. No Playbook A or B today: only a 2-minute close past 70.5% (Playbook C) or an older unfilled gap (Playbook F), at small size.';}
   else if(size<=60){cls='g';msg=dir+' of '+size.toFixed(1)+' points: workable. Mark the nearest 15-minute liquidity '+(g>0?'above':'below')+' the open and watch it until 10:00.';}
-  else{cls='a';msg=dir+' of '+size.toFixed(1)+' points: very large. She has not backtested these. Micros only; a reaction slightly before 25% is acceptable.';}
+  else{cls='a';msg=dir+' of '+size.toFixed(1)+' points: very large. She has not backtested these. Smaller size; a reaction slightly before 25% is a B setup (half size).';}
   vd.className='verdict '+cls;vd.textContent=msg;
 }
 gc.addEventListener('input',gcalc);go2.addEventListener('input',gcalc);gcalc();
@@ -1200,22 +1388,24 @@ pcalc();
 var items=[
  ['G','Before 9:30'],
  ['I','Higher-timeframe objective is marked','Previous day high/low, weekly open, old SPX gaps, daily OB/FVG.'],
- ['I','ES and NQ are on the same side of the daily open and NYMO','If not, the market is decoupled: evaluation account or no trade.'],
+ ['I','ES and NQ are on the same side of the daily open and NYMO','If not, the market is decoupled: half size on an evaluation account, or no trade.'],
  ['I','I wrote my two scenarios','Liquidity not taken → 25–50%. Taken → OTE.'],
- ['I','No FOMC; for 10:00 news I will wait for the hourly close',''],
+ ['I','No FOMC; for 10:00 news I will wait for the 10:00 candle to close',''],
  ['G','At the open'],
- ['I','The SPX gap is 10 points or more','SPCFD:SPX, prior close = 4:08 PM print.'],
- ['I','I know whether the nearest 15-minute+ liquidity was taken','Decided by 9:45, confirmed by 10:00.'],
+ ['I','The SPX gap is 10 points or more','SPCFD:SPX, prior close = 4:08 PM print. Under 10: only Playbook C or an old gap, small size.'],
+ ['I','I know whether the nearest 15-minute+ liquidity was taken','Taken 9:30–10:00 → B. Not taken by 10:00 → A.'],
  ['I','I picked one playbook (A–F)',''],
  ['G','The entry'],
- ['I','Price actually traded into the playbook zone','Not "almost".'],
- ['I','A 2-minute CISD closed on SPX, with displacement','From the first candle that touched the level. Not a V. Not from nowhere.'],
- ['I','NQ agrees, and after 10:00 I am on the right side of the 10 AM open','Otherwise half size, or skip.'],
+ ['I','Price actually traded into the playbook zone','A near-miss is a B setup: half size at most.'],
+ ['I','A 2-minute CISD closed on SPX, with displacement','The run of candles starts at the level. Not a V. Not from nowhere.'],
+ ['I','After 10:00, a 2-minute body has closed on my side of the 10:00 AM open','Longs above it, shorts below it. Not needed for Playbook B before 10:00.'],
+ ['I','NQ agrees','If this is the only missing item: half size, or wait for NQ to turn.'],
  ['I','Reward is at least 1R to the first real target',''],
  ['I','Stop is at the swing and the dollar risk fits my daily limit','$150 first trade on 50K, max $250 per day.'],
  ['I','I have fewer than 2 losses today','']
 ];
-var key='spxgap-check-'+new Date().toISOString().slice(0,10),saved=store(key)||{};
+var NQI=items.findIndex(function(it){return it[1]==='NQ agrees';});
+var key='spxgap-check2-'+new Date().toISOString().slice(0,10),saved=store(key)||{};
 var ul=document.getElementById('ck'),total=0;
 items.forEach(function(it,i){
   var li=document.createElement('li');
@@ -1232,7 +1422,7 @@ function ck(){
   document.getElementById('ck-bar').style.width=(n/total*100)+'%';
   var v=document.getElementById('ck-verdict');
   if(n===total){v.className='verdict g';v.textContent='All checks pass. This is a model trade: take it at your normal size.';}
-  else if(n===total-1){v.className='verdict a';v.textContent='One item missing. If it is the NQ check, trade half size. Anything else: no trade.';}
+  else if(n===total-1){var nq=ul.querySelector('#ck-'+NQI);v.className='verdict a';v.textContent=nq&&!nq.checked?'Only NQ is missing: half size, or wait for NQ to turn.':'One item missing, and it is not the NQ check: no trade.';}
   else{v.className='verdict r';v.textContent='Not a model trade yet. "No model, no trade."';}
 }
 document.getElementById('ck-reset').addEventListener('click',function(){saved={};store(key,saved);ul.querySelectorAll('input').forEach(function(c){c.checked=false});ck();});
@@ -1246,23 +1436,47 @@ S.done=S.done||{};S.tasks=S.tasks||{};S.ans=S.ans||{};
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 
 /* ---------- theme ---------- */
-document.getElementById('themebtn').addEventListener('click',function(){
+function toggleTheme(){
   var r=document.documentElement,cur=r.getAttribute('data-theme');
   var dark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;
-  r.setAttribute('data-theme',dark?'light':'dark');
+  r.setAttribute('data-theme',dark?'light':'dark');store('spxgap-theme',dark?'light':'dark');
+}
+document.getElementById('themebtn').addEventListener('click',toggleTheme);
+document.getElementById('themebtn2').addEventListener('click',toggleTheme);
+
+/* ---------- image viewer ---------- */
+var lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap'),lbLast=null;
+function lbClose(){lb.hidden=true;lb.classList.remove('zoom');document.body.style.overflow='';if(lbLast)lbLast.focus();}
+document.querySelectorAll('figure .frame img').forEach(function(img){
+  img.setAttribute('tabindex','0');img.setAttribute('loading','lazy');img.setAttribute('decoding','async');
+  function open(){
+    lbLast=img;lbImg.src=img.currentSrc||img.src;lbImg.alt=img.alt;
+    var cap=img.closest('figure').querySelector('figcaption');lbCap.textContent=cap?cap.textContent.trim():img.alt;
+    lb.hidden=false;lb.classList.remove('zoom');document.body.style.overflow='hidden';document.getElementById('lb-close').focus();
+  }
+  img.addEventListener('click',open);
+  img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
 });
+lbImg.addEventListener('click',function(e){
+  var z=!lb.classList.contains('zoom'),sc=document.getElementById('lb-scroll'),r=lbImg.getBoundingClientRect();
+  var fx=(e.clientX-r.left)/r.width,fy=(e.clientY-r.top)/r.height;
+  lb.classList.toggle('zoom',z);document.getElementById('lb-hint').textContent=z?'Drag to look around · tap to fit':'Tap the image to zoom';
+  if(z){sc.scrollLeft=fx*sc.scrollWidth-sc.clientWidth/2;sc.scrollTop=fy*sc.scrollHeight-sc.clientHeight/2;}
+});
+document.getElementById('lb-close').addEventListener('click',lbClose);
+lb.addEventListener('click',function(e){if(e.target===lb||e.target.id==='lb-scroll')lbClose();});
 
 /* ---------- quiz bank ---------- */
 var BANK={
- gap6:{q:'At 9:30 SPX opens 6 points above yesterday’s close. What does she do with the model today?',o:['Trade Playbook A as normal','Skip it: under 10 points means choppy, messy price action','Trade double size because small gaps fill fast'],a:1,w:'"Anything less than 10 points it’s most likely going to be chop session." She skips, uses an older gap, or trades something else.'},
+ gap6:{q:'At 9:30 SPX opens 6 points above yesterday’s close. What does she do with the model today?',o:['Trade Playbook A as normal','No Playbook A or B: under 10 points is "like no gap". At most Playbook C or an older gap, small size','Trade double size because small gaps fill fast'],a:1,w:'"10 points gap, that’s at least what I want… Two, three points for me is like no gap." She skips A and B, and uses Playbook C, an older gap, or nothing.'},
  pA:{q:'Gap up of 35 points. By 10:00 price has not reached the high above. It pulls back to 30% of the gap and a 2-minute signal prints with a strong candle. NQ agrees. What is the trade?',o:['Buy at the next candle’s open, stop under the swing low, target the high above','Sell, because price is falling','Wait for 62% first'],a:0,w:'Playbook A: high not taken, pullback into 25–50%, signal, NQ agrees. Target the high that was not taken.'},
  pB:{q:'Gap up of 30 points. At 9:36 price takes the high above the open, then a 2-minute signal down appears. Where is the target?',o:['The 25% level','62% of the gap','Yesterday’s close'],a:1,w:'Playbook B: the high was taken early, so she expects a deep pullback. Her trade is "done" at 62%.'},
  pC:{q:'Price falls through the OTE of a gap up and a 2-minute candle closes below 70.5%. What does she expect?',o:['A bounce from 70.5%','The whole gap to fill, then the low below to be taken','Nothing; 70.5% is not important'],a:1,w:'Playbook C: a close past 70.5% means "gap fill… nine of 10 times". Target 1 = yesterday’s close, target 2 = the next low.'},
  nq:{q:'A clean SPX sell signal appears at the OTE, but NQ is still rising to new highs. What does she do?',o:['Sell full size: SPX is what matters','Wait for NQ to turn, or trade half size on a practice account','Buy instead'],a:1,w:'On Sep 24 she waited about 30 minutes for NQ. On Sep 21 she ignored NQ and lost.'},
  be:{q:'You are +8 points with no profit taken yet. Price stalls. Do you move the stop to your entry?',o:['Yes, always protect profit','No. Only after taking some profit, or at a level','Close everything now'],a:1,w:'"I never moved to break even while I was in trade without partial." On Sep 23 a needless stop move cost her a winner.'},
- fifty:{q:'Price took the high in the first 15 minutes, then pulled back only to 50% and gave a signal. Trade it?',o:['Yes, 50% is a level','No: after a sweep she waits for 62–70.5%'],a:1,w:'"If price takes nearest liquidity… but only retrace to 50, I don’t like it… wait for OTE or no trades." (Sep 11)'},
+ fifty:{q:'Gap up. Price took the high above the open at 9:40, then fell back only to 50% of the gap and printed a 2-minute buy signal there. Take the buy?',o:['Yes, 50% is a level','No: after a sweep she waits for 62–70.5%'],a:1,w:'"If price takes nearest liquidity… but only retrace to 50, I don’t like it… wait for OTE or no trades." (Sep 11)'},
  twoL:{q:'You already lost twice today. At 11:05 a perfect setup appears. What do you do?',o:['Take it, perfect setups are rare','Take it with half size','Nothing. Two losses and you are done for the day'],a:2,w:'"Once I took two losses in a row, I usually done for the day."'},
- tick:{q:'Price stops one tick before 25% and then runs to the target without you. Did you miss a trade?',o:['Yes, you should have entered early','No. Price never entered the zone, so there was no trade'],a:1,w:'"Not being one tick above or one tick below… it’s all about enter this area." (Sep 16)'},
+ tick:{q:'Normal 30-point gap, Playbook A day. Price turns one tick before 25% and prints a strong 2-minute signal. What is the right size?',o:['Full size, one tick does not matter','Half size or skip: a near-miss is a B setup','It can never be traded'],a:1,w:'Full size needs price inside the zone ("it’s all about enter this area", Sep 16). A near-miss with a good signal is a B setup: she takes those at reduced size (Sep 17) or skips them.'},
  calc62:{q:'Yesterday’s SPX close was 7,704.00 and today’s open is 7,746.00. Where is the 62% level?',o:['7,729.96','7,719.96','7,730.04'],a:1,w:'Gap = 42 points. 62% from the open = 7,746 − 42 × 0.62 = 7,719.96. You can check with the gap calculator.'}
 };
 var CHECKS={
@@ -1271,8 +1485,8 @@ var CHECKS={
  s3:[{q:'What is the OTE?',o:['0–25% of the gap','62–70.5% of the gap','Yesterday’s high'],a:1,w:'The deep zone of the gap.'},{q:'ES is rising and NQ is falling. What does she call it and what does she do?',o:['Decoupled: stay out or trade tiny','Trend day: trade bigger'],a:0,w:'"Decoupled equals stay away."'}],
  s4:[BANK.calc62,{q:'On a gap down, which line is closest to the 9:30 open?',o:['25%','70.5%'],a:0,w:'25% is always nearest the open, whether the gap is up or down.'}],
  s5:[BANK.gap6,{q:'ES is above its midnight open, NQ is below its own. What kind of day is it?',o:['A normal day','Decoupled: stay out or trade tiny'],a:1,w:'When the two disagree she stays away or uses a practice account.'}],
- s6:[{q:'Gap up. At 9:38 price takes the 15-minute high above the open. Which playbook?',o:['A','B','C'],a:1,w:'Liquidity taken early means Playbook B: expect a deep pullback to 62–70.5%.'},{q:'Gap up. By 10:00 the high above was never reached. Which playbook?',o:['A','B','C'],a:0,w:'Not taken means Playbook A: expect a small pullback to 25–50%, then a move to take it.'}],
- s7:[{q:'Where do you draw the CISD line?',o:['At the last candle before the signal','At the open of the first opposite candle that touched the level','At the 9:30 open'],a:1,w:'The first candle that touched the level. Not the whole run of candles.'},{q:'When exactly do you enter?',o:['As soon as price touches the level','At the open of the candle after the signal candle closes','At 10:00 sharp'],a:1,w:'Signal candle closes past the line, then you enter at the next open.'},{q:'After your entry, price closes back through the 50% line of the box. What does it mean?',o:['The signal is getting stronger','The signal is failing'],a:1,w:'"Once price closes above or below the mean threshold, the OB has a higher chance of failing."'}],
+ s6:[{q:'Gap up. At 9:38 price takes the 15-minute high above the open. Which playbook?',o:['A','B','C'],a:1,w:'Liquidity taken in the first 30 minutes means Playbook B: expect a deep pullback to 62–70.5%. It can trigger straight away.'},{q:'Gap up. By 10:00 the high above was never reached. Which playbook?',o:['A','B','C'],a:0,w:'Not taken means Playbook A: expect a small pullback to 25–50%, then a move to take it.'},{q:'It is 10:20. Price is below the 10:00 AM open and you see a buy signal. What does her 10 AM rule say?',o:['Buy: the signal is enough','Wait: longs only after a 2-minute body closes back above the 10:00 open'],a:1,w:'"We do not blindly buy while price is below the 10:00 AM Open." A body close back above it shows the bullish candle body is forming.'}],
+ s7:[{q:'Where do you draw the CISD line?',o:['At the last candle before the signal','At the open of the first opposite candle that touched the level','At the 9:30 open'],a:1,w:'The run of opposite candles starts with the first one that touched the level. Its open is the CISD line, and the whole run is the order block.'},{q:'When exactly do you enter?',o:['As soon as price touches the level','At the open of the candle after the signal candle closes','At 10:00 sharp'],a:1,w:'Signal candle closes past the line, then you enter at the next open.'},{q:'After your entry, price closes back through the 50% line of the box. What does it mean?',o:['The signal is getting stronger','The signal is failing'],a:1,w:'"Once price closes above or below the mean threshold, the OB has a higher chance of failing."'}],
  s8:[BANK.pA,BANK.tick],
  s9:[BANK.pB,BANK.fifty],
  s10:[BANK.pC,{q:'A wick pokes below 70.5% but the 2-minute candle closes above it. Is that Playbook C?',o:['Yes','No, it needs a close past the line'],a:1,w:'A wick does not count. Only a 2-minute close.'}],
@@ -1381,13 +1595,19 @@ function paint(){
 function paintNav(sec){
   var i=main.indexOf(sec),st=document.getElementById('stepstate'),prev=document.getElementById('prevbtn'),next=document.getElementById('nextbtn');
   var isRef=sec.getAttribute('data-stage')==='R';
+  var mp=document.getElementById('mprev'),mn=document.getElementById('mnext'),ms=document.getElementById('mstate');
+  function mirror(){mp.disabled=prev.disabled;mn.disabled=next.disabled;
+    mn.textContent=isRef?'Course →':(sec.id==='s0'?'Start →':(next.disabled?'Done':'Next →'));
+    ms.className='mid'+(st.className.indexOf('ok')>-1?' ok':'');
+    ms.textContent=isRef?sec.getAttribute('data-title'):(sec.id==='s0'?'Introduction':('Step '+sec.id.slice(1)+' / '+counted.length+(S.done[sec.id]?' · ✓ done':' · '+(sec.getAttribute('data-title')||''))));}
   prev.disabled=isRef?false:i<=0;
-  if(isRef){next.textContent='Back to the course →';st.textContent='Reference';st.className='state';return;}
+  if(isRef){next.disabled=false;next.textContent='Back to the course →';st.textContent='Reference';st.className='state';mirror();return;}
   next.disabled=i>=main.length-1;
   next.textContent=sec.id==='s0'?'Start step 1 →':(i>=main.length-1?'Course finished':'Next step →');
-  if(sec.id==='s0'){st.textContent='';return;}
+  if(sec.id==='s0'){st.textContent='';st.className='state';mirror();return;}
   if(S.done[sec.id]){st.textContent='✓ Step complete';st.className='state ok';}
   else{st.textContent=sec.id==='s19'?'Score 8/10 to complete':(sec.id==='s20'?'Tick the four weeks as you finish them':'Answer the check questions to complete this step');st.className='state';}
+  mirror();
 }
 function show(id){
   var sec=document.getElementById(id);if(!sec||!sec.classList.contains('step'))sec=document.getElementById(S.last||'s0')||steps[0];
@@ -1400,13 +1620,22 @@ function show(id){
   document.getElementById('ct-bar').style.width=st==='R'?'0%':(Math.max(0,i)/counted.length*100)+'%';
   if(st!=='R'){S.last=sec.id;save();}
   paintNav(sec);
-  window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0);},0);
+  window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0);},0);requestAnimationFrame(function(){requestAnimationFrame(function(){window.scrollTo(0,0);});});
 }
 document.getElementById('prevbtn').addEventListener('click',function(){var cur=document.querySelector('section.step.show');if(cur.getAttribute('data-stage')==='R'){location.hash=S.last||'s0';return;}var i=main.indexOf(cur);if(i>0)location.hash=main[i-1].id;});
 document.getElementById('nextbtn').addEventListener('click',function(){var cur=document.querySelector('section.step.show');if(cur.getAttribute('data-stage')==='R'){location.hash=S.last||'s0';return;}var i=main.indexOf(cur);if(i<main.length-1)location.hash=main[i+1].id;});
+document.getElementById('mprev').addEventListener('click',function(){document.getElementById('prevbtn').click();});
+document.getElementById('mnext').addEventListener('click',function(){document.getElementById('nextbtn').click();});
+document.addEventListener('keydown',function(e){
+  if(!lb.hidden){if(e.key==='Escape')lbClose();return;}
+  if(e.altKey||e.ctrlKey||e.metaKey||/^(INPUT|SELECT|TEXTAREA)$/.test((e.target.tagName||'')))return;
+  if(e.key==='ArrowRight'&&!document.getElementById('nextbtn').disabled)document.getElementById('nextbtn').click();
+  if(e.key==='ArrowLeft'&&!document.getElementById('prevbtn').disabled)document.getElementById('prevbtn').click();
+});
 window.addEventListener('hashchange',function(){show(location.hash.slice(1));});
 show(location.hash.slice(1)||S.last||'s0');
 paint();
+window.addEventListener('load',function(){window.scrollTo(0,0);});
 
 })();
 </script>

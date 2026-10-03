@@ -3,11 +3,13 @@
 Study material for LumiTraders' (Dasha) "SPX strategy": the SPX regular-trading-hours gap model.
 
 ## Start here
-Open `course/index.html` in your browser (double-click it). It is a 20-step course:
-each step has a goal, a short lesson with diagrams, tasks to do, and check questions.
-Your progress is saved in that browser.
+**Online:** https://ledian63s.github.io/spx-gap-playbook/ (works on phone; add it to your home screen).
 
-Online copy (private): https://claude.ai/artifact/M8ax8wKCLKuAuBGcFrNY6y
+Or open `course/index.html` in your browser (double-click it). It is a 20-step course:
+each step has a goal, a short lesson with diagrams, tasks to do, and check questions.
+Your progress is saved in that browser (separately for the online and local copies).
+
+`AUDIT.md` lists what was checked and corrected on Oct 3, 2026.
 
 ## Folders
 - `course/` – the course (current version) and `previous-version/` (the single-page playbook).
