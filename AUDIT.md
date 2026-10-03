@@ -33,10 +33,10 @@ now in the course. Where her sources disagree, the course has a new reference pa
 ## Fact corrections
 
 - **Sep 24 example:** about +1.4R, not +1.8R ($500 on $350 risk). It was an OTE reaction with no sweep, not "Playbook B". The final exit was at the 9:30 open. Video segment changed to 1:04–2:06.
-- **Sep 17 example:** buy 2 was at about 11:41, not 11:11, and she finished around 12:10. Neither entry was inside 25–50% (both were B-grade).
+- **Sep 17 example:** neither entry was inside 25–50% (both were B-grade). (The first audit also moved buy 2 to 11:41; the second audit showed that was wrong, and 11:11 stands.)
 - **Aug 24 loss:** she did not sell "above the 10 AM open". She shorted on a day the model said buy (the low had been swept first).
 - **Session table:**
-  - Aug 28: +$313 realised (the +$700 was open profit).
+  - Aug 28: +$313 on the sell; the later long was +$700 open, with partials taken.
   - Sep 3: a gap up, not down.
   - Sep 4: a gap of ~20 that filled at the open, ~+$500.
   - Sep 21: off-model.
@@ -60,3 +60,51 @@ now in the course. Where her sources disagree, the course has a new reference pa
 - New reference pages: **Cheat sheet** and **Where her sources disagree**.
 - New lesson images: the order-block run, order block on candle bodies, Playbook B with both trades, and the Jul 23 overlap gap.
 - Proper page title and description and a `noindex` tag.
+
+## Second audit — Oct 3, 2026
+
+Three fresh reviewers re-checked the corrected course: two on content (steps 0–10, and steps 11–20 plus the reference pages), and one on code, layout and usability. All of their fixes are now in the course.
+
+**Content fixes**
+- **One-tick near-miss on a normal gap = no trade.** "One tick above or below means no trades" (Sep 16). Reduced size is only for near-misses on 60+ point gaps. The quiz, the checklist and the step 8 box were updated.
+- **50/50 setups are a skip, not half size.** "When you feel like this set up is 50/50, don't trade it" (Sep 21).
+- **Decoupled days:** funded accounts stay out; she trades those days only on evaluation or competition accounts. There is no "half size" rule.
+- **Sep 17:** the gap was ~80 points, not 100; buy 1 made about 1R; the times are 10:14, 11:11 and ~11:40.
+- **Sep 24:** she took it on her competition account only ("don't copy this on your personal funded evaluations"). The first profit at 25% came after 10:53.
+- **Aug 28:** removed the "didn't take profit" example. The +$700 was a later long, and she did take partials.
+- **Quotes credited to the wrong source:**
+  - "Not two different words" and "random sequence" came from her other model's video. They were replaced with lesson and Oct 2 quotes.
+  - "Price seeks balance, not fills" is from her written lesson, not X.
+  - The "middle of nowhere" rule is from Oct 2.
+  - "63%" was said on Sep 3, 11 and 17.
+  - The 50–70.5% OTE appears in only one X post.
+- **Claims with no source were removed or softened:**
+  - "20–40 points is ideal"
+  - "entered before 10:00 on about half of the days"
+  - "skips stops over 13–14 points" (she cuts size instead)
+  - "HTF Candles is for gold"
+  - the unsourced contract counts in the risk table
+- **Contradictions inside the course resolved:**
+  - The under-10-point rule now reads the same in every step.
+  - The checklist allows valid Playbook C and big-gap trades.
+  - FOMC wording matches across steps.
+  - A table in step 6 shows what can trigger before and after 10:00.
+  - The Playbook C stop and entry are stated once.
+  - "B setup" (a grade) is now written "B-grade", so it isn't confused with Playbook B.
+- **The final test** now covers Playbook D, the SPX-to-ES stop and contract sizing instead of repeating earlier checks.
+
+**Site fixes**
+- The order calculator showed a green "sell NaN MES" with an empty Risk field. It now asks for a risk amount. The ES stop also rounds away from the entry.
+- Saved progress is re-checked against the current questions on load, so old answers to changed questions no longer count.
+- Phone Back with the image viewer open now closes the viewer.
+- External links (YouTube, TradingView, funded.now) open in a new tab instead of replacing the course.
+- Image viewer:
+  - visible keyboard focus;
+  - focus stays inside the viewer;
+  - keyboard zoom;
+  - drag to pan on desktop.
+- Small text and the light-theme green and amber now have readable contrast.
+- Phone diagram labels have a halo so they stay legible over candles, and tick labels are no longer clipped.
+- Wide tables scroll sideways with a hint. iPhone no longer zooms when you tap a calculator field. Phone buttons are bigger.
+- Arrow keys no longer change steps while a quiz answer is focused.
+- The checklist's "today" follows New York time, and old days are cleaned up.
