@@ -72,7 +72,10 @@ nav.toc{position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;padd
 .toc li a:hover{color:var(--fg);text-decoration:none}
 .toc li a.on{color:var(--fg);border-left-color:var(--accent)}
 .toc li a.on span{color:var(--accent)}
-.toc .themebtn{margin-top:26px;background:none;border:1px solid var(--line2);color:var(--muted);font:12px var(--mono);padding:6px 10px;border-radius:6px;cursor:pointer}
+.toc .themeseg{margin-top:14px}
+.themeseg button{display:inline-flex;align-items:center;justify-content:center;padding:6px 14px}
+.themeseg .ico{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.themeseg button[aria-pressed="true"] .ico{fill:currentColor}
 
 main{padding-block:36px 120px;min-width:0}
 .mobile-toc{display:none}
@@ -410,7 +413,7 @@ svg .lbl,svg .zl,svg .ptx,svg .psx,svg .brkt,svg .tick{paint-order:stroke;stroke
 @media (max-width: 640px){ .tblhint{display:block;margin:-8px 0 14px} }
 @media (max-width: 960px){
   .fields input,.fields select{font-size:16px}
-  #themebtn2{min-height:44px;padding:8px 12px}
+  .ct-tools .seg button{min-height:44px;padding:8px 12px}
   .mobile-nav select{min-height:44px}
   .mbar #mprev{min-width:52px}
   .seg button{min-height:42px}
@@ -497,17 +500,17 @@ th{font-weight:500}
 <div class="shell">
 <nav class="toc" aria-label="Course outline">
   <div class="brand">SPX Gap Playbook<small>Learn LumiTraders' SPX RTH gap model one step at a time. Built from her lessons and 29 live sessions (Aug 21 – Oct 2, 2026).</small></div>
+  <div class="seg themeseg" role="group" aria-label="Theme"><button type="button" data-theme-set="light" aria-pressed="false" aria-label="Light theme" title="Light theme"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button><button type="button" data-theme-set="dark" aria-pressed="false" aria-label="Dark theme" title="Dark theme"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button></div>
   <div class="prog"><span>Course progress</span><span id="prog-n">0 / 0</span></div>
   <div class="progress"><i id="prog-bar"></i></div>
   <div id="outline"></div>
-  <button class="themebtn" id="themebtn" type="button">Switch light / dark</button>
 </nav>
 
 <main>
 <div class="course-top">
   <div class="row1"><b id="ct-stage">Start</b><span id="ct-step">Step 0 of 20</span></div>
   <div class="progress"><i id="ct-bar"></i></div>
-  <div class="mobile-nav"><label class="src" for="jump" style="white-space:nowrap">Go to</label><select id="jump"></select><div class="ct-tools"><button class="iconbtn" id="themebtn2" type="button" aria-label="Switch light or dark theme">◐ Theme</button></div></div>
+  <div class="mobile-nav"><label class="src" for="jump" style="white-space:nowrap">Go to</label><select id="jump"></select><div class="ct-tools"><div class="seg themeseg" role="group" aria-label="Theme"><button type="button" data-theme-set="light" aria-pressed="false" aria-label="Light theme" title="Light theme"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button><button type="button" data-theme-set="dark" aria-pressed="false" aria-label="Dark theme" title="Dark theme"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg></button></div></div></div>
 </div>
 
 <!-- ===================== STEP 0 ===================== -->
@@ -1558,13 +1561,22 @@ if(S.qv!==3){['s5','s6','s7','s8','s9','s18','s19'].forEach(function(k){delete S
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 
 /* ---------- theme ---------- */
-function toggleTheme(){
-  var r=document.documentElement,cur=r.getAttribute('data-theme');
-  var dark=cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;
-  r.setAttribute('data-theme',dark?'light':'dark');store('spxgap-theme',dark?'light':'dark');
+function isDark(){
+  var cur=document.documentElement.getAttribute('data-theme');
+  return cur?cur==='dark':!window.matchMedia('(prefers-color-scheme: light)').matches;
 }
-document.getElementById('themebtn').addEventListener('click',toggleTheme);
-document.getElementById('themebtn2').addEventListener('click',toggleTheme);
+function setTheme(t){
+  document.documentElement.setAttribute('data-theme',t);store('spxgap-theme',t);showTheme();
+}
+/* mark the active button and match the browser bar colour */
+function showTheme(){
+  var dark=isDark();
+  document.querySelectorAll('[data-theme-set]').forEach(function(b){b.setAttribute('aria-pressed',(b.getAttribute('data-theme-set')==='dark')===dark?'true':'false');});
+  if(document.documentElement.getAttribute('data-theme'))document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute('content',dark?'#080b10':'#f3f5f8');});
+}
+document.querySelectorAll('[data-theme-set]').forEach(function(b){b.addEventListener('click',function(){setTheme(b.getAttribute('data-theme-set'));});});
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change',showTheme);
+showTheme();
 
 /* ---------- image viewer ---------- */
 var lb=document.getElementById('lb'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap'),lbLast=null;
